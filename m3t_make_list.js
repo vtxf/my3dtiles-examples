@@ -15,7 +15,6 @@ function findMatchingImage(dirPath, baseName) {
 }
 
 function shouldFlatten(dirPath, dirName) {
-    // 检查子目录
     const subDirPath = path.join(dirPath, dirName);
     if (!fs.existsSync(subDirPath) || !fs.statSync(subDirPath).isDirectory()) {
         return false;
@@ -24,7 +23,6 @@ function shouldFlatten(dirPath, dirName) {
     const subDirContents = fs.readdirSync(subDirPath);
     const m3tJsonFiles = subDirContents.filter(item => item.endsWith('.m3tjson'));
     
-    // 检查是否只有一个与目录同名的m3tjson文件
     return m3tJsonFiles.length === 1 && m3tJsonFiles[0] === `${dirName}.m3tjson`;
 }
 
@@ -39,15 +37,14 @@ function generateTree(dirPath, relativePath = '') {
     );
 
     const dirName = path.basename(dirPath);
+    const children = [];
 
     // 处理子目录
-    const children = [];
     for (const dir of dirs) {
-        // 检查是否需要扁平化处理
         if (shouldFlatten(dirPath, dir)) {
+            // 扁平化节点是叶子节点，不需要path属性
             const result = {
                 name: dir,
-                path: dir,
                 content: {
                     type: "m3tJsonUri",
                     m3tJsonUri: `\${M3T_CurrentDir}${dir}/${dir}.m3tjson`
@@ -90,7 +87,7 @@ function generateTree(dirPath, relativePath = '') {
 
     if (children.length === 0) return null;
 
-    // 设置collapse属性：只有最后一级目录（没有子目录的目录）为true
+    // 设置组节点的属性（必须包含path和collapse）
     const hasSubDirs = children.some(child => child.children);
     return {
         name: dirName,

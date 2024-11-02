@@ -43,47 +43,46 @@
                         },
                         {
                             "name": "卫星沿路径运动",
-                            "path": "卫星沿路径运动",
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}卫星沿路径运动/卫星沿路径运动.m3tjson"
-                            }
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}卫星沿路径运动/卫星沿路径运动.jpg"
                         },
                         {
                             "name": "导弹沿路径运动并爆炸",
-                            "path": "导弹沿路径运动并爆炸",
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}导弹沿路径运动并爆炸/导弹沿路径运动并爆炸.m3tjson"
-                            }
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}导弹沿路径运动并爆炸/导弹沿路径运动并爆炸.jpg"
                         },
                         {
                             "name": "接收站姿态控制",
-                            "path": "接收站姿态控制",
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}接收站姿态控制/接收站姿态控制.m3tjson"
-                            }
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}接收站姿态控制/接收站姿态控制.jpg"
                         },
                         {
                             "name": "数字城市_20241016",
-                            "path": "数字城市_20241016",
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}数字城市_20241016/数字城市_20241016.m3tjson"
-                            }
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}数字城市_20241016/数字城市_20241016.jpg"
                         },
                         {
                             "name": "无人机沿路径飞行加相机控制",
-                            "path": "无人机沿路径飞行加相机控制",
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}无人机沿路径飞行加相机控制/无人机沿路径飞行加相机控制.m3tjson"
-                            }
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}无人机沿路径飞行加相机控制/无人机沿路径飞行加相机控制.jpg"
                         },
                         {
                             "name": "海水&热力图20241025",
-                            "path": "海水&热力图20241025",
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.m3tjson"
@@ -92,11 +91,11 @@
                         },
                         {
                             "name": "运动的双箭头",
-                            "path": "运动的双箭头",
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}运动的双箭头/运动的双箭头.m3tjson"
-                            }
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}运动的双箭头/运动的双箭头.jpg"
                         }
                     ]
                 }
