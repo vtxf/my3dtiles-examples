@@ -1,0 +1,23 @@
+{
+    "list": {
+        "root": {
+            "name": "m3t官方示例(来自网络)",
+            "path": "examples",
+            "children": [
+                {
+                    "name": "综合示例",
+                    "path": "综合示例",
+                    "children": [
+                        {
+                            "name": "海水&热力图20241025",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.m3tjson"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

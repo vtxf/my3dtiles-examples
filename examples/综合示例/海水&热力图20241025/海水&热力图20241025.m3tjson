@@ -1,0 +1,401 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.16",
+        "createdTime": "2024-10-28T05:37:31.809Z",
+        "modifiedTime": "2024-10-28T06:13:11.995Z",
+        "name": "海水&热力图20241025"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "Czm海水",
+                    "sceneObj": {
+                        "id": "6333d773-978e-4a3f-986d-a6173888f98d",
+                        "type": "SceneScript",
+                        "name": "Czm海水",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    // 创建primitive\r\n    function createPrimitive(viewer) {\r\n        const { getStrFromEnv } = XE2['xe2-base-objects'].SceneObject.context;\r\n        var waterNormalsPath = getStrFromEnv(\"${SD}/images/waterNormals.jpg\");\r\n        var specularMap = getStrFromEnv(\"${SD}/images/earthspec.png\");\r\n        \r\n\r\n        var p = viewer.scene.primitives.add(\r\n            new Cesium.Primitive({\r\n                geometryInstances: new Cesium.GeometryInstance({\r\n                    geometry: new Cesium.RectangleGeometry({\r\n                        rectangle: Cesium.Rectangle.fromDegrees(-180.0, -90.0, 180.0, 90.0),\r\n                        vertexFormat: Cesium.EllipsoidSurfaceAppearance.VERTEX_FORMAT,\r\n                        height: 0,\r\n                        extrudedHeight: 10\r\n                    }),\r\n                }),\r\n                appearance: new Cesium.EllipsoidSurfaceAppearance({\r\n                    material: new Cesium.Material({\r\n                    fabric: {\r\n                        type: \"Water\",\r\n                        uniforms: {\r\n                        specularMap: specularMap,\r\n                        //normalMap: Cesium.buildModuleUrl(\"Assets/Textures/waterNormals.jpg\"),\r\n                        normalMap: waterNormalsPath,\r\n                        frequency: 10000.0,\r\n                        animationSpeed: 0.01,\r\n                        amplitude: 1.0,\r\n                        },\r\n                    },\r\n                    }),\r\n                    aboveGround: true\r\n                }),\r\n                show: true,\r\n            })\r\n        );\r\n        return p;\r\n    }\r\n    \r\n    // 销毁primitive\r\n    function destroyPrimitive(viewer, p) {\r\n        viewer.scene.primitives.remove(p)\r\n    }\r\n\r\n    class CzmViewerAttachedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor(czmViewer) {\r\n            super();\r\n\r\n            const { viewer } = czmViewer;\r\n            if (!viewer) return;\r\n            const p = createPrimitive(viewer);\r\n            this.dispose(() => destroyPrimitive(viewer, p));\r\n        }\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n            this.disposeVar(sceneObject.createAttachedObject(viewer => {\r\n                if (!(viewer instanceof XE2['xe2-cesium-objects'].CzmViewer)) return undefined;\r\n                return new CzmViewerAttachedObj(viewer);\r\n            }));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                    }
+                },
+                {
+                    "name": "热力图",
+                    "sceneObj": {
+                        "id": "90ec86c0-1119-41c8-a505-e5046ab83b77",
+                        "type": "CzmHeatMap",
+                        "show": true,
+                        "allowPicking": true,
+                        "data": [
+                            [
+                                127.77805794732302,
+                                32.01070776864192,
+                                64.9826297089111
+                            ],
+                            [
+                                121.00470425723061,
+                                31.172332198763513,
+                                56.28148043639947
+                            ],
+                            [
+                                131.3605391860252,
+                                39.261594960785445,
+                                68.80332936513646
+                            ],
+                            [
+                                123.08133162311394,
+                                30.97760210292025,
+                                74.42630395096536
+                            ],
+                            [
+                                119.59580943446876,
+                                34.57662525663736,
+                                48.432517660637366
+                            ],
+                            [
+                                120.71313439639974,
+                                39.04844542281124,
+                                28.79142203388545
+                            ],
+                            [
+                                129.38941659090472,
+                                31.719984992889103,
+                                56.140376295515246
+                            ],
+                            [
+                                128.87848766768658,
+                                30.837834473276583,
+                                46.032760395355865
+                            ],
+                            [
+                                125.0161327807565,
+                                37.49124657773727,
+                                77.42027083065067
+                            ],
+                            [
+                                128.93456338013152,
+                                32.88646892619374,
+                                31.785543333122313
+                            ],
+                            [
+                                120.7172059454548,
+                                34.80337496902626,
+                                38.91612579824306
+                            ],
+                            [
+                                132.8044767031535,
+                                31.491414484391488,
+                                65.58850202656888
+                            ],
+                            [
+                                123.64492743413076,
+                                33.50850669019405,
+                                8.313359215370575
+                            ],
+                            [
+                                121.51763995220655,
+                                30.782429686770122,
+                                96.54639701524343
+                            ],
+                            [
+                                128.20528704036656,
+                                35.4224291488224,
+                                63.311320588966645
+                            ],
+                            [
+                                130.9928569730653,
+                                31.22235776121674,
+                                80.90732160274001
+                            ],
+                            [
+                                118.02545506641066,
+                                35.52005597097513,
+                                11.393613556136483
+                            ],
+                            [
+                                123.4137843338019,
+                                30.9567349919007,
+                                92.52519235304536
+                            ],
+                            [
+                                131.1382981769329,
+                                36.43814870587903,
+                                0.24374059080505273
+                            ],
+                            [
+                                122.43648909404047,
+                                35.21528626502247,
+                                78.23630645106454
+                            ],
+                            [
+                                124.41793792850201,
+                                34.65057247536771,
+                                94.14787176227803
+                            ],
+                            [
+                                121.43825395577129,
+                                38.944158472162236,
+                                20.137010688262635
+                            ],
+                            [
+                                132.77013575506427,
+                                33.67088937357246,
+                                45.36436555713039
+                            ],
+                            [
+                                132.43512360789873,
+                                34.04813457895194,
+                                52.96689345651273
+                            ],
+                            [
+                                120.63754981927183,
+                                31.66975687942201,
+                                67.97792445780799
+                            ],
+                            [
+                                120.02416820261298,
+                                37.38052082013704,
+                                85.47516195856531
+                            ],
+                            [
+                                120.73399235122513,
+                                35.16684443212044,
+                                31.35807532210344
+                            ],
+                            [
+                                124.12350018706604,
+                                38.3989409502251,
+                                77.181214065218
+                            ],
+                            [
+                                132.4876847736115,
+                                39.312100776865634,
+                                11.37163662889149
+                            ],
+                            [
+                                118.7369008783729,
+                                32.18685187875934,
+                                17.456675081800597
+                            ],
+                            [
+                                129.72339182863308,
+                                38.026369660540254,
+                                32.93794573203772
+                            ],
+                            [
+                                120.93496459315011,
+                                31.691396065691702,
+                                0.9104973190662058
+                            ],
+                            [
+                                131.60200751231955,
+                                36.46110122513159,
+                                37.293531347939805
+                            ],
+                            [
+                                133.23392659174112,
+                                33.22042817601309,
+                                65.9153949405822
+                            ],
+                            [
+                                120.49423953882831,
+                                36.57659408579199,
+                                2.4055186792692584
+                            ],
+                            [
+                                122.84312859134923,
+                                31.9275928007559,
+                                26.028599320029187
+                            ],
+                            [
+                                125.5447759112639,
+                                35.072708317288,
+                                70.78518496592598
+                            ],
+                            [
+                                133.65854381324368,
+                                36.88466016894827,
+                                56.780526218397576
+                            ],
+                            [
+                                126.58158771483396,
+                                30.74737128814671,
+                                90.0468399241658
+                            ],
+                            [
+                                125.08639983012296,
+                                39.27670752674801,
+                                88.1656335609948
+                            ],
+                            [
+                                124.29082360922867,
+                                30.755900242787888,
+                                95.12645680136936
+                            ],
+                            [
+                                127.94762968765036,
+                                35.64672457789042,
+                                94.50987416661916
+                            ],
+                            [
+                                125.37370489748608,
+                                39.323928272090214,
+                                12.190253671575446
+                            ],
+                            [
+                                129.841124160594,
+                                30.525188329772906,
+                                54.25961260820236
+                            ],
+                            [
+                                131.88825185515913,
+                                38.08728728123208,
+                                6.602309151494534
+                            ],
+                            [
+                                130.61292924420138,
+                                34.74877739583083,
+                                19.63587465860419
+                            ],
+                            [
+                                126.85503727937201,
+                                32.59251489116015,
+                                85.74132235000991
+                            ],
+                            [
+                                126.78142238794263,
+                                33.056593594136885,
+                                77.65628165367566
+                            ],
+                            [
+                                126.25675740060854,
+                                37.76496645705823,
+                                49.49893044766802
+                            ],
+                            [
+                                122.30759809322743,
+                                34.83925676883899,
+                                67.07186215816967
+                            ],
+                            [
+                                132.21226444543336,
+                                31.02049278383731,
+                                13.629672411014715
+                            ],
+                            [
+                                125.788749354338,
+                                38.33770230149139,
+                                52.44344685120992
+                            ],
+                            [
+                                126.79880602368708,
+                                33.21999534103161,
+                                72.27461928637398
+                            ],
+                            [
+                                121.45222432085917,
+                                33.54324528214742,
+                                37.73374585366766
+                            ],
+                            [
+                                126.67779641411757,
+                                31.149076745359242,
+                                11.624008749162563
+                            ]
+                        ],
+                        "rectangle": [
+                            116.8381348777707,
+                            29.65997721325868,
+                            135.04990510809557,
+                            40.70478060489422
+                        ],
+                        "height": 1000,
+                        "editing": false,
+                        "ground": false,
+                        "name": "热力图"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "af379814-a78b-4bb0-950d-b0435a233272",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1730093851817
+        },
+        "offlineImagery": {
+            "id": "20b5e868-f786-496a-98f2-afdeea5834bb",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "47d0a309-0d75-4ae5-b1e7-b356435475cc",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "0e8ee4d1-94a8-4a70-916b-10e5368666a9",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "79ef9a31-95ed-423c-bf81-7a809e61fd37",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "c98e2f17-0516-4299-8974-0d95fa271daa",
+            "type": "View",
+            "position": [
+                126.35291004282948,
+                31.231212161517764,
+                801508.7165933223
+            ],
+            "rotation": [
+                343.61229777408226,
+                -69.5254988740786,
+                0.1285874217726211
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "50ce90a1-79b6-423b-90c6-1ae65d18e970",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
