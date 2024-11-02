@@ -16,6 +16,7 @@
  * @property {string} name - The name of the tree item
  * @property {string} [path] - Script language  新加的属性
  * @property {boolean} [collapsed] - Whether the tree item is collapsed
+ * @property {string} [previewImageUri] - Whether the tree item is collapsed
  * @property {MyTreeItemContentJsonType} [content] - The content of the tree item
  * @property {MyTreeItemJsonType[]} [children] - Child tree items
  */
@@ -50,6 +51,10 @@
             path += item.path + '/';
         }
         do {
+            if (item.previewImageUri) {
+                item.previewImageUri = item.previewImageUri.replaceAll('${M3T_CurrentDir}', path);
+            }
+
             const { content } = item;
             if (!content) break;
             if (content.m3tJsonUri) {

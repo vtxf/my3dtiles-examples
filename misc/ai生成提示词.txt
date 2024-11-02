@@ -1,0 +1,6 @@
+m3t_make_list.js是一个nodejs执行文件，它会遍历example文件夹中的m3tjson文件，然后生成类似misc/m3t_list.json的json格式，然后把生成的json保存到同目录下的m3t_list.json文件中。注意以下特点：
+1. 如果某个文件夹下有一个和文件夹名字相同的m3tjson文件，并且没有其他m3tjson文件的情况下，那么就不要多一个文件夹名字的节点了。但是要注意m3tJsonUrl和previewImageUri的路径。请参考 misc/m3t_list.json文件中的 “海水&热力图20241025”的节点的写法。
+2. previewImageUri需要确实存在某个图片文件时，才要设置previewImageUri这个属性，否则不写。这个文件不一定是jpg，也有可能是png、gif或者别的图片格式。
+3. collapse属性，只在最后一个文件夹时，是true，否则一律为false。
+4. 生成的m3t_list.json文件放在同目录下，不是misc目录下！
+5. 如果叶子节点的上一级节点中只有一个子节点，且子节点的名字和父节点名字相同的话，那么合并成一个节点，注意m3tJsonUri和previewImageUri的路径中，需要有两级路径，参考misc/m3t_list.json中的名字为“海水&热力图20241025”的节点的写法。

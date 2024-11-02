@@ -1,0 +1,15 @@
+{
+  "name": "m3t-examples-202411",
+  "version": "1.0.0",
+  "main": "m3t_make_list.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "make-list": "node m3t_make_list.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

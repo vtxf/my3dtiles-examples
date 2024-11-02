@@ -1,0 +1,252 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.7.0",
+        "createdTime": "2024-05-10T08:29:55.691Z",
+        "modifiedTime": "2024-06-16T13:56:16.727Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "children": [
+                {
+                    "name": "dizuo",
+                    "sceneObj": {
+                        "id": "d45711a9-8ea7-4e49-ad12-30f4a331dd2d",
+                        "type": "CzmModelPrimitive",
+                        "name": "dizuo",
+                        "show": true,
+                        "url": "${SD}glbs\\dizuo.glb",
+                        "allowPicking": true,
+                        "position": [
+                            114.45764294253881,
+                            28.083120090839053,
+                            0
+                        ]
+                    },
+                    "children": []
+                },
+                {
+                    "name": "tianxian",
+                    "sceneObj": {
+                        "id": "46a0a85f-1504-4258-ade0-457b6216108a",
+                        "type": "CzmModelPrimitive",
+                        "name": "tianxian",
+                        "ref": "t",
+                        "updateFuncStr": "// sceneObject表示当前的场景对象\n// timeStamp表示时间戳\n(sceneObject, timeStamp) => {\n    const r = (timeStamp % 5000) / 5000;\n    const p = 40 + 30 * Math.cos(4*r*Math.PI*2);\n    sceneObject.rotation = [r * 360, p, 0];\n}\n",
+                        "show": true,
+                        "url": "${SD}glbs\\tianxian.glb",
+                        "allowPicking": true,
+                        "position": [
+                            114.45764294253881,
+                            28.083120090839053,
+                            37
+                        ],
+                        "rotation": [
+                            21.477599999785422,
+                            42.139491803888006,
+                            0
+                        ],
+                        "localPosition": [
+                            0,
+                            -37,
+                            0
+                        ],
+                        "localRotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    },
+                    "children": []
+                },
+                {
+                    "name": "zhijia",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "34e0dfaa-7902-4968-9f02-cdef6b676473",
+                        "type": "CzmModelPrimitive",
+                        "name": "zhijia",
+                        "ref": "z",
+                        "show": true,
+                        "url": "${SD}glbs\\zhijia.glb",
+                        "allowPicking": true,
+                        "position": [
+                            114.45764294253881,
+                            28.083120090839053,
+                            0
+                        ],
+                        "rotation": [
+                            20.865599999785424,
+                            0,
+                            0
+                        ]
+                    },
+                    "children": []
+                },
+                {
+                    "name": "visible",
+                    "sceneObj": {
+                        "id": "93f35e7a-ca3d-4c27-ad3c-342a81fd5b9b",
+                        "type": "CzmModelPrimitive",
+                        "name": "visible",
+                        "ref": "v",
+                        "show": true,
+                        "url": "${my3dtiles-assets-script-dir}/assets/gltfs/misc/visible.glb",
+                        "allowPicking": true,
+                        "position": [
+                            114.45764294253881,
+                            28.083120090839053,
+                            37
+                        ],
+                        "rotation": [
+                            20.865599999785424,
+                            43.41565644187221,
+                            0
+                        ],
+                        "scale": [
+                            200,
+                            200,
+                            200
+                        ],
+                        "localPosition": [
+                            0,
+                            0.15,
+                            0
+                        ]
+                    },
+                    "children": []
+                },
+                {
+                    "name": "监视器",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "73643380-2d01-49bd-a955-0c5c004f5fd6",
+                        "type": "Watcher",
+                        "enabled": true,
+                        "objIdAndPropChangedNames": [
+                            [
+                                "46a0a85f-1504-4258-ade0-457b6216108a",
+                                "rotation"
+                            ]
+                        ],
+                        "evalFuncStr": "([/*obj0, obj1, obj2*/]) => {\n    const { t, z, v } = XE2.g.refs;\n    if (!t || !z || !v) return;\n    const [h, p, r] = t.rotation;\n    z.rotation = [h, 0, 0];\n    v.rotation = [h, p, r];\n}",
+                        "name": "监视器"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "视角",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "9731925d-c76a-409a-a287-f67f9f6c2914",
+                        "type": "View",
+                        "position": [
+                            114.4605686436616,
+                            28.083445967689148,
+                            195.29834829012094
+                        ],
+                        "rotation": [
+                            258.05605436527156,
+                            -16.570085808111177,
+                            0.00033861143432352794
+                        ],
+                        "default": true,
+                        "name": "视角"
+                    },
+                    "children": []
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "361f3118-76b1-4a27-95c4-758bb7f950b2",
+            "type": "CzmViewer",
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1710748559577
+        },
+        "offlineImagery": {
+            "id": "3092b187-9931-4514-b46c-8782c97afa90",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "googleImagery": {
+            "id": "eb846955-25cf-407b-97a3-623aa096f194",
+            "type": "CzmImagery",
+            "show": false,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://gac-geo.googlecnapps.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
+            },
+            "zIndex": -1,
+            "name": "谷歌影像"
+        },
+        "tdtImagery": {
+            "id": "ab580470-d47d-44f1-8ccc-180e052bb3fe",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "天地图影像"
+        },
+        "czmTerrain": {
+            "id": "ff95a93a-5caf-406b-8d25-e17661ee599a",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "5db92ec9-4663-4323-8c11-8019a376e505",
+            "type": "CzmClassicNavigator"
+        },
+        "lastView": {
+            "id": "1f0bc8a5-44cc-40cf-92b5-88845ed2690c",
+            "type": "View",
+            "position": [
+                114.45748373969987,
+                28.08451447121203,
+                145.01330029531982
+            ],
+            "rotation": [
+                161.42441075539787,
+                -45.33956034496339,
+                0.00041758390795290363
+            ],
+            "default": true,
+            "name": "View_dc4b"
+        },
+        "initOptions": {
+            "id": "6805a813-6c2b-4a57-a74d-f1a05d1e8b88",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

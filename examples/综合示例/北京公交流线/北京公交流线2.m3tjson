@@ -1,0 +1,157 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.6.0",
+        "createdTime": "2024-05-14T10:07:50.210Z",
+        "modifiedTime": "2024-05-14T10:34:31.666Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "children": [
+                {
+                    "name": "GifPoi",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "96da9e2d-c3ff-405b-831b-e69c8dc867a5",
+                        "type": "GeoGifPoi",
+                        "position": [
+                            105.29828647681104,
+                            36.14336192510911,
+                            9.313225746154785e-10
+                        ],
+                        "positionEditing": false,
+                        "playing": true,
+                        "currentTime": 299.59999987483025,
+                        "name": "GifPoi"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "文本标签",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "08aa8672-395b-4f3b-8d93-fcaccd7ff8be",
+                        "type": "GeoDivTextPoi",
+                        "name": "文本标签",
+                        "position": [
+                            91.90131698551588,
+                            42.48077523430159,
+                            -1.3174105316582457e-9
+                        ]
+                    },
+                    "children": []
+                },
+                {
+                    "name": "信号线集合",
+                    "sceneObj": {
+                        "id": "89e175cf-3b2d-4de9-8234-83f7c0d510c1",
+                        "type": "CzmSignalTransmissionCollection",
+                        "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAABCAYAAABubagXAAAATUlEQVQYlaXLOQqEUBQF0SMmojgvpfe/JiccEvlNwwuM24IK7oXKUkof7ylQoUGHHsPDMf4WNcpociTcuHBgx4oFczg9/O0tPKP7D3wBky8UMt76XnoAAAAASUVORK5CYII=",
+                        "repeat": 0.5,
+                        "width": 1,
+                        "geoJsonUrl": "https://a.amap.com/Loca/static/loca-v2/demos/mock_data/bj_bus.json",
+                        "allowPicking": true,
+                        "loop": true,
+                        "currentTime": 26.09999978542328,
+                        "duration": 1000,
+                        "speed": 1,
+                        "playing": true,
+                        "name": "信号线集合"
+                    },
+                    "children": []
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "60e82979-9f33-4b72-a1cc-b517eed7930a",
+            "type": "CzmViewer",
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "resolutionScale": 1.5,
+            "sceneSkyAtmosphereShow": false,
+            "sceneSsccZoomFactor": 2,
+            "scenePpsBloomEnabled": true,
+            "clockCurrentTime": 1710748559577
+        },
+        "offlineImagery": {
+            "id": "a69c1d8c-e22a-4f67-84b2-e02fe834b175",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "googleImagery": {
+            "id": "be462c44-23fd-4527-ad34-86375e53a60c",
+            "type": "CzmImagery",
+            "show": false,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://gac-geo.googlecnapps.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
+            },
+            "zIndex": -1,
+            "name": "谷歌影像"
+        },
+        "tdtImagery": {
+            "id": "fcea7028-7c15-4d72-abe8-f4976250626a",
+            "type": "CzmImagery",
+            "brightness": 0.3,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "天地图影像"
+        },
+        "czmTerrain": {
+            "id": "6fa5a210-663e-4fbd-9da5-ac6c7e11083f",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "lastView": {
+            "id": "c211350b-1750-4c55-8add-53f7e2fc4968",
+            "type": "View",
+            "position": [
+                116.5462717968224,
+                39.61484171688097,
+                58304.59902342018
+            ],
+            "rotation": [
+                341.13310910655684,
+                -62.72662635823257,
+                359.9744716198059
+            ],
+            "default": true,
+            "name": "View_4968"
+        },
+        "initOptions": {
+            "id": "837e1719-fb59-43e8-8d2d-a0d805ff2171",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

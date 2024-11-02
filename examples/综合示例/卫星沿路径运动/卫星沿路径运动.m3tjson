@@ -1,0 +1,251 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.5.0",
+        "createdTime": "2024-04-25T05:33:41.316Z",
+        "modifiedTime": "2024-05-08T03:01:20.361Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "children": [
+                {
+                    "name": "曲线路径",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "ace7b8e9-2059-4de1-803c-04450c019e7b",
+                        "type": "GeoBezierPath",
+                        "allowPicking": true,
+                        "positions": [
+                            [
+                                97.20433583581027,
+                                32.845984222301276,
+                                1000000
+                            ],
+                            [
+                                103.45804333604492,
+                                38.84538646175778,
+                                1000000
+                            ],
+                            [
+                                115.84771560339857,
+                                41.25358043605323,
+                                1000000
+                            ]
+                        ],
+                        "loop": true,
+                        "currentTime": 14480.68396782875,
+                        "duration": 30000,
+                        "playing": true,
+                        "name": "曲线路径"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "卫星",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "ff27619d-7801-46ec-bcae-5812f349d924",
+                        "type": "CzmModelPrimitive",
+                        "name": "卫星",
+                        "url": "http://114.242.26.126:7000/data/models/WeiXing.glb",
+                        "allowPicking": true,
+                        "pixelSize": 1,
+                        "position": [
+                            104.17080226861671,
+                            39.15610457218852,
+                            998213.8952649655
+                        ],
+                        "rotation": [
+                            59.82821667256434,
+                            -1.1607661345211682,
+                            0
+                        ]
+                    },
+                    "children": []
+                },
+                {
+                    "name": "侦照",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "69b62a0e-ed53-4488-a6ee-dc6816f30aea",
+                        "type": "CzmDetectives",
+                        "allowPicking": true,
+                        "editing": false,
+                        "positions": [
+                            [
+                                104.17080226861671,
+                                39.15610457218852,
+                                998213.8952649655
+                            ],
+                            [
+                                107.33876946459043,
+                                32.17280396240956,
+                                0
+                            ]
+                        ],
+                        "bottomRadius": 0.1,
+                        "segments": 14,
+                        "ringRepeat": 16,
+                        "loop": true,
+                        "currentTime": 2654.999994441867,
+                        "duration": 6000,
+                        "speed": 1,
+                        "playing": true,
+                        "name": "侦照"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "接收站",
+                    "sceneObj": {
+                        "id": "ba4a128d-43a2-412a-9c51-df8087d6b81e",
+                        "type": "CzmModelPrimitive",
+                        "name": "接收站",
+                        "url": "${LP}http://114.242.26.126:7000/data/models/JieShouZhan.glb",
+                        "allowPicking": true,
+                        "pixelSize": 1,
+                        "position": [
+                            107.33876946459043,
+                            32.17280396240956,
+                            0
+                        ]
+                    },
+                    "children": []
+                },
+                {
+                    "name": "监视器",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "71a1d690-a1b0-40c0-95ec-2f3a74923865",
+                        "type": "Watcher",
+                        "enabled": true,
+                        "objIdAndPropChangedNames": [
+                            [
+                                "ace7b8e9-2059-4de1-803c-04450c019e7b",
+                                "currentPosition"
+                            ],
+                            [
+                                "69b62a0e-ed53-4488-a6ee-dc6816f30aea",
+                                ""
+                            ],
+                            [
+                                "ff27619d-7801-46ec-bcae-5812f349d924",
+                                ""
+                            ]
+                        ],
+                        "evalFuncStr": "([路径, 侦照, 卫星]) => {\n    const ps = 侦照.positions;\n    if (!ps || ps.length < 2) return;\n    const [a, b] = ps;\n    侦照.positions = [路径.currentPosition, b];\n    卫星.position = 路径.currentPosition;\n}",
+                        "name": "监视器"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "视角",
+                    "show": false,
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "de0be3b7-599a-4a59-be59-f8e92e9950a4",
+                        "type": "View",
+                        "position": [
+                            102.55345357367719,
+                            23.48111442683376,
+                            2295355.3899290976
+                        ],
+                        "rotation": [
+                            22.31108828291997,
+                            -59.45578018480686,
+                            0.07073921297151058
+                        ],
+                        "default": true,
+                        "name": "视角"
+                    },
+                    "children": []
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "cd16f484-8962-411b-9279-5be540f10fde",
+            "type": "CzmViewer",
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "clockCurrentTime": 1710748559577
+        },
+        "offlineImagery": {
+            "id": "78f9eb9e-3b02-414f-bd3a-fc570984aac2",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "googleImagery": {
+            "id": "22a90861-0913-45aa-917e-e6162451b907",
+            "type": "CzmImagery",
+            "show": false,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://gac-geo.googlecnapps.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
+            },
+            "zIndex": -1,
+            "name": "谷歌影像"
+        },
+        "tdtImagery": {
+            "id": "ddd60ca0-f965-4ede-9512-8d52a96bf9b0",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "天地图影像"
+        },
+        "czmTerrain": {
+            "id": "8ed99afd-1e76-46cf-a492-fcc48b558b5f",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "lastView": {
+            "id": "b6dd4ab1-b9cf-4c74-8f72-300cbb9a6ebc",
+            "type": "View",
+            "position": [
+                102.55345357367722,
+                23.481114426833773,
+                2295355.3899285975
+            ],
+            "rotation": [
+                22.31108828291997,
+                -59.45578018480686,
+                0.07073921297151058
+            ],
+            "name": "View_6b67"
+        },
+        "initOptions": {
+            "id": "6eddd23e-03b5-4272-8e40-e52534e01be4",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

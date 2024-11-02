@@ -1,0 +1,50 @@
+{
+    "list": {
+        "root": {
+            "name": "m3t官方示例(来自网络)",
+            "path": "examples",
+            "collapse": true,
+            "children": [
+                {
+                    "name": "综合示例",
+                    "path": "综合示例",
+                    "collapse": true,
+                    "children": [
+                        {
+                            "name": "北京公交流线",
+                            "path": "北京公交流线",
+                            "collapse": false,
+                            "children": [
+                                {
+                                    "name": "北京公交流线1",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}北京公交流线1.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}北京公交流线1.jpg"
+                                },
+                                {
+                                    "name": "北京公交流线2",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}北京公交流线2.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}北京公交流线2.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "海水&热力图20241025",
+                            "path": "海水&热力图20241025",
+                            "previewImageUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.jpg",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.m3tjson"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
