@@ -1,0 +1,50 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    116.2,
+                    39.56
+                ]
+            },
+            "properties": {
+                "title": "swimming",
+                "marker-symbol": "swimming",
+                "marker-color": "#8F1312"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.2,
+                    38.56
+                ]
+            },
+            "properties": {
+                "title": "8",
+                "marker-symbol": "8",
+                "marker-color": "#46117E"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2,
+                    37.56
+                ]
+            },
+            "properties": {
+                "title": "6",
+                "marker-symbol": "6",
+                "marker-color": "#713291"
+            }
+        }
+    ]
+}

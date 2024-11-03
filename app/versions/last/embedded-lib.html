@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="./js/m3t/load-common.js"></script>
+</head>
+
+<body>
+    <script src="m3tapp.js"></script>
+    <div style="max-width: 1200px; margin: auto">
+        <div
+            style="margin:10px; width: 100%; height: 100px; display: flex; border: 1px solid #000; justify-content: center; align-items: center;">
+            <div style="margin:10px; font-size: 50px;">XXXX省XXXX市XXXX公司运维系统</div>
+        </div>
+        <div style="margin:10px; width: 100%; border: 1px solid #000; display: flex; flex-direction: row;">
+            <div style="margin:10px; flex: 0 0 300px; border: 1px solid #000;">
+                <div style="font-size: 30px;">设备列表</div>
+            </div>
+            <div style="margin:10px; flex: 1; border: 1px solid #000; display: flex; flex-direction: column;">
+                <div id="m3tapp" style="margin:10px; flex: 0 0 500px; border: 1px solid #000;">
+                </div>
+                <script>
+                    g_app.container = 'm3tapp';
+                </script>
+                <div style="margin:10px; flex: 0 0 400px; border: 1px solid #000;">
+                    <div style="font-size: 30px;">设备详情</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

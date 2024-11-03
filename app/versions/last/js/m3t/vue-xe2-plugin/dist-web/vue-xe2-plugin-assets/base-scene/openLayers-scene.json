@@ -1,0 +1,105 @@
+{
+    "asset": {
+        "version": "0.1.0",
+        "createdTime": "2023-01-05T00:58:11.604Z",
+        "modifiedTime": "2023-02-27T06:58:55.896Z",
+        "name": "OpenLayers基础场景"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "未命名条目(0)",
+            "children": [
+                {
+                    "name": "OepnLayers基础场景",
+                    "children": [
+                        {
+                            "name": "OpenLayers视口(d07c)",
+                            "sceneObj": {
+                                "id": "a535c151-941b-4f43-9f70-a6dd4e87d07c",
+                                "type": "OpenLayersViewer",
+                                "actived": false,
+                                "zIndex": "1",
+                                "originRatioAndOffset": [
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "sizeRatioAndOffset": [
+                                    1,
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "name": "OpenLayers视口(d07c)",
+                                "position": [
+                                    113.82387755916106,
+                                    28.959543114029003
+                                ],
+                                "zoom": 6.8393984968236685,
+                                "rotation": 0,
+                                "resolution": 1367.003563521881,
+                                "boundary": [
+                                    [
+                                        100.56147545793944,
+                                        35.182055905069376
+                                    ],
+                                    [
+                                        127.08627966038269,
+                                        22.339589592981397
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "OlSimpleXYZLayer(天地图影像)",
+                            "sceneObj": {
+                                "type": "OlSimpleXYZLayer",
+                                "name": "OlSimpleXYZLayer(天地图影像)",
+                                "url": "https://t4.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb"
+                            }
+                        },
+                        {
+                            "name": "OlXYZLayer(天地图)",
+                            "sceneObj": {
+                                "id": "9a2fcbc5-04f1-4d37-a3f9-f3543a79cb7c",
+                                "type": "OlXYZLayer",
+                                "name": "OlXYZLayer(天地图)",
+                                "show": false,
+                                "crossOrigin": "",
+                                "url": "http://t4.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=abd187e1140259634e44eea628b65e00"
+                            }
+                        },
+                        {
+                            "name": "OlWMTSLayer(GH)",
+                            "sceneObj": {
+                                "id": "abca0330-0751-41f8-903c-0f108e9aad54",
+                                "type": "OlWMTSLayer",
+                                "name": "OlWMTSLayer(GH)",
+                                "show": false,
+                                "url": "http://183.223.249.238:9877/services/wgs84/startlvlone/wmts",
+                                "crossOrigin": "",
+                                "layer": "geearth",
+                                "matrixSet": "ge"
+                            }
+                        },
+                        {
+                            "name": "OlWMTSLayer(天地图)",
+                            "sceneObj": {
+                                "id": "88102b53-5775-45eb-b3da-61d91c08b6ae",
+                                "type": "OlWMTSLayer",
+                                "name": "OlWMTSLayer(天地图)",
+                                "show": false,
+                                "url": "http://t0.tianditu.com/vec_c/wmts?tk=abd187e1140259634e44eea628b65e00",
+                                "crossOrigin": "",
+                                "layer": "vec",
+                                "format": "tiles",
+                                "matrixSet": "c"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,119 @@
+{
+    "asset": {
+        "version": "0.1.0",
+        "createdTime": "2023-01-05T00:58:11.604Z",
+        "modifiedTime": "2023-02-27T01:01:29.916Z",
+        "name": "OpenLayers&Cesium基础场景"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "未命名条目(0)",
+            "children": [
+                {
+                    "name": "OepnLayers基础场景",
+                    "children": [
+                        {
+                            "name": "OpenLayers视口(d07c)",
+                            "sceneObj": {
+                                "id": "a535c151-941b-4f43-9f70-a6dd4e87d07c",
+                                "type": "OpenLayersViewer",
+                                "actived": false,
+                                "zIndex": "1",
+                                "originRatioAndOffset": [
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "sizeRatioAndOffset": [
+                                    0.5,
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "name": "OpenLayers视口(d07c)",
+                                "position": [
+                                    106.5483492555556,
+                                    29.741979268338227
+                                ],
+                                "zoom": 4.472329504263471,
+                                "rotation": 0,
+                                "resolution": 7052.261622811888,
+                                "boundary": [
+                                    [
+                                        86.68764020095475,
+                                        53.225218942058746
+                                    ],
+                                    [
+                                        126.40905831015647,
+                                        -0.7537837526045195
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "OlSimpleXYZLayer(天地图影像)",
+                            "sceneObj": {
+                                "type": "OlSimpleXYZLayer",
+                                "name": "OlSimpleXYZLayer(天地图影像)",
+                                "url": "https://t4.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Cesium基础场景",
+                    "children": [
+                        {
+                            "name": "Cesium视口(441d)",
+                            "sceneObj": {
+                                "id": "eea2cbbc-300d-482a-b5b1-4822f449441d",
+                                "type": "CzmViewer",
+                                "actived": false,
+                                "zIndex": "1",
+                                "originRatioAndOffset": [
+                                    0.5,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "sizeRatioAndOffset": [
+                                    0.5,
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "name": "Cesium视口(441d)",
+                                "ionAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5YTJlYmI0NC1kM2IwLTRmZDktOGI2Yy01MDFiZWRkYzQ4NzEiLCJpZCI6MjU5LCJpYXQiOjE2NTE0OTY5NDl9.GEWUJWU1Yuf7kVTVshQ1jb2ix9f-O-A74MuSsjq7Kbg",
+                                "globeDepthTestAgainstTerrain": false,
+                                "globeEnableLighting": false,
+                                "sunShow": true,
+                                "sunGlowFactor": 1,
+                                "moonShow": true,
+                                "moonTextureUrl": "",
+                                "moonOnlySunLighting": true,
+                                "skyBoxShow": true,
+                                "fogEnabled": true,
+                                "fogDensity": 0.0002,
+                                "fogScreenSpaceErrorFactor": 2,
+                                "fogMinimumBrightness": 0.03
+                            }
+                        },
+                        {
+                            "name": "默认离线影像",
+                            "sceneObj": {
+                                "id": "4b05b9f3-62eb-4654-a542-5b9363d12277",
+                                "type": "CzmImagery",
+                                "imageryProvider": {
+                                    "type": "TileMapServiceImageryProvider",
+                                    "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+                                },
+                                "name": "默认离线影像"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

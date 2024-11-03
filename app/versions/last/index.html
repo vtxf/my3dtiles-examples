@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="./my3dtiles.png">
+  <title>My3dtiles</title>
+
+  <script src="./js/m3t/load-common.js"></script>
+
+  <script src="js/m3tEditorUi.js"></script>
+  <link rel="stylesheet" href="css/m3tEditorUi.css">
+
+  <style>
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    ::selection {
+      color: #ffffff;
+      background: #01ab36;
+    }
+
+    #m3tapp {
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #2c3e50;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- m3tapp.js需要在body之后引入 -->
+  <script src="m3tapp.js"></script>
+  <div id="m3tapp"></div>
+  <script>
+    // m3tEditorUi.js加载后，g_initM3tEditorUi必须有值
+    if (window.g_initM3tEditorUi) {
+      window.g_initM3tEditorUi(app);
+    } else {
+      console.warn(`window.g_initM3tEditorUi is undefined!`);
+    }
+  </script>
+</body>
+
+</html>

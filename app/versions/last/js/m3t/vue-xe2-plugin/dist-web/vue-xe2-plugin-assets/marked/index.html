@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例面板</title>
+    <script src="./js/prism.js"></script>
+    <script src="./js/marked.js"></script>
+    <link href="./css/app.css" rel="stylesheet">
+</head>
+<style>
+    html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        overflow: hidden;
+    }
+
+    pre::-webkit-scrollbar,
+    div::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+    }
+
+    pre::-webkit-scrollbar-track,
+    div::-webkit-scrollbar-track {
+        background: #00212b;
+        opacity: 0.5;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    pre::-webkit-scrollbar-thumb,
+    div::-webkit-scrollbar-thumb {
+        background: #3f4347;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+</style>
+
+<body>
+    <div id="content" style="width: 100%;height:100%;overflow: auto; padding: 0 15px;">
+    </div>
+    <script>
+        function setHtml(str) {
+            const content = document.getElementById('content')
+
+            const renderer = new marked.Renderer();
+            renderer.link = function(href, title, text) {
+                return `<a href="${href}" onclick="window.open('${href}'); event.preventDefault();" target="_blank">${text}</a>`;
+            };
+
+            content.innerHTML = marked(str, { renderer: renderer });
+            Prism.highlightAll();
+        }
+        addEventListener('message', function (messageEvent) {
+            const data = messageEvent.data;
+            if (!data || !data.type || !data.id) {
+                return;
+            }
+            if (data.type === 'setSample') {
+                if (typeof data.value !== 'string') {
+                    console.warn(`typeof data.value !=='string'`);
+                    return;
+                }
+                try {
+                    setHtml(data.value)
+                    parent.postMessage({ type: 'setSampleReturn', id: data.id, status: 'ok' }, '*');
+                } catch (error) {
+                    parent.postMessage({ type: 'setSampleReturn', id: data.id, status: 'error' }, '*');
+                }
+            }
+        }, false);
+    </script>
+</body>
+
+</html>

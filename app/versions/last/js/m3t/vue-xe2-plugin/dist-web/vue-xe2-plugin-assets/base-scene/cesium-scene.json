@@ -1,0 +1,45 @@
+{
+    "asset": {
+        "version": "0.1.0",
+        "createdTime": "2022-06-17T05:54:41.744Z",
+        "modifiedTime": "2023-08-31T05:47:02.048Z",
+        "name": "基础场景"
+    },
+    "sceneTree": {
+        "root": {
+            "children": [
+                {
+                    "name": "Cesium基础场景",
+                    "children": [
+                        {
+                            "name": "czm视口",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "0e5a5eb7-8c3c-44f7-b5bd-e53821c7d315",
+                                "ref": "v",
+                                "type": "CzmViewer",
+                                "actived": true,
+                                "name": "czm视口"
+                            },
+                            "children": []
+                        },
+                        {
+                            "name": "谷歌影像",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "e211f45f-bed9-4898-8ae4-8f4ba7cba447",
+                                "type": "CzmImagery",
+                                "imageryProvider": {
+                                    "type": "UrlTemplateImageryProvider",
+                                    "url": "https://gac-geo.googlecnapps.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
+                                },
+                                "name": "谷歌影像"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

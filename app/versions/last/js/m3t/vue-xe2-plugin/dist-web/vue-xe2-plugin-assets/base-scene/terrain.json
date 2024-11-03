@@ -1,0 +1,51 @@
+{
+    "data": [
+        {
+            "thumbnail": "/imagery/001.jpg",
+            "sceneObjectJson": {
+                "type": "CzmTerrain",
+                "name": "Cesium官方地形",
+                "provider": {
+                    "type": "CesiumTerrainProvider",
+                    "url": "ion://1",
+                    "requestVertexNormals": true
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/yun.png",
+            "sceneObjectJson": {
+                "type": "CzmTerrain",
+                "name": "星图地球Terrain-3D",
+                "provider": {
+                    "type": "CesiumTerrainProvider",
+                    "url": "//tiles1.geovisearth.com/base/v1/terrain?token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/yun.png",
+            "sceneObjectJson": {
+                "type": "CzmTerrain",
+                "provider": {
+                    "type": "CesiumTerrainProvider",
+                    "url": "http://data.mars3d.cn/terrain",
+                    "requestWaterMask": true
+                },
+                "name": "mars3d地形"
+            }
+        },
+        {
+            "thumbnail": "/imagery/yun.png",
+            "sceneObjectJson": {
+                "type": "CzmTerrain",
+                "provider": {
+                    "type": "CesiumTerrainProvider",
+                    "url": "https://terrain.giiiis.com/terrain",
+                    "requestWaterMask": true
+                },
+                "name": "giiiis地形"
+            }
+        }
+    ]
+}

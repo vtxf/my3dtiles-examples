@@ -1,0 +1,65 @@
+{
+    "asset": {
+        "version": "0.1.0",
+        "createdTime": "2022-06-17T05:54:41.744Z",
+        "modifiedTime": "2023-08-31T05:44:23.112Z",
+        "name": "基础场景"
+    },
+    "sceneTree": {
+        "root": {
+            "children": [
+                {
+                    "name": "UE基础场景",
+                    "children": [
+                        {
+                            "name": "ue视口",
+                            "sceneObj": {
+                                "id": "4cbb525b-0a8e-4726-ac49-d6d079f9752e",
+                                "type": "UeViewer",
+                                "actived": false,
+                                "name": "ue视口",
+                                "uri": "http://localhost:8086/",
+                                "signallingServerId": "simple"
+                            },
+                            "children": []
+                        },
+                        {
+                            "name": "高德影像",
+                            "sceneObj": {
+                                "id": "9812a65f-0de0-4f7b-b234-809c0c2fb8ef",
+                                "type": "ESImageryLayer",
+                                "url": "https://webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+                                "zIndex": 1,
+                                "name": "高德影像",
+                                "show": true,
+                                "allowPicking": true
+                            },
+                            "children": []
+                        },
+                        {
+                            "name": "arcgis在线影像",
+                            "show": false,
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "ae103185-08c7-4ed0-b6d4-15ad77bbbf66",
+                                "type": "ESImageryLayer",
+                                "url": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                                "rectangle": [
+                                    -180,
+                                    -90,
+                                    180,
+                                    90
+                                ],
+                                "zIndex": 0,
+                                "name": "arcgis在线影像",
+                                "show": false,
+                                "allowPicking": true
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

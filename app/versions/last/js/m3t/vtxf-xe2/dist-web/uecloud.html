@@ -1,0 +1,167 @@
+<head>
+    <meta charset="utf-8" />
+    <title>UE云渲染通信Demo</title>
+    <script src="./ue-cloud.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        html,
+        body {
+            padding: none !important;
+            margin: none !important;
+            width: 100%;
+            height: 100%;
+            /* overflow: hidden; */
+            /* position: absolute; */
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        #viewer {
+            position: absolute;
+            z-index: 1;
+            top: 50px;
+            left: 0px;
+            width: 1000px;
+            height: 900px;
+        }
+
+
+        #mark {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 2000;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        #loading {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% -50%);
+            width: 50px;
+            perspective: 200px;
+        }
+
+        #loading:before,
+        #loading:after {
+            position: absolute;
+
+            width: 20px;
+            height: 20px;
+            content: "";
+            animation: jumping 0.5s infinite alternate;
+            background: rgba(0, 0, 0, 0);
+        }
+
+        #loading:before {
+            left: 0;
+        }
+
+        #loading:after {
+            right: 0;
+            animation-delay: 0.15s;
+        }
+
+        @keyframes jumping {
+            0% {
+                transform: scale(1) translateY(0px) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+
+            100% {
+                transform: scale(1.2) translateY(-25px) rotateX(45deg);
+                background: #000;
+                box-shadow: 0 25px 40px #000;
+            }
+        }
+    </style>
+
+
+    <script>
+        /**
+         * UE云渲染通信流程：
+         *  （1）通过请求接口获取通信UE的websocket连接
+         *  （2）new一个UEViewwer类来创建像素流Video
+         *  （3）网页send发送消息给UE端
+         *  （4）网页js监听接收UE消息
+         * 
+        */
+        var esUEViewer
+        async function startCloud() {
+            if (esUEViewer) {
+                esUEViewer.destroy()
+                esUEViewer = undefined
+            }
+            // 获取请求的参数宽度、高度、云渲染服务的uri和UE实例的id
+            const width = document.getElementById("viewer").clientWidth
+            const height = document.getElementById("viewer").clientHeight
+            const uri = document.getElementById("uri").value
+            const signallingServerId = document.getElementById("serverid").value
+            try {
+                document.getElementById("mark").style.display = 'block'
+                // (1)通过请求接口获取通信UE的websocket连接
+                const res = await fetch(`${uri}instance/${signallingServerId}/${width}/${height}`, { method: "GET" })
+                const resjson = await res.json()
+                document.getElementById("mark").style.display = 'none'
+                if (resjson.status !== "ok") {
+                    alert(`信令服务器请求失败 ${JSON.stringify(resjson)}`)
+                    return
+                }
+
+                console.log(`ue instance 请求成功！返回结果：`);
+                console.log(JSON.stringify(resjson, undefined, '    '));
+
+                // （2）new一个UEViewwer类来创建像素流Video
+                esUEViewer = new ESUEViewer("viewer", {
+                    url: resjson.server,
+                });
+
+            } catch (error) {
+                document.getElementById("mark").style.display = 'none'
+                alert(`信令服务器请求失败 ${JSON.stringify(error)}`)
+
+            }
+            // （4）网页js监听接收UE消息
+            esUEViewer.addEventListener('ueevent', (event) => {
+                console.log("获取UEEvent消息:", event.detail)
+            })
+        }
+
+        // （3）网页send发送消息给UE端
+        function sendMsg() {
+            let json = { "name": "测试1" }
+            esUEViewer.emitUIInteraction(json, () => {
+                console.log("发送完成")
+            })
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <label>云渲染服务地址uri</label>
+        <input id="uri" type="text" value="http://localhost:8086/">
+        <label>云渲染实例Id</label>
+        <input id="serverid" type="text" value="uedemo">
+        <button onclick="startCloud()">启动连接UE实例</button>
+        <button onclick="sendMsg()">点击发送json</button>
+        <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+    </div>
+    <div id="mark">
+        <div id="loading"></div>
+    </div>
+    <div id="viewer" class="viewer">
+    </div>
+</body>
+<script>
+</script>
+
+</html>

@@ -1,0 +1,100 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.6.0",
+        "createdTime": "2024-04-20T03:46:35.312Z",
+        "modifiedTime": "2024-04-20T03:46:45.576Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "children": []
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "4618aef3-51a3-4dc3-ad92-8cc22c66b848",
+            "type": "CzmViewer",
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1710748559577
+        },
+        "offlineImagery": {
+            "id": "47900dea-b60f-45bd-9dac-f9985baa4740",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "googleImagery": {
+            "id": "ecc39099-a161-443f-be48-1d5933498249",
+            "type": "CzmImagery",
+            "show": false,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://gac-geo.googlecnapps.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
+            },
+            "zIndex": -1,
+            "name": "谷歌影像"
+        },
+        "tdtImagery": {
+            "id": "cc46ee1b-c01e-469d-a777-2c70daf10926",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "天地图影像"
+        },
+        "czmTerrain": {
+            "id": "b6c72cfc-854e-4da0-8913-8f65b3a1221b",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "lastView": {
+            "id": "ad1e29a9-c8b1-447c-9c71-f646ff589362",
+            "type": "View",
+            "position": [
+                105,
+                30.013886488328524,
+                10921493.167230599
+            ],
+            "rotation": [
+                360,
+                -89.92527383684947,
+                0
+            ],
+            "default": true,
+            "name": "View_9362"
+        },
+        "initOptions": {
+            "id": "2f5a5096-95a4-4b8d-8a96-c4e70d19fd6c",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
