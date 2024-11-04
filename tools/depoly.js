@@ -1,53 +1,62 @@
 const { exec } = require('child_process');
+const path = require('path');
 
-// 可配置的项目目录路径
-// let projectDir = 'C:\\Users\\vtxf\\Documents\\vtxf\\2024\\projects\\vtxf\\m3t-examples-202411';
-let projectDir = '..';
-// 可配置的远程仓库名
-let remoteRepo = 'jinfei';
-// 可配置的远程分支名
-let remoteBranch = 'master';
+// 使用当前脚本所在目录作为工作目录
+const projectDir = __dirname;
+
+// 定义要执行的命令序列
+const commands = [
+    'git clean -df',
+    'git fetch',
+    'git reset master --hard'
+];
 
 // 定义执行git命令的函数
-const executeGitCommand = (command, callback) => {
+const executeGitCommand = (command, nextCommand) => {
     console.log(`即将执行命令: ${command}`);
     const startTime = Date.now();
+    
     exec(command, { cwd: projectDir }, (error, stdout, stderr) => {
         const endTime = Date.now();
         const executionTime = endTime - startTime;
 
-        if (error) {
-            console.error(`执行 ${command} 时出错: ${error.message}`);
-            console.error(`命令执行失败，耗时: ${executionTime} 毫秒`);
-            return;
+        if (error || stderr) {
+            console.log(`命令 ${command} 执行完成，但有错误信息，耗时: ${executionTime} 毫秒`);
+            console.log(`输出: ${stdout}`);
+            console.log(`错误: ${error?.message || stderr}`);
+        } else {
+            console.log(`命令 ${command} 执行成功，耗时: ${executionTime} 毫秒`);
+            console.log(`输出: ${stdout}`);
         }
-        if (stderr) {
-            console.error(`执行 ${command} 时的错误信息: ${stderr}`);
-            console.error(`命令执行出现错误信息，耗时: ${executionTime} 毫秒`);
-            return;
-        }
-        console.log(`执行 ${command} 的结果: ${stdout}`);
-        console.log(`命令执行成功，耗时: ${executionTime} 毫秒`);
-        if (callback) {
-            callback();
+
+        // 无论是否有错误都继续执行下一个命令
+        if (nextCommand) {
+            nextCommand();
         }
     });
 };
 
 // 定义更新代码的函数
 const updateCode = () => {
-    // 先执行git fetch
-    executeGitCommand(`git fetch ${remoteRepo} ${remoteBranch}`, () => {
-        // 再执行git reset
-        executeGitCommand(`git reset --hard ${remoteRepo}/${remoteBranch}`, () => {
-            console.log('本地代码已更新为远程仓库最新代码。');
-        });
-    });
+    let currentIndex = 0;
+
+    const executeNext = () => {
+        if (currentIndex < commands.length) {
+            executeGitCommand(commands[currentIndex], () => {
+                currentIndex++;
+                executeNext();
+            });
+        } else {
+            console.log('所有命令执行完成');
+        }
+    };
+
+    executeNext();
 };
 
-console.log(`执行一次更新代码操作。`)
+console.log('执行一次更新代码操作。');
 updateCode();
 
-// 每隔5分钟（300000毫秒）执行一次更新代码操作
-console.log(`启动定时器每5分钟执行一次更新代码操作。`);
-setInterval(updateCode, 3000);
+// 每隔5分钟执行一次更新代码操作
+console.log('启动定时器每5分钟执行一次更新代码操作。');
+setInterval(updateCode, 300000); // 改回5分钟 (300000毫秒)
