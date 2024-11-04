@@ -182,6 +182,7 @@
             })();
 
             (() => {
+                显隐代码按钮.highlighted = false;
                 const update = () => {
                     Json代码.show = 显隐代码按钮.highlighted;
                     三维视口.show = !显隐代码按钮.highlighted;
@@ -197,7 +198,7 @@
                     "menuStrings": []
                 });
 
-                预览图片.tooltip = '';
+                myCursorTooltip.tooltip = ' ';
                 myCursorTooltip.tooltipImageUri = '';
 
                 myCursorTooltip.enabled = true;
