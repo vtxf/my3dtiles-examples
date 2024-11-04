@@ -36,7 +36,7 @@ const executeGitCommand = (command, nextCommand) => {
     });
 };
 
-const intervalTime = 3000; // 间隔时间，单位为毫秒
+const intervalTime = 30000; // 间隔时间，单位为毫秒
 
 // 定义更新代码的函数
 const updateCode = () => {
