@@ -7,8 +7,8 @@ const projectDir = __dirname;
 // 定义要执行的命令序列
 const commands = [
     'git clean -df',
-    'git fetch',
-    'git reset master --hard'
+    'git fetch origin master',
+    'git reset origin/master --hard'
 ];
 
 // 定义执行git命令的函数
