@@ -179,6 +179,14 @@
                 ContentLeftTree.lastSelectedItemChanged.disposableOn(update);
             })();
 
+            (() => {
+                const update = () => {
+                    Json代码.show = 显隐代码按钮.highlighted;
+                    三维视口.show = !显隐代码按钮.highlighted;
+                };
+                update();
+                显隐代码按钮.highlightedChanged.disposableOn(update);
+            })();
         }
         setTimeout(loadedFunc, 500);
 
