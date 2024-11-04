@@ -78,7 +78,6 @@
             }
         }
 
-
         // g_app.container = 'm3tapp';
         g_app.loadDataFromUrlOrFilePath('./m3t示例集合202411.m3tjson');
 
@@ -91,6 +90,54 @@
             示例框架.layoutType = 'FullScreen';
 
             await creatorUiFunc();
+
+            (() => {
+                const { createProcessingFromAsyncFunc } = XE2['xe2-utils'];
+                const { fetchJson } = XE2['xe2-base-utils'];
+                const processing = createProcessingFromAsyncFunc(async (cancelsManager) => {
+                    let jsonContent = {};
+                    do {
+                        const { ContentLeftTree } = XE2.g.refs;
+
+                        const { lastSelectedItem } = ContentLeftTree;
+                        if (!lastSelectedItem) break;
+                        const { extras } = lastSelectedItem;
+                        if (!extras) break;
+
+                        const { content } = extras;
+                        if (!content) break;
+
+                        const c = content;
+                        if (c.type === 'm3tJson') {
+                            jsonContent = c.m3tJson;
+                        } else if (c.type === 'm3tJsonUri') {
+                            jsonContent = await cancelsManager.promise(fetchJson(c.m3tJsonUri));
+                        } else if (c.type === 'm3toJson') {
+                            jsonContent = c.m3toJson;
+                        } else if (c.type === 'm3toJsonUri') {
+                            jsonContent = await cancelsManager.promise(fetchJson(c.m3toJsonUri));
+                        } else if (c.type === 'sceneObjJson') {
+                            jsonContent = c.sceneObjJson;
+                        } else if (c.type === 'sceneObjJsonUri') {
+                            jsonContent = await cancelsManager.promise(fetchJson(c.sceneObjJsonUri));
+                        } else {
+                            jsonContent = {};
+                        }
+                    } while (false);
+                    const { Json代码 } = XE2.g.refs;
+                    Json代码.content = jsonContent;
+                    return;
+                });
+
+                const update = () => {
+                    processing.restart();
+                };
+                update();
+                // this.dispose(this.树结构.lastSelectedItemChanged.disposableOn(update));
+                const { ContentLeftTree } = XE2.g.refs;
+                ContentLeftTree.lastSelectedItemChanged.disposableOn(update);
+            })();
+
         }
         setTimeout(loadedFunc, 500);
 
