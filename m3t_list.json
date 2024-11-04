@@ -6,6 +6,21 @@
             "collapse": true,
             "children": [
                 {
+                    "name": "UI示例",
+                    "path": "UI示例",
+                    "collapse": true,
+                    "children": [
+                        {
+                            "name": "常用对象创建工具栏",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.jpg"
+                        }
+                    ]
+                },
+                {
                     "name": "特效示例",
                     "path": "特效示例",
                     "collapse": true,
