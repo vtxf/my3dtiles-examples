@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.18",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-04T13:53:47.078Z",
+        "modifiedTime": "2024-11-04T23:28:22.233Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -86,6 +86,7 @@
                             "children": [
                                 {
                                     "name": "Content-Left",
+                                    "collapsed": true,
                                     "sceneObj": {
                                         "id": "99a8fcb2-50b4-4de9-a2d5-fd5188a5ae63",
                                         "type": "MyContainer",
@@ -164,7 +165,7 @@
                                         "type": "MyContainer",
                                         "name": "Content-Right",
                                         "layoutType": "FullScreen",
-                                        "cssText": "flex: 1;",
+                                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\n",
                                         "subIds": [
                                             "d6c188d1-350d-4a4e-8ab0-9cd24788845f",
                                             "b4393dd5-1508-4d6a-b280-283758fb3de3"
@@ -173,12 +174,13 @@
                                     "children": [
                                         {
                                             "name": "Content-Right-Top",
+                                            "collapsed": true,
                                             "sceneObj": {
                                                 "id": "d6c188d1-350d-4a4e-8ab0-9cd24788845f",
                                                 "type": "MyContainer",
                                                 "name": "Content-Right-Top",
                                                 "height": 24,
-                                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nbackground: #222;\n",
+                                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nbackground: #222;\nwidth: 100%;\n",
                                                 "subIds": [
                                                     "a00cab33-148d-4cd5-a0f5-f500c57c8be2",
                                                     "2373f295-fe3d-4003-a031-3f7fb0fc5a59"
@@ -324,7 +326,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "92b3015a-ed92-4d7d-860d-12748cd7d517",
+            "id": "f1323211-fa79-43e7-9af7-69d7925ffd68",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -334,7 +336,7 @@
             "clockCurrentTime": 1730698401758
         },
         "offlineImagery": {
-            "id": "3acf1dce-72c8-42a4-aa63-5c69e6a93dbb",
+            "id": "644a241b-f33c-432b-a1de-4653b9c02d4e",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -344,7 +346,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "ce6f445f-a16c-435d-86cd-1a8b989f62ee",
+            "id": "093acb56-4633-4057-9bd5-78bc2db2145f",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -366,7 +368,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "3b24143c-4c2c-4c08-8751-7b6f068a72bd",
+            "id": "ae0e07d0-6546-4b4a-a7bc-4e8047f69e10",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -377,17 +379,17 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "a7474038-4c62-48b6-8243-6d7b46afead8",
+            "id": "590fe560-454c-4080-9ace-5cd0fcdff470",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "06a80ef4-3d08-4d82-aa3c-9a155b14724f",
+            "id": "b02b4988-ee55-4956-b646-d4c6ec2fac6f",
             "type": "View",
             "position": [
                 122.07370262044508,
-                48.89685734551336,
-                4057014.5361161614
+                48.89685734551341,
+                4057014.5361136817
             ],
             "rotation": [
                 348.8240003376302,
@@ -397,7 +399,7 @@
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "32602265-d11d-4a88-9d09-c71b13c7a8b0",
+            "id": "58c5f76d-583a-46ac-a8b9-3d70b5425539",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
