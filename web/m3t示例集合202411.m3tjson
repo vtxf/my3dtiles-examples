@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.18",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-04T23:28:22.233Z",
+        "modifiedTime": "2024-11-04T23:44:27.324Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -29,12 +29,11 @@
                     "children": [
                         {
                             "name": "Header",
-                            "collapsed": true,
                             "sceneObj": {
                                 "id": "62e806ac-db80-4302-9120-4877067cccf5",
                                 "type": "MyContainer",
                                 "name": "Header",
-                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nbackground-color: #333;\nflex: 0 0 40px;",
+                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nbackground-color: #333;\nflex: 0 0 40px;\noverflow: hidden;",
                                 "subIds": [
                                     "24d18169-5c0b-4b1c-8385-130aa3fa951a",
                                     "8f3acd17-d0cd-48e4-830b-416f1b5b96cd"
@@ -67,6 +66,7 @@
                         },
                         {
                             "name": "Content",
+                            "collapsed": true,
                             "sceneObj": {
                                 "id": "0732c2de-0f29-4139-8b6b-68d870ae64f4",
                                 "type": "MyContainer",
@@ -77,7 +77,7 @@
                                     0,
                                     1
                                 ],
-                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nflex: 1 0 0;\n",
+                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nflex: 1 0 0;\noverflow: hidden;\n",
                                 "subIds": [
                                     "99a8fcb2-50b4-4de9-a2d5-fd5188a5ae63",
                                     "aa97b2ec-429f-484b-81be-1a653054378f"
@@ -293,12 +293,11 @@
                         },
                         {
                             "name": "Footer",
-                            "collapsed": true,
                             "sceneObj": {
                                 "id": "a4a791d7-2c15-40d3-81c6-3c7f4cef3878",
                                 "type": "MyContainer",
                                 "name": "Footer",
-                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nbackground: #333;\nflex: 0 0 24px;",
+                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nbackground: #333;\nflex: 0 0 24px;\noverflow: hidden;",
                                 "subIds": [
                                     "391939d7-d828-443b-8265-54e075a63495"
                                 ]
@@ -326,7 +325,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "f1323211-fa79-43e7-9af7-69d7925ffd68",
+            "id": "5fa3a329-260a-4def-b3fd-41858dd8b441",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -336,7 +335,7 @@
             "clockCurrentTime": 1730698401758
         },
         "offlineImagery": {
-            "id": "644a241b-f33c-432b-a1de-4653b9c02d4e",
+            "id": "76fed063-1366-4378-ad6d-b9353b23db83",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -346,7 +345,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "093acb56-4633-4057-9bd5-78bc2db2145f",
+            "id": "534ec35c-6183-4753-b8f7-2fabc5807ed2",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -368,7 +367,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "ae0e07d0-6546-4b4a-a7bc-4e8047f69e10",
+            "id": "8c9ece3d-e6ff-4ec7-a1b1-4ceff0908548",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -379,17 +378,17 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "590fe560-454c-4080-9ace-5cd0fcdff470",
+            "id": "b0acd013-11ab-4586-95e3-bad1f8969a8d",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "b02b4988-ee55-4956-b646-d4c6ec2fac6f",
+            "id": "7abac5fb-b09f-42e6-89c8-d8fea041ad62",
             "type": "View",
             "position": [
                 122.07370262044508,
-                48.89685734551341,
-                4057014.5361136817
+                48.896857345513475,
+                4057014.5361112016
             ],
             "rotation": [
                 348.8240003376302,
@@ -399,7 +398,7 @@
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "58c5f76d-583a-46ac-a8b9-3d70b5425539",
+            "id": "c8117a4a-2fc6-4058-86d9-0e9bb906e48a",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
