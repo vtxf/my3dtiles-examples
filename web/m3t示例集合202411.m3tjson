@@ -1,0 +1,402 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.20",
+        "createdTime": "2024-11-04T05:33:21.751Z",
+        "modifiedTime": "2024-11-04T09:41:40.782Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "示例框架",
+                    "sceneObj": {
+                        "id": "34e49e29-7785-44ee-a177-5a0ddcc02dff",
+                        "type": "MyContainer",
+                        "name": "示例框架",
+                        "ref": "示例框架",
+                        "width": 800,
+                        "height": 600,
+                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\n",
+                        "subIds": [
+                            "62e806ac-db80-4302-9120-4877067cccf5",
+                            "0732c2de-0f29-4139-8b6b-68d870ae64f4",
+                            "a4a791d7-2c15-40d3-81c6-3c7f4cef3878"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "Header",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "62e806ac-db80-4302-9120-4877067cccf5",
+                                "type": "MyContainer",
+                                "name": "Header",
+                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nbackground-color: #333;\nflex: 0 0 40px;",
+                                "subIds": [
+                                    "24d18169-5c0b-4b1c-8385-130aa3fa951a",
+                                    "8f3acd17-d0cd-48e4-830b-416f1b5b96cd"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "MyImage",
+                                    "sceneObj": {
+                                        "id": "24d18169-5c0b-4b1c-8385-130aa3fa951a",
+                                        "type": "MyImage",
+                                        "name": "MyImage",
+                                        "width": 24,
+                                        "height": 24,
+                                        "cssText": "padding: 0 10px;",
+                                        "imageUri": "${my3dtiles-assets-script-dir}/assets/images/my3dtiles.png"
+                                    }
+                                },
+                                {
+                                    "name": "MyLabel",
+                                    "sceneObj": {
+                                        "id": "8f3acd17-d0cd-48e4-830b-416f1b5b96cd",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel",
+                                        "cssText": "color: white; ",
+                                        "text": "My3dtiles(m3t)示例集合"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Content",
+                            "sceneObj": {
+                                "id": "0732c2de-0f29-4139-8b6b-68d870ae64f4",
+                                "type": "MyContainer",
+                                "name": "Content",
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nflex: 1 0 0;\n",
+                                "subIds": [
+                                    "99a8fcb2-50b4-4de9-a2d5-fd5188a5ae63",
+                                    "aa97b2ec-429f-484b-81be-1a653054378f"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "Content-Left",
+                                    "sceneObj": {
+                                        "id": "99a8fcb2-50b4-4de9-a2d5-fd5188a5ae63",
+                                        "type": "MyContainer",
+                                        "name": "Content-Left",
+                                        "width": 200,
+                                        "cssText": "height: 100%;\nbackground: #222;",
+                                        "subIds": [
+                                            "f21857d0-e33f-4de5-b9bd-9081ef9494b3"
+                                        ]
+                                    },
+                                    "children": [
+                                        {
+                                            "name": "ContentLeftTree",
+                                            "sceneObj": {
+                                                "id": "f21857d0-e33f-4de5-b9bd-9081ef9494b3",
+                                                "type": "MyTreeUi",
+                                                "name": "ContentLeftTree",
+                                                "ref": "ContentLeftTree",
+                                                "layoutType": "FullScreen",
+                                                "width": 0,
+                                                "height": 0,
+                                                "items": [
+                                                    {
+                                                        "name": "影像加载",
+                                                        "collapsed": true,
+                                                        "children": [
+                                                            {
+                                                                "name": "默认离线影像",
+                                                                "content": {
+                                                                    "type": "sceneObjJson",
+                                                                    "sceneObjJson": {
+                                                                        "type": "CzmImagery",
+                                                                        "name": "默认离线影像",
+                                                                        "imageryProvider": {
+                                                                            "type": "TileMapServiceImageryProvider",
+                                                                            "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "name": "天地图影像",
+                                                                "content": {
+                                                                    "type": "sceneObjJson",
+                                                                    "sceneObjJson": {
+                                                                        "type": "CzmImagery",
+                                                                        "name": "天地图影像",
+                                                                        "imageryProvider": {
+                                                                            "type": "UrlTemplateImageryProvider",
+                                                                            "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                                                                            "subdomains": [
+                                                                                "t0",
+                                                                                "t1",
+                                                                                "t2",
+                                                                                "t3",
+                                                                                "t4",
+                                                                                "t5",
+                                                                                "t6",
+                                                                                "t7"
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Content-Right",
+                                    "sceneObj": {
+                                        "id": "aa97b2ec-429f-484b-81be-1a653054378f",
+                                        "type": "MyContainer",
+                                        "name": "Content-Right",
+                                        "layoutType": "FullScreen",
+                                        "cssText": "flex: 1;",
+                                        "subIds": [
+                                            "d6c188d1-350d-4a4e-8ab0-9cd24788845f",
+                                            "b4393dd5-1508-4d6a-b280-283758fb3de3"
+                                        ]
+                                    },
+                                    "children": [
+                                        {
+                                            "name": "Content-Right-Top",
+                                            "sceneObj": {
+                                                "id": "d6c188d1-350d-4a4e-8ab0-9cd24788845f",
+                                                "type": "MyContainer",
+                                                "name": "Content-Right-Top",
+                                                "height": 24,
+                                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nbackground: #222;\n",
+                                                "subIds": [
+                                                    "a00cab33-148d-4cd5-a0f5-f500c57c8be2",
+                                                    "2373f295-fe3d-4003-a031-3f7fb0fc5a59"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "显隐代码按钮",
+                                                    "sceneObj": {
+                                                        "id": "a00cab33-148d-4cd5-a0f5-f500c57c8be2",
+                                                        "type": "CircleButton",
+                                                        "name": "显隐代码按钮",
+                                                        "ref": "显隐代码按钮",
+                                                        "highlighted": true,
+                                                        "highlightOnClick": true,
+                                                        "clickFuncStr": "",
+                                                        "normalImageUri": "<svg t=\"1715824848417\" class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"2574\"><path d=\"M815.104 69.632q27.648 25.6 44.032 42.496t25.088 28.672 10.752 19.968 2.048 14.336l0 16.384-151.552 0q-10.24 0-17.92-7.68t-12.8-17.92-7.68-20.992-2.56-16.896l0-126.976 3.072 0q8.192 0 16.896 2.56t19.968 9.728 28.16 20.48 42.496 35.84zM640 129.024q0 20.48 6.144 42.496t19.456 40.96 33.792 31.232 48.128 12.288l149.504 0 0 577.536q0 29.696-11.776 53.248t-31.232 39.936-43.008 25.6-46.08 9.216l-503.808 0q-19.456 0-42.496-11.264t-43.008-29.696-33.28-41.984-13.312-49.152l0-696.32q0-21.504 9.728-44.544t26.624-42.496 38.4-32.256 45.056-12.8l391.168 0 0 128zM704.512 768q26.624 0 45.056-18.944t18.432-45.568-18.432-45.056-45.056-18.432l-384 0q-26.624 0-45.056 18.432t-18.432 45.056 18.432 45.568 45.056 18.944l384 0zM768 448.512q0-26.624-18.432-45.568t-45.056-18.944l-384 0q-26.624 0-45.056 18.944t-18.432 45.568 18.432 45.056 45.056 18.432l384 0q26.624 0 45.056-18.432t18.432-45.056z\" p-id=\"2575\" fill=\"#ffffff\"></path></svg>",
+                                                        "hoveredImageSize": 0.65,
+                                                        "highlightedImageUri": "<svg t=\"1715824848417\" class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"2574\"><path d=\"M815.104 69.632q27.648 25.6 44.032 42.496t25.088 28.672 10.752 19.968 2.048 14.336l0 16.384-151.552 0q-10.24 0-17.92-7.68t-12.8-17.92-7.68-20.992-2.56-16.896l0-126.976 3.072 0q8.192 0 16.896 2.56t19.968 9.728 28.16 20.48 42.496 35.84zM640 129.024q0 20.48 6.144 42.496t19.456 40.96 33.792 31.232 48.128 12.288l149.504 0 0 577.536q0 29.696-11.776 53.248t-31.232 39.936-43.008 25.6-46.08 9.216l-503.808 0q-19.456 0-42.496-11.264t-43.008-29.696-33.28-41.984-13.312-49.152l0-696.32q0-21.504 9.728-44.544t26.624-42.496 38.4-32.256 45.056-12.8l391.168 0 0 128zM704.512 768q26.624 0 45.056-18.944t18.432-45.568-18.432-45.056-45.056-18.432l-384 0q-26.624 0-45.056 18.432t-18.432 45.056 18.432 45.568 45.056 18.944l384 0zM768 448.512q0-26.624-18.432-45.568t-45.056-18.944l-384 0q-26.624 0-45.056 18.944t-18.432 45.568 18.432 45.056 45.056 18.432l384 0q26.624 0 45.056-18.432t18.432-45.056z\" p-id=\"2575\" fill=\"#a5d63f\"></path></svg>",
+                                                        "backgroundColor": [
+                                                            1,
+                                                            0,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "borderWidth": 0,
+                                                        "tooltip": "显示/隐藏代码"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "url按钮",
+                                                    "sceneObj": {
+                                                        "id": "2373f295-fe3d-4003-a031-3f7fb0fc5a59",
+                                                        "type": "RectangleButton",
+                                                        "name": "url按钮",
+                                                        "width": 0,
+                                                        "height": 24,
+                                                        "backgroundColor": null,
+                                                        "borderColor": [
+                                                            0.8,
+                                                            0.8,
+                                                            0.8,
+                                                            0.8
+                                                        ],
+                                                        "borderWidth": 0,
+                                                        "clickFuncStr": "\nasync function(mouseEvent, context) {\n    // console.log(context);\n    // console.log(mouseEvent, context);\n    try {\n        const { rectangleButton } = context;\n        const textToCopy = rectangleButton.text;\n        await navigator.clipboard.writeText(textToCopy);\n        console.log('已复制到剪切板！' + textToCopy);\n    } catch (err) {\n        console.error('复制失败：', err);\n    }\n}\n",
+                                                        "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    // sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
+                                                        "text": "abcdef123456",
+                                                        "textColor": [
+                                                            0.8,
+                                                            0.8,
+                                                            0.8,
+                                                            0.8
+                                                        ],
+                                                        "fontSize": 12,
+                                                        "textLayoutType": "None",
+                                                        "textCssText": "line-height: 24px;",
+                                                        "tooltip": "点击复制"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Content-Right-Bottom",
+                                            "sceneObj": {
+                                                "id": "b4393dd5-1508-4d6a-b280-283758fb3de3",
+                                                "type": "MyContainer",
+                                                "name": "Content-Right-Bottom",
+                                                "layoutType": "FullScreen",
+                                                "cssText": "flex: 1;\n",
+                                                "subIds": [
+                                                    "14d839e3-92ae-4d48-8926-673d2509681e",
+                                                    "349e3748-dab2-437c-a44f-d1715e1f0941"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "三维视口",
+                                                    "sceneObj": {
+                                                        "id": "14d839e3-92ae-4d48-8926-673d2509681e",
+                                                        "type": "IFrameDiv",
+                                                        "name": "三维视口",
+                                                        "ref": "三维视口",
+                                                        "layoutType": "FullScreen",
+                                                        "width": 0,
+                                                        "height": 0,
+                                                        "cssText": "position: absolute;"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "Json代码",
+                                                    "sceneObj": {
+                                                        "id": "349e3748-dab2-437c-a44f-d1715e1f0941",
+                                                        "type": "JsonEditor",
+                                                        "name": "Json代码",
+                                                        "ref": "Json代码",
+                                                        "layoutType": "FullScreen",
+                                                        "width": 0,
+                                                        "height": 0,
+                                                        "cssText": "position: absolute;"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Footer",
+                            "sceneObj": {
+                                "id": "a4a791d7-2c15-40d3-81c6-3c7f4cef3878",
+                                "type": "MyContainer",
+                                "name": "Footer",
+                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nbackground: #333;\nflex: 0 0 24px;",
+                                "subIds": [
+                                    "391939d7-d828-443b-8265-54e075a63495"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "MyLabel",
+                                    "sceneObj": {
+                                        "id": "391939d7-d828-443b-8265-54e075a63495",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel",
+                                        "layoutType": "Center",
+                                        "cssText": "color: white;",
+                                        "text": "版权所有@2024 北京尽飞科技有限公司",
+                                        "fontSize": 12,
+                                        "fontWeight": 400
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "72be53e1-d299-47a7-a46b-3dcc787caa24",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1730698401758
+        },
+        "offlineImagery": {
+            "id": "a1a12403-ddc4-4ecd-9c50-fc3acf7b6d9d",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "f992d210-8fac-4753-ab0e-af8d525573f5",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "a164a52d-e4d5-48d0-a7d1-90499c0ad73e",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "af6fbf29-1af2-4000-ad05-74b222b8d8a4",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "b380c658-4623-4557-a93c-f54480d020b6",
+            "type": "View",
+            "position": [
+                122.07370262044508,
+                48.896857345513254,
+                4057014.53612112
+            ],
+            "rotation": [
+                348.8240003376302,
+                -89.80606158996427,
+                0
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "9cc3f824-9efe-458b-8c56-12eab3420d42",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
