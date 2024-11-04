@@ -1,20 +1,20 @@
 @echo off
 setlocal enabledelayedexpansion
 
-rem è®¾ç½®é¡¹ç›®ç›®å½•
+rem ÉèÖÃÏîÄ¿Ä¿Â¼
 set "projectDir=.."
-rem è®¾ç½®æ›´æ–°çš„è¿œç¨‹ä»“åº“åˆ†æ”¯
+rem ÉèÖÃ¸üÐÂµÄÔ¶³Ì²Ö¿â·ÖÖ§
 set "remoteBranch=origin/master"
 
-rem æ— é™å¾ªçŽ¯æ‰§è¡Œæ›´æ–°æ“ä½œ
+rem ÎÞÏÞÑ­»·Ö´ÐÐ¸üÐÂ²Ù×÷
 :loop
-rem è¿›å…¥é¡¹ç›®ç›®å½•
+rem ½øÈëÏîÄ¿Ä¿Â¼
 cd /d %projectDir%
-rem æ‰§è¡Œgit fetch
+rem Ö´ÐÐgit fetch
 git fetch origin master
-rem æ‰§è¡Œgit reset
+rem Ö´ÐÐgit reset
 git reset --hard %remoteBranch%
-echo å·²å®Œæˆä¸€æ¬¡æºç æ›´æ–°ï¼Œä¸‹æ¬¡æ›´æ–°å°†åœ¨5åˆ†é’ŸåŽ...
-rem ç­‰å¾…5åˆ†é’Ÿï¼ˆ300ç§’ï¼‰
+echo ÒÑÍê³ÉÒ»´ÎÔ´Âë¸üÐÂ£¬ÏÂ´Î¸üÐÂ½«ÔÚ5·ÖÖÓºó...
+rem µÈ´ý5·ÖÖÓ£¨300Ãë£©
 ping 127.0.0.1 -n 301 > nul
 goto loop
