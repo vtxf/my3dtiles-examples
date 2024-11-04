@@ -84,7 +84,7 @@
         const loadedFunc = async () => {
             const { createProcessingFromAsyncFunc } = XE2['xe2-utils'];
             const { fetchJson } = XE2['xe2-base-utils'];
-            const { 示例框架, 显隐代码按钮, 三维视口, Json代码, ContentLeftTree } = XE2.g.refs;
+            const { 示例框架, 显隐代码按钮, 三维视口, Json代码, ContentLeftTree, url按钮 } = XE2.g.refs;
 
             Json代码.show = false;
 
@@ -154,7 +154,8 @@
                             // jsonContent = c.m3tJson;
                         } else if (c.type === 'm3tJsonUri') {
                             // jsonContent = await cancelsManager.promise(fetchJson(c.m3tJsonUri));
-                            iframeSrc = `../app/versions/last/?s=${encodeURIComponent(c.m3tJsonUri)}`;
+                            const href = new URL('../', window.location.href).href;
+                            iframeSrc = `${href}app/versions/last/?s=${encodeURIComponent(c.m3tJsonUri)}`;
                         } else if (c.type === 'm3toJson') {
                             // jsonContent = c.m3toJson;
                         } else if (c.type === 'm3toJsonUri') {
@@ -169,6 +170,7 @@
                         }
                     } while (false);
                     三维视口.iframeSrc = iframeSrc;
+                    url按钮.text = decodeURI(iframeSrc);
                     return;
                 });
 
