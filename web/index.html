@@ -95,7 +95,7 @@
 
             await creatorUiFunc();
 
-            (() => {     
+            (() => {
                 const processing = createProcessingFromAsyncFunc(async (cancelsManager) => {
                     let jsonContent = {};
                     do {
@@ -189,6 +189,38 @@
                 update();
                 显隐代码按钮.highlightedChanged.disposableOn(update);
             })();
+
+            const 预览图片 = (() => {
+                const myCursorTooltip = g_app.xe2ProjectManager.createSceneObjectFromJson({
+                    "type": "MyCursorTooltip",
+                    "name": "MyCursorTooltip",
+                    "menuStrings": []
+                });
+
+                预览图片.tooltip = '';
+                myCursorTooltip.tooltipImageUri = '';
+
+                myCursorTooltip.enabled = true;
+                myCursorTooltip.activated = false;
+
+                return myCursorTooltip;
+            })();
+
+            {
+                const update = () => {
+                    if (!ContentLeftTree.hoveredItem) {
+                        预览图片.activated = false;
+                        return;
+                    }
+                    // console.log(myTreeUi.hoveredItem.name);
+                    // 预览图片.tooltip = ContentLeftTree.hoveredItem.name;
+                    // @ts-ignore
+                    预览图片.tooltipImageUri = ContentLeftTree.hoveredItem?.extras?.previewImageUri ?? '';
+                    预览图片.activated = true;
+                };
+                update();
+                ContentLeftTree.hoveredItemChanged.disposableOn(update);
+            }
         }
         setTimeout(loadedFunc, 500);
 
