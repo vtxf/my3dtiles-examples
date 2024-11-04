@@ -6,6 +6,21 @@
             "collapse": true,
             "children": [
                 {
+                    "name": "特效示例",
+                    "path": "特效示例",
+                    "collapse": true,
+                    "children": [
+                        {
+                            "name": "海水&热力图20241025",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.jpg"
+                        }
+                    ]
+                },
+                {
                     "name": "综合示例",
                     "path": "综合示例",
                     "collapse": false,
@@ -80,14 +95,6 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}无人机沿路径飞行加相机控制/无人机沿路径飞行加相机控制.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}无人机沿路径飞行加相机控制/无人机沿路径飞行加相机控制.jpg"
-                        },
-                        {
-                            "name": "海水&热力图20241025",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.jpg"
                         },
                         {
                             "name": "运动的双箭头",
