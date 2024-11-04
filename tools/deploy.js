@@ -36,6 +36,8 @@ const executeGitCommand = (command, nextCommand) => {
     });
 };
 
+const intervalTime = 3000; // 间隔时间，单位为毫秒
+
 // 定义更新代码的函数
 const updateCode = () => {
     let currentIndex = 0;
@@ -47,7 +49,7 @@ const updateCode = () => {
                 executeNext();
             });
         } else {
-            console.log('所有命令执行完成');
+            console.log(`所有命令执行完成，${intervalTime}ms后将再次执行！`);
         }
     };
 
@@ -59,4 +61,4 @@ updateCode();
 
 // 每隔5分钟执行一次更新代码操作
 console.log('启动定时器每5分钟执行一次更新代码操作。');
-setInterval(updateCode, 300000); // 改回5分钟 (300000毫秒)
+setInterval(updateCode, intervalTime); // 改回5分钟 (300000毫秒)
