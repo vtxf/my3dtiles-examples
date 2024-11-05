@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.16",
+        "version": "0.9.22",
         "createdTime": "2024-10-28T05:37:31.809Z",
-        "modifiedTime": "2024-10-28T06:13:11.995Z",
+        "modifiedTime": "2024-11-05T07:33:00.183Z",
         "name": "海水&热力图20241025"
     },
     "sceneTree": {
@@ -16,7 +16,7 @@
                         "id": "6333d773-978e-4a3f-986d-a6173888f98d",
                         "type": "SceneScript",
                         "name": "Czm海水",
-                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    // 创建primitive\r\n    function createPrimitive(viewer) {\r\n        const { getStrFromEnv } = XE2['xe2-base-objects'].SceneObject.context;\r\n        var waterNormalsPath = getStrFromEnv(\"${SD}/images/waterNormals.jpg\");\r\n        var specularMap = getStrFromEnv(\"${SD}/images/earthspec.png\");\r\n        \r\n\r\n        var p = viewer.scene.primitives.add(\r\n            new Cesium.Primitive({\r\n                geometryInstances: new Cesium.GeometryInstance({\r\n                    geometry: new Cesium.RectangleGeometry({\r\n                        rectangle: Cesium.Rectangle.fromDegrees(-180.0, -90.0, 180.0, 90.0),\r\n                        vertexFormat: Cesium.EllipsoidSurfaceAppearance.VERTEX_FORMAT,\r\n                        height: 0,\r\n                        extrudedHeight: 10\r\n                    }),\r\n                }),\r\n                appearance: new Cesium.EllipsoidSurfaceAppearance({\r\n                    material: new Cesium.Material({\r\n                    fabric: {\r\n                        type: \"Water\",\r\n                        uniforms: {\r\n                        specularMap: specularMap,\r\n                        //normalMap: Cesium.buildModuleUrl(\"Assets/Textures/waterNormals.jpg\"),\r\n                        normalMap: waterNormalsPath,\r\n                        frequency: 10000.0,\r\n                        animationSpeed: 0.01,\r\n                        amplitude: 1.0,\r\n                        },\r\n                    },\r\n                    }),\r\n                    aboveGround: true\r\n                }),\r\n                show: true,\r\n            })\r\n        );\r\n        return p;\r\n    }\r\n    \r\n    // 销毁primitive\r\n    function destroyPrimitive(viewer, p) {\r\n        viewer.scene.primitives.remove(p)\r\n    }\r\n\r\n    class CzmViewerAttachedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor(czmViewer) {\r\n            super();\r\n\r\n            const { viewer } = czmViewer;\r\n            if (!viewer) return;\r\n            const p = createPrimitive(viewer);\r\n            this.dispose(() => destroyPrimitive(viewer, p));\r\n        }\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n            this.disposeVar(sceneObject.createAttachedObject(viewer => {\r\n                if (!(viewer instanceof XE2['xe2-cesium-objects'].CzmViewer)) return undefined;\r\n                return new CzmViewerAttachedObj(viewer);\r\n            }));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    // 创建primitive\r\n    function createPrimitive(viewer) {\r\n        const { getStrFromEnv } = XE2['xe2-base-objects'].SceneObject.context;\r\n        var waterNormalsPath = getStrFromEnv(\"${SD}/images/waterNormals.jpg\");\r\n        var specularMap = getStrFromEnv(\"${SD}/images/earthspec.png\");\r\n        \r\n        var p = viewer.scene.primitives.add(\r\n            new Cesium.Primitive({\r\n                geometryInstances: new Cesium.GeometryInstance({\r\n                    geometry: new Cesium.RectangleGeometry({\r\n                        rectangle: Cesium.Rectangle.fromDegrees(-180.0, -90.0, 180.0, 90.0),\r\n                        vertexFormat: Cesium.EllipsoidSurfaceAppearance.VERTEX_FORMAT,\r\n                        height: 0,\r\n                        extrudedHeight: 10\r\n                    }),\r\n                }),\r\n                appearance: new Cesium.EllipsoidSurfaceAppearance({\r\n                    material: new Cesium.Material({\r\n                        fabric: {\r\n                            type: \"Water\",\r\n                            uniforms: {\r\n                                specularMap: specularMap,\r\n                                //normalMap: Cesium.buildModuleUrl(\"Assets/Textures/waterNormals.jpg\"),\r\n                                normalMap: waterNormalsPath,\r\n                                frequency: 10000.0,\r\n                                animationSpeed: 0.01,\r\n                                amplitude: 1.0,\r\n                            },\r\n                        },\r\n                    }),\r\n                    aboveGround: true,\r\n                }),\r\n                show: true,\r\n            })\r\n        );\r\n\r\n        // viewer.scene.primitives.raiseToTop(p);\r\n        viewer.scene.primitives.lowerToBottom(p);\r\n\r\n        return p;\r\n    }\r\n    \r\n    // 销毁primitive\r\n    function destroyPrimitive(viewer, p) {\r\n        viewer.scene.primitives.remove(p)\r\n    }\r\n\r\n    const { ObjResettingWithEvent } = XE2['xe2-utils'];\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { CzmViewer } = XE2['xe2-cesium-objects'];\r\n\r\n    class ViewerInstance extends Destroyable {\r\n        constructor(viewer, sceneObject) {\r\n            super();\r\n            const p = createPrimitive(viewer);\r\n            this.dispose(() => destroyPrimitive(viewer, p));\r\n\r\n            // {\r\n            //     debugger;\r\n            //     const update = () => { p.show = sceneObject.show };\r\n            //     update();\r\n            //     this.dispose(sceneObject.showChanged.disposableOn(update));\r\n            // }\r\n        }\r\n    }\r\n\r\n    class CzmViewerAttachedObj extends Destroyable {\r\n        constructor(czmViewer, sceneObject) {\r\n            super();\r\n\r\n            this.disposeVar(new ObjResettingWithEvent(czmViewer.viewerChanged, () => {\r\n                const { viewer } = czmViewer;\r\n                if (!viewer) return undefined;\r\n                return new ViewerInstance(viewer, sceneObject);\r\n            }));\r\n        }\r\n    }\r\n\r\n    class AppendedObj extends Destroyable {\r\n        constructor() {\r\n            super();\r\n            this.disposeVar(sceneObject.createAttachedObject(viewer => {\r\n                if (!(viewer instanceof CzmViewer)) return undefined;\r\n                return new CzmViewerAttachedObj(viewer, sceneObject);\r\n            }));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
                     }
                 },
                 {
@@ -309,7 +309,7 @@
                             135.04990510809557,
                             40.70478060489422
                         ],
-                        "height": 1000,
+                        "height": 10000,
                         "editing": false,
                         "ground": false,
                         "name": "热力图"
@@ -320,7 +320,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "af379814-a78b-4bb0-950d-b0435a233272",
+            "id": "1c291018-05a5-4b5b-bee2-97ba4a74344a",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -330,7 +330,7 @@
             "clockCurrentTime": 1730093851817
         },
         "offlineImagery": {
-            "id": "20b5e868-f786-496a-98f2-afdeea5834bb",
+            "id": "b99bc989-db1b-4256-b9b9-0ad93f04831a",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -340,7 +340,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "47d0a309-0d75-4ae5-b1e7-b356435475cc",
+            "id": "462cec2a-b7de-45df-984d-385932e015eb",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -362,7 +362,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "0e8ee4d1-94a8-4a70-916b-10e5368666a9",
+            "id": "aa0403b6-e665-4c36-92e7-470499a6c9da",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -373,27 +373,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "79ef9a31-95ed-423c-bf81-7a809e61fd37",
+            "id": "2f62b551-e17f-4418-9614-4679c5d4bb7c",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "c98e2f17-0516-4299-8974-0d95fa271daa",
+            "id": "abbbcf8d-7044-4b0b-a34b-e1daf4936e33",
             "type": "View",
             "position": [
-                126.35291004282948,
-                31.231212161517764,
-                801508.7165933223
+                124.84877520126521,
+                31.400824424352557,
+                752509.3846161905
             ],
             "rotation": [
-                343.61229777408226,
-                -69.5254988740786,
-                0.1285874217726211
+                342.11601217669164,
+                -70.88002898209763,
+                0.17890608660455887
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "50ce90a1-79b6-423b-90c6-1ae65d18e970",
+            "id": "4555a809-af8f-4a56-8228-9752bb2b76a7",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
