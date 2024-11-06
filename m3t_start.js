@@ -75,7 +75,7 @@
         }
     }
 
-    const creatorUiFunc = async app => {     
+    const creatorUiFunc = async app => {
         // 加载脚本所在目录下面的m3t_list.json文件
         const m3tListJsonResponse = await fetch(scriptDir + "m3t_list.json");
         if (!m3tListJsonResponse.ok) {
@@ -101,12 +101,7 @@
             "containerId": "m3t_info_div",
             "width": 0,
             "height": 32,
-            "backgroundColor": [
-                0.1,
-                0.1,
-                0.1,
-                0
-            ],
+            "backgroundColor": [0.1, 0.1, 0.1, 0],
             "borderWidth": 0,
             "cssText": "cursor: pointer;\nline-height: 32px;\npadding: 0 4px;",
             "clickFuncStr": "\nfunction(mouseEvent) {\n    window.open(`http://114.242.26.126:7000/examples/web/`);\n}\n",
@@ -130,7 +125,7 @@
         window.__m3tLoadedFunc = () => {
             origin_m3tLoadedFunc && origin_m3tLoadedFunc();
             registFunc();
-        }    
+        }
     } else {
         registFunc();
     }
