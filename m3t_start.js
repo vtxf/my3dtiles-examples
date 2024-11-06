@@ -94,8 +94,34 @@
         app.creatorUi.items = items;
     }
 
+    const createButtonFunc = (app) => {
+        const buttonJson = {
+            "type": "RectangleButton",
+            "name": "通知按钮",
+            "containerId": "m3t_info_div",
+            "width": 0,
+            "height": 32,
+            "backgroundColor": [
+                0.1,
+                0.1,
+                0.1,
+                0
+            ],
+            "borderWidth": 0,
+            "cssText": "cursor: pointer;\nline-height: 32px;\npadding: 0 4px;",
+            "clickFuncStr": "\nfunction(mouseEvent) {\n    window.open(`http://114.242.26.126:7000/examples/web/`);\n}\n",
+            "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+            "text": "示例集合",
+            "fontSize": 12,
+            "textLayoutType": "None"
+        };
+        const 通知按钮 = app.xe2ProjectManager.createSceneObjectFromJson(buttonJson);
+        app.dispose(() => app.xe2ProjectManager.destroySceneObject(通知按钮));
+    }
+
     const m3tAppCreatedFunc = app => {
         creatorUiFunc(app);
+        createButtonFunc(app);
     };
 
     const registFunc = () => window.__m3tRegisterCreatedFunc && window.__m3tRegisterCreatedFunc(m3tAppCreatedFunc);
