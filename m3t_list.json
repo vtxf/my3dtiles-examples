@@ -21,6 +21,21 @@
                     ]
                 },
                 {
+                    "name": "基础图形示例",
+                    "path": "基础图形示例",
+                    "collapse": true,
+                    "children": [
+                        {
+                            "name": "贴地图形重叠示例20241106",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}贴地图形重叠示例20241106/贴地图形重叠示例20241106.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}贴地图形重叠示例20241106/贴地图形重叠示例20241106.jpg"
+                        }
+                    ]
+                },
+                {
                     "name": "特效示例",
                     "path": "特效示例",
                     "collapse": true,
@@ -30,7 +45,8 @@
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}卫星在空间中位置20241106/卫星在空间中位置20241106.m3tjson"
-                            }
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}卫星在空间中位置20241106/卫星在空间中位置20241106.jpg"
                         },
                         {
                             "name": "海水&热力图20241025",
