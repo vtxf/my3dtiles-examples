@@ -63,6 +63,14 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}海水&热力图20241025/海水&热力图20241025.jpg"
+                        },
+                        {
+                            "name": "粒子系统测试场景20240812",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}粒子系统测试场景20240812/粒子系统测试场景20240812.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}粒子系统测试场景20240812/粒子系统测试场景20240812.jpg"
                         }
                     ]
                 },
