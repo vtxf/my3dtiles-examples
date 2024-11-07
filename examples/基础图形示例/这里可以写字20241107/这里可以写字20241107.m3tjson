@@ -1,0 +1,136 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.23",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-07T01:26:17.644Z",
+        "name": "这里可以写字"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "show": false,
+            "children": [
+                {
+                    "name": "这里可以写字",
+                    "sceneObj": {
+                        "id": "6e604fac-faa9-4077-8b85-dcd9a1de5ac6",
+                        "type": "CzmCustomGroundRectangle",
+                        "show": true,
+                        "allowPicking": true,
+                        "editing": false,
+                        "rectangle": [
+                            104.67033282900177,
+                            32.40499942815974,
+                            120.24494636671261,
+                            37.63564657276808
+                        ],
+                        "czmTextureId": "a9c2195c-c493-4e7b-a425-e068e3605806",
+                        "name": "这里可以写字",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function drawTextOnCanvas(canvas, text) {\r\n        const fontSize = 100;\r\n        // const width = fontSize * text.length; \r\n        const height = fontSize * 2;\r\n        const fillStyle = 'white';\r\n        // 绘制文字\r\n        // 获取canvas元素\r\n        // const canvas = document.createElement('canvas');\r\n        // 获取绘图上下文\r\n        const ctx = canvas.getContext('2d');\r\n        // 设置文字样式\r\n        ctx.font = `${fontSize}px Arial`;\r\n        const metrics = ctx.measureText(text);\r\n        const width = Math.ceil(metrics.width) | 0;\r\n\r\n        canvas.width = width;\r\n        canvas.height = height;\r\n\r\n        ctx.font = `${fontSize}px Arial`;\r\n        ctx.fillStyle = \"white\";\r\n        //ctx.strokeStyle = \"white\";\r\n        //ctx.strokeRect(0, 0, width, height); \r\n\r\n        const baseHeight = (height * 0.75) | 0;\r\n        ctx.fillText(text, 0, baseHeight);\r\n        const imageData = ctx.getImageData(0, 0, width, height);\r\n        let minY = height;\r\n        let maxY = 0;\r\n        for (let y = 0; y < height; y++) {\r\n            for (let x = 0; x < width; x++) {\r\n                const index = (y * imageData.width + x) * 4;\r\n                const alpha = imageData.data[index + 3];\r\n                if (alpha > 0) {\r\n                    minY = Math.min(minY, y);\r\n                    maxY = Math.max(maxY, y);\r\n                }\r\n            }\r\n        }\r\n        const finalHeight = maxY - minY + 1;\r\n        const offsetHeight = maxY - baseHeight;\r\n\r\n        canvas.width = width;\r\n        canvas.height = finalHeight;\r\n\r\n        ctx.font = `${fontSize}px Arial`;\r\n        ctx.fillStyle = fillStyle;\r\n        ctx.fillText(text, 0, finalHeight - offsetHeight);\r\n        //sceneObject.copyFromCanvas(canvas);\r\n    }\r\n\r\n    const { SceneObject } = XE2['xe2-base-objects']\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { CzmTexture } = XE2['xe2-cesium-objects'];\r\n\r\n    class AppendedObj extends Destroyable {\r\n        constructor() {\r\n            super();\r\n    \r\n            const czmTexture = this.disposeVar(SceneObject.createFromClass(CzmTexture));\r\n            this.dispose(sceneObject.components.disposableAdd(czmTexture));\r\n            sceneObject.czmTextureId = czmTexture.id;\r\n        \r\n            const canvas = document.createElement('canvas');\r\n\r\n            {\r\n                const update = () => {\r\n                    drawTextOnCanvas(canvas, sceneObject.name);\r\n                    czmTexture.copyFromCanvas(canvas);\r\n                };\r\n                update();\r\n                this.dispose(sceneObject.nameChanged.disposableOn(update));\r\n                this.dispose(czmTexture.readyEvent.disposableOn(update));\r\n            }\r\n\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                    }
+                },
+                {
+                    "name": "标签",
+                    "sceneObj": {
+                        "id": "5723669b-8790-49c0-998f-77c9e3576e82",
+                        "type": "MyLabel",
+                        "name": "标签",
+                        "layoutType": "CenterTop",
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.79
+                        ],
+                        "cssText": "color: white;\nborder-radius: 2px;\ntop: 2px;",
+                        "text": "提示：修改场景对象的名称，即可修改文字内容！",
+                        "fontSize": 12,
+                        "fontWeight": 400,
+                        "padding": 4
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "bb081c42-40e1-4037-ad65-2c072949871b",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1730941110516
+        },
+        "offlineImagery": {
+            "id": "3162e538-3ac0-4f95-b16e-b6ca8215cda2",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "091497d0-7de4-44b6-85c4-8f7990ead5aa",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "7d44b7c4-a397-4a63-a546-6d236361e74b",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "4aab8f49-0dfe-4792-8d3a-0628b0ff82bc",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "7784f27c-72cf-4cf0-b494-6e9b3881d60e",
+            "type": "View",
+            "position": [
+                114.67659720772264,
+                32.66252229150279,
+                1096888.591887328
+            ],
+            "rotation": [
+                342.6625979371918,
+                -76.73530142684513,
+                0.3275022496926006
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "5c485c6f-7ac1-41af-a1c7-1fe3be3cbf14",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
