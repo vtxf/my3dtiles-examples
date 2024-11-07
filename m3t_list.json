@@ -26,6 +26,22 @@
                     "collapse": true,
                     "children": [
                         {
+                            "name": "地球自转20241107",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}地球自转20241107/地球自转20241107.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}地球自转20241107/地球自转20241107.jpg"
+                        },
+                        {
+                            "name": "环绕云图20241107",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}环绕云图20241107/环绕云图20241107.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}环绕云图20241107/环绕云图20241107.jpg"
+                        },
+                        {
                             "name": "贴地图形重叠示例20241106",
                             "content": {
                                 "type": "m3tJsonUri",
@@ -71,6 +87,22 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}粒子系统测试场景20240812/粒子系统测试场景20240812.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}粒子系统测试场景20240812/粒子系统测试场景20240812.jpg"
+                        },
+                        {
+                            "name": "雨后特效20241107",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}雨后特效20241107/雨后特效20241107.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}雨后特效20241107/雨后特效20241107.jpg"
+                        },
+                        {
+                            "name": "雪后特效20241107",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}雪后特效20241107/雪后特效20241107.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}雪后特效20241107/雪后特效20241107.jpg"
                         }
                     ]
                 },
@@ -172,6 +204,14 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}ECharts图表立起来案例20241011/ECharts图表立起来案例20241011.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}ECharts图表立起来案例20241011/ECharts图表立起来案例20241011.jpg"
+                        },
+                        {
+                            "name": "加载CAD图纸20241107",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}加载CAD图纸20241107/加载CAD图纸20241107.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}加载CAD图纸20241107/加载CAD图纸20241107.jpg"
                         },
                         {
                             "name": "自定义场景对象拾取20241107",

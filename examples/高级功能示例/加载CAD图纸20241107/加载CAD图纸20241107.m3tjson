@@ -1,0 +1,109 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.22",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-07T08:25:14.310Z",
+        "name": "加载CAD图纸"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "GeoServer的WMS影像",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "cbb17d42-e230-44d9-8311-124d782fffa5",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "WebMapServiceImageryProvider",
+                            "url": "https://vjmap.com/server/api/v1/map/cmd/wms/sys_cadcesium/v1?mapbounds=&format=image/png&service=WMS&request=GetMap&srs=EPSG:4326&transparent=true&width=256&height=256&layers=se92105f73&crs=EPSG:3857&fourParameter=-9683318.567486502,268803.4665029384,0.8712301352439984,0&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MiwiVXNlcm5hbWUiOiJhZG1pbjEiLCJOaWNrTmFtZSI6ImFkbWluMSIsIkF1dGhvcml0eUlkIjoiYWRtaW4iLCJCdWZmZXJUaW1lIjo4NjQwMCwiZXhwIjo0ODEzMjY3NjM3LCJpc3MiOiJ2am1hcCIsIm5iZiI6MTY1OTY2NjYzN30.cDXCH2ElTzU2sQU36SNHWoTYTAc4wEkVIXmBAIzWh6M"
+                        },
+                        "name": "GeoServer的WMS影像"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "65cd9324-c00f-4166-9d14-36099cc6edd7",
+            "type": "CzmViewer",
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1710748559577
+        },
+        "offlineImagery": {
+            "id": "610c3c62-a192-4519-b2a3-58cbc54e6657",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "369c60ee-ae8e-41e9-a47e-6ea9d5bc4bca",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "天地图影像"
+        },
+        "czmTerrain": {
+            "id": "cd54e3ee-8a9c-4cdc-a5d9-405d8f3ddc2a",
+            "type": "CzmTerrain",
+            "show": true,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "a45e8061-a145-4aad-948a-8b9e32c28d9b",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "c5b3e1a7-192a-4248-98b9-8f99cbb204c3",
+            "type": "View",
+            "position": [
+                106.29560932762098,
+                29.464535326217224,
+                720.4349527067662
+            ],
+            "rotation": [
+                7.355219317424448,
+                -56.761311823897934,
+                0.0016418147605556058
+            ],
+            "default": true,
+            "name": "View_d241"
+        },
+        "initOptions": {
+            "id": "743a444e-b467-45b4-b1ec-3eff1c324e46",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
