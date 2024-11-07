@@ -139,6 +139,76 @@
 
             (() => {
                 const { ContentLeftTree } = XE2.g.refs;
+                console.log('11');
+
+                // 示例网址：http://127.0.0.1:5500/web/index.html?src=m3t%E5%AE%98%E6%96%B9%E7%A4%BA%E4%BE%8B(%E6%9D%A5%E8%87%AA%E7%BD%91%E7%BB%9C)%2F%E7%BB%BC%E5%90%88%E7%A4%BA%E4%BE%8B%2F%E5%8C%97%E4%BA%AC%E5%85%AC%E4%BA%A4%E6%B5%81%E7%BA%BF%2F%E5%8C%97%E4%BA%AC%E5%85%AC%E4%BA%A4%E6%B5%81%E7%BA%BF1
+                // 获取当前网址，示例如上，获取src参数，先解码，然后使用/进行分割
+                // 获取当前URL
+                const currentUrl = new URL(window.location.href);
+                // 获取src参数
+                const srcParam = currentUrl.searchParams.get('src');
+                
+                if (srcParam) {
+                    // 解码src参数
+                    const decodedSrc = decodeURIComponent(srcParam);
+                    // 用/分割路径
+                    const pathSegments = decodedSrc.split('/');
+                    
+                    console.log('解码后的路径:', decodedSrc);
+                    console.log('路径片段:', pathSegments);
+
+                    debugger;
+
+                    const { ContentLeftTree } = XE2.g.refs;
+                    if (!ContentLeftTree) return;
+                    const { mySceneTreeUi } = ContentLeftTree;
+                    if (!mySceneTreeUi) return;
+                    const { sceneTree } = mySceneTreeUi;
+                    if (!sceneTree) return;
+                    const { root } = sceneTree;
+                    if (!root) return;
+
+                    // 获取子节点
+                    var currentItem = root;
+
+                    function getChild(item, func) {
+                        for (let e of item.children) {
+                            if (func(e)) return e;
+                        }
+                        return undefined;
+                    }
+
+                    pathSegments.reverse();
+
+                    while (currentItem && (pathSegments.length > 0)) {
+                        const childName = pathSegments.pop();
+                        currentItem = getChild(currentItem, e => e.name === childName);
+                    }
+
+                    if (!currentItem) return;
+                    currentItem.selected = true;
+                    
+                    // // 根据路径选择相应的树节点
+                    // let currentNode = ContentLeftTree.root;
+                    // for (const segment of pathSegments) {
+                    //     const child = currentNode.children.find(c => c.name === segment);
+                    //     if (child) {
+                    //         currentNode = child;
+                    //     } else {
+                    //         console.warn('未找到匹配的节点:', segment);
+                    //         break;
+                    //     }
+                    // }
+                    
+                    // // 如果找到了最终节点，选中它
+                    // if (currentNode !== ContentLeftTree.root) {
+                    //     ContentLeftTree.lastSelectedItem = currentNode;
+                    // }
+                }
+            })();
+
+            (() => {
+                const { ContentLeftTree } = XE2.g.refs;
                 const href = new URL('../', window.location.href).href;
                 const baseHref = `${href}app/versions/last/`;
 
@@ -153,14 +223,29 @@
                         const { content } = extras;
                         if (!content) break;
 
-
-
                         const c = content;
                         if (c.type === 'm3tJson') {
                             // jsonContent = c.m3tJson;
                         } else if (c.type === 'm3tJsonUri') {
                             // jsonContent = await cancelsManager.promise(fetchJson(c.m3tJsonUri));
                             iframeSrc = `${baseHref}?s=${encodeURIComponent(c.m3tJsonUri)}`;
+
+                            {
+                                // 修改网页地址
+                                const names = [];
+                                let currentItem = lastSelectedItem;
+                                while (currentItem && currentItem.name !== 'root') {
+                                    names.push(currentItem.name);
+                                    currentItem = currentItem.parent;
+                                }
+                                console.log(names)
+                                names.reverse();
+                                const src = names.join('/');
+                                console.log(src);
+                                const src2 = encodeURIComponent(src);
+                                console.log(src2);
+                                history.replaceState({}, "", `?src=${src2}`);
+                            }
                         } else if (c.type === 'm3toJson') {
                             // jsonContent = c.m3toJson;
                         } else if (c.type === 'm3toJsonUri') {
