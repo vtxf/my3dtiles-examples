@@ -32,6 +32,14 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}贴地图形重叠示例20241106/贴地图形重叠示例20241106.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}贴地图形重叠示例20241106/贴地图形重叠示例20241106.jpg"
+                        },
+                        {
+                            "name": "这里可以写字20241107",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}这里可以写字20241107/这里可以写字20241107.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}这里可以写字20241107/这里可以写字20241107.jpg"
                         }
                     ]
                 },
