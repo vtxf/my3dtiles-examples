@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.23",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-07T01:26:17.644Z",
+        "modifiedTime": "2024-11-07T01:34:25.635Z",
         "name": "这里可以写字"
     },
     "sceneTree": {
@@ -12,30 +12,11 @@
             "show": false,
             "children": [
                 {
-                    "name": "这里可以写字",
-                    "sceneObj": {
-                        "id": "6e604fac-faa9-4077-8b85-dcd9a1de5ac6",
-                        "type": "CzmCustomGroundRectangle",
-                        "show": true,
-                        "allowPicking": true,
-                        "editing": false,
-                        "rectangle": [
-                            104.67033282900177,
-                            32.40499942815974,
-                            120.24494636671261,
-                            37.63564657276808
-                        ],
-                        "czmTextureId": "a9c2195c-c493-4e7b-a425-e068e3605806",
-                        "name": "这里可以写字",
-                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function drawTextOnCanvas(canvas, text) {\r\n        const fontSize = 100;\r\n        // const width = fontSize * text.length; \r\n        const height = fontSize * 2;\r\n        const fillStyle = 'white';\r\n        // 绘制文字\r\n        // 获取canvas元素\r\n        // const canvas = document.createElement('canvas');\r\n        // 获取绘图上下文\r\n        const ctx = canvas.getContext('2d');\r\n        // 设置文字样式\r\n        ctx.font = `${fontSize}px Arial`;\r\n        const metrics = ctx.measureText(text);\r\n        const width = Math.ceil(metrics.width) | 0;\r\n\r\n        canvas.width = width;\r\n        canvas.height = height;\r\n\r\n        ctx.font = `${fontSize}px Arial`;\r\n        ctx.fillStyle = \"white\";\r\n        //ctx.strokeStyle = \"white\";\r\n        //ctx.strokeRect(0, 0, width, height); \r\n\r\n        const baseHeight = (height * 0.75) | 0;\r\n        ctx.fillText(text, 0, baseHeight);\r\n        const imageData = ctx.getImageData(0, 0, width, height);\r\n        let minY = height;\r\n        let maxY = 0;\r\n        for (let y = 0; y < height; y++) {\r\n            for (let x = 0; x < width; x++) {\r\n                const index = (y * imageData.width + x) * 4;\r\n                const alpha = imageData.data[index + 3];\r\n                if (alpha > 0) {\r\n                    minY = Math.min(minY, y);\r\n                    maxY = Math.max(maxY, y);\r\n                }\r\n            }\r\n        }\r\n        const finalHeight = maxY - minY + 1;\r\n        const offsetHeight = maxY - baseHeight;\r\n\r\n        canvas.width = width;\r\n        canvas.height = finalHeight;\r\n\r\n        ctx.font = `${fontSize}px Arial`;\r\n        ctx.fillStyle = fillStyle;\r\n        ctx.fillText(text, 0, finalHeight - offsetHeight);\r\n        //sceneObject.copyFromCanvas(canvas);\r\n    }\r\n\r\n    const { SceneObject } = XE2['xe2-base-objects']\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { CzmTexture } = XE2['xe2-cesium-objects'];\r\n\r\n    class AppendedObj extends Destroyable {\r\n        constructor() {\r\n            super();\r\n    \r\n            const czmTexture = this.disposeVar(SceneObject.createFromClass(CzmTexture));\r\n            this.dispose(sceneObject.components.disposableAdd(czmTexture));\r\n            sceneObject.czmTextureId = czmTexture.id;\r\n        \r\n            const canvas = document.createElement('canvas');\r\n\r\n            {\r\n                const update = () => {\r\n                    drawTextOnCanvas(canvas, sceneObject.name);\r\n                    czmTexture.copyFromCanvas(canvas);\r\n                };\r\n                update();\r\n                this.dispose(sceneObject.nameChanged.disposableOn(update));\r\n                this.dispose(czmTexture.readyEvent.disposableOn(update));\r\n            }\r\n\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
-                    }
-                },
-                {
-                    "name": "标签",
+                    "name": "提示信息",
                     "sceneObj": {
                         "id": "5723669b-8790-49c0-998f-77c9e3576e82",
                         "type": "MyLabel",
-                        "name": "标签",
+                        "name": "提示信息",
                         "layoutType": "CenterTop",
                         "backgroundColor": [
                             0,
@@ -49,13 +30,58 @@
                         "fontWeight": 400,
                         "padding": 4
                     }
+                },
+                {
+                    "name": "这里可以写字(贴地)",
+                    "sceneObj": {
+                        "id": "6e604fac-faa9-4077-8b85-dcd9a1de5ac6",
+                        "type": "CzmCustomGroundRectangle",
+                        "show": true,
+                        "allowPicking": true,
+                        "editing": false,
+                        "rectangle": [
+                            104.67033282900177,
+                            32.40499942815974,
+                            120.24494636671261,
+                            37.63564657276808
+                        ],
+                        "czmTextureId": "4b80f036-c625-4052-bce1-32302dad356a",
+                        "name": "这里可以写字(贴地)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function drawTextOnCanvas(canvas, text) {\r\n        const fontSize = 100;\r\n        // const width = fontSize * text.length; \r\n        const height = fontSize * 2;\r\n        const fillStyle = 'white';\r\n        // 绘制文字\r\n        // 获取canvas元素\r\n        // const canvas = document.createElement('canvas');\r\n        // 获取绘图上下文\r\n        const ctx = canvas.getContext('2d');\r\n        // 设置文字样式\r\n        ctx.font = `${fontSize}px Arial`;\r\n        const metrics = ctx.measureText(text);\r\n        const width = Math.ceil(metrics.width) | 0;\r\n\r\n        canvas.width = width;\r\n        canvas.height = height;\r\n\r\n        ctx.font = `${fontSize}px Arial`;\r\n        ctx.fillStyle = \"white\";\r\n        //ctx.strokeStyle = \"white\";\r\n        //ctx.strokeRect(0, 0, width, height); \r\n\r\n        const baseHeight = (height * 0.75) | 0;\r\n        ctx.fillText(text, 0, baseHeight);\r\n        const imageData = ctx.getImageData(0, 0, width, height);\r\n        let minY = height;\r\n        let maxY = 0;\r\n        for (let y = 0; y < height; y++) {\r\n            for (let x = 0; x < width; x++) {\r\n                const index = (y * imageData.width + x) * 4;\r\n                const alpha = imageData.data[index + 3];\r\n                if (alpha > 0) {\r\n                    minY = Math.min(minY, y);\r\n                    maxY = Math.max(maxY, y);\r\n                }\r\n            }\r\n        }\r\n        const finalHeight = maxY - minY + 1;\r\n        const offsetHeight = maxY - baseHeight;\r\n\r\n        canvas.width = width;\r\n        canvas.height = finalHeight;\r\n\r\n        ctx.font = `${fontSize}px Arial`;\r\n        ctx.fillStyle = fillStyle;\r\n        ctx.fillText(text, 0, finalHeight - offsetHeight);\r\n        //sceneObject.copyFromCanvas(canvas);\r\n    }\r\n\r\n    const { SceneObject } = XE2['xe2-base-objects']\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { CzmTexture } = XE2['xe2-cesium-objects'];\r\n\r\n    class AppendedObj extends Destroyable {\r\n        constructor() {\r\n            super();\r\n    \r\n            const czmTexture = this.disposeVar(SceneObject.createFromClass(CzmTexture));\r\n            this.dispose(sceneObject.components.disposableAdd(czmTexture));\r\n            sceneObject.czmTextureId = czmTexture.id;\r\n        \r\n            const canvas = document.createElement('canvas');\r\n\r\n            {\r\n                const update = () => {\r\n                    drawTextOnCanvas(canvas, sceneObject.name);\r\n                    czmTexture.copyFromCanvas(canvas);\r\n                };\r\n                update();\r\n                this.dispose(sceneObject.nameChanged.disposableOn(update));\r\n                this.dispose(czmTexture.readyEvent.disposableOn(update));\r\n            }\r\n\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                    }
+                },
+                {
+                    "name": "这里可以写字(站立)",
+                    "sceneObj": {
+                        "id": "fee238ed-634e-4401-9e91-af79604df041",
+                        "type": "CzmImageModel",
+                        "allowPicking": true,
+                        "czmTextureId": "9f816995-c092-4ef6-8c6d-8c945fcfdb3a",
+                        "position": [
+                            113.1673460365995,
+                            38.43574524441441,
+                            7.115304830962697
+                        ],
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ],
+                        "size": [
+                            1500000,
+                            500000
+                        ],
+                        "pixelSize": 0,
+                        "name": "这里可以写字(站立)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function drawTextOnCanvas(canvas, text) {\r\n        const fontSize = 100;\r\n        // const width = fontSize * text.length; \r\n        const height = fontSize * 2;\r\n        const fillStyle = 'white';\r\n        // 绘制文字\r\n        // 获取canvas元素\r\n        // const canvas = document.createElement('canvas');\r\n        // 获取绘图上下文\r\n        const ctx = canvas.getContext('2d');\r\n        // 设置文字样式\r\n        ctx.font = `${fontSize}px Arial`;\r\n        const metrics = ctx.measureText(text);\r\n        const width = Math.ceil(metrics.width) | 0;\r\n\r\n        canvas.width = width;\r\n        canvas.height = height;\r\n\r\n        ctx.font = `${fontSize}px Arial`;\r\n        ctx.fillStyle = \"white\";\r\n        //ctx.strokeStyle = \"white\";\r\n        //ctx.strokeRect(0, 0, width, height); \r\n\r\n        const baseHeight = (height * 0.75) | 0;\r\n        ctx.fillText(text, 0, baseHeight);\r\n        const imageData = ctx.getImageData(0, 0, width, height);\r\n        let minY = height;\r\n        let maxY = 0;\r\n        for (let y = 0; y < height; y++) {\r\n            for (let x = 0; x < width; x++) {\r\n                const index = (y * imageData.width + x) * 4;\r\n                const alpha = imageData.data[index + 3];\r\n                if (alpha > 0) {\r\n                    minY = Math.min(minY, y);\r\n                    maxY = Math.max(maxY, y);\r\n                }\r\n            }\r\n        }\r\n        const finalHeight = maxY - minY + 1;\r\n        const offsetHeight = maxY - baseHeight;\r\n\r\n        canvas.width = width;\r\n        canvas.height = finalHeight;\r\n\r\n        ctx.font = `${fontSize}px Arial`;\r\n        ctx.fillStyle = fillStyle;\r\n        ctx.fillText(text, 0, finalHeight - offsetHeight);\r\n        //sceneObject.copyFromCanvas(canvas);\r\n    }\r\n\r\n    const { SceneObject } = XE2['xe2-base-objects']\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { CzmTexture } = XE2['xe2-cesium-objects'];\r\n\r\n    class AppendedObj extends Destroyable {\r\n        constructor() {\r\n            super();\r\n    \r\n            const czmTexture = this.disposeVar(SceneObject.createFromClass(CzmTexture));\r\n            this.dispose(sceneObject.components.disposableAdd(czmTexture));\r\n            sceneObject.czmTextureId = czmTexture.id;\r\n        \r\n            const canvas = document.createElement('canvas');\r\n\r\n            {\r\n                const update = () => {\r\n                    drawTextOnCanvas(canvas, sceneObject.name);\r\n                    czmTexture.copyFromCanvas(canvas);\r\n                };\r\n                update();\r\n                this.dispose(sceneObject.nameChanged.disposableOn(update));\r\n                this.dispose(czmTexture.readyEvent.disposableOn(update));\r\n            }\r\n\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                    }
                 }
             ]
         }
     },
     "builtin": {
         "czmViewer": {
-            "id": "bb081c42-40e1-4037-ad65-2c072949871b",
+            "id": "cf78765a-9844-4aaf-a4c6-59dcee6e2bf5",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -65,7 +91,7 @@
             "clockCurrentTime": 1730941110516
         },
         "offlineImagery": {
-            "id": "3162e538-3ac0-4f95-b16e-b6ca8215cda2",
+            "id": "29e56aeb-28c4-4b43-a48c-0a68dc20b29d",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -75,7 +101,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "091497d0-7de4-44b6-85c4-8f7990ead5aa",
+            "id": "a817539d-5adc-4cbe-b97b-94710a0e3abb",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -97,7 +123,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "7d44b7c4-a397-4a63-a546-6d236361e74b",
+            "id": "663d6bee-7112-4838-885d-c2b51fd0b182",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -108,27 +134,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "4aab8f49-0dfe-4792-8d3a-0628b0ff82bc",
+            "id": "5b3d148a-e28c-4cc6-b727-b6bd3b5c00c2",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "7784f27c-72cf-4cf0-b494-6e9b3881d60e",
+            "id": "c64d19ff-62ce-43e4-8039-65d61dfe234d",
             "type": "View",
             "position": [
-                114.67659720772264,
-                32.66252229150279,
-                1096888.591887328
+                122.98628646800287,
+                28.360562243468365,
+                1464337.0366542952
             ],
             "rotation": [
-                342.6625979371918,
-                -76.73530142684513,
-                0.3275022496926006
+                331.64947784340717,
+                -52.9100276061327,
+                0.02620166993078109
             ],
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "5c485c6f-7ac1-41af-a1c7-1fe3be3cbf14",
+            "id": "bba6f8dd-3b68-4705-8865-4a3de224071a",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
