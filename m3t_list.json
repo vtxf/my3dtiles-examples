@@ -35,14 +35,16 @@
                                     "content": {
                                         "type": "m3tJsonUri",
                                         "m3tJsonUri": "${M3T_CurrentDir}单图片影像(影像配置).m3tjson"
-                                    }
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}单图片影像(影像配置).jpg"
                                 },
                                 {
                                     "name": "单图片影像(自定义贴地矩形)",
                                     "content": {
                                         "type": "m3tJsonUri",
                                         "m3tJsonUri": "${M3T_CurrentDir}单图片影像(自定义贴地矩形).m3tjson"
-                                    }
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}单图片影像(自定义贴地矩形).jpg"
                                 }
                             ]
                         },
