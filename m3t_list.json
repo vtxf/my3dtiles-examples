@@ -267,6 +267,14 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.jpg"
+                        },
+                        {
+                            "name": "附着对象20241111",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}附着对象20241111/附着对象20241111.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}附着对象20241111/附着对象20241111.jpg"
                         }
                     ]
                 }
