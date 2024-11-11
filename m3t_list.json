@@ -57,6 +57,14 @@
                             "previewImageUri": "${M3T_CurrentDir}地球自转20241107/地球自转20241107.jpg"
                         },
                         {
+                            "name": "影像对比20241111",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}影像对比20241111/影像对比20241111.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}影像对比20241111/影像对比20241111.jpg"
+                        },
+                        {
                             "name": "环绕云图20241107",
                             "content": {
                                 "type": "m3tJsonUri",
@@ -235,6 +243,14 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}加载CAD图纸20241107/加载CAD图纸20241107.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}加载CAD图纸20241107/加载CAD图纸20241107.jpg"
+                        },
+                        {
+                            "name": "双视口联动20240926",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}双视口联动20240926/双视口联动20240926.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}双视口联动20240926/双视口联动20240926.jpg"
                         },
                         {
                             "name": "自定义场景对象拾取20241107",
