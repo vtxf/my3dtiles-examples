@@ -73,6 +73,14 @@
                             "previewImageUri": "${M3T_CurrentDir}环绕云图20241107/环绕云图20241107.jpg"
                         },
                         {
+                            "name": "视频纹理20241111",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}视频纹理20241111/视频纹理20241111.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}视频纹理20241111/视频纹理20241111.jpg"
+                        },
+                        {
                             "name": "贴地图形重叠示例20241106",
                             "content": {
                                 "type": "m3tJsonUri",
