@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.24",
         "createdTime": "2024-11-12T02:27:38.047Z",
-        "modifiedTime": "2024-11-12T03:47:10.754Z",
+        "modifiedTime": "2024-11-12T03:53:28.228Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -26,7 +26,7 @@
                             0.004250632283847631
                         ],
                         "rotation": [
-                            348.491,
+                            104.49099999999999,
                             0,
                             0
                         ],
@@ -101,7 +101,7 @@
                             ]
                         ],
                         "loop": true,
-                        "currentTime": 5923.400000009686,
+                        "currentTime": 2546.000000011176,
                         "duration": 10000,
                         "playing": true,
                         "name": "曲线路径",
@@ -183,7 +183,7 @@
                                     0.8
                                 ],
                                 "borderWidth": 0,
-                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.地理路径相机控制器.enabled = true;\n}\n",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.地理路径相机控制器.enabled = true;\n    XE2.g.refs.曲线路径.editing = false;\n}\n",
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
                                 "text": "跟踪目标",
                                 "textColor": [
@@ -215,7 +215,7 @@
                                     0.8
                                 ],
                                 "borderWidth": 0,
-                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.地理路径相机控制器.enabled = false;\n    XE2.g.refs.视角.flyTo();\n}\n",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.地理路径相机控制器.enabled = false;\n    XE2.g.refs.视角.flyTo();\n    XE2.g.refs.曲线路径.editing = false;\n}\n",
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
                                 "text": "查看路径",
                                 "textColor": [
@@ -267,7 +267,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "de63874d-560b-4c06-b73b-a1a69d3fa542",
+            "id": "c3d24880-186b-4732-884f-81a69eaf772a",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -277,7 +277,7 @@
             "clockCurrentTime": 1731378458052
         },
         "offlineImagery": {
-            "id": "f246d9f6-4649-4fab-b291-a5ad99c7e984",
+            "id": "2c83c517-2380-4030-874a-611cc6cff522",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -287,7 +287,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "fafabb95-76df-42d9-993b-378236979c48",
+            "id": "a8f13485-e7a2-4d94-856c-3700f23c0829",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -309,7 +309,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "d48bbacc-0ef7-41e8-bbf9-fc29db6ab554",
+            "id": "03ee06ca-b6a6-4a49-8590-e6e317913412",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -320,12 +320,12 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "a72083f7-46f8-4a45-8c42-cf8d59e4d24f",
+            "id": "0ab16ec1-ba06-4685-afbd-be3e57b67558",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "17e71b7d-4574-45ef-966f-353e96d362e8",
+            "id": "d52278d5-2e63-4e12-a59d-2109d6c35256",
             "type": "View",
             "position": [
                 116.360697552434,
@@ -334,13 +334,13 @@
             ],
             "rotation": [
                 334.15297071480063,
-                -40.57047102846024,
+                -40.57047102846027,
                 359.9999136707567
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "7720c775-51d1-44fd-abc7-ee430f52ef10",
+            "id": "02724150-298e-4f62-8d5a-31341854304e",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
