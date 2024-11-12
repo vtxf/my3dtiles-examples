@@ -3,8 +3,8 @@
         "type": "My3dtiles",
         "version": "0.9.24",
         "createdTime": "2024-11-12T02:27:38.047Z",
-        "modifiedTime": "2024-11-12T03:53:28.228Z",
-        "name": "未命名项目"
+        "modifiedTime": "2024-11-12T12:26:40.872Z",
+        "name": "路径运动始终跟踪目标点20241112"
     },
     "sceneTree": {
         "root": {
@@ -26,7 +26,7 @@
                             0.004250632283847631
                         ],
                         "rotation": [
-                            104.49099999999999,
+                            114.49099999999999,
                             0,
                             0
                         ],
@@ -101,19 +101,18 @@
                             ]
                         ],
                         "loop": true,
-                        "currentTime": 2546.000000011176,
+                        "currentTime": 809.3076923088386,
                         "duration": 10000,
-                        "playing": true,
                         "name": "曲线路径",
                         "ref": "曲线路径"
                     }
                 },
                 {
                     "name": "地理路径相机控制器",
-                    "show": false,
                     "sceneObj": {
                         "id": "24700328-6d90-46f0-bd4b-52c718dbcf8a",
                         "type": "GeoPathCameraController",
+                        "enabled": true,
                         "pathId": "6a461ce6-5511-432d-85d4-63faf1981be8",
                         "usePathRotation": false,
                         "viewDistance": 0,
@@ -151,6 +150,7 @@
                 },
                 {
                     "name": "MyContainer",
+                    "collapsed": true,
                     "sceneObj": {
                         "id": "b80f78bd-06b8-47a3-80f0-0cdb2b5944dc",
                         "type": "MyContainer",
@@ -170,6 +170,8 @@
                                 "id": "d605cb9e-639e-4043-9149-e2dd6d717456",
                                 "type": "RectangleButton",
                                 "name": "跟踪目标",
+                                "width": 82,
+                                "height": 29,
                                 "backgroundColor": [
                                     0.08000000000000002,
                                     0.08000000000000002,
@@ -177,21 +179,22 @@
                                     0
                                 ],
                                 "borderColor": [
-                                    0.8,
-                                    0.8,
-                                    0.8,
-                                    0.8
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
                                 ],
                                 "borderWidth": 0,
                                 "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.地理路径相机控制器.enabled = true;\n    XE2.g.refs.曲线路径.editing = false;\n}\n",
-                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                 "text": "跟踪目标",
                                 "textColor": [
-                                    0.8,
-                                    0.8,
-                                    0.8,
-                                    0.8
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
                                 ],
+                                "fontSize": 14,
                                 "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
                                 "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
                             }
@@ -202,6 +205,8 @@
                                 "id": "c00a033c-575b-44c0-9c98-49f6c2903675",
                                 "type": "RectangleButton",
                                 "name": "查看路径",
+                                "width": 82,
+                                "height": 29,
                                 "backgroundColor": [
                                     0.08000000000000002,
                                     0.08000000000000002,
@@ -209,21 +214,22 @@
                                     0
                                 ],
                                 "borderColor": [
-                                    0.8,
-                                    0.8,
-                                    0.8,
-                                    0.8
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
                                 ],
                                 "borderWidth": 0,
                                 "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.地理路径相机控制器.enabled = false;\n    XE2.g.refs.视角.flyTo();\n    XE2.g.refs.曲线路径.editing = false;\n}\n",
-                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                 "text": "查看路径",
                                 "textColor": [
-                                    0.8,
-                                    0.8,
-                                    0.8,
-                                    0.8
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
                                 ],
+                                "fontSize": 14,
                                 "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
                                 "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
                             }
@@ -234,6 +240,8 @@
                                 "id": "728349c0-0207-472b-a36d-d807ebdf8935",
                                 "type": "RectangleButton",
                                 "name": "编辑路径",
+                                "width": 82,
+                                "height": 29,
                                 "backgroundColor": [
                                     0.08000000000000002,
                                     0.08000000000000002,
@@ -241,33 +249,66 @@
                                     0
                                 ],
                                 "borderColor": [
-                                    0.8,
-                                    0.8,
-                                    0.8,
-                                    0.8
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
                                 ],
                                 "borderWidth": 0,
                                 "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.地理路径相机控制器.enabled = false;\n    XE2.g.refs.视角.flyTo();\n    XE2.g.refs.曲线路径.editing = true;\n}\n",
-                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                 "text": "编辑路径",
                                 "textColor": [
-                                    0.8,
-                                    0.8,
-                                    0.8,
-                                    0.8
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
                                 ],
+                                "fontSize": 14,
                                 "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
                                 "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
                             }
                         }
                     ]
+                },
+                {
+                    "name": "播放器跟踪器",
+                    "sceneObj": {
+                        "id": "50b0b2c5-41cf-46fc-b749-e4b67267e7a7",
+                        "type": "PlayerTracker",
+                        "enabled": true,
+                        "playerId": "94c211e2-571c-41a7-801e-ff53db2cec20",
+                        "targetObjId": "6a461ce6-5511-432d-85d4-63faf1981be8",
+                        "name": "播放器跟踪器"
+                    }
+                },
+                {
+                    "name": "播放器",
+                    "sceneObj": {
+                        "id": "94c211e2-571c-41a7-801e-ff53db2cec20",
+                        "type": "Player",
+                        "loop": true,
+                        "currentTime": 1052.1000000014901,
+                        "duration": 13000,
+                        "playing": true,
+                        "name": "播放器"
+                    }
+                },
+                {
+                    "name": "播放器面板",
+                    "sceneObj": {
+                        "id": "2a13b26e-4242-4442-8b86-e2ac83c2c998",
+                        "type": "MyPlayerUI",
+                        "name": "播放器面板",
+                        "targetID": "94c211e2-571c-41a7-801e-ff53db2cec20"
+                    }
                 }
             ]
         }
     },
     "builtin": {
         "czmViewer": {
-            "id": "c3d24880-186b-4732-884f-81a69eaf772a",
+            "id": "d1433dc9-d56d-4f55-a7a6-3510bb9e187f",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -277,7 +318,7 @@
             "clockCurrentTime": 1731378458052
         },
         "offlineImagery": {
-            "id": "2c83c517-2380-4030-874a-611cc6cff522",
+            "id": "ccb696c9-fd4e-46cf-ae81-1910692db754",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -287,7 +328,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "a8f13485-e7a2-4d94-856c-3700f23c0829",
+            "id": "d0308ed7-0fe5-485e-850e-a48671417ee9",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -309,7 +350,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "03ee06ca-b6a6-4a49-8590-e6e317913412",
+            "id": "97f37ce9-5007-47f0-b312-c1d6d0eb86f5",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -320,27 +361,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "0ab16ec1-ba06-4685-afbd-be3e57b67558",
+            "id": "ff90a306-7f9b-4eb6-bdd4-7535e7e1eea1",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "d52278d5-2e63-4e12-a59d-2109d6c35256",
+            "id": "756d690c-6d80-4c80-9dac-c28f92f730ed",
             "type": "View",
             "position": [
-                116.360697552434,
-                39.894807761747266,
-                861.7604035534547
+                116.350888684232,
+                39.91098761788895,
+                131.6251168419732
             ],
             "rotation": [
-                334.15297071480063,
-                -40.57047102846027,
-                359.9999136707567
+                150.77038160946455,
+                -14.419506093360983,
+                360
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "02724150-298e-4f62-8d5a-31341854304e",
+            "id": "7dcf48cf-228f-4223-b315-f9f8bfd6c041",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
