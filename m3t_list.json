@@ -230,6 +230,14 @@
                             "previewImageUri": "${M3T_CurrentDir}无人机沿路径飞行加相机控制/无人机沿路径飞行加相机控制.jpg"
                         },
                         {
+                            "name": "模拟路线规划20241112",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}模拟路线规划20241112/模拟路线规划20241112.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}模拟路线规划20241112/模拟路线规划20241112.jpg"
+                        },
+                        {
                             "name": "运动的双箭头",
                             "content": {
                                 "type": "m3tJsonUri",
