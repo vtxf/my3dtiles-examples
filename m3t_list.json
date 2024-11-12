@@ -238,6 +238,14 @@
                             "previewImageUri": "${M3T_CurrentDir}模拟路线规划20241112/模拟路线规划20241112.jpg"
                         },
                         {
+                            "name": "路径运动始终跟踪目标点20241112",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}路径运动始终跟踪目标点20241112/路径运动始终跟踪目标点20241112.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}路径运动始终跟踪目标点20241112/路径运动始终跟踪目标点20241112.jpg"
+                        },
+                        {
                             "name": "运动的双箭头",
                             "content": {
                                 "type": "m3tJsonUri",
