@@ -65,6 +65,14 @@
                             "previewImageUri": "${M3T_CurrentDir}影像对比20241111/影像对比20241111.jpg"
                         },
                         {
+                            "name": "物体加屏幕标牌20241112",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}物体加屏幕标牌20241112/物体加屏幕标牌20241112.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}物体加屏幕标牌20241112/物体加屏幕标牌20241112.jpg"
+                        },
+                        {
                             "name": "环绕云图20241107",
                             "content": {
                                 "type": "m3tJsonUri",
