@@ -52,4 +52,10 @@ https://qm.qq.com/q/kcmepspADC
 或者扫描二维码加入QQ群聊：  
 <img src="./md/images/qq_qrcode.jpg" alt="这是一个示例图片" width="300" height="460">
 
-    
+#### gitee地址
+https://gitee.com/vtxf3d/my3dtiles-examples
+
+#### github地址
+https://github.com/vtxf/my3dtiles-examples
+
+
