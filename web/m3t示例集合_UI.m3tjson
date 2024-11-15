@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.18",
+        "version": "0.9.26",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-04T23:44:27.324Z",
+        "modifiedTime": "2024-11-15T02:11:19.469Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -36,7 +36,9 @@
                                 "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;\nbackground-color: #333;\nflex: 0 0 40px;\noverflow: hidden;",
                                 "subIds": [
                                     "24d18169-5c0b-4b1c-8385-130aa3fa951a",
-                                    "8f3acd17-d0cd-48e4-830b-416f1b5b96cd"
+                                    "8f3acd17-d0cd-48e4-830b-416f1b5b96cd",
+                                    "f48d0a85-4162-4536-9cb7-35eb216d00dc",
+                                    "67b412ba-59d9-4505-8b3a-cf7102e37269"
                                 ]
                             },
                             "children": [
@@ -60,6 +62,38 @@
                                         "name": "MyLabel",
                                         "cssText": "color: white; ",
                                         "text": "My3dtiles(m3t)示例集合"
+                                    }
+                                },
+                                {
+                                    "name": "Empty",
+                                    "sceneObj": {
+                                        "id": "f48d0a85-4162-4536-9cb7-35eb216d00dc",
+                                        "type": "MyContainer",
+                                        "name": "Empty",
+                                        "cssText": "flex: 1"
+                                    }
+                                },
+                                {
+                                    "name": "代码地址",
+                                    "sceneObj": {
+                                        "id": "67b412ba-59d9-4505-8b3a-cf7102e37269",
+                                        "type": "RectangleButton",
+                                        "name": "代码地址",
+                                        "width": 0,
+                                        "height": 24,
+                                        "backgroundColor": [
+                                            0.1,
+                                            0.1,
+                                            0.1,
+                                            0.8
+                                        ],
+                                        "borderWidth": 0,
+                                        "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nmargin: 0 6px;",
+                                        "clickFuncStr": "\nfunction(mouseEvent) {\n    window.open('https://www.wolai.com/vtxf/pJ7FMfbt4xgMLKvDv6tyQ8');\n}\n",
+                                        "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                        "text": "代码地址",
+                                        "fontSize": 12,
+                                        "textLayoutType": "None"
                                     }
                                 }
                             ]
@@ -325,7 +359,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "5fa3a329-260a-4def-b3fd-41858dd8b441",
+            "id": "ebb25c31-dc9d-4faf-8a64-7137f6dd8c91",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -335,7 +369,7 @@
             "clockCurrentTime": 1730698401758
         },
         "offlineImagery": {
-            "id": "76fed063-1366-4378-ad6d-b9353b23db83",
+            "id": "eecd9441-42d0-4ef5-b9c3-b2237c67af3c",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -345,7 +379,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "534ec35c-6183-4753-b8f7-2fabc5807ed2",
+            "id": "6c9340da-f899-435b-873a-a07919560258",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -367,7 +401,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "8c9ece3d-e6ff-4ec7-a1b1-4ceff0908548",
+            "id": "67a98786-34ea-4505-a220-9b0e65e584a5",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -378,17 +412,17 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "b0acd013-11ab-4586-95e3-bad1f8969a8d",
+            "id": "e896d23f-02ec-4303-9395-0eb1149e2a5c",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "7abac5fb-b09f-42e6-89c8-d8fea041ad62",
+            "id": "8559dd80-b57f-4bbd-9bce-5f6cc9935b10",
             "type": "View",
             "position": [
                 122.07370262044508,
-                48.896857345513475,
-                4057014.5361112016
+                48.89685734551353,
+                4057014.5361087215
             ],
             "rotation": [
                 348.8240003376302,
@@ -398,7 +432,7 @@
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "c8117a4a-2fc6-4058-86d9-0e9bb906e48a",
+            "id": "886c7baa-f4b9-49e3-af1f-3ee41d880f48",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
