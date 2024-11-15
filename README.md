@@ -2,6 +2,8 @@
 
 ## 简介
 
+![m3t预览](./md/images/preview.jpg)
+
 My3dtiles(简称m3t)是一个3dtiles数据浏览器，快速数字孪生搭建工具。M3T官网地址：https://czmtoy.com/p/my3dtiles/。
 
 M3T示例代码，旨在展示通过M3T快速搭建的三维场景。M3T是一个桌面工具，但是搭建的场景是可以直接在网页上展示的。只需要将M3T生成的场景文件(m3tjson)，放到服务器上，通过浏览器访问即可。
