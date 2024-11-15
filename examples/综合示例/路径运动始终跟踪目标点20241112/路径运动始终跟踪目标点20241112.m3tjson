@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.24",
+        "version": "0.9.26",
         "createdTime": "2024-11-12T02:27:38.047Z",
-        "modifiedTime": "2024-11-12T12:26:40.872Z",
+        "modifiedTime": "2024-11-15T14:35:38.477Z",
         "name": "路径运动始终跟踪目标点20241112"
     },
     "sceneTree": {
@@ -26,7 +26,7 @@
                             0.004250632283847631
                         ],
                         "rotation": [
-                            114.49099999999999,
+                            202.49099999999999,
                             0,
                             0
                         ],
@@ -101,7 +101,7 @@
                             ]
                         ],
                         "loop": true,
-                        "currentTime": 809.3076923088386,
+                        "currentTime": 9157.84615386564,
                         "duration": 10000,
                         "name": "曲线路径",
                         "ref": "曲线路径"
@@ -125,7 +125,7 @@
                         "enabledScaleInput": false,
                         "name": "地理路径相机控制器",
                         "ref": "地理路径相机控制器",
-                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { geoHeading, geoDistance } = XE2['xe2-base-objects'];\r\n    function getRotation(p0, p1) {\r\n        const heading = geoHeading(p0, p1);\r\n        const distance = geoDistance(p0, p1);\r\n        const height = p1[2] - p0[2];\r\n        const pitch = Math.asin(height / distance) * 180 / Math.PI;\r\n        return [heading, pitch, 0];\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            this.dispose(sceneObject.positionChanged.disposableOn(() => {\r\n                const { m0 } = XE2.g.refs;\r\n                if (!m0) return;\r\n                if (!m0.position) return;\r\n                if (!sceneObject.position) return;\r\n                const r = getRotation(sceneObject.position, m0.position);\r\n                //console.log(r);\r\n                sceneObject.geoCameraController.rotation = r;\r\n            }));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    // const { geoHeading, geoDistance } = XE2['xe2-base-objects'];\r\n    // function getRotation(p0, p1) {\r\n    //     const heading = geoHeading(p0, p1);\r\n    //     const distance = geoDistance(p0, p1);\r\n    //     const height = p1[2] - p0[2];\r\n    //     let pitch = Math.asin(height / distance) * 180 / Math.PI;\r\n    //     if (!Number.isFinite(pitch)) pitch = 0;\r\n    //     return [heading, pitch, 0];\r\n    // }\r\n\r\n    function getRotation(positionA, positionB) {\r\n        const { ab2Ab } = XE2['xe2-base-cesium'];\r\n        const a = new Cesium.Cartesian3(0, 0, 0);\r\n        const b = new Cesium.Cartesian3(1, 0, 0);\r\n        const A = Cesium.Cartesian3.fromDegrees(positionA[0], positionA[1], positionA[2]);\r\n        const B = Cesium.Cartesian3.fromDegrees(positionB[0], positionB[1], positionB[2]);\r\n        const result = ab2Ab(a, b, A, B);\r\n        if (!result) return undefined;\r\n        const { heading: h, pitch: p, roll: r } = result.hprInDegrees;\r\n        return [h + 90, p, 0];\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            this.dispose(sceneObject.positionChanged.disposableOn(() => {\r\n                const { m0 } = XE2.g.refs;\r\n                if (!m0) return;\r\n                if (!m0.position) return;\r\n                if (!sceneObject.position) return;\r\n                const r = getRotation(sceneObject.position, m0.position);\r\n                console.log(r);\r\n                sceneObject.geoCameraController.rotation = r;\r\n            }));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
                     }
                 },
                 {
@@ -288,9 +288,8 @@
                         "id": "94c211e2-571c-41a7-801e-ff53db2cec20",
                         "type": "Player",
                         "loop": true,
-                        "currentTime": 1052.1000000014901,
+                        "currentTime": 11905.200000025332,
                         "duration": 13000,
-                        "playing": true,
                         "name": "播放器"
                     }
                 },
@@ -308,7 +307,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "d1433dc9-d56d-4f55-a7a6-3510bb9e187f",
+            "id": "dbade667-69f0-4c30-ae38-52f9fe5bc0c7",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -318,7 +317,7 @@
             "clockCurrentTime": 1731378458052
         },
         "offlineImagery": {
-            "id": "ccb696c9-fd4e-46cf-ae81-1910692db754",
+            "id": "c2e4cc67-2745-4664-9abc-6d432c55714f",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -328,7 +327,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "d0308ed7-0fe5-485e-850e-a48671417ee9",
+            "id": "c20d77f6-0f01-46f7-969a-2d95e32c4644",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -350,7 +349,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "97f37ce9-5007-47f0-b312-c1d6d0eb86f5",
+            "id": "9729a7ee-f716-4419-91ae-f76637b6eb8b",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -361,27 +360,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "ff90a306-7f9b-4eb6-bdd4-7535e7e1eea1",
+            "id": "44b6c08b-3271-43e4-8ef7-072bac9bd946",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "756d690c-6d80-4c80-9dac-c28f92f730ed",
+            "id": "dd67af5a-1a46-4e3a-874e-8dccfb212148",
             "type": "View",
             "position": [
-                116.350888684232,
-                39.91098761788895,
-                131.6251168419732
+                116.35702728570624,
+                39.90720011993212,
+                131.63016769387664
             ],
             "rotation": [
-                150.77038160946455,
-                -14.419506093360983,
-                360
+                261.41048125795277,
+                -29.353926654147134,
+                359.9999999999999
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "7dcf48cf-228f-4223-b315-f9f8bfd6c041",
+            "id": "e8b772bd-d21c-4326-a682-f051ad863a41",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
