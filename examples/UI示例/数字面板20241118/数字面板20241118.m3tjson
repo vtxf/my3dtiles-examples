@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.26",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-18T08:21:30.691Z",
+        "modifiedTime": "2024-11-18T09:45:23.123Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -12,11 +12,11 @@
             "children": [
                 {
                     "name": "左侧边栏",
-                    "collapsed": true,
                     "sceneObj": {
                         "id": "4cb5b3ff-3fc0-4edc-b3a9-424fd9594298",
                         "type": "MySidebar",
                         "name": "左侧边栏",
+                        "interaction": false,
                         "width": 360,
                         "sceneObjectIds": [
                             "b45c5ff1-27a8-490f-aff6-903c73ab3313",
@@ -24,8 +24,7 @@
                             "6a19d9cf-0419-4409-829e-f8f72982c625",
                             "ddb68dd5-db85-4cb2-b87c-65b5841827d2"
                         ],
-                        "direction": "column",
-                        "collapsed": false
+                        "direction": "column"
                     },
                     "children": [
                         {
@@ -761,6 +760,7 @@
                         },
                         {
                             "name": "面板4",
+                            "collapsed": true,
                             "sceneObj": {
                                 "id": "ddb68dd5-db85-4cb2-b87c-65b5841827d2",
                                 "type": "MyPanel",
@@ -1245,7 +1245,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "7f6bbe93-8304-4dc4-a8fa-d1854c50654a",
+            "id": "b86e18de-34ad-4ba1-9346-8d7e4a320fa7",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -1255,7 +1255,7 @@
             "clockCurrentTime": 1731911033812
         },
         "offlineImagery": {
-            "id": "03215916-44ab-42f4-b33c-55298908b390",
+            "id": "044b70e4-95d2-4be9-9881-ac28723e62d8",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -1265,7 +1265,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "b0c43f6f-b89b-4c99-8f8e-2a1456bfcfab",
+            "id": "a2462915-fb05-4038-992b-dd945dbf7eca",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -1287,7 +1287,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "fbf71ba8-80b6-4b2d-b132-d6291c6d57e6",
+            "id": "42d9ca89-7479-4bb3-a809-e896890513e0",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -1298,27 +1298,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "a27498e2-9230-4ef6-8314-11001a342015",
+            "id": "cd8ced97-ebd5-4444-ab34-c6f8b72c1318",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "25116a2a-60f7-45e7-aec7-45653612273a",
+            "id": "e7448b08-9c36-4247-a1a0-452ebb9b0ed5",
             "type": "View",
             "position": [
-                116.46348989298572,
-                39.82289078208864,
-                6521.20513152816
+                116.48680907196133,
+                39.81593896284621,
+                9600.331286278912
             ],
             "rotation": [
-                300.63375647043944,
-                -71.68628946358966,
-                0.018160580578910054
+                300.6337606608181,
+                -71.6862886422481,
+                0.018156166634180664
             ],
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "920ef524-38df-436c-b6c5-93bf6b102825",
+            "id": "46cf317e-6674-4cb3-9ef4-be94a3639fe6",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
