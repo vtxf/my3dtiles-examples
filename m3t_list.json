@@ -11,6 +11,14 @@
                     "collapse": true,
                     "children": [
                         {
+                            "name": "大屏UI布局20241118",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}大屏UI布局20241118/大屏UI布局20241118.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}大屏UI布局20241118/大屏UI布局20241118.jpg"
+                        },
+                        {
                             "name": "常用对象创建工具栏",
                             "content": {
                                 "type": "m3tJsonUri",
@@ -23,7 +31,8 @@
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}数字面板20241118/数字面板20241118.m3tjson"
-                            }
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}数字面板20241118/数字面板20241118.jpg"
                         },
                         {
                             "name": "背景图按钮工具栏20241118",
