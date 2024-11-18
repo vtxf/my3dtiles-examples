@@ -24,6 +24,14 @@
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}数字面板20241118/数字面板20241118.m3tjson"
                             }
+                        },
+                        {
+                            "name": "背景图按钮工具栏20241118",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}背景图按钮工具栏20241118/背景图按钮工具栏20241118.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}背景图按钮工具栏20241118/背景图按钮工具栏20241118.jpg"
                         }
                     ]
                 },
