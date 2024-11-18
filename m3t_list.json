@@ -26,6 +26,14 @@
                     "collapse": false,
                     "children": [
                         {
+                            "name": "3dtiles数据加载示例20241118",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}3dtiles数据加载示例20241118/3dtiles数据加载示例20241118.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}3dtiles数据加载示例20241118/3dtiles数据加载示例20241118.jpg"
+                        },
+                        {
                             "name": "单图片影像20241108",
                             "path": "单图片影像20241108",
                             "collapse": true,
