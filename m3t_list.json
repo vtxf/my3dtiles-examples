@@ -17,6 +17,13 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.jpg"
+                        },
+                        {
+                            "name": "数字面板20241118",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}数字面板20241118/数字面板20241118.m3tjson"
+                            }
                         }
                     ]
                 },
