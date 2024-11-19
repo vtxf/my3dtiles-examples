@@ -1,6 +1,6 @@
 # My3dtiles示例代码
 
-## 简介
+## 1 简介
 
 ![m3t预览](./md/images/preview.jpg)
 
@@ -8,11 +8,15 @@ My3dtiles(简称m3t)是一个3dtiles数据浏览器，快速数字孪生搭建�
 
 M3T示例代码，旨在展示通过M3T快速搭建的三维场景。M3T是一个桌面工具，但是搭建的场景是可以直接在网页上展示的。只需要将M3T生成的场景文件(m3tjson)，放到服务器上，通过浏览器访问即可。
 
-## 使用说明
+## 2 使用说明
 
-M3T示例可在本地直接运行，需要执行以下步骤：
+查看示例场景的方式有两种：在浏览器中查看示例场景，或者在My3dtiles桌面程序中查看示例。
 
-### 命令行模式
+### 2.1 在浏览器中查看示例
+
+浏览器中查看示例，需要首先在本地运行http服务器，您可以通过以下两种方式来运行http服务器。
+
+#### 2.1.1 命令行模式
 1. 安装nodejs
 2. 安装依赖
    ```bash
@@ -25,7 +29,7 @@ M3T示例可在本地直接运行，需要执行以下步骤：
 4. 在浏览器中打开  
    http://127.0.0.1:9123/web/
 
-### 图形界面模式
+#### 2.1.2 图形界面模式
 1. 下载简易http服务器  
     可以在以下网址下载 http-server-vtxf20221104.exe  
     https://www.wolai.com/vtxf/p7eukvsNuwWEVNmR8m4KYw  
@@ -34,7 +38,25 @@ M3T示例可在本地直接运行，需要执行以下步骤：
 4. 在浏览器中打开
    http://127.0.0.1:9123/web/
 
-## 后续问题
+### 2.2 在My3dtiles桌面程序中查看示例
+
+需要首先安装My3dtiles软件，安装地址在这里：
+https://www.wolai.com/vtxf/85sBNQP1KsdkFSrtbRGPyG
+
+msi文件是安装文件，如下图所示
+![下载m3t安装程序](./md/images/m3t-download.jpg)
+
+安装好以后，打开examples文件夹。
+![examples文件夹](./md/images/examples-folder.jpg)
+
+双击其中的任意m3tjson文件，即可打开相应的场景
+![examples文件夹](./md/images/examples-folder2.jpg)
+
+## 3 m3tjson场景文件的说明
+使用My3dtiles搭建数字孪生场景以后，可以将搭建好的场景保存成m3tjson文件，以后双击即可再次访问该场景。
+把m3tjson文件放到http服务器上去以后，就可以通过浏览器访问相应的网址打开场景。
+
+## 4 后续问题
 
 ### 如有问题，请加入群聊
 
