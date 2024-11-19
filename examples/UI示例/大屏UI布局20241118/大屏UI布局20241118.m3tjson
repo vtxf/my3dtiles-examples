@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.26",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-18T11:07:28.850Z",
+        "modifiedTime": "2024-11-19T01:13:21.675Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -19,7 +19,7 @@
                         "name": "左侧边栏",
                         "ref": "左侧边栏",
                         "layoutType": "LeftTop",
-                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nheight: calc(100% - 100px);\nleft: 0px;\ntop: 60px;\ntransition: left 0.3s ease-in-out;\n",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nheight: 100%;\nleft: 0px;\ntop: 0px;\ntransition: left 0.3s ease-in-out;\n",
                         "subIds": [
                             "c63550ef-9784-4bbd-867a-dc85a5f57b40",
                             "4088864b-8bf8-4a72-82c9-c400573b5067"
@@ -1088,7 +1088,7 @@
                         "name": "右侧边栏",
                         "ref": "右侧边栏",
                         "layoutType": "RightTop",
-                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nheight: calc(100% - 100px);\nright: 0px;\ntop: 60px;\ntransition: right 0.3s ease-in-out;\n",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nheight: 100%;\nright: 0px;\ntop: 0px;\ntransition: right 0.3s ease-in-out;\n",
                         "subIds": [
                             "f3682f13-442c-45d6-8da2-98cb37fbbb9b",
                             "04e7f388-62cf-421e-8383-6544dfa41766"
@@ -2195,7 +2195,6 @@
                         },
                         {
                             "name": "图片工具栏(中下)",
-                            "collapsed": true,
                             "sceneObj": {
                                 "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
                                 "type": "MyContainer",
@@ -2230,7 +2229,7 @@
                                             0.95
                                         ],
                                         "borderWidth": 0,
-                                        "clickFuncStr": "function(mouseEvent) {\n    alert('我给点击')\n}\n",
+                                        "clickFuncStr": "function(mouseEvent) {\n    alert('我被点击！')\n}\n",
                                         "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                         "text": "跟踪目标",
                                         "textColor": [
@@ -2265,7 +2264,7 @@
                                             0.95
                                         ],
                                         "borderWidth": 0,
-                                        "clickFuncStr": "function(mouseEvent) {\n    alert('我给点击')\n}\n",
+                                        "clickFuncStr": "function(mouseEvent) {\n    alert('我被点击！')\n}\n",
                                         "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                         "text": "查看路径",
                                         "textColor": [
@@ -2300,7 +2299,7 @@
                                             0.95
                                         ],
                                         "borderWidth": 0,
-                                        "clickFuncStr": "function(mouseEvent) {\n    alert('我给点击')\n}\n",
+                                        "clickFuncStr": "function(mouseEvent) {\n    alert('我被点击！')\n}\n",
                                         "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                         "text": "编辑路径",
                                         "textColor": [
@@ -2323,7 +2322,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "ca848c17-de46-4984-ae44-630b48349051",
+            "id": "ddb42c34-676f-400a-92a6-531c9fcbe58b",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -2333,7 +2332,7 @@
             "clockCurrentTime": 1731911033812
         },
         "offlineImagery": {
-            "id": "2ecfa13e-7c10-4d4b-a7bb-6155b5194c6c",
+            "id": "a58a1d87-6096-43ff-9fa9-b0097b5a6d71",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -2343,7 +2342,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "409d239f-6e1b-4070-a0e7-d5f521599f56",
+            "id": "cc26b684-6492-45be-bf39-5a239b528b95",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -2365,7 +2364,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "67aee7dd-b32c-423c-a63c-73906568aef2",
+            "id": "7d020dd8-14f7-4f85-9cb4-685d248006c3",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -2376,27 +2375,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "5ab5b3a1-768a-445d-98d9-065959583da3",
+            "id": "b218613b-ac0b-4605-ba44-3a4eb7ae5c07",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "36a5b267-b497-41e2-85a3-036e40eaccac",
+            "id": "dbecf46c-1c99-4ba4-a601-2acfe87d855f",
             "type": "View",
             "position": [
                 122.81340031703225,
-                39.38095101917221,
-                4298972.654668001
+                39.38095101917228,
+                4298972.654663993
             ],
             "rotation": [
-                344.7611126872075,
-                -80.46197946817887,
-                359.9292753830271
+                344.76111268720706,
+                -80.46197946817884,
+                359.9292753830276
             ],
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "051c5ba5-21c5-4f90-aa25-e3bcc96d8a89",
+            "id": "93fd4335-3cf3-4f52-a5f3-073ee08560af",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
