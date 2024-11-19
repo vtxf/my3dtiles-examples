@@ -32,6 +32,33 @@
             width: 100%;
             height: 100%;
         }
+
+        textarea::-webkit-scrollbar,
+        div::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+        }
+
+        textarea::-webkit-scrollbar-track,
+        div::-webkit-scrollbar-track {
+            background: #00212b;
+            opacity: 0.5;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        textarea::-webkit-scrollbar-thumb,
+        div::-webkit-scrollbar-thumb {
+            background: #3f4347;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        textarea::-webkit-scrollbar-corner,
+        div::-webkit-scrollbar-corner {
+            background-color: rgba(0, 0, 0, 0);
+        }
     </style>
 </head>
 
@@ -147,13 +174,13 @@
                 const currentUrl = new URL(window.location.href);
                 // 获取src参数
                 const srcParam = currentUrl.searchParams.get('src');
-                
+
                 if (srcParam) {
                     // 解码src参数
                     const decodedSrc = decodeURIComponent(srcParam);
                     // 用/分割路径
                     const pathSegments = decodedSrc.split('/');
-                    
+
                     // console.log('解码后的路径:', decodedSrc);
                     // console.log('路径片段:', pathSegments);
 
@@ -185,7 +212,7 @@
 
                     if (!currentItem) return;
                     currentItem.selected = true;
-                    
+
                     // // 根据路径选择相应的树节点
                     // let currentNode = ContentLeftTree.root;
                     // for (const segment of pathSegments) {
@@ -197,7 +224,7 @@
                     //         break;
                     //     }
                     // }
-                    
+
                     // // 如果找到了最终节点，选中它
                     // if (currentNode !== ContentLeftTree.root) {
                     //     ContentLeftTree.lastSelectedItem = currentNode;
