@@ -1,0 +1,170 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-11-19T09:23:01.766Z",
+        "modifiedTime": "2024-11-19T09:46:13.207Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "GifPoi",
+                    "sceneObj": {
+                        "id": "3ef97588-cdab-452a-ae13-2d0be3afc95e",
+                        "type": "GeoGifPoi",
+                        "show": true,
+                        "position": [
+                            120.85640015060108,
+                            23.854623560526267,
+                            4.656612873077393e-10
+                        ],
+                        "positionEditing": false,
+                        "playing": false,
+                        "currentTime": 291.19999996572733,
+                        "name": "GifPoi"
+                    }
+                },
+                {
+                    "name": "说明",
+                    "sceneObj": {
+                        "id": "51ac0569-1cb7-4058-9d0a-b3c4b55c0caf",
+                        "type": "MyLabel",
+                        "name": "说明",
+                        "layoutType": "CenterTop",
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "color": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+                        "cssText": "top: 4px;\npadding: 4px;\nborder-radius: 4px;",
+                        "text": "爆炸效果",
+                        "fontSize": 14,
+                        "fontWeight": 400
+                    }
+                },
+                {
+                    "name": "播放器",
+                    "sceneObj": {
+                        "id": "dbe6bb26-9749-4999-8068-7be58c13495f",
+                        "type": "Player",
+                        "loop": true,
+                        "currentTime": 307.9999999701977,
+                        "duration": 1160,
+                        "playing": true,
+                        "name": "播放器"
+                    }
+                },
+                {
+                    "name": "播放器面板",
+                    "sceneObj": {
+                        "id": "570c3500-6efc-4583-be2c-f99db77861bb",
+                        "type": "MyPlayerUI",
+                        "name": "播放器面板",
+                        "targetID": "dbe6bb26-9749-4999-8068-7be58c13495f"
+                    }
+                },
+                {
+                    "name": "播放器跟踪器",
+                    "sceneObj": {
+                        "id": "b218ded9-3bac-4a48-a077-c16b3e9ced16",
+                        "type": "PlayerTracker",
+                        "enabled": true,
+                        "playerId": "dbe6bb26-9749-4999-8068-7be58c13495f",
+                        "targetObjId": "3ef97588-cdab-452a-ae13-2d0be3afc95e",
+                        "name": "播放器跟踪器"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "c815a6bf-910e-4dcc-8048-5414f9d26db8",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732008181769
+        },
+        "offlineImagery": {
+            "id": "9f273dff-a9a6-4a8a-a399-c80b65e09e08",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "9b286135-8019-4559-b1f7-686cd1c614be",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "55e86299-a5ce-4fe7-a18f-386454d29a00",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "55f8e70d-c707-4f5f-9651-922ecd1dced5",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "4eeaa852-d7ec-4799-a871-979a37b2ad71",
+            "type": "View",
+            "position": [
+                120.96107069379008,
+                22.874431945705382,
+                216026.3051881516
+            ],
+            "rotation": [
+                353.64239500393666,
+                -59.33453888744229,
+                0.0004055011803041911
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "db918bdc-6331-4ca4-a9a9-bdf56bc91026",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

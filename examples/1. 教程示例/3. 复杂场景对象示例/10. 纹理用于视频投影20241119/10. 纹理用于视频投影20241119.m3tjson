@@ -1,0 +1,250 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-19T09:22:02.675Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "视频纹理(CzmTexture)",
+                    "sceneObj": {
+                        "id": "5d9c8903-3dbf-414c-aeec-f9047b2cfbc3",
+                        "type": "CzmTexture",
+                        "size": [
+                            1280,
+                            720
+                        ],
+                        "uri": "https://0472.org/hls/cgtn.m3u8",
+                        "name": "视频纹理(CzmTexture)",
+                        "ref": "压平纹理"
+                    }
+                },
+                {
+                    "name": "说明",
+                    "sceneObj": {
+                        "id": "51ac0569-1cb7-4058-9d0a-b3c4b55c0caf",
+                        "type": "MyLabel",
+                        "name": "说明",
+                        "layoutType": "CenterTop",
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "color": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+                        "cssText": "top: 4px;\npadding: 4px;\nborder-radius: 4px;",
+                        "text": "纹理对象 可以用于3dtiles数据的压平和挖坑",
+                        "fontSize": 14,
+                        "fontWeight": 400
+                    }
+                },
+                {
+                    "name": "台北3dtiles",
+                    "sceneObj": {
+                        "id": "038a99f8-905a-47be-a26a-391b871b624a",
+                        "type": "Czm3DTiles",
+                        "name": "台北3dtiles",
+                        "allowPicking": true,
+                        "czmFlattenedPlaneId": "a97cb506-b3be-4329-be78-619b4b2e17cd",
+                        "url": "${SD}../../../../shared/data/3dtiles/tw-3dtiles-121.217432_24.954151/3143415260736271/tileset.json",
+                        "show": true
+                    }
+                },
+                {
+                    "name": "台北视角",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "a2dfd699-8c3e-437d-baa7-d5456ea34409",
+                        "type": "View",
+                        "position": [
+                            121.2221596597704,
+                            24.950115376924018,
+                            457.53268759607425
+                        ],
+                        "rotation": [
+                            330.41591880146973,
+                            -58.02879911027895,
+                            0.00020280130272249186
+                        ],
+                        "name": "台北视角",
+                        "ref": "台北视角"
+                    }
+                },
+                {
+                    "name": "视频融合",
+                    "sceneObj": {
+                        "id": "516b221b-205f-463e-86fd-2b24cf62b04c",
+                        "type": "CzmCameraVideo",
+                        "name": "视频融合",
+                        "ref": "视频融合",
+                        "position": [
+                            121.2220031407185,
+                            24.951049752419884,
+                            238.24759397350365
+                        ],
+                        "rotation": [
+                            -40.962397275537285,
+                            -41.66153317527041,
+                            0
+                        ],
+                        "far": 276.79641380020786,
+                        "czmTextureId": "5d9c8903-3dbf-414c-aeec-f9047b2cfbc3"
+                    }
+                },
+                {
+                    "name": "MyContainer(命令按钮工具栏)",
+                    "sceneObj": {
+                        "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
+                        "type": "MyContainer",
+                        "name": "MyContainer(命令按钮工具栏)",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;\ngap: 4px;",
+                        "subIds": [
+                            "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                            "eec3eea8-bc9a-4707-ab97-ba12b8360423"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "台北视角按钮",
+                            "sceneObj": {
+                                "id": "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                                "type": "RectangleButton",
+                                "name": "台北视角按钮",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "\nfunction(mouseEvent) {\n    XE2.g.refs.台北视角.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "台北视角",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "投影视角按钮",
+                            "sceneObj": {
+                                "id": "eec3eea8-bc9a-4707-ab97-ba12b8360423",
+                                "type": "RectangleButton",
+                                "name": "投影视角按钮",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "\nfunction(mouseEvent) {\n    XE2.g.refs.视频融合.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "投影视角",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "0e315933-e172-438f-928d-316153831825",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732003678952
+        },
+        "offlineImagery": {
+            "id": "6edb347c-d812-45a9-9c01-0090af9d7a78",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "d92192dc-f230-4b56-aeb7-86efa5b79a04",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "73a53a8f-6341-44ac-b03f-1139bbc9f5c2",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "dd4aa95e-8be2-41bb-b320-ae58f7dd6a1c",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "7cf5334f-35c0-43d4-b5fa-f581959de451",
+            "type": "View",
+            "position": [
+                121.22207243066033,
+                24.95101845036045,
+                238.52920950196895
+            ],
+            "rotation": [
+                318.0507058649478,
+                -39.55859468804285,
+                359.9999221456105
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "5b32b867-12b9-4afa-ae8c-fd67c086b90d",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
