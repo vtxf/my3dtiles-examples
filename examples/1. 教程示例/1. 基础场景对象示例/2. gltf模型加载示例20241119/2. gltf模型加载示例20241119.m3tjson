@@ -1,0 +1,195 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-11-19T03:05:02.649Z",
+        "modifiedTime": "2024-11-19T03:34:03.648Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "MyContainer(命令按钮工具栏)",
+                    "sceneObj": {
+                        "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
+                        "type": "MyContainer",
+                        "name": "MyContainer(命令按钮工具栏)",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;\ngap: 4px;",
+                        "subIds": [
+                            "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                            "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                            "8b568979-58da-4f2a-b03f-1773d731e067",
+                            "7494a97c-b078-49d3-8135-a4eb13dd9c0f"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "开启/关闭动画",
+                            "sceneObj": {
+                                "id": "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭动画",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    const { running_jerry, worker } = XE2.g.refs;\n    const active = running_jerry.activeAnimationsAnimateWhilePaused;\n    running_jerry.activeAnimationsAnimateWhilePaused = !active;\n    worker.activeAnimationsAnimateWhilePaused = !active;\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭动画",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "gltf模型",
+                    "children": [
+                        {
+                            "name": "running_jerry(场景目录下gltf模型文件)",
+                            "sceneObj": {
+                                "id": "43d6299b-15cb-4398-9c80-401a0b32635d",
+                                "type": "CzmModelPrimitive",
+                                "name": "running_jerry(场景目录下gltf模型文件)",
+                                "ref": "running_jerry",
+                                "url": "${SD}/running_jerry.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39093680226415,
+                                    39.90370214944275,
+                                    0.01785615392444122
+                                ],
+                                "localScale": [
+                                    0.1,
+                                    0.1,
+                                    0.1
+                                ],
+                                "activeAnimationsJson": [
+                                    {
+                                        "index": 0,
+                                        "loop": "REPEAT",
+                                        "animationTime": "(duration) => Date.now() / 1000 / duration"
+                                    }
+                                ],
+                                "activeAnimationsAnimateWhilePaused": true
+                            }
+                        },
+                        {
+                            "name": "worker(程序内置gltf模型)",
+                            "sceneObj": {
+                                "id": "add8bea1-28d8-4883-b56c-ae0b0df9f861",
+                                "type": "CzmModelPrimitive",
+                                "name": "worker(程序内置gltf模型)",
+                                "ref": "worker",
+                                "url": "${my3dtiles-assets-script-dir}/assets/gltfs/build_worker/worker.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39095607486854,
+                                    39.9037027981438,
+                                    0.01785615392444122
+                                ],
+                                "activeAnimationsJson": [
+                                    {
+                                        "index": 1,
+                                        "loop": "REPEAT",
+                                        "animationTime": "(duration) => Date.now() / 1000 / duration"
+                                    }
+                                ],
+                                "activeAnimationsAnimateWhilePaused": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "fff2cdbf-42da-4419-907b-0e9a47b0dbbe",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731985502652
+        },
+        "offlineImagery": {
+            "id": "333e7d13-5542-41c8-bc4d-993edbe4686d",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "d72d4eaf-be4d-47c9-b629-f7859f55275a",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "2aca1526-6c0b-458d-9e4e-24ddc3499b73",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "0f66f7f3-48f5-4944-988e-ea1691feeff3",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "db48c982-4732-46bf-948f-693a48ed1f4c",
+            "type": "View",
+            "position": [
+                116.39092541391861,
+                39.90372883247541,
+                2.4164925480459973
+            ],
+            "rotation": [
+                149.44620125164604,
+                -26.050078469256174,
+                359.99998899446723
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "be3b6bc3-703f-4417-aeda-d6a5ced72a5b",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

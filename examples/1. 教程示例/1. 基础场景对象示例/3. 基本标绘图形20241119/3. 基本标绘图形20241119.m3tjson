@@ -1,0 +1,327 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-19T03:37:43.326Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "基本标绘图形",
+                    "children": [
+                        {
+                            "name": "聚集区",
+                            "sceneObj": {
+                                "id": "047aff66-a061-46f9-b7bf-32e24a046a3b",
+                                "type": "SMGeoGatheringPlace",
+                                "allowPicking": true,
+                                "positions": [
+                                    [
+                                        116.3846968155884,
+                                        39.87747116908516,
+                                        0
+                                    ],
+                                    [
+                                        116.40097689903119,
+                                        39.88036419750408,
+                                        0.015484483116982814
+                                    ]
+                                ],
+                                "name": "聚集区"
+                            }
+                        },
+                        {
+                            "name": "折线",
+                            "sceneObj": {
+                                "id": "0ff883d1-3e7b-42a7-9ff6-77af8b8a00d8",
+                                "type": "GeoPolyline",
+                                "allowPicking": true,
+                                "positions": [
+                                    [
+                                        116.34808299460727,
+                                        39.92871267728603,
+                                        0
+                                    ],
+                                    [
+                                        116.36330904292748,
+                                        39.94051673789182,
+                                        0
+                                    ],
+                                    [
+                                        116.40124342111561,
+                                        39.93501708816313,
+                                        0
+                                    ],
+                                    [
+                                        116.41929440676871,
+                                        39.946018394354354,
+                                        0
+                                    ],
+                                    [
+                                        116.43487976538798,
+                                        39.941357803240834,
+                                        0
+                                    ]
+                                ],
+                                "name": "折线"
+                            }
+                        },
+                        {
+                            "name": "多边形",
+                            "sceneObj": {
+                                "id": "aa6f6341-3745-46cb-ba9e-e9920a783062",
+                                "type": "GeoPolygon",
+                                "name": "多边形",
+                                "allowPicking": true,
+                                "positions": [
+                                    [
+                                        116.32694749583072,
+                                        39.894427489938764,
+                                        0.016587708340772982
+                                    ],
+                                    [
+                                        116.3266370703153,
+                                        39.90843205986525,
+                                        0
+                                    ],
+                                    [
+                                        116.34717109992191,
+                                        39.9088532556321,
+                                        0
+                                    ],
+                                    [
+                                        116.36099206353933,
+                                        39.901203604615795,
+                                        0
+                                    ],
+                                    [
+                                        116.35904145535436,
+                                        39.89116948293922,
+                                        0.01850034467257927
+                                    ],
+                                    [
+                                        116.34918171518795,
+                                        39.88633605601218,
+                                        0
+                                    ],
+                                    [
+                                        116.3413330715206,
+                                        39.88552853088837,
+                                        0.022470580389382065
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "创建曲线",
+                            "sceneObj": {
+                                "id": "24bfffb0-22a5-45fd-9848-426655de3f6f",
+                                "type": "GeoBezierSpline",
+                                "allowPicking": true,
+                                "positions": [
+                                    [
+                                        116.34807379996718,
+                                        39.91381615502094,
+                                        0
+                                    ],
+                                    [
+                                        116.35746628611466,
+                                        39.920674465503616,
+                                        0.016494344082776308
+                                    ],
+                                    [
+                                        116.37302618191413,
+                                        39.91836991643465,
+                                        0
+                                    ],
+                                    [
+                                        116.38798865853114,
+                                        39.92152578250777,
+                                        0
+                                    ],
+                                    [
+                                        116.39456287955056,
+                                        39.92516988689241,
+                                        0
+                                    ],
+                                    [
+                                        116.4031555823935,
+                                        39.923345653849175,
+                                        0
+                                    ]
+                                ],
+                                "name": "创建曲线"
+                            }
+                        },
+                        {
+                            "name": "圆形",
+                            "sceneObj": {
+                                "id": "b76adb56-c2e9-4cc2-a6c8-bc4a28f7a216",
+                                "type": "GeoCircle",
+                                "allowPicking": true,
+                                "position": [
+                                    116.37436824626575,
+                                    39.903609071397995,
+                                    9.313225746154785e-10
+                                ],
+                                "radius": 829.7958349161752,
+                                "name": "圆形"
+                            }
+                        },
+                        {
+                            "name": "矩形",
+                            "sceneObj": {
+                                "id": "e62e45d5-fffc-4d0f-bdb8-baa7bb689295",
+                                "type": "GeoRectangle",
+                                "allowPicking": true,
+                                "rectangle": [
+                                    116.39200726588791,
+                                    39.90168278407417,
+                                    116.4090696831636,
+                                    39.9130004847812
+                                ],
+                                "name": "矩形"
+                            }
+                        },
+                        {
+                            "name": "燕尾斜箭头",
+                            "sceneObj": {
+                                "id": "52d5a127-92a4-4728-8a33-5116c690e36c",
+                                "type": "SMGeoDoveTailDiagonalArrow",
+                                "allowPicking": true,
+                                "positions": [
+                                    [
+                                        116.41110276976056,
+                                        39.92019775338442,
+                                        0
+                                    ],
+                                    [
+                                        116.42487623665158,
+                                        39.924726654030486,
+                                        0
+                                    ],
+                                    [
+                                        116.43224623457843,
+                                        39.93021581103924,
+                                        0
+                                    ],
+                                    [
+                                        116.44175478908676,
+                                        39.94214600238111,
+                                        0.00995695913642148
+                                    ]
+                                ],
+                                "name": "燕尾斜箭头"
+                            }
+                        },
+                        {
+                            "name": "直角旗标",
+                            "sceneObj": {
+                                "id": "ae9b1c22-2bd2-48b3-8454-e3abb1d87019",
+                                "type": "SMGeoRectFlag",
+                                "allowPicking": true,
+                                "positions": [
+                                    [
+                                        116.42039504060952,
+                                        39.90688150516684,
+                                        9.313225746154785e-10
+                                    ],
+                                    [
+                                        116.42743206777915,
+                                        39.89971445099867,
+                                        0
+                                    ]
+                                ],
+                                "name": "直角旗标"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "fff2cdbf-42da-4419-907b-0e9a47b0dbbe",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731987269220
+        },
+        "offlineImagery": {
+            "id": "333e7d13-5542-41c8-bc4d-993edbe4686d",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "d72d4eaf-be4d-47c9-b629-f7859f55275a",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "2aca1526-6c0b-458d-9e4e-24ddc3499b73",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "0f66f7f3-48f5-4944-988e-ea1691feeff3",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "db48c982-4732-46bf-948f-693a48ed1f4c",
+            "type": "View",
+            "position": [
+                116.32524435351984,
+                39.793886375129496,
+                21549.759597621534
+            ],
+            "rotation": [
+                28.872719519761638,
+                -59.05191363957214,
+                359.97892535796046
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "be3b6bc3-703f-4417-aeda-d6a5ced72a5b",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

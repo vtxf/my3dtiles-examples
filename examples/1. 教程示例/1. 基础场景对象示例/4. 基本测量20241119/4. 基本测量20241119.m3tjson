@@ -1,0 +1,208 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-19T03:42:42.207Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "面积测量",
+                    "sceneObj": {
+                        "id": "a3c9e82f-c3aa-4716-b1b2-39333fe01a68",
+                        "type": "GeoAreaMeasurement",
+                        "allowPicking": true,
+                        "positions": [
+                            [
+                                116.4251346158143,
+                                39.970959791425265,
+                                9.313225746154785e-10
+                            ],
+                            [
+                                116.47079407196381,
+                                39.946205721495424,
+                                9.313225746154785e-10
+                            ],
+                            [
+                                116.46112478057735,
+                                39.91953224033866,
+                                9.313225746154785e-10
+                            ],
+                            [
+                                116.41948718306944,
+                                39.91657715149827,
+                                0
+                            ],
+                            [
+                                116.39989341577541,
+                                39.94556441515992,
+                                0.005858945342150714
+                            ]
+                        ],
+                        "name": "面积测量"
+                    }
+                },
+                {
+                    "name": "方向测量",
+                    "sceneObj": {
+                        "id": "b3714f70-4627-47e4-9e97-1fd101b57e2e",
+                        "type": "GeoDirectionMeasurement",
+                        "allowPicking": true,
+                        "positions": [
+                            [
+                                116.33572318044519,
+                                39.9413149544551,
+                                0.006139841430801967
+                            ],
+                            [
+                                116.37239034185583,
+                                39.959524960933315,
+                                0
+                            ]
+                        ],
+                        "name": "方向测量"
+                    }
+                },
+                {
+                    "name": "位置测量",
+                    "sceneObj": {
+                        "id": "4bb2444a-fd3f-4639-9f70-9911300ced37",
+                        "type": "GeoLocationMeasurement",
+                        "allowPicking": true,
+                        "position": [
+                            116.36161972792252,
+                            39.9098952462211,
+                            0.006794881601181474
+                        ],
+                        "name": "位置测量"
+                    }
+                },
+                {
+                    "name": "worker",
+                    "sceneObj": {
+                        "id": "66c6f816-2943-47c8-a008-30caac93dbf1",
+                        "type": "CzmModelPrimitive",
+                        "name": "worker",
+                        "url": "${my3dtiles-assets-script-dir}/assets/gltfs/build_worker/worker.glb",
+                        "allowPicking": true,
+                        "position": [
+                            116.38871272059984,
+                            39.890252377425305,
+                            0
+                        ],
+                        "localScale": [
+                            1000,
+                            1000,
+                            1000
+                        ]
+                    }
+                },
+                {
+                    "name": "高度测量",
+                    "sceneObj": {
+                        "id": "73ca53b7-fffe-4797-aace-ebcf46f9eb22",
+                        "type": "GeoHeightMeasurement",
+                        "allowPicking": true,
+                        "positions": [
+                            [
+                                116.3769018272078,
+                                39.89202801562817,
+                                0
+                            ],
+                            [
+                                116.38831242406513,
+                                39.890175491134464,
+                                1805.053138286605
+                            ]
+                        ],
+                        "name": "高度测量"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "fff2cdbf-42da-4419-907b-0e9a47b0dbbe",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731987500279
+        },
+        "offlineImagery": {
+            "id": "333e7d13-5542-41c8-bc4d-993edbe4686d",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "d72d4eaf-be4d-47c9-b629-f7859f55275a",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "2aca1526-6c0b-458d-9e4e-24ddc3499b73",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "0f66f7f3-48f5-4944-988e-ea1691feeff3",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "db48c982-4732-46bf-948f-693a48ed1f4c",
+            "type": "View",
+            "position": [
+                116.34953211464065,
+                39.81025085497608,
+                8091.610800555301
+            ],
+            "rotation": [
+                20.417165089799845,
+                -30.29462435213739,
+                359.98331639687495
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "be3b6bc3-703f-4417-aeda-d6a5ced72a5b",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

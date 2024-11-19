@@ -1,0 +1,298 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-11-19T03:05:02.649Z",
+        "modifiedTime": "2024-11-19T03:13:25.994Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "程序内置gltf模型",
+                    "collapsed": true,
+                    "children": [
+                        {
+                            "name": "worker",
+                            "sceneObj": {
+                                "id": "f6ca30ee-c2fb-443b-ae6b-3bfcf070be87",
+                                "type": "CzmModelPrimitive",
+                                "name": "worker",
+                                "url": "${my3dtiles-assets-script-dir}/assets/gltfs/build_worker/worker.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.3901255673838,
+                                    39.90362470709636,
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "name": "denggan",
+                            "sceneObj": {
+                                "id": "74f79811-ef86-41d5-9b5b-e2a8be4a03df",
+                                "type": "CzmModelPrimitive",
+                                "name": "denggan",
+                                "url": "${my3dtiles-assets-script-dir}/assets/gltfs/plotting/denggan.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39030241472335,
+                                    39.90364489499854,
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "name": "fenxianxiang",
+                            "sceneObj": {
+                                "id": "48af05b3-45c4-437f-8a08-dda71dc7d8a4",
+                                "type": "CzmModelPrimitive",
+                                "name": "fenxianxiang",
+                                "url": "${my3dtiles-assets-script-dir}/assets/gltfs/plotting/fenxianxiang.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39013615579677,
+                                    39.90361541291018,
+                                    0.3228325354727111
+                                ]
+                            }
+                        },
+                        {
+                            "name": "jiankongqi",
+                            "sceneObj": {
+                                "id": "74ecf170-1412-445e-a81d-851ce5879f5d",
+                                "type": "CzmModelPrimitive",
+                                "name": "jiankongqi",
+                                "url": "${my3dtiles-assets-script-dir}/assets/gltfs/plotting/jiankongqi.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39013756587292,
+                                    39.903618460641155,
+                                    1.537710245448347
+                                ]
+                            }
+                        },
+                        {
+                            "name": "xiangan",
+                            "sceneObj": {
+                                "id": "d1547ef3-1e20-48e7-8f7f-408e8f65e69e",
+                                "type": "CzmModelPrimitive",
+                                "name": "xiangan",
+                                "url": "${my3dtiles-assets-script-dir}/assets/gltfs/plotting/xiangan.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39027228481666,
+                                    39.90365094701648,
+                                    -0.17312193194666786
+                                ]
+                            }
+                        },
+                        {
+                            "name": "xiaohuoshuan",
+                            "sceneObj": {
+                                "id": "982a105c-9a3f-4524-8533-b94236156d42",
+                                "type": "CzmModelPrimitive",
+                                "name": "xiaohuoshuan",
+                                "url": "${my3dtiles-assets-script-dir}/assets/gltfs/plotting/xiaohuoshuan.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39011735608437,
+                                    39.90362147872012,
+                                    0
+                                ],
+                                "localScale": [
+                                    0.1,
+                                    0.1,
+                                    0.1
+                                ]
+                            }
+                        },
+                        {
+                            "name": "导弹",
+                            "sceneObj": {
+                                "id": "3669a7c3-8fd2-422c-b9d8-1b19a3d81cd5",
+                                "type": "CzmModelPrimitive",
+                                "name": "导弹",
+                                "url": "${xe2-assets-script-dir}/xe2-assets/scene-manager/glbs/DaoDan.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39022284418303,
+                                    39.90363469754443,
+                                    0.1271360998631509
+                                ]
+                            }
+                        },
+                        {
+                            "name": "卫星",
+                            "sceneObj": {
+                                "id": "f066016b-db0e-435b-b761-a0bce67f9c50",
+                                "type": "CzmModelPrimitive",
+                                "name": "卫星",
+                                "url": "${xe2-assets-script-dir}/xe2-assets/scene-manager/glbs/WeiXing.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39039104889707,
+                                    39.90376123129611,
+                                    1.119885895488033
+                                ],
+                                "localScale": [
+                                    0.1,
+                                    0.1,
+                                    0.1
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Cesium官网模型",
+                    "collapsed": true,
+                    "children": [
+                        {
+                            "name": "卡车glb",
+                            "sceneObj": {
+                                "id": "215fb951-91a4-493b-83b4-722159f681df",
+                                "type": "CzmModelPrimitive",
+                                "name": "卡车glb",
+                                "url": "${LP}https://sandcastle.cesium.com/SampleData/models/CesiumMilkTruck/CesiumMilkTruck.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39028558912312,
+                                    39.9036946674709,
+                                    0.7467746216372476
+                                ]
+                            }
+                        },
+                        {
+                            "name": "气球glb",
+                            "sceneObj": {
+                                "id": "9655fb2e-277c-4ef7-bcbb-9fd315a7693e",
+                                "type": "CzmModelPrimitive",
+                                "name": "气球glb",
+                                "url": "${LP}https://sandcastle.cesium.com/SampleData/models/CesiumBalloon/CesiumBalloon.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.3899987771064,
+                                    39.903745879679356,
+                                    -0.02470013955405454
+                                ]
+                            }
+                        },
+                        {
+                            "name": "车辆glb",
+                            "sceneObj": {
+                                "id": "2cebe2f4-0d18-49c6-9d1d-f1a04d3baf07",
+                                "type": "CzmModelPrimitive",
+                                "name": "车辆glb",
+                                "url": "${LP}https://sandcastle.cesium.com/SampleData/models/GroundVehicle/GroundVehicle.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39024095243956,
+                                    39.903775879169075,
+                                    -0.18656929351377446
+                                ]
+                            }
+                        },
+                        {
+                            "name": "无人机glb",
+                            "sceneObj": {
+                                "id": "5a215103-c052-425d-a135-a468ce688226",
+                                "type": "CzmModelPrimitive",
+                                "name": "无人机glb",
+                                "url": "${LP}https://sandcastle.cesium.com/SampleData/models/CesiumDrone/CesiumDrone.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39016966232951,
+                                    39.903840504036204,
+                                    -0.2741545226406909
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "e9cb77f1-a17b-4742-a2a2-84844df60fb5",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731985502652
+        },
+        "offlineImagery": {
+            "id": "9397cf3f-5043-438d-a6fb-822da80b3c95",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "96f0bd4f-95bc-48a2-973f-76cd11e96ea5",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "de9479a3-908d-47cf-87d8-ec0f8f5912ca",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "ae79441f-cdd8-4d72-b413-9fbbe450ba17",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "73fcc074-f280-4f2b-bce7-a1313528c52d",
+            "type": "View",
+            "position": [
+                116.39012111780524,
+                39.903806283254816,
+                9.211061215701967
+            ],
+            "rotation": [
+                131.23471887785013,
+                -30.225535479529235,
+                0.000022483828202465052
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "9a0f4ab1-c0dd-4a41-add4-0c633f93e2be",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

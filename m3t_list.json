@@ -16,12 +16,36 @@
                             "collapse": true,
                             "children": [
                                 {
-                                    "name": "3dtiles数据加载示例20241118",
+                                    "name": "1. 3dtiles数据加载示例20241118",
                                     "content": {
                                         "type": "m3tJsonUri",
-                                        "m3tJsonUri": "${M3T_CurrentDir}3dtiles数据加载示例20241118/3dtiles数据加载示例20241118.m3tjson"
+                                        "m3tJsonUri": "${M3T_CurrentDir}1. 3dtiles数据加载示例20241118/1. 3dtiles数据加载示例20241118.m3tjson"
                                     },
-                                    "previewImageUri": "${M3T_CurrentDir}3dtiles数据加载示例20241118/3dtiles数据加载示例20241118.jpg"
+                                    "previewImageUri": "${M3T_CurrentDir}1. 3dtiles数据加载示例20241118/1. 3dtiles数据加载示例20241118.jpg"
+                                },
+                                {
+                                    "name": "2. gltf模型加载示例20241119",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}2. gltf模型加载示例20241119/2. gltf模型加载示例20241119.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}2. gltf模型加载示例20241119/2. gltf模型加载示例20241119.jpg"
+                                },
+                                {
+                                    "name": "3. 基本标绘图形20241119",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}3. 基本标绘图形20241119/3. 基本标绘图形20241119.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}3. 基本标绘图形20241119/3. 基本标绘图形20241119.jpg"
+                                },
+                                {
+                                    "name": "4. 基本测量20241119",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}4. 基本测量20241119/4. 基本测量20241119.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}4. 基本测量20241119/4. 基本测量20241119.jpg"
                                 },
                                 {
                                     "name": "场景对象的飞入操作20241115",
@@ -69,6 +93,14 @@
                                         "m3tJsonUri": "${M3T_CurrentDir}RectangleButton的使用示例/RectangleButton的使用示例.m3tjson"
                                     },
                                     "previewImageUri": "${M3T_CurrentDir}RectangleButton的使用示例/RectangleButton的使用示例.jpg"
+                                },
+                                {
+                                    "name": "命令按钮工具栏的使用示例",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}命令按钮工具栏的使用示例/命令按钮工具栏的使用示例.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}命令按钮工具栏的使用示例/命令按钮工具栏的使用示例.jpg"
                                 }
                             ]
                         }
@@ -79,6 +111,13 @@
                     "path": "2. 基础示例",
                     "collapse": false,
                     "children": [
+                        {
+                            "name": "gltf模型示例20241119",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}gltf模型示例20241119/gltf模型示例20241119.m3tjson"
+                            }
+                        },
                         {
                             "name": "单图片影像20241108",
                             "path": "单图片影像20241108",
