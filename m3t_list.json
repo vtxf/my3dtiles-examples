@@ -11,6 +11,14 @@
                     "collapse": true,
                     "children": [
                         {
+                            "name": "ECharts面板展示20241119",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}ECharts面板展示20241119/ECharts面板展示20241119.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}ECharts面板展示20241119/ECharts面板展示20241119.jpg"
+                        },
+                        {
                             "name": "大屏UI布局20241118",
                             "content": {
                                 "type": "m3tJsonUri",
@@ -25,6 +33,14 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.jpg"
+                        },
+                        {
+                            "name": "按钮控制视角20241119",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}按钮控制视角20241119/按钮控制视角20241119.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}按钮控制视角20241119/按钮控制视角20241119.jpg"
                         },
                         {
                             "name": "数字面板20241118",
@@ -143,6 +159,52 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}这里可以写字20241107/这里可以写字20241107.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}这里可以写字20241107/这里可以写字20241107.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "基础教程示例",
+                    "path": "基础教程示例",
+                    "collapse": false,
+                    "children": [
+                        {
+                            "name": "基础UI教程示例",
+                            "path": "基础UI教程示例",
+                            "collapse": true,
+                            "children": [
+                                {
+                                    "name": "MyContainer的使用示例",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}MyContainer的使用示例/MyContainer的使用示例.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}MyContainer的使用示例/MyContainer的使用示例.jpg"
+                                },
+                                {
+                                    "name": "MyImage的使用示例",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}MyImage的使用示例/MyImage的使用示例.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}MyImage的使用示例/MyImage的使用示例.jpg"
+                                },
+                                {
+                                    "name": "MyLabel的使用示例",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}MyLabel的使用示例/MyLabel的使用示例.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}MyLabel的使用示例/MyLabel的使用示例.jpg"
+                                },
+                                {
+                                    "name": "RectangleButton的使用示例",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}RectangleButton的使用示例/RectangleButton的使用示例.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}RectangleButton的使用示例/RectangleButton的使用示例.jpg"
+                                }
+                            ]
                         }
                     ]
                 },

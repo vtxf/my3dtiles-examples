@@ -1,0 +1,277 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-19T02:24:16.282Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "图像按钮",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "2ff38d8a-bdb0-41ee-98f8-03d4e9b3a6ab",
+                        "type": "RectangleButton",
+                        "name": "图像按钮",
+                        "width": 82,
+                        "height": 29,
+                        "backgroundColor": [
+                            0.08000000000000002,
+                            0.08000000000000002,
+                            0.08000000000000002,
+                            0
+                        ],
+                        "borderColor": [
+                            0.8,
+                            0.8,
+                            0.8,
+                            0.8
+                        ],
+                        "borderWidth": 0,
+                        "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
+                        "textColor": [
+                            0.8,
+                            0.8,
+                            0.8,
+                            0.8
+                        ],
+                        "fontSize": 12,
+                        "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                        "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                    }
+                },
+                {
+                    "name": "默认按钮",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "e5457c8d-2599-4686-a8f1-c35408d54f47",
+                        "type": "RectangleButton",
+                        "name": "默认按钮",
+                        "backgroundColor": [
+                            0.08000000000000002,
+                            0.08000000000000002,
+                            0.08000000000000002,
+                            0.7200000000000001
+                        ],
+                        "borderColor": [
+                            0.8,
+                            0.8,
+                            0.8,
+                            0.8
+                        ],
+                        "textColor": [
+                            0.8,
+                            0.8,
+                            0.8,
+                            0.8
+                        ]
+                    }
+                },
+                {
+                    "name": "圆形按钮",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "27e61c6e-b38c-425b-a8d5-3d52d254e36f",
+                        "type": "RectangleButton",
+                        "name": "圆形按钮",
+                        "width": 32,
+                        "height": 32,
+                        "backgroundColor": [
+                            0.08000000000000002,
+                            0.08000000000000002,
+                            0.08000000000000002,
+                            0.7200000000000001
+                        ],
+                        "borderColor": [
+                            0.8,
+                            0.8,
+                            0.8,
+                            0.8
+                        ],
+                        "borderWidth": 0,
+                        "cssText": "cursor: pointer;\nborder-radius: 32px;",
+                        "text": "",
+                        "textColor": [
+                            0.8,
+                            0.8,
+                            0.8,
+                            0.8
+                        ],
+                        "normalImageUri": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#ffffff\" viewBox=\"0 0 24 24\"><g id=\"_01_align_center\" data-name=\"01 align center\"><path d=\"M23.821,11.181v0C22.943,9.261,19.5,3,12,3S1.057,9.261.179,11.181a1.969,1.969,0,0,0,0,1.64C1.057,14.739,4.5,21,12,21s10.943-6.261,11.821-8.181A1.968,1.968,0,0,0,23.821,11.181ZM12,19c-6.307,0-9.25-5.366-10-6.989C2.75,10.366,5.693,5,12,5c6.292,0,9.236,5.343,10,7C21.236,13.657,18.292,19,12,19Z\"/><path d=\"M12,7a5,5,0,1,0,5,5A5.006,5.006,0,0,0,12,7Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,12,15Z\"/></g></svg>",
+                        "imageCssText": "width: 20px; height: 20px;"
+                    }
+                },
+                {
+                    "name": "MyContainer(命令按钮组)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "951c8f0c-f783-40d4-9049-3ce652bc4f6b",
+                        "type": "MyContainer",
+                        "name": "MyContainer(命令按钮组)",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\n",
+                        "subIds": [
+                            "760e57b8-1514-457b-bcc1-72e70b45d7c4",
+                            "8b9d75be-c3fd-45e4-943c-63549f3e3113",
+                            "b9815a91-a916-48c7-b7b3-757433de6ad8"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "命令按钮",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "760e57b8-1514-457b-bcc1-72e70b45d7c4",
+                                "type": "RectangleButton",
+                                "name": "命令按钮",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "命令按钮1",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "命令按钮",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "8b9d75be-c3fd-45e4-943c-63549f3e3113",
+                                "type": "RectangleButton",
+                                "name": "命令按钮",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "命令按钮2",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "命令按钮",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "b9815a91-a916-48c7-b7b3-757433de6ad8",
+                                "type": "RectangleButton",
+                                "name": "命令按钮",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "命令按钮3",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "6d1f0614-5944-40ec-9f24-9a65d9267536",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731982684394
+        },
+        "offlineImagery": {
+            "id": "caf657cb-6311-479d-b044-2eb5dc27a5fe",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "277a7cfa-e820-4c35-98f5-d71e4eff53ca",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "9b988a9b-76e4-4c97-82bd-3231ff15a6f4",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "0f390cac-ed87-4986-97ae-0573338244c8",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "83a014cc-a0e4-41c1-bd0b-8d39256a3b65",
+            "type": "View",
+            "position": [
+                116.71727402589282,
+                40.219589933087995,
+                8577.647313653699
+            ],
+            "rotation": [
+                252.42447673231072,
+                -55.98761996883157,
+                359.931174171498
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "81934296-952b-4e8c-8c59-64848d029ecd",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
