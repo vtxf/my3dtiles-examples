@@ -1,0 +1,170 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-19T06:31:01.990Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "播放器",
+                    "sceneObj": {
+                        "id": "4854f468-2278-4643-93d0-7086b5b68367",
+                        "type": "Player",
+                        "loop": true,
+                        "currentTime": 1248.3000001311302,
+                        "playing": true,
+                        "name": "播放器",
+                        "ref": "播放器"
+                    }
+                },
+                {
+                    "name": "播放器面板",
+                    "sceneObj": {
+                        "id": "8e566010-dd86-425d-a637-9482e339b910",
+                        "type": "MyPlayerUI",
+                        "name": "播放器面板",
+                        "targetID": "4854f468-2278-4643-93d0-7086b5b68367"
+                    }
+                },
+                {
+                    "name": "播放器的解释说明",
+                    "sceneObj": {
+                        "id": "6d56d8e7-bae5-45f9-85c3-958030101c0a",
+                        "type": "MyLabel",
+                        "name": "播放器的解释说明",
+                        "layoutType": "LeftTop",
+                        "width": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "color": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+                        "cssText": "border-radius: 4px;\nleft: 4px;\ntop: 4px;\nwhite-space: break-spaces;",
+                        "text": "播放器是一个抽象对象，内部驱动时间戳和比率变化，其他对象跟踪播放器的时间戳或者比率做出相应的变化，通过播放器可以驱动路径动画。播放器面板只是一个UI，只是为了表现播放器状态而创建的UI，没有播放器面板，播放器一样能起作用。",
+                        "fontSize": 12,
+                        "fontWeight": 400
+                    }
+                },
+                {
+                    "name": "播放器变化监测板",
+                    "sceneObj": {
+                        "id": "a0028ae8-5273-4721-8f0f-7b117cbba5c1",
+                        "type": "MyLabel",
+                        "name": "播放器变化监测板",
+                        "ref": "播放器变化监测板",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n            const { 播放器 } = XE2.g.refs;\r\n            const update = () => {\r\n                sceneObject.text = `播放器属性变化\\nratio(比率): ${播放器.ratio}\\ncurrentTime(时间戳): ${播放器.currentTime}`;\r\n            };\r\n            update();\r\n            this.dispose(播放器.currentTimeChanged.disposableOn(update));\r\n            this.dispose(播放器.ratioChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "layoutType": "Center",
+                        "width": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "color": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+                        "cssText": "padding: 4px;\nborder-radius: 4px;\n",
+                        "text": "播放器属性变化\nratio(比率): 0.4102333333765467\ncurrentTime(时间戳): 1248.3000001311302",
+                        "fontSize": 12
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "dbbc823b-394e-4001-afb0-f18776a2a557",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731997053839
+        },
+        "offlineImagery": {
+            "id": "dc7547ca-7eec-4651-a06d-adcea738295e",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "ba502bc5-ea9c-4687-909e-93c5fdffc901",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "c920be1d-18ed-4762-afb3-15ba2bf12922",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "8bd36894-0579-4bf3-85ae-b26aa4dae9fa",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "7c8a0e1a-2895-451d-96d4-be7f2816586a",
+            "type": "View",
+            "position": [
+                115.64680573514623,
+                31.970118613421786,
+                2616663.8403370418
+            ],
+            "rotation": [
+                341.8250852929055,
+                -89.88919685309419,
+                0
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "fc3acddc-e3bb-41ad-a592-54259a571b88",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

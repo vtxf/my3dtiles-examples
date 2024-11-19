@@ -1,0 +1,199 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-19T06:15:53.793Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "物体沿路径运动",
+                    "children": [
+                        {
+                            "name": "播放器面板",
+                            "sceneObj": {
+                                "id": "015f8bed-ac33-4216-9899-cb3544bb9e31",
+                                "type": "MyPlayerUI",
+                                "name": "播放器面板",
+                                "targetID": "56aca440-c31c-448a-882f-ecbb00afa3cc"
+                            }
+                        },
+                        {
+                            "name": "曲线路径",
+                            "sceneObj": {
+                                "id": "c22bd6ff-374a-4b2d-a8af-e14cd52893f0",
+                                "type": "GeoBezierPath",
+                                "allowPicking": true,
+                                "positions": [
+                                    [
+                                        116.3855779551094,
+                                        39.8956019529853,
+                                        9.313225746154785e-10
+                                    ],
+                                    [
+                                        116.39358716136974,
+                                        39.89547859245732,
+                                        0.0026629833210497895
+                                    ],
+                                    [
+                                        116.3947259433772,
+                                        39.89980830675697,
+                                        9.313225746154785e-10
+                                    ],
+                                    [
+                                        116.39797699439485,
+                                        39.903093920443396,
+                                        0
+                                    ],
+                                    [
+                                        116.40267250244771,
+                                        39.90196239067925,
+                                        0.0073085488895922295
+                                    ]
+                                ],
+                                "currentTime": 329.8076923076923,
+                                "name": "曲线路径"
+                            }
+                        },
+                        {
+                            "name": "物体",
+                            "sceneObj": {
+                                "id": "eccfa684-8508-4b1c-8ad2-0852420115c5",
+                                "type": "CzmModelPrimitive",
+                                "name": "物体",
+                                "url": "${SD}/running_jerry.glb",
+                                "allowPicking": true,
+                                "pixelSize": 10,
+                                "position": [
+                                    116.38825919194069,
+                                    39.89525823674888,
+                                    -0.005360615439713001
+                                ],
+                                "rotation": [
+                                    97.55265220053258,
+                                    -0.0005507103246600309,
+                                    0
+                                ],
+                                "activeAnimationsJson": [
+                                    {
+                                        "index": 0,
+                                        "loop": "REPEAT",
+                                        "animationTime": "(duration) => Date.now() / 1000 / duration"
+                                    }
+                                ],
+                                "activeAnimationsAnimateWhilePaused": true
+                            }
+                        },
+                        {
+                            "name": "场景对象路径播放器跟踪器",
+                            "sceneObj": {
+                                "id": "f2b51aae-b04c-4be0-84fd-bce645560641",
+                                "type": "GeoSceneObjectPathPlayerTracker",
+                                "enabled": true,
+                                "name": "场景对象路径播放器跟踪器",
+                                "playerId": "56aca440-c31c-448a-882f-ecbb00afa3cc",
+                                "pathId": "c22bd6ff-374a-4b2d-a8af-e14cd52893f0",
+                                "targetObjId": "eccfa684-8508-4b1c-8ad2-0852420115c5"
+                            }
+                        },
+                        {
+                            "name": "播放器",
+                            "sceneObj": {
+                                "id": "56aca440-c31c-448a-882f-ecbb00afa3cc",
+                                "type": "Player",
+                                "loop": true,
+                                "currentTime": 1099.3589743589744,
+                                "duration": 10000,
+                                "name": "播放器"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "fff2cdbf-42da-4419-907b-0e9a47b0dbbe",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731996555186
+        },
+        "offlineImagery": {
+            "id": "333e7d13-5542-41c8-bc4d-993edbe4686d",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "d72d4eaf-be4d-47c9-b629-f7859f55275a",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "2aca1526-6c0b-458d-9e4e-24ddc3499b73",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "0f66f7f3-48f5-4944-988e-ea1691feeff3",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "db48c982-4732-46bf-948f-693a48ed1f4c",
+            "type": "View",
+            "position": [
+                116.40684529585454,
+                39.88579412256362,
+                1640.3171348206934
+            ],
+            "rotation": [
+                327.4807750642225,
+                -41.376460345092795,
+                359.99387417205753
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "be3b6bc3-703f-4417-aeda-d6a5ced72a5b",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

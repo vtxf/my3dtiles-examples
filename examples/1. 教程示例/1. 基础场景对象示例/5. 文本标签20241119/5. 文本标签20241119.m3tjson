@@ -1,0 +1,246 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-19T05:28:16.392Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "文本标签",
+                    "children": [
+                        {
+                            "name": "简单的文本标签(GeoDivTextPoi)",
+                            "sceneObj": {
+                                "id": "c511bd83-4a66-492b-a433-f3c742d24f6c",
+                                "type": "GeoDivTextPoi",
+                                "name": "简单的文本标签(GeoDivTextPoi)",
+                                "position": [
+                                    116.37781686453408,
+                                    39.929040952416486,
+                                    0
+                                ],
+                                "text": "简单的文本标签(GeoDivTextPoi)"
+                            }
+                        },
+                        {
+                            "name": "带边框的文本标签(GeoDivTextPoi)",
+                            "sceneObj": {
+                                "id": "5ea5005f-ea57-497f-b50b-b3947f205de3",
+                                "type": "GeoDivTextPoi",
+                                "name": "带边框的文本标签(GeoDivTextPoi)",
+                                "position": [
+                                    116.37674507601946,
+                                    39.93042604298344,
+                                    0
+                                ],
+                                "text": "带边框的文本标签(GeoDivTextPoi)",
+                                "backgroundColor": [
+                                    0.12941176470588237,
+                                    0.12941176470588237,
+                                    0.12941176470588237,
+                                    0.65
+                                ],
+                                "borderWidth": 1
+                            }
+                        },
+                        {
+                            "name": "仿宋字体的文本标签(GeoDivTextPoi)",
+                            "sceneObj": {
+                                "id": "80bc7254-6a4c-4e7e-8722-d308535777db",
+                                "type": "GeoDivTextPoi",
+                                "name": "仿宋字体的文本标签(GeoDivTextPoi)",
+                                "position": [
+                                    116.38106711895091,
+                                    39.927294906138094,
+                                    0
+                                ],
+                                "text": "仿宋字体的文本标签(GeoDivTextPoi)",
+                                "fontFamily": "fangsong",
+                                "fontSize": 20
+                            }
+                        },
+                        {
+                            "name": "楷体的文本标签(GeoDivTextPoi)",
+                            "sceneObj": {
+                                "id": "3bef4d02-080d-4d8a-902f-0563fbdc6bff",
+                                "type": "GeoDivTextPoi",
+                                "name": "楷体的文本标签(GeoDivTextPoi)",
+                                "position": [
+                                    116.38262741110225,
+                                    39.926441871725025,
+                                    0
+                                ],
+                                "text": "楷体的文本标签(GeoDivTextPoi)",
+                                "fontFamily": "KaiTi",
+                                "fontSize": 20
+                            }
+                        },
+                        {
+                            "name": "华文宋体的文本标签(GeoDivTextPoi)",
+                            "sceneObj": {
+                                "id": "4e329592-cc0d-4271-bedc-cf270655b97a",
+                                "type": "GeoDivTextPoi",
+                                "name": "华文宋体的文本标签(GeoDivTextPoi)",
+                                "position": [
+                                    116.38333522118637,
+                                    39.9251724350228,
+                                    0
+                                ],
+                                "text": "华文宋体的文本标签(GeoDivTextPoi)",
+                                "fontFamily": "STSong",
+                                "fontSize": 20
+                            }
+                        },
+                        {
+                            "name": "双击可以修改内容的文本标签(GeoDivTextPoi)",
+                            "sceneObj": {
+                                "id": "3b497b85-71c4-4b37-9d3d-1fa38b0ede06",
+                                "type": "GeoDivTextPoi",
+                                "name": "双击可以修改内容的文本标签(GeoDivTextPoi)",
+                                "position": [
+                                    116.37840427971571,
+                                    39.924552792019995,
+                                    0
+                                ],
+                                "text": "双击可以修改内容的文本标签(GeoDivTextPoi)",
+                                "textEditingInteraction": true
+                            }
+                        },
+                        {
+                            "name": "颜色大小变化的文本标签(GeoDivTextPoi)",
+                            "sceneObj": {
+                                "id": "2a55261e-d578-47f6-95c2-b9d16d04e1ca",
+                                "type": "GeoDivTextPoi",
+                                "name": "颜色大小变化的文本标签(GeoDivTextPoi)",
+                                "position": [
+                                    116.37484884528112,
+                                    39.9269132299272,
+                                    0
+                                ],
+                                "text": "颜色大小变化的文本标签(GeoDivTextPoi)",
+                                "fontSize": 16,
+                                "color": [
+                                    0.9803921568627451,
+                                    0.0196078431372549,
+                                    0.0196078431372549,
+                                    1
+                                ],
+                                "backgroundColor": [
+                                    0.10196078431372549,
+                                    0.1411764705882353,
+                                    0.0784313725490196,
+                                    0.8
+                                ]
+                            }
+                        },
+                        {
+                            "name": "离远消失的文本标签(GeoDivTextPoi)",
+                            "sceneObj": {
+                                "id": "f8867b11-69a6-4198-adb5-abc0f00da38e",
+                                "type": "GeoDivTextPoi",
+                                "name": "离远消失的文本标签(GeoDivTextPoi)",
+                                "position": [
+                                    116.37699321000059,
+                                    39.92568909728237,
+                                    0
+                                ],
+                                "text": "离远消失的文本标签(GeoDivTextPoi)",
+                                "viewDistanceRange": [
+                                    0,
+                                    0,
+                                    2000,
+                                    2500
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "fff2cdbf-42da-4419-907b-0e9a47b0dbbe",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731987809989
+        },
+        "offlineImagery": {
+            "id": "333e7d13-5542-41c8-bc4d-993edbe4686d",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "d72d4eaf-be4d-47c9-b629-f7859f55275a",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "2aca1526-6c0b-458d-9e4e-24ddc3499b73",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "0f66f7f3-48f5-4944-988e-ea1691feeff3",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "db48c982-4732-46bf-948f-693a48ed1f4c",
+            "type": "View",
+            "position": [
+                116.38496661942145,
+                39.92014688210996,
+                1670.1652868476729
+            ],
+            "rotation": [
+                342.7268154073099,
+                -60.927969104098494,
+                359.99489646747173
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "be3b6bc3-703f-4417-aeda-d6a5ced72a5b",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
