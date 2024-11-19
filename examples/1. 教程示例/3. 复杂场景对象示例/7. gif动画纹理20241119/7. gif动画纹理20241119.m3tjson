@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.26",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-19T08:30:06.235Z",
+        "modifiedTime": "2024-11-19T09:57:19.625Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -16,10 +16,10 @@
                         "id": "5d9c8903-3dbf-414c-aeec-f9047b2cfbc3",
                         "type": "CzmTexture",
                         "size": [
-                            641,
-                            360
+                            159,
+                            183
                         ],
-                        "uri": "${SD}/big-buck-bunny_trailer.mp4",
+                        "uri": "${SD}/vtxf.gif",
                         "name": "CzmTexture"
                     }
                 },
@@ -67,7 +67,7 @@
                         ],
                         "size": [
                             1000000,
-                            500000
+                            1000000
                         ],
                         "pixelSize": 0,
                         "name": "图片模型"
@@ -82,8 +82,8 @@
                         "allowPicking": true,
                         "editing": false,
                         "rectangle": [
-                            110.84730992323351,
-                            29.123558400282864,
+                            111.8102950211811,
+                            27.180571110892625,
                             120.34078095952034,
                             33.834056122072596
                         ],
@@ -101,8 +101,8 @@
                         "editing": false,
                         "pointEditing": false,
                         "rectangle": [
-                            104.69818952306201,
-                            30.148115551208022,
+                            105.29596047049654,
+                            29.062672513350115,
                             112.5509372518133,
                             34.33271314655886
                         ],
@@ -116,7 +116,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "0e315933-e172-438f-928d-316153831825",
+            "id": "60f17f76-071a-4866-8a54-d947669522cb",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -126,7 +126,7 @@
             "clockCurrentTime": 1732003678952
         },
         "offlineImagery": {
-            "id": "6edb347c-d812-45a9-9c01-0090af9d7a78",
+            "id": "56160c75-77a3-4c17-90eb-78d303fa2a7a",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -136,7 +136,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "d92192dc-f230-4b56-aeb7-86efa5b79a04",
+            "id": "7499c386-ed6b-4f40-9c00-03e253de2327",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -158,7 +158,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "73a53a8f-6341-44ac-b03f-1139bbc9f5c2",
+            "id": "648050b8-1007-49db-84f9-993dbdeb64b2",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -169,27 +169,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "dd4aa95e-8be2-41bb-b320-ae58f7dd6a1c",
+            "id": "2719df4c-7d4f-489e-aed2-5b3ea15cb268",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "7cf5334f-35c0-43d4-b5fa-f581959de451",
+            "id": "85853da8-6866-4bcb-842b-6388fa30f534",
             "type": "View",
             "position": [
-                118.03849599750629,
-                28.01775835538488,
-                1543132.5741631482
+                116.63312952199406,
+                26.7589287375376,
+                1971679.132771389
             ],
             "rotation": [
-                334.0229875451133,
-                -63.91039641710067,
-                0.20588602536154407
+                337.3441300486525,
+                -65.32115880082095,
+                0.21203532643439063
             ],
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "5b32b867-12b9-4afa-ae8c-fd67c086b90d",
+            "id": "022330d0-f152-4443-8a5a-fb45d0a32e85",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
