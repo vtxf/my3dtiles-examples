@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.26",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-19T07:09:38.411Z",
+        "modifiedTime": "2024-11-19T07:55:16.976Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -230,14 +230,15 @@
                                                         "width": 0,
                                                         "height": 24,
                                                         "backgroundColor": [
-                                                            0.1,
-                                                            0.1,
-                                                            0.1,
-                                                            0
+                                                            0.3,
+                                                            0.3,
+                                                            0,
+                                                            1
                                                         ],
                                                         "borderWidth": 0,
                                                         "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;",
                                                         "statusFuncStr": "function (status, sceneObject) {\n    if (sceneObject.highlighted) {\n        sceneObject.backgroundColor = [0.3, 0.3, 0.0, 1];\n        sceneObject.textColor = [1, 1, 1, 1];\n        return;\n    }\n\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, r - 0.1];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                                        "highlighted": true,
                                                         "highlightOnClick": true,
                                                         "text": "显示/隐藏代码",
                                                         "fontSize": 12,
@@ -262,7 +263,7 @@
                                                         ],
                                                         "borderWidth": 0,
                                                         "cssText": "cursor: pointer;\noverflow: hidden;",
-                                                        "clickFuncStr": "\nasync function(mouseEvent, context) {\n    // console.log(context);\n    // console.log(mouseEvent, context);\n    try {\n        const { rectangleButton } = context;\n        const textToCopy = rectangleButton.text;\n        await navigator.clipboard.writeText(textToCopy);\n        console.log('已复制到剪切板！' + textToCopy);\n    } catch (err) {\n        console.error('可能是浏览器安全限制导致。', err);\n        alert('复制失败, 可能是浏览器安全限制导致。', err);\n    }\n}\n",
+                                                        "clickFuncStr": "\nasync function(mouseEvent, context) {\n    // console.log(context);\n    // console.log(mouseEvent, context);\n    const { rectangleButton } = context;\n    const textToCopy = rectangleButton.text;\n    try {\n        await navigator.clipboard.writeText(textToCopy);\n        console.log('已复制到剪切板！' + textToCopy);\n    } catch (err) {\n        console.error('可能是浏览器安全限制导致。', err);\n        alert('复制失败, 可能是浏览器安全限制导致。请在此处手动复制：${textToCopy}', err);\n    }\n}\n",
                                                         "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    // sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
                                                         "text": "abcdef123456",
                                                         "textColor": [
@@ -360,7 +361,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "2edc1e14-93e1-4662-a736-1a0eef7be29b",
+            "id": "b4e0378d-de03-4105-958b-1cc159241f65",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -370,7 +371,7 @@
             "clockCurrentTime": 1730698401758
         },
         "offlineImagery": {
-            "id": "ec462c96-ccfa-459a-b291-26b8983a7e66",
+            "id": "de8729cc-28c0-4407-8331-ceeee9280b2a",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -380,7 +381,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "6936b558-07f9-480f-8bb1-9cd552e5b20e",
+            "id": "efe73667-06ab-41b6-b0d2-70c607a525eb",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -402,7 +403,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "23fc4ee4-bf12-4f89-a015-7c776fd04203",
+            "id": "9e0b2c06-9278-400f-8fee-92d209a6c5c0",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -413,27 +414,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "0e305696-79f1-49cf-a406-57b1113a42f5",
+            "id": "73f3a99f-4d3b-4112-b6da-adce1af7b827",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "d7e24a2f-b2cf-4e89-8508-8bfb528b9564",
+            "id": "eb189409-e53e-4045-84ea-aa22e15a9a39",
             "type": "View",
             "position": [
-                106.77002788572813,
-                36.78284196016728,
-                4052541.4870996303
+                106.77002788572814,
+                36.78284196016731,
+                4052541.487097451
             ],
             "rotation": [
                 348.8240043047283,
-                -89.81208353781544,
+                -89.81208353781737,
                 0
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "eaa582f1-26b8-448b-8a1e-e266e3ae69c8",
+            "id": "019af053-14c9-4438-b092-5e5eaf3fc211",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
