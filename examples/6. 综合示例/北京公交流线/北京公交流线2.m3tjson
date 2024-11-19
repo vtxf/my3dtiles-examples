@@ -1,0 +1,118 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.22",
+        "createdTime": "2024-05-14T10:07:50.210Z",
+        "modifiedTime": "2024-11-05T07:35:37.644Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "信号线集合",
+                    "sceneObj": {
+                        "id": "89e175cf-3b2d-4de9-8234-83f7c0d510c1",
+                        "type": "CzmSignalTransmissionCollection",
+                        "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAABCAYAAABubagXAAAATUlEQVQYlaXLOQqEUBQF0SMmojgvpfe/JiccEvlNwwuM24IK7oXKUkof7ylQoUGHHsPDMf4WNcpociTcuHBgx4oFczg9/O0tPKP7D3wBky8UMt76XnoAAAAASUVORK5CYII=",
+                        "repeat": 0.5,
+                        "width": 1,
+                        "geoJsonUrl": "https://a.amap.com/Loca/static/loca-v2/demos/mock_data/bj_bus.json",
+                        "allowPicking": true,
+                        "loop": true,
+                        "currentTime": 786.7000020742416,
+                        "duration": 1000,
+                        "speed": 1,
+                        "playing": true,
+                        "name": "信号线集合"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "5e8114a0-58ae-4337-95a7-9f1417e40bdd",
+            "type": "CzmViewer",
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "resolutionScale": 1.5,
+            "sceneSkyAtmosphereShow": false,
+            "sceneSsccZoomFactor": 2,
+            "scenePpsBloomEnabled": true,
+            "clockCurrentTime": 1710748559577
+        },
+        "offlineImagery": {
+            "id": "bfad1b48-e349-42c3-8781-65852feaabcf",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "0c6ec576-e43f-435d-a749-0bd047ecf721",
+            "type": "CzmImagery",
+            "brightness": 0.3,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "天地图影像"
+        },
+        "czmTerrain": {
+            "id": "8dd623bf-7557-434d-8a71-02481dfaaedc",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "22fdd5c8-56e7-44a2-bf60-9e5f62441f34",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "47f00a3c-9566-47de-bd38-be7c4f137367",
+            "type": "View",
+            "position": [
+                116.64885268197159,
+                39.79569899869837,
+                96280.36994069889
+            ],
+            "rotation": [
+                340.120657946956,
+                -74.46551693700853,
+                359.9757400538633
+            ],
+            "default": true,
+            "name": "View_4968"
+        },
+        "initOptions": {
+            "id": "9f6ebda3-da57-407b-b69f-5bd12263a389",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

@@ -1,0 +1,548 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-19T01:55:01.747Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "提示信息",
+                    "sceneObj": {
+                        "id": "0242f8f1-1004-4a40-a82b-6dbac3d51511",
+                        "type": "MyLabel",
+                        "name": "提示信息",
+                        "layoutType": "LeftTop",
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.78
+                        ],
+                        "color": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+                        "cssText": "left: 2px;\ntop: 2px;\npadding: 4px;\nborder-radius: 4px;\n",
+                        "text": "展示MyContainer的多种用法",
+                        "fontSize": 20,
+                        "fontWeight": 400
+                    }
+                },
+                {
+                    "name": "MyContainer(仅包含提示模块)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "d1178b57-5af3-4bb5-b293-f605a18003ac",
+                        "type": "MyContainer",
+                        "name": "MyContainer(仅包含提示模块)",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 2px;\ntop: 42px;\nborder-radius: 4px;",
+                        "subIds": [
+                            "289358e8-0c55-4212-aa11-7789e742aaa6"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "提示信息",
+                            "sceneObj": {
+                                "id": "289358e8-0c55-4212-aa11-7789e742aaa6",
+                                "type": "MyLabel",
+                                "name": "提示信息",
+                                "layoutType": "Center",
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    0,
+                                    0.78
+                                ],
+                                "color": [
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "cssText": "padding: 4px;\nborder-radius: 4px;",
+                                "text": "MyContainer内部可添加多种UI模块",
+                                "fontWeight": 400
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MyContainer(单行横向flex)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "d29306aa-3ca8-44b9-84bb-6ff341ad541a",
+                        "type": "MyContainer",
+                        "name": "MyContainer(单行横向flex)",
+                        "layoutType": "LeftTop",
+                        "height": 60,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 2px;\ntop: 260px;\n",
+                        "subIds": [
+                            "a350fc09-ed54-4d9c-b89f-f828a9890da2",
+                            "be481f2d-561f-4ccc-837b-437e30c26813",
+                            "1e6caf6a-530e-43aa-ad4e-0463b1712186",
+                            "3c301811-f761-47f5-b97a-506b5d3b6395",
+                            "3c429eb8-cf3a-4d63-8235-2ce48bc6c4c3",
+                            "de8bad44-a2bb-4002-adbd-a45b5234fc27"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "a350fc09-ed54-4d9c-b89f-f828a9890da2",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "be481f2d-561f-4ccc-837b-437e30c26813",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "1e6caf6a-530e-43aa-ad4e-0463b1712186",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "3c301811-f761-47f5-b97a-506b5d3b6395",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "3c429eb8-cf3a-4d63-8235-2ce48bc6c4c3",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "de8bad44-a2bb-4002-adbd-a45b5234fc27",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MyContainer(多行横向flex)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "e1b15d79-8be0-4e12-af0f-db62c0e374b5",
+                        "type": "MyContainer",
+                        "name": "MyContainer(多行横向flex)",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 2px;\ntop: 330px;\npadding: 4px;\ngap: 4px;",
+                        "subIds": [
+                            "ce013ed3-df3f-42a7-88bb-f57ba014d3ca",
+                            "5e9a32c7-80e4-4227-a204-56420207538d",
+                            "73ace1e6-cb7b-4be4-8910-430fdaa38b08",
+                            "d7b2b3dd-0a99-46e8-a67d-e462133440fd",
+                            "e508317e-0826-4157-8f8f-1d33a3dc5c0a",
+                            "f8d18b4e-6560-4c38-aab2-4a286c45d54a",
+                            "cd734ec3-e294-4669-aa2f-09f46e6ed867",
+                            "846ee222-6b28-4d46-af9b-267fe10c5440",
+                            "394d8c8a-fe65-4dcf-8deb-5e2287188731",
+                            "65e4c89f-94de-4e5b-a1bf-7e02d9b248c1"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "ce013ed3-df3f-42a7-88bb-f57ba014d3ca",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "5e9a32c7-80e4-4227-a204-56420207538d",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "73ace1e6-cb7b-4be4-8910-430fdaa38b08",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "d7b2b3dd-0a99-46e8-a67d-e462133440fd",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "e508317e-0826-4157-8f8f-1d33a3dc5c0a",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "f8d18b4e-6560-4c38-aab2-4a286c45d54a",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "cd734ec3-e294-4669-aa2f-09f46e6ed867",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "846ee222-6b28-4d46-af9b-267fe10c5440",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "394d8c8a-fe65-4dcf-8deb-5e2287188731",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "65e4c89f-94de-4e5b-a1bf-7e02d9b248c1",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MyContainer(纵向flex)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "8951ce4b-6d78-40c7-b796-d7fc5e2d6474",
+                        "type": "MyContainer",
+                        "name": "MyContainer(纵向flex)",
+                        "layoutType": "LeftTop",
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 320px;\ntop: 2px;\ngap: 4px;",
+                        "subIds": [
+                            "9d2e8d97-ea16-4952-a620-fe26921f711f",
+                            "ad127dc5-de28-4d4e-9191-7a3af34bc2a1",
+                            "a45bb2db-dcf0-44e5-b370-771f411f6154",
+                            "c722c91c-9d05-4389-9d60-a429e54f4f77",
+                            "fd57555a-ee80-4e50-8080-478ede69da10",
+                            "8fae753c-103f-48ee-86fb-09858945907f"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "9d2e8d97-ea16-4952-a620-fe26921f711f",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "ad127dc5-de28-4d4e-9191-7a3af34bc2a1",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "a45bb2db-dcf0-44e5-b370-771f411f6154",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "c722c91c-9d05-4389-9d60-a429e54f4f77",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "fd57555a-ee80-4e50-8080-478ede69da10",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        },
+                        {
+                            "name": "MyImage",
+                            "sceneObj": {
+                                "id": "8fae753c-103f-48ee-86fb-09858945907f",
+                                "type": "MyImage",
+                                "name": "MyImage",
+                                "width": 50,
+                                "height": 50
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MyContainer(容器内套容器)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "4c31df8f-243e-4372-9798-1f6a50e0ff04",
+                        "type": "MyContainer",
+                        "name": "MyContainer(容器内套容器)",
+                        "layoutType": "LeftTop",
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 380px;\ntop: 2px;\ngap: 10px;\npadding: 10px;",
+                        "subIds": [
+                            "2f2c4b30-11d1-4aee-b4af-0b82a1cd6f9c",
+                            "ea72216a-a3ac-4a9f-9766-e3a5a9799e39",
+                            "d6282777-38c2-4b5e-b5e5-f1eb409d030d"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "MyContainer(子容器)",
+                            "sceneObj": {
+                                "id": "2f2c4b30-11d1-4aee-b4af-0b82a1cd6f9c",
+                                "type": "MyContainer",
+                                "name": "MyContainer(子容器)",
+                                "width": 100,
+                                "height": 100,
+                                "backgroundColor": [
+                                    0.9490196078431372,
+                                    0.9333333333333333,
+                                    0.058823529411764705,
+                                    0.93
+                                ]
+                            }
+                        },
+                        {
+                            "name": "MyContainer(子容器)",
+                            "sceneObj": {
+                                "id": "ea72216a-a3ac-4a9f-9766-e3a5a9799e39",
+                                "type": "MyContainer",
+                                "name": "MyContainer(子容器)",
+                                "width": 100,
+                                "height": 100,
+                                "backgroundColor": [
+                                    0.9490196078431372,
+                                    0.17647058823529413,
+                                    0.0392156862745098,
+                                    0.93
+                                ]
+                            }
+                        },
+                        {
+                            "name": "MyContainer(子容器)",
+                            "sceneObj": {
+                                "id": "d6282777-38c2-4b5e-b5e5-f1eb409d030d",
+                                "type": "MyContainer",
+                                "name": "MyContainer(子容器)",
+                                "width": 100,
+                                "height": 100,
+                                "backgroundColor": [
+                                    0.0392156862745098,
+                                    0.9411764705882353,
+                                    0.24705882352941178,
+                                    0.93
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "6d1f0614-5944-40ec-9f24-9a65d9267536",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731979922404
+        },
+        "offlineImagery": {
+            "id": "caf657cb-6311-479d-b044-2eb5dc27a5fe",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "277a7cfa-e820-4c35-98f5-d71e4eff53ca",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "9b988a9b-76e4-4c97-82bd-3231ff15a6f4",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "0f390cac-ed87-4986-97ae-0573338244c8",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "83a014cc-a0e4-41c1-bd0b-8d39256a3b65",
+            "type": "View",
+            "position": [
+                116.66596624272802,
+                40.10881562058003,
+                6898.8513699446285
+            ],
+            "rotation": [
+                257.7686029434765,
+                -53.621242144875815,
+                359.91147171409443
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "81934296-952b-4e8c-8c59-64848d029ecd",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

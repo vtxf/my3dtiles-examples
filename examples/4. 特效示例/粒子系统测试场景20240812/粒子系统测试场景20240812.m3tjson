@@ -1,0 +1,286 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.22",
+        "createdTime": "2024-08-12T09:35:12.449Z",
+        "modifiedTime": "2024-11-07T06:56:19.223Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "大雁塔3dtiles",
+                    "sceneObj": {
+                        "id": "b9ea1ea2-2967-43ff-829c-d4dcb5d7ada1",
+                        "type": "Czm3DTiles",
+                        "name": "大雁塔3dtiles",
+                        "allowPicking": true,
+                        "url": "http://114.242.26.126:7000/data/3dtiles/dayanta-3dtiles-202211/tileset.json",
+                        "show": true
+                    }
+                },
+                {
+                    "name": "烟雾",
+                    "sceneObj": {
+                        "id": "ce7b99b2-ad23-48e7-aa53-9b78dd2d106b",
+                        "type": "CzmParticleSystemPrimitive",
+                        "allowPicking": true,
+                        "position": [
+                            108.95961600128976,
+                            34.219609136631675,
+                            430.0292361080085
+                        ],
+                        "emitter": {
+                            "type": "CircleEmitter",
+                            "radius": 1
+                        },
+                        "emissionRate": 20,
+                        "startScale": 5,
+                        "endScale": 10,
+                        "startColor": [
+                            0.058823529411764705,
+                            0.03529411764705882,
+                            0.03529411764705882,
+                            0.34
+                        ],
+                        "endColor": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "sizeInMeters": true,
+                        "minimumSpeed": 1,
+                        "maximumSpeed": 2,
+                        "particleLife": 12,
+                        "currentTime": 2977.6999993715435,
+                        "name": "烟雾"
+                    }
+                },
+                {
+                    "name": "火焰",
+                    "sceneObj": {
+                        "id": "222e4c97-b321-4545-a858-92a061bfdf2a",
+                        "type": "CzmParticleSystemPrimitive",
+                        "allowPicking": true,
+                        "position": [
+                            108.95920170902991,
+                            34.21970132362382,
+                            431.11395754858864
+                        ],
+                        "emitter": {
+                            "type": "CircleEmitter",
+                            "radius": 5
+                        },
+                        "minimumImageSize": [
+                            1,
+                            1
+                        ],
+                        "maximumImageSize": [
+                            10,
+                            10
+                        ],
+                        "emissionRate": 100,
+                        "startScale": 1,
+                        "endScale": 2,
+                        "startColor": [
+                            0.9803921568627451,
+                            0.8352941176470589,
+                            0.0196078431372549,
+                            0.46
+                        ],
+                        "endColor": [
+                            0.9803921568627451,
+                            0.49411764705882355,
+                            0.00784313725490196,
+                            0
+                        ],
+                        "sizeInMeters": true,
+                        "minimumSpeed": 5,
+                        "maximumSpeed": 22,
+                        "particleLife": 1,
+                        "currentTime": 892.9999995082617,
+                        "name": "火焰"
+                    }
+                },
+                {
+                    "name": "爆炸",
+                    "sceneObj": {
+                        "id": "8319e663-8039-4b45-b4c2-ad88c9beb167",
+                        "type": "CzmParticleSystemPrimitive",
+                        "allowPicking": true,
+                        "position": [
+                            108.95939519775109,
+                            34.219611328840266,
+                            429.58723958090366
+                        ],
+                        "emitter": {
+                            "type": "ConeEmitter",
+                            "angle": 1.5
+                        },
+                        "imageSize": [
+                            2,
+                            2
+                        ],
+                        "emissionRate": 201,
+                        "loop": false,
+                        "startScale": 2,
+                        "endScale": 2,
+                        "startColor": [
+                            0.9607843137254902,
+                            0.9490196078431372,
+                            0.6039215686274509,
+                            0.86
+                        ],
+                        "endColor": [
+                            1,
+                            1,
+                            1,
+                            0
+                        ],
+                        "sizeInMeters": true,
+                        "minimumSpeed": 10,
+                        "maximumSpeed": 10,
+                        "lifetime": 0.8,
+                        "minimumParticleLife": 0.5,
+                        "maximumParticleLife": 0.8,
+                        "currentTime": 4323.1000005137175,
+                        "name": "爆炸"
+                    }
+                },
+                {
+                    "name": "大坝排水",
+                    "sceneObj": {
+                        "id": "24735d3f-0866-4bd1-a8b4-0a127a3dc550",
+                        "type": "CzmParticleSystemPrimitive",
+                        "allowPicking": true,
+                        "position": [
+                            108.95942242625495,
+                            34.21978837010637,
+                            476.5157966899711
+                        ],
+                        "rotation": [
+                            0,
+                            30,
+                            0
+                        ],
+                        "localRotation": [
+                            0,
+                            -90,
+                            0
+                        ],
+                        "emitter": {
+                            "type": "CircleEmitter",
+                            "radius": 2
+                        },
+                        "updateCallbackStr": "function (particle, dt) {\n    const gravityVector = new Cesium.Cartesian3();\n    const gravity = -9.8;\n    // Compute a local up vector for each particle in geocentric space.\n    const position = particle.position;\n\n    Cesium.Cartesian3.normalize(position, gravityVector);\n    Cesium.Cartesian3.multiplyByScalar(\n        gravityVector,\n        gravity * dt,\n        gravityVector\n    );\n\n    particle.velocity = Cesium.Cartesian3.add(particle.velocity, gravityVector, particle.velocity);\n}\n",
+                        "emissionRate": 20,
+                        "loop": false,
+                        "startScale": 8,
+                        "endScale": 10,
+                        "startColor": [
+                            0.7607843137254902,
+                            0.9803921568627451,
+                            1,
+                            1
+                        ],
+                        "endColor": [
+                            1,
+                            1,
+                            1,
+                            0.55
+                        ],
+                        "sizeInMeters": true,
+                        "speed": 20,
+                        "minimumParticleLife": 5,
+                        "maximumParticleLife": 5,
+                        "currentTime": 729.19999881275,
+                        "name": "大坝排水"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "73214aa7-4b4f-48a4-b739-0a427a602f25",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1723455312459
+        },
+        "offlineImagery": {
+            "id": "c3c56796-571a-4af0-a2c4-7e81dbb25b75",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "ff8e2315-fbf5-467d-ad54-1580c639b279",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "af20766f-d44f-49d3-91c0-9c68a7d4c92b",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "76885ad5-7a30-4aa2-9ba2-847b211e6786",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "5b1d70f3-8759-4e22-849b-7d77d3cc51f2",
+            "type": "View",
+            "position": [
+                108.95851625633487,
+                34.21927246217946,
+                529.8022331419636
+            ],
+            "rotation": [
+                61.5501244659839,
+                -37.7485488178076,
+                359.9996757420968
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "82a12e54-492b-4eb0-9b6b-12b3f0f682a0",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

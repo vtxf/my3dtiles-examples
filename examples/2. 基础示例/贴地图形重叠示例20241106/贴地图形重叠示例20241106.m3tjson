@@ -1,0 +1,279 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.22",
+        "createdTime": "2024-11-06T02:38:32.997Z",
+        "modifiedTime": "2024-11-06T08:08:23.619Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "多边形",
+                    "sceneObj": {
+                        "id": "3881630c-eee9-4444-9328-a9d0a40b6389",
+                        "type": "GeoPolygon",
+                        "name": "多边形",
+                        "allowPicking": true,
+                        "ground": true,
+                        "color": [
+                            0.03137254901960784,
+                            1,
+                            0.09411764705882353,
+                            1
+                        ],
+                        "positions": [
+                            [
+                                107.33390337139548,
+                                33.23366766518802,
+                                0
+                            ],
+                            [
+                                113.95687415837735,
+                                36.98664564936397,
+                                0
+                            ],
+                            [
+                                118.82592152699478,
+                                32.35910550103267,
+                                0
+                            ],
+                            [
+                                115.19937117929483,
+                                28.278964662267846,
+                                0
+                            ],
+                            [
+                                111.27376004877512,
+                                27.97660354275944,
+                                0
+                            ]
+                        ],
+                        "zIndex": 1
+                    }
+                },
+                {
+                    "name": "多边形",
+                    "sceneObj": {
+                        "id": "0fa5d9c4-611a-44e4-8995-0af2fdd193e1",
+                        "type": "GeoPolygon",
+                        "name": "多边形",
+                        "allowPicking": true,
+                        "ground": true,
+                        "color": [
+                            0.9490196078431372,
+                            0.027450980392156862,
+                            0.027450980392156862,
+                            1
+                        ],
+                        "positions": [
+                            [
+                                106.88552788236818,
+                                28.482181451959732,
+                                0
+                            ],
+                            [
+                                111.12021994074095,
+                                30.964375532742327,
+                                -69.42014472560129
+                            ],
+                            [
+                                116.5540352529241,
+                                29.394729034974755,
+                                7.6957682809808015
+                            ],
+                            [
+                                117.11492332864228,
+                                26.606893458992307,
+                                0
+                            ],
+                            [
+                                111.8631594968057,
+                                23.733728130187046,
+                                0.3765608910842591
+                            ],
+                            [
+                                108.21153363156351,
+                                23.32926810203101,
+                                -32.88615537291286
+                            ]
+                        ],
+                        "zIndex": 2
+                    }
+                },
+                {
+                    "name": "圆形",
+                    "sceneObj": {
+                        "id": "f1e26bdb-e65d-4640-a992-b5acc0baae53",
+                        "type": "GeoCircle",
+                        "allowPicking": true,
+                        "ground": true,
+                        "material": {
+                            "type": "Color",
+                            "color": [
+                                0,
+                                0,
+                                1,
+                                1
+                            ]
+                        },
+                        "position": [
+                            118.0236943535252,
+                            28.836665126492683,
+                            0
+                        ],
+                        "radius": 328661.3784565956,
+                        "zIndex": 3,
+                        "name": "圆形"
+                    }
+                },
+                {
+                    "name": "矩形",
+                    "sceneObj": {
+                        "id": "89f68b1d-6e0f-460d-9ca7-567adae89201",
+                        "type": "GeoRectangle",
+                        "allowPicking": true,
+                        "ground": true,
+                        "height": 3.773643107384016,
+                        "material": {
+                            "type": "Color",
+                            "color": [
+                                1,
+                                0,
+                                1,
+                                1
+                            ]
+                        },
+                        "rectangle": [
+                            102.52687894757024,
+                            24.404363900085606,
+                            110.85034835839092,
+                            29.399025207301822
+                        ],
+                        "zIndex": 5,
+                        "name": "矩形"
+                    }
+                },
+                {
+                    "name": "图片",
+                    "children": [
+                        {
+                            "name": "自定义贴地矩形",
+                            "sceneObj": {
+                                "id": "a0f05198-d231-4c9b-a256-efd74f38308b",
+                                "type": "CzmCustomGroundRectangle",
+                                "show": true,
+                                "allowPicking": true,
+                                "editing": false,
+                                "rectangle": [
+                                    111.50162728677559,
+                                    22.121317472541993,
+                                    118.14290071551966,
+                                    27.382168192631635
+                                ],
+                                "czmTextureId": "43c04454-54f3-4c8d-a960-2131a70003c3",
+                                "zIndex": 1,
+                                "name": "自定义贴地矩形"
+                            }
+                        },
+                        {
+                            "name": "CzmTexture",
+                            "sceneObj": {
+                                "id": "43c04454-54f3-4c8d-a960-2131a70003c3",
+                                "type": "CzmTexture",
+                                "size": [
+                                    64,
+                                    64
+                                ],
+                                "uri": "${xe2-assets-script-dir}/xe2-assets/scene-manager/images/location.png",
+                                "name": "CzmTexture"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "e669cdfd-d0f5-4cc9-973d-bbcd0c0cd699",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1730860713004
+        },
+        "offlineImagery": {
+            "id": "fb11adf1-53c8-4b49-9f61-2b4974a872e7",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "69aa75c0-0b88-44cc-8c66-58df9b404717",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "a3129452-6b57-4583-94db-dfba32262f54",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "b8830afc-f21b-49f1-a2ce-aa5081f0d08a",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "ed9adf36-94ce-45ed-8cc3-c111bccafb62",
+            "type": "View",
+            "position": [
+                111.28788423848434,
+                20.64002545314594,
+                1479293.4011145954
+            ],
+            "rotation": [
+                14.957528156749115,
+                -69.86210690223209,
+                359.3663140748551
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "e61dca09-6f26-4ddf-bcf2-1e0a78a4c359",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

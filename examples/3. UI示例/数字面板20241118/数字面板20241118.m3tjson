@@ -1,0 +1,1326 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-18T09:45:23.123Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "左侧边栏",
+                    "sceneObj": {
+                        "id": "4cb5b3ff-3fc0-4edc-b3a9-424fd9594298",
+                        "type": "MySidebar",
+                        "name": "左侧边栏",
+                        "interaction": false,
+                        "width": 360,
+                        "sceneObjectIds": [
+                            "b45c5ff1-27a8-490f-aff6-903c73ab3313",
+                            "dbf7094e-dc12-4c62-bd34-d938f1c2c9cf",
+                            "6a19d9cf-0419-4409-829e-f8f72982c625",
+                            "ddb68dd5-db85-4cb2-b87c-65b5841827d2"
+                        ],
+                        "direction": "column"
+                    },
+                    "children": [
+                        {
+                            "name": "面板1",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "b45c5ff1-27a8-490f-aff6-903c73ab3313",
+                                "type": "MyPanel",
+                                "name": "面板1",
+                                "width": 0,
+                                "sceneObjectIds": [
+                                    "96ab5e57-3d16-4061-bcaf-ac9239a2eb69"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "数字面板集合1",
+                                    "collapsed": true,
+                                    "sceneObj": {
+                                        "id": "96ab5e57-3d16-4061-bcaf-ac9239a2eb69",
+                                        "type": "MyContainer",
+                                        "name": "数字面板集合1",
+                                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\n",
+                                        "subIds": [
+                                            "02260cb4-7c05-4857-ad08-9cda83e06704",
+                                            "116d475e-199b-46c9-8451-3bc463a8781d",
+                                            "eaefe802-e70a-47ed-8ec0-4762243b975f"
+                                        ]
+                                    },
+                                    "children": [
+                                        {
+                                            "name": "数字面板1",
+                                            "collapsed": true,
+                                            "sceneObj": {
+                                                "id": "02260cb4-7c05-4857-ad08-9cda83e06704",
+                                                "type": "MyContainer",
+                                                "name": "数字面板1",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "af31c1c3-7baf-4b64-a7ad-a708764a24d3",
+                                                    "75010b2a-b7d1-42b2-ab68-75b2ea6403dc",
+                                                    "fe2f0020-4681-45c2-beb7-6313961f6e20"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "af31c1c3-7baf-4b64-a7ad-a708764a24d3",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "75010b2a-b7d1-42b2-ab68-75b2ea6403dc",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "fe2f0020-4681-45c2-beb7-6313961f6e20",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "63",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "数字面板2",
+                                            "collapsed": true,
+                                            "sceneObj": {
+                                                "id": "116d475e-199b-46c9-8451-3bc463a8781d",
+                                                "type": "MyContainer",
+                                                "name": "数字面板2",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "9a129722-0259-4e9e-a7e9-815452b648fb",
+                                                    "877dadb2-6d9e-4bab-b1c9-9603a391e5ba",
+                                                    "7527338c-e23a-49f5-b882-8144d7eb77da"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "9a129722-0259-4e9e-a7e9-815452b648fb",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "877dadb2-6d9e-4bab-b1c9-9603a391e5ba",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "7527338c-e23a-49f5-b882-8144d7eb77da",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "64",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "数字面板3",
+                                            "collapsed": true,
+                                            "sceneObj": {
+                                                "id": "eaefe802-e70a-47ed-8ec0-4762243b975f",
+                                                "type": "MyContainer",
+                                                "name": "数字面板3",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "4ca8dfd8-2006-476c-b3be-86488854aba1",
+                                                    "ea01114e-117c-4df4-a6c2-eebdfccfd60b",
+                                                    "d81887c9-be7e-4940-8c24-e2a5489a4665"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "4ca8dfd8-2006-476c-b3be-86488854aba1",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "ea01114e-117c-4df4-a6c2-eebdfccfd60b",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "d81887c9-be7e-4940-8c24-e2a5489a4665",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "65",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "面板2",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "dbf7094e-dc12-4c62-bd34-d938f1c2c9cf",
+                                "type": "MyPanel",
+                                "name": "面板2",
+                                "width": 0,
+                                "sceneObjectIds": [
+                                    "a9115319-c64e-4361-a843-36ff95bc4679"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "数字面板集合1",
+                                    "collapsed": true,
+                                    "sceneObj": {
+                                        "id": "a9115319-c64e-4361-a843-36ff95bc4679",
+                                        "type": "MyContainer",
+                                        "name": "数字面板集合1",
+                                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\n",
+                                        "subIds": [
+                                            "24281b55-e319-42b7-bcca-6081eb57ec1b",
+                                            "59a422c1-6b1d-448d-a0e7-33bcd9305afe",
+                                            "4b071339-5b53-4e92-a6fd-0050b3767493"
+                                        ]
+                                    },
+                                    "children": [
+                                        {
+                                            "name": "数字面板1",
+                                            "sceneObj": {
+                                                "id": "24281b55-e319-42b7-bcca-6081eb57ec1b",
+                                                "type": "MyContainer",
+                                                "name": "数字面板1",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "6476a101-ec65-4906-82f7-856dafcca3f9",
+                                                    "11eba682-719a-4a04-a9c0-878f5668f975",
+                                                    "34ba9462-f07c-4a9a-8eee-f9facf92a4f1"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "6476a101-ec65-4906-82f7-856dafcca3f9",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "11eba682-719a-4a04-a9c0-878f5668f975",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "34ba9462-f07c-4a9a-8eee-f9facf92a4f1",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "63",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "数字面板2",
+                                            "sceneObj": {
+                                                "id": "59a422c1-6b1d-448d-a0e7-33bcd9305afe",
+                                                "type": "MyContainer",
+                                                "name": "数字面板2",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "0cae89e3-53dc-4fee-8d33-afc537dbfde8",
+                                                    "b43580c6-1717-43f4-9c8e-e3a5ff458b90",
+                                                    "5d606a30-0d7c-4836-9b70-dbf36dd431a8"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "0cae89e3-53dc-4fee-8d33-afc537dbfde8",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "b43580c6-1717-43f4-9c8e-e3a5ff458b90",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "5d606a30-0d7c-4836-9b70-dbf36dd431a8",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "64",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "数字面板3",
+                                            "sceneObj": {
+                                                "id": "4b071339-5b53-4e92-a6fd-0050b3767493",
+                                                "type": "MyContainer",
+                                                "name": "数字面板3",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "2008387a-0fb9-4d48-9b56-28b4376744d3",
+                                                    "db2836ab-cfca-4829-a0db-126d192bd79b",
+                                                    "6a00d652-32ab-40f1-969c-c9b2de4b07b6"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "2008387a-0fb9-4d48-9b56-28b4376744d3",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "db2836ab-cfca-4829-a0db-126d192bd79b",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "6a00d652-32ab-40f1-969c-c9b2de4b07b6",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "65",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "面板3",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "6a19d9cf-0419-4409-829e-f8f72982c625",
+                                "type": "MyPanel",
+                                "name": "面板3",
+                                "width": 0,
+                                "sceneObjectIds": [
+                                    "6ed2826f-f206-4af6-a6d1-34650d8e797c"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "数字面板集合1",
+                                    "sceneObj": {
+                                        "id": "6ed2826f-f206-4af6-a6d1-34650d8e797c",
+                                        "type": "MyContainer",
+                                        "name": "数字面板集合1",
+                                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\n",
+                                        "subIds": [
+                                            "3c095096-06b2-47ec-81f4-7faa51f6dbe9",
+                                            "a4a95c83-8fe6-4462-ace2-723bd2116613",
+                                            "824651bf-2c31-44d6-b86b-c65c6010c89c"
+                                        ]
+                                    },
+                                    "children": [
+                                        {
+                                            "name": "数字面板1",
+                                            "collapsed": true,
+                                            "sceneObj": {
+                                                "id": "3c095096-06b2-47ec-81f4-7faa51f6dbe9",
+                                                "type": "MyContainer",
+                                                "name": "数字面板1",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "e497afe2-ade8-48a4-8fae-118ce26d14fc",
+                                                    "d4efe0f0-e820-4c87-b966-51d014e86132",
+                                                    "2744aac9-a8fc-42b2-93a8-0a4ff443cff8"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "e497afe2-ade8-48a4-8fae-118ce26d14fc",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "d4efe0f0-e820-4c87-b966-51d014e86132",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "2744aac9-a8fc-42b2-93a8-0a4ff443cff8",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "63",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "数字面板2",
+                                            "collapsed": true,
+                                            "sceneObj": {
+                                                "id": "a4a95c83-8fe6-4462-ace2-723bd2116613",
+                                                "type": "MyContainer",
+                                                "name": "数字面板2",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "802e955e-7fc1-4e28-912f-6de517044dc8",
+                                                    "66e6c187-e65e-4bb6-b246-8f6b8728b4f9",
+                                                    "1652c6fb-2c61-4afd-9c39-800c77e9979a"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "802e955e-7fc1-4e28-912f-6de517044dc8",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "66e6c187-e65e-4bb6-b246-8f6b8728b4f9",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "1652c6fb-2c61-4afd-9c39-800c77e9979a",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "64",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "数字面板3",
+                                            "collapsed": true,
+                                            "sceneObj": {
+                                                "id": "824651bf-2c31-44d6-b86b-c65c6010c89c",
+                                                "type": "MyContainer",
+                                                "name": "数字面板3",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "12a06a10-470c-4a7c-aba9-628efd3b025d",
+                                                    "ef30105e-4e15-472a-b32b-a4ed42b76fa4",
+                                                    "44244a0c-52db-4b75-98a7-fd2cf23d425b"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "12a06a10-470c-4a7c-aba9-628efd3b025d",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "ef30105e-4e15-472a-b32b-a4ed42b76fa4",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "44244a0c-52db-4b75-98a7-fd2cf23d425b",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "65",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "面板4",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "ddb68dd5-db85-4cb2-b87c-65b5841827d2",
+                                "type": "MyPanel",
+                                "name": "面板4",
+                                "width": 0,
+                                "sceneObjectIds": [
+                                    "1b5c566f-a394-4a7d-9cc4-e1633a1b50b0"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "数字面板集合1",
+                                    "sceneObj": {
+                                        "id": "1b5c566f-a394-4a7d-9cc4-e1633a1b50b0",
+                                        "type": "MyContainer",
+                                        "name": "数字面板集合1",
+                                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\n",
+                                        "subIds": [
+                                            "7cc96f35-efb6-4add-b2ae-72e30ce7b635",
+                                            "5735914b-fff1-4e76-9144-272045c4de89",
+                                            "1e827f3f-ea2a-4dee-866b-d8cab556274c"
+                                        ]
+                                    },
+                                    "children": [
+                                        {
+                                            "name": "数字面板1",
+                                            "collapsed": true,
+                                            "sceneObj": {
+                                                "id": "7cc96f35-efb6-4add-b2ae-72e30ce7b635",
+                                                "type": "MyContainer",
+                                                "name": "数字面板1",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "99a1f6e9-939a-44ed-b71b-9e398f491078",
+                                                    "21cc2459-6d01-470e-bc4b-7bb65f322045",
+                                                    "e216bfc7-206e-4fd0-8265-30f2888f69ea"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "99a1f6e9-939a-44ed-b71b-9e398f491078",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "21cc2459-6d01-470e-bc4b-7bb65f322045",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "e216bfc7-206e-4fd0-8265-30f2888f69ea",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "63",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "数字面板2",
+                                            "collapsed": true,
+                                            "sceneObj": {
+                                                "id": "5735914b-fff1-4e76-9144-272045c4de89",
+                                                "type": "MyContainer",
+                                                "name": "数字面板2",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "e8404f7c-b81d-4080-8779-6dab883f99df",
+                                                    "25a4b537-58ff-431f-9b28-ad80155e928d",
+                                                    "2fc05364-15f2-4e8a-b49c-a9f8726639e0"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "e8404f7c-b81d-4080-8779-6dab883f99df",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "25a4b537-58ff-431f-9b28-ad80155e928d",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "2fc05364-15f2-4e8a-b49c-a9f8726639e0",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "64",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "数字面板3",
+                                            "sceneObj": {
+                                                "id": "1e827f3f-ea2a-4dee-866b-d8cab556274c",
+                                                "type": "MyContainer",
+                                                "name": "数字面板3",
+                                                "width": 100,
+                                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                                "subIds": [
+                                                    "cd902f5e-c7f1-4dee-b708-f7cfdacc544b",
+                                                    "99f036d5-0208-4176-ba8d-ae9f5618a028",
+                                                    "0cfb2aef-fd04-4bb4-9629-288adbd63a3b"
+                                                ]
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "MyLabel1",
+                                                    "sceneObj": {
+                                                        "id": "cd902f5e-c7f1-4dee-b708-f7cfdacc544b",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel1",
+                                                        "color": [
+                                                            0.08627450980392157,
+                                                            0.788235294117647,
+                                                            0.8,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "全区车位数",
+                                                        "fontSize": 14,
+                                                        "fontWeight": 200
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel2",
+                                                    "sceneObj": {
+                                                        "id": "99f036d5-0208-4176-ba8d-ae9f5618a028",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel2",
+                                                        "color": [
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "单位：辆",
+                                                        "fontSize": 12,
+                                                        "fontWeight": 600
+                                                    }
+                                                },
+                                                {
+                                                    "name": "MyLabel3",
+                                                    "sceneObj": {
+                                                        "id": "0cfb2aef-fd04-4bb4-9629-288adbd63a3b",
+                                                        "type": "MyLabel",
+                                                        "name": "MyLabel3",
+                                                        "color": [
+                                                            0.17647058823529413,
+                                                            0.6980392156862745,
+                                                            0.6784313725490196,
+                                                            1
+                                                        ],
+                                                        "cssText": "",
+                                                        "text": "65",
+                                                        "fontSize": 36
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "右上角数字",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "90e1b282-966e-4b04-8b4a-aba395dde34f",
+                        "type": "MyContainer",
+                        "name": "右上角数字",
+                        "layoutType": "RightTop",
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.2
+                        ],
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\n",
+                        "subIds": [
+                            "0c6ae8b7-7fad-4cfc-bbf1-5a59aa8bd720",
+                            "e1ede6c3-dc7c-4f1d-9bc0-e1868067bf76",
+                            "da1543d5-b174-45fa-90ee-8c96d2ea8983"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "数字面板1",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "0c6ae8b7-7fad-4cfc-bbf1-5a59aa8bd720",
+                                "type": "MyContainer",
+                                "name": "数字面板1",
+                                "width": 100,
+                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                "subIds": [
+                                    "f7f56117-f74c-4548-98ca-2971f022a1e5",
+                                    "2d9c9bd2-2952-4fc2-a310-d13fd4e9a3bd",
+                                    "d5dff2f3-76d1-4033-b2f5-ae8915a85d3d"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "MyLabel1",
+                                    "sceneObj": {
+                                        "id": "f7f56117-f74c-4548-98ca-2971f022a1e5",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel1",
+                                        "color": [
+                                            0.08627450980392157,
+                                            0.788235294117647,
+                                            0.8,
+                                            1
+                                        ],
+                                        "cssText": "",
+                                        "text": "全区车位数",
+                                        "fontSize": 14,
+                                        "fontWeight": 200
+                                    }
+                                },
+                                {
+                                    "name": "MyLabel2",
+                                    "sceneObj": {
+                                        "id": "2d9c9bd2-2952-4fc2-a310-d13fd4e9a3bd",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel2",
+                                        "color": [
+                                            1,
+                                            1,
+                                            1,
+                                            1
+                                        ],
+                                        "cssText": "",
+                                        "text": "单位：辆",
+                                        "fontSize": 12,
+                                        "fontWeight": 600
+                                    }
+                                },
+                                {
+                                    "name": "MyLabel3",
+                                    "sceneObj": {
+                                        "id": "d5dff2f3-76d1-4033-b2f5-ae8915a85d3d",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel3",
+                                        "color": [
+                                            0.17647058823529413,
+                                            0.6980392156862745,
+                                            0.6784313725490196,
+                                            1
+                                        ],
+                                        "cssText": "",
+                                        "text": "63",
+                                        "fontSize": 36
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "数字面板2",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "e1ede6c3-dc7c-4f1d-9bc0-e1868067bf76",
+                                "type": "MyContainer",
+                                "name": "数字面板2",
+                                "width": 100,
+                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                "subIds": [
+                                    "a72d02b4-ab6b-4562-9585-3f1700c55ccd",
+                                    "2ca87bb3-080e-47cf-aa10-9aa2e68d6e0a",
+                                    "27cef6bd-2fb3-41af-8f1a-c40514c37746"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "MyLabel1",
+                                    "sceneObj": {
+                                        "id": "a72d02b4-ab6b-4562-9585-3f1700c55ccd",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel1",
+                                        "color": [
+                                            0.08627450980392157,
+                                            0.788235294117647,
+                                            0.8,
+                                            1
+                                        ],
+                                        "cssText": "",
+                                        "text": "全区车位数",
+                                        "fontSize": 14,
+                                        "fontWeight": 200
+                                    }
+                                },
+                                {
+                                    "name": "MyLabel2",
+                                    "sceneObj": {
+                                        "id": "2ca87bb3-080e-47cf-aa10-9aa2e68d6e0a",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel2",
+                                        "color": [
+                                            1,
+                                            1,
+                                            1,
+                                            1
+                                        ],
+                                        "cssText": "",
+                                        "text": "单位：辆",
+                                        "fontSize": 12,
+                                        "fontWeight": 600
+                                    }
+                                },
+                                {
+                                    "name": "MyLabel3",
+                                    "sceneObj": {
+                                        "id": "27cef6bd-2fb3-41af-8f1a-c40514c37746",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel3",
+                                        "color": [
+                                            0.17647058823529413,
+                                            0.6980392156862745,
+                                            0.6784313725490196,
+                                            1
+                                        ],
+                                        "cssText": "",
+                                        "text": "64",
+                                        "fontSize": 36
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "数字面板3",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "da1543d5-b174-45fa-90ee-8c96d2ea8983",
+                                "type": "MyContainer",
+                                "name": "数字面板3",
+                                "width": 100,
+                                "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;",
+                                "subIds": [
+                                    "151d656b-4468-479f-b7a9-396e1673fcf4",
+                                    "d10ba26d-8c20-4154-b1dd-42638075e205",
+                                    "4dc6df28-455b-4eaa-8c4f-5f7ccc9b756b"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "MyLabel1",
+                                    "sceneObj": {
+                                        "id": "151d656b-4468-479f-b7a9-396e1673fcf4",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel1",
+                                        "color": [
+                                            0.08627450980392157,
+                                            0.788235294117647,
+                                            0.8,
+                                            1
+                                        ],
+                                        "cssText": "",
+                                        "text": "全区车位数",
+                                        "fontSize": 14,
+                                        "fontWeight": 200
+                                    }
+                                },
+                                {
+                                    "name": "MyLabel2",
+                                    "sceneObj": {
+                                        "id": "d10ba26d-8c20-4154-b1dd-42638075e205",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel2",
+                                        "color": [
+                                            1,
+                                            1,
+                                            1,
+                                            1
+                                        ],
+                                        "cssText": "",
+                                        "text": "单位：辆",
+                                        "fontSize": 12,
+                                        "fontWeight": 600
+                                    }
+                                },
+                                {
+                                    "name": "MyLabel3",
+                                    "sceneObj": {
+                                        "id": "4dc6df28-455b-4eaa-8c4f-5f7ccc9b756b",
+                                        "type": "MyLabel",
+                                        "name": "MyLabel3",
+                                        "color": [
+                                            0.17647058823529413,
+                                            0.6980392156862745,
+                                            0.6784313725490196,
+                                            1
+                                        ],
+                                        "cssText": "",
+                                        "text": "65",
+                                        "fontSize": 36
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "b86e18de-34ad-4ba1-9346-8d7e4a320fa7",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731911033812
+        },
+        "offlineImagery": {
+            "id": "044b70e4-95d2-4be9-9881-ac28723e62d8",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "a2462915-fb05-4038-992b-dd945dbf7eca",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "42d9ca89-7479-4bb3-a809-e896890513e0",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "cd8ced97-ebd5-4444-ab34-c6f8b72c1318",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "e7448b08-9c36-4247-a1a0-452ebb9b0ed5",
+            "type": "View",
+            "position": [
+                116.48680907196133,
+                39.81593896284621,
+                9600.331286278912
+            ],
+            "rotation": [
+                300.6337606608181,
+                -71.6862886422481,
+                0.018156166634180664
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "46cf317e-6674-4cb3-9ef4-be94a3639fe6",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

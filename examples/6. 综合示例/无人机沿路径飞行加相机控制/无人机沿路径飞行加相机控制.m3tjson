@@ -1,0 +1,267 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.7.0-1",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-05-31T01:53:45.283Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "children": [
+                {
+                    "name": "曲线路径",
+                    "sceneObj": {
+                        "id": "53cadab7-7a65-4c67-bfd8-3a5e6118965a",
+                        "type": "GeoBezierPath",
+                        "allowPicking": true,
+                        "currentPoiShow": false,
+                        "positions": [
+                            [
+                                99.03869172367338,
+                                27.753943497910896,
+                                2715.903230632331
+                            ],
+                            [
+                                99.04617389044765,
+                                27.75526102719462,
+                                2727.2783988536235
+                            ],
+                            [
+                                99.04387350226521,
+                                27.763593221489273,
+                                2729.717994627537
+                            ],
+                            [
+                                99.04341208820628,
+                                27.771242941420397,
+                                2724.738242176677
+                            ],
+                            [
+                                99.04707865895921,
+                                27.773955550395037,
+                                2728.414714349579
+                            ],
+                            [
+                                99.04215924808541,
+                                27.776268208773917,
+                                2730.9540952615894
+                            ],
+                            [
+                                99.03884634896062,
+                                27.779431847524513,
+                                2739.0881606422486
+                            ],
+                            [
+                                99.03501007067602,
+                                27.7824604677453,
+                                2737.949246088574
+                            ],
+                            [
+                                99.02978038506983,
+                                27.78316545168366,
+                                2726.6742199231585
+                            ],
+                            [
+                                99.03140543294954,
+                                27.7906217539718,
+                                2731.847272525201
+                            ],
+                            [
+                                99.0303543030054,
+                                27.797826623278706,
+                                2735.7243125400455
+                            ],
+                            [
+                                99.03019557909816,
+                                27.803895689648606,
+                                2737.521807534085
+                            ]
+                        ],
+                        "color": [
+                            1,
+                            1,
+                            1,
+                            0.46
+                        ],
+                        "currentTime": 1378.519999998808,
+                        "resolution": 10000,
+                        "depthTest": true,
+                        "name": "曲线路径"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "无人机glb",
+                    "sceneObj": {
+                        "id": "cdb977f3-e204-4fad-a34a-a4d33393903f",
+                        "type": "CzmModelPrimitive",
+                        "name": "无人机glb",
+                        "url": "${LP}http://114.242.26.126:7000/data/CesiumSampleData/models/CesiumDrone/CesiumDrone.glb",
+                        "allowPicking": true,
+                        "pixelSize": 22,
+                        "position": [
+                            99.0439815084743,
+                            27.77544456197394,
+                            2729.6392658799887
+                        ],
+                        "rotation": [
+                            -69.63178160549899,
+                            0.19572662372942773,
+                            0
+                        ],
+                        "activeAnimationsJson": [
+                            {
+                                "index": 0,
+                                "loop": "REPEAT",
+                                "animationTime": "(duration) => Date.now() / 1000 / duration"
+                            }
+                        ],
+                        "activeAnimationsAnimateWhilePaused": true
+                    },
+                    "children": []
+                },
+                {
+                    "name": "场景对象路径播放器跟踪器",
+                    "sceneObj": {
+                        "id": "b01e5417-fa7c-4ecb-a1e7-b809a4a0947e",
+                        "type": "GeoSceneObjectPathPlayerTracker",
+                        "enabled": true,
+                        "name": "场景对象路径播放器跟踪器",
+                        "playerId": "06e6a203-fd1b-45aa-8a31-ab6707a62a7f",
+                        "pathId": "53cadab7-7a65-4c67-bfd8-3a5e6118965a",
+                        "targetObjId": "cdb977f3-e204-4fad-a34a-a4d33393903f"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "播放器",
+                    "sceneObj": {
+                        "id": "06e6a203-fd1b-45aa-8a31-ab6707a62a7f",
+                        "type": "Player",
+                        "loop": true,
+                        "currentTime": 13785.199999988079,
+                        "duration": 30000,
+                        "playing": true,
+                        "name": "播放器"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "播放器面板",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "f36d418a-353d-4a5f-a620-0e635bd86c79",
+                        "type": "MyPlayerUI",
+                        "name": "播放器面板",
+                        "targetID": "06e6a203-fd1b-45aa-8a31-ab6707a62a7f",
+                        "layoutCssText": "\n    position: absolute;\n    left: 50%;\n    right: unset;\n    top: unset;\n    bottom:10px;\n    width: 600px;\n    height: 50px;\n    transform: translateX(-50%);\n    \n            zIndex: 100;\n            pointerEvents: all;\n        \n    "
+                    },
+                    "children": []
+                },
+                {
+                    "name": "地理路径相机控制器",
+                    "sceneObj": {
+                        "id": "125f03ae-7bdb-4277-9748-050fa593817a",
+                        "type": "GeoPathCameraController",
+                        "enabled": true,
+                        "pathId": "53cadab7-7a65-4c67-bfd8-3a5e6118965a",
+                        "offsetRotation": [
+                            7.200000000000005,
+                            -20.8,
+                            0
+                        ],
+                        "name": "地理路径相机控制器"
+                    },
+                    "children": []
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "23252926-15de-4dc8-b718-b0d96ccd5b29",
+            "type": "CzmViewer",
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1710748559577
+        },
+        "offlineImagery": {
+            "id": "8f0048c2-52a7-467c-819c-8d689c3833ed",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "googleImagery": {
+            "id": "6595ca99-e027-404b-8e53-af28de29e853",
+            "type": "CzmImagery",
+            "show": false,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://gac-geo.googlecnapps.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
+            },
+            "zIndex": -1,
+            "name": "谷歌影像"
+        },
+        "tdtImagery": {
+            "id": "342e1a68-e6a4-44c8-ac10-92507dd66674",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "天地图影像"
+        },
+        "czmTerrain": {
+            "id": "e0fc147d-9501-4014-8985-779774e6b2c6",
+            "type": "CzmTerrain",
+            "show": true,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "lastView": {
+            "id": "0825c3ae-7d24-49e8-ac10-cb1ce498b06a",
+            "type": "View",
+            "position": [
+                99.05249620281869,
+                27.77154771349523,
+                3081.7463973829867
+            ],
+            "rotation": [
+                297.28799022660104,
+                -20.613763679381655,
+                360
+            ],
+            "default": true,
+            "name": "View_d241"
+        },
+        "initOptions": {
+            "id": "1de816dd-296f-46af-afb7-ee3d4361ff8a",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

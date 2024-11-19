@@ -1,0 +1,114 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.24",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-08T07:49:24.424Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "单图片影像",
+                    "sceneObj": {
+                        "id": "60dc72a5-cb11-48b5-8858-93c4acad150a",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "SingleTileImageryProvider",
+                            "url": "${SD}/北京行政区划图.png",
+                            "rectangle": [
+                                115.31302276743361,
+                                39.31256344855234,
+                                117.59063509058751,
+                                41.16450074420513
+                            ]
+                        },
+                        "name": "单图片影像"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "639a7db3-c5b6-42e0-865a-afc701756765",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731051711418
+        },
+        "offlineImagery": {
+            "id": "1d36ecce-4646-4f79-9d05-78e65dedb492",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "eb047fcd-019b-4f08-8752-60e360899e3b",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "d71742cc-a07a-47dd-8ad3-36c6a11913a9",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "f23a4fc9-a879-455e-8285-2a0655597be6",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "ab22461f-8eee-4ad8-a6de-f102261155c7",
+            "type": "View",
+            "position": [
+                116.2527255832293,
+                39.563837767557565,
+                152307.78795077783
+            ],
+            "rotation": [
+                2.2515424589848316,
+                -71.90853677141972,
+                0.025848753714737303
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "f4e5f527-a52b-477a-a7d9-79c49a19a544",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

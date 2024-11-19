@@ -1,0 +1,152 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.24",
+        "createdTime": "2024-11-11T02:50:08.921Z",
+        "modifiedTime": "2024-11-11T02:56:06.303Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "bunny视频纹理",
+                    "sceneObj": {
+                        "id": "04189331-7f54-4cde-8535-390f6b8e6847",
+                        "type": "CzmTexture",
+                        "size": [
+                            641,
+                            360
+                        ],
+                        "uri": "${SD}/big-buck-bunny_trailer.mp4",
+                        "name": "bunny视频纹理"
+                    }
+                },
+                {
+                    "name": "图片模型",
+                    "sceneObj": {
+                        "id": "4e67ef03-3f02-4bbd-ab53-98854fdec0d2",
+                        "type": "CzmImageModel",
+                        "allowPicking": true,
+                        "czmTextureId": "04189331-7f54-4cde-8535-390f6b8e6847",
+                        "position": [
+                            115.89697406385812,
+                            32.298390062475406,
+                            -1.3969838619232178e-9
+                        ],
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ],
+                        "size": [
+                            1000000,
+                            500000
+                        ],
+                        "pixelSize": 0,
+                        "name": "图片模型"
+                    }
+                },
+                {
+                    "name": "自定义贴地矩形",
+                    "sceneObj": {
+                        "id": "1af15233-2284-4ea0-a816-c2f1131a278a",
+                        "type": "CzmCustomGroundRectangle",
+                        "show": true,
+                        "allowPicking": true,
+                        "editing": false,
+                        "rectangle": [
+                            110.8579515170882,
+                            27.97379331891429,
+                            121.21180204175721,
+                            31.786502768977442
+                        ],
+                        "czmTextureId": "04189331-7f54-4cde-8535-390f6b8e6847",
+                        "name": "自定义贴地矩形"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "1b313f17-e867-4e8f-8542-f550a27c631a",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731293408923
+        },
+        "offlineImagery": {
+            "id": "ce1004b5-6f67-4a04-8207-ba1b6ef1a780",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "4890d122-4f13-4da8-bb7a-1ea5151e5a3a",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "3014e7f8-c1a5-4e4e-b304-4331a8f2809e",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "d6add913-d379-49b7-a368-21f5e9781e3e",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "1854a6e4-934e-4fd9-b183-2aaa0ade0366",
+            "type": "View",
+            "position": [
+                122.4459654589599,
+                25.730909622342814,
+                960839.9974765057
+            ],
+            "rotation": [
+                330.14328032865916,
+                -47.8443664502801,
+                0.16409063003559812
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "821ced5a-fd02-4fa1-86af-e49d025fc129",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

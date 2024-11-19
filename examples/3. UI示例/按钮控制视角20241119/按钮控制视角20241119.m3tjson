@@ -1,0 +1,295 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-19T02:32:50.075Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "revtt_school_3dtiles",
+                    "sceneObj": {
+                        "id": "6524f478-5fdc-4e56-ab45-efcaf94c1095",
+                        "type": "Czm3DTiles",
+                        "name": "revtt_school_3dtiles",
+                        "allowPicking": true,
+                        "url": "${SD}../../../shared/data/3dtiles/revit_school_3dtiles1.1/tileset.json",
+                        "show": true
+                    }
+                },
+                {
+                    "name": "图片工具栏(中下)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "图片工具栏(中下)",
+                        "layoutType": "CenterBottom",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nbottom: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                            "56cd610f-4592-466f-b28a-2386984d3b3b",
+                            "5e5341a5-0c28-4c74-83ef-4f14f14174c1"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "俯视",
+                            "sceneObj": {
+                                "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                "type": "RectangleButton",
+                                "name": "俯视",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.俯视视角.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "俯视",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 14,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "平视",
+                            "sceneObj": {
+                                "id": "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                "type": "RectangleButton",
+                                "name": "平视",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.平视视角.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "平视",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 14,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "整体",
+                            "sceneObj": {
+                                "id": "5e5341a5-0c28-4c74-83ef-4f14f14174c1",
+                                "type": "RectangleButton",
+                                "name": "整体",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.整体视角.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "整体",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 14,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "视角集合",
+                    "children": [
+                        {
+                            "name": "整体视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "e7919d17-4877-40d8-82f6-464741ec20d8",
+                                "type": "View",
+                                "position": [
+                                    116.392182580065,
+                                    39.90724632028426,
+                                    61.83894838138189
+                                ],
+                                "rotation": [
+                                    241.13494821136086,
+                                    -39.965735653968565,
+                                    359.99996927251163
+                                ],
+                                "name": "整体视角",
+                                "ref": "整体视角"
+                            }
+                        },
+                        {
+                            "name": "俯视视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "f67fa56f-63a0-4053-8a36-ca1c77b4b8d4",
+                                "type": "View",
+                                "position": [
+                                    116.39158069611882,
+                                    39.90694362933181,
+                                    121.52639241305818
+                                ],
+                                "rotation": [
+                                    270.92370429499937,
+                                    -87.65969353042243,
+                                    0
+                                ],
+                                "name": "俯视视角",
+                                "ref": "俯视视角"
+                            }
+                        },
+                        {
+                            "name": "平视视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "a119c561-4e63-4d80-bafc-569157e7527c",
+                                "type": "View",
+                                "position": [
+                                    116.39275671782137,
+                                    39.906991531747565,
+                                    11.113057043919058
+                                ],
+                                "rotation": [
+                                    269.7638671399706,
+                                    -7.006124568061837,
+                                    359.9999650326023
+                                ],
+                                "name": "平视视角",
+                                "ref": "平视视角"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "6d1f0614-5944-40ec-9f24-9a65d9267536",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731983063196
+        },
+        "offlineImagery": {
+            "id": "caf657cb-6311-479d-b044-2eb5dc27a5fe",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "277a7cfa-e820-4c35-98f5-d71e4eff53ca",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "9b988a9b-76e4-4c97-82bd-3231ff15a6f4",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "0f390cac-ed87-4986-97ae-0573338244c8",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "83a014cc-a0e4-41c1-bd0b-8d39256a3b65",
+            "type": "View",
+            "position": [
+                116.392182580065,
+                39.907246320284244,
+                61.83894838138189
+            ],
+            "rotation": [
+                241.13494821136086,
+                -39.965735653968544,
+                359.99996927251163
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "81934296-952b-4e8c-8c59-64848d029ecd",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

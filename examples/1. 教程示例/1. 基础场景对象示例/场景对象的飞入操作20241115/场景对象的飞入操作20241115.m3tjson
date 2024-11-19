@@ -1,0 +1,182 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-11-15T09:47:10.768Z",
+        "modifiedTime": "2024-11-15T09:51:42.567Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "大雁塔3dtiles",
+                    "sceneObj": {
+                        "id": "daf6d6d1-b018-4c62-89d0-cefddf6d30bd",
+                        "type": "Czm3DTiles",
+                        "name": "大雁塔3dtiles",
+                        "ref": "大雁塔3dtiles",
+                        "allowPicking": true,
+                        "url": "http://114.242.26.126:7000/data/3dtiles/dayanta-3dtiles-202211/tileset.json",
+                        "show": true
+                    }
+                },
+                {
+                    "name": "上海3dtiles",
+                    "sceneObj": {
+                        "id": "bb3ff4bb-562d-4842-aa46-5d37fa78b87c",
+                        "type": "Czm3DTiles",
+                        "name": "上海3dtiles",
+                        "ref": "上海3dtiles",
+                        "allowPicking": true,
+                        "url": "http://114.242.26.126:7000/data/3dtiles/shanghai2-3dtiles-20230907/tileset.json",
+                        "show": true
+                    }
+                },
+                {
+                    "name": "MyContainer",
+                    "sceneObj": {
+                        "id": "ebd4a22a-b040-4663-8429-42f98ae9f4a6",
+                        "type": "MyContainer",
+                        "name": "MyContainer",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;\ngap: 4px;",
+                        "subIds": [
+                            "9366e874-3472-483f-bd2f-4d861a2a028f",
+                            "eea3f8d1-48d4-4197-9664-0b7441f43b12"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "命令按钮",
+                            "sceneObj": {
+                                "id": "9366e874-3472-483f-bd2f-4d861a2a028f",
+                                "type": "RectangleButton",
+                                "name": "命令按钮",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;",
+                                "clickFuncStr": "\nfunction(mouseEvent) {\n    XE2.g.refs.大雁塔3dtiles.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "飞入大雁塔",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "命令按钮",
+                            "sceneObj": {
+                                "id": "eea3f8d1-48d4-4197-9664-0b7441f43b12",
+                                "type": "RectangleButton",
+                                "name": "命令按钮",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;",
+                                "clickFuncStr": "\nfunction(mouseEvent) {\n    XE2.g.refs.上海3dtiles.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "飞入上海",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "1fbf27a7-7b43-4c81-9e70-51c7e15cebe4",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731664030771
+        },
+        "offlineImagery": {
+            "id": "235bcbbe-4377-494b-b8cf-b58ec6b86a2c",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "ba9ec813-1dc5-4f2c-910c-ca11896462bd",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "a90da188-4cf2-4b88-a65f-4f6b2d9c71b5",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "6c628517-a70f-4cac-8f2c-f340ce3bb805",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "a2ea327c-4976-4910-8657-ddce1afd0910",
+            "type": "View",
+            "position": [
+                121.49536238509083,
+                31.186661160465736,
+                6068.200335103477
+            ],
+            "rotation": [
+                1.7811106216195693e-12,
+                -45.05239549832508,
+                359.99999999999994
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "f8fa09a5-fe65-46c8-a31c-d302f9ff4dc7",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

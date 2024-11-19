@@ -6,63 +6,77 @@
             "collapse": true,
             "children": [
                 {
-                    "name": "UI示例",
-                    "path": "UI示例",
-                    "collapse": true,
+                    "name": "1. 教程示例",
+                    "path": "1. 教程示例",
+                    "collapse": false,
                     "children": [
                         {
-                            "name": "ECharts面板展示20241119",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}ECharts面板展示20241119/ECharts面板展示20241119.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}ECharts面板展示20241119/ECharts面板展示20241119.jpg"
+                            "name": "1. 基础场景对象示例",
+                            "path": "1. 基础场景对象示例",
+                            "collapse": true,
+                            "children": [
+                                {
+                                    "name": "3dtiles数据加载示例20241118",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}3dtiles数据加载示例20241118/3dtiles数据加载示例20241118.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}3dtiles数据加载示例20241118/3dtiles数据加载示例20241118.jpg"
+                                },
+                                {
+                                    "name": "场景对象的飞入操作20241115",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}场景对象的飞入操作20241115/场景对象的飞入操作20241115.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}场景对象的飞入操作20241115/场景对象的飞入操作20241115.jpg"
+                                }
+                            ]
                         },
                         {
-                            "name": "大屏UI布局20241118",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}大屏UI布局20241118/大屏UI布局20241118.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}大屏UI布局20241118/大屏UI布局20241118.jpg"
-                        },
-                        {
-                            "name": "常用对象创建工具栏",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.jpg"
-                        },
-                        {
-                            "name": "按钮控制视角20241119",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}按钮控制视角20241119/按钮控制视角20241119.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}按钮控制视角20241119/按钮控制视角20241119.jpg"
-                        },
-                        {
-                            "name": "数字面板20241118",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}数字面板20241118/数字面板20241118.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}数字面板20241118/数字面板20241118.jpg"
-                        },
-                        {
-                            "name": "背景图按钮工具栏20241118",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}背景图按钮工具栏20241118/背景图按钮工具栏20241118.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}背景图按钮工具栏20241118/背景图按钮工具栏20241118.jpg"
+                            "name": "2. 基础UI教程示例",
+                            "path": "2. 基础UI教程示例",
+                            "collapse": true,
+                            "children": [
+                                {
+                                    "name": "MyContainer的使用示例",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}MyContainer的使用示例/MyContainer的使用示例.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}MyContainer的使用示例/MyContainer的使用示例.jpg"
+                                },
+                                {
+                                    "name": "MyImage的使用示例",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}MyImage的使用示例/MyImage的使用示例.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}MyImage的使用示例/MyImage的使用示例.jpg"
+                                },
+                                {
+                                    "name": "MyLabel的使用示例",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}MyLabel的使用示例/MyLabel的使用示例.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}MyLabel的使用示例/MyLabel的使用示例.jpg"
+                                },
+                                {
+                                    "name": "RectangleButton的使用示例",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}RectangleButton的使用示例/RectangleButton的使用示例.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}RectangleButton的使用示例/RectangleButton的使用示例.jpg"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "基础示例",
-                    "path": "基础示例",
+                    "name": "2. 基础示例",
+                    "path": "2. 基础示例",
                     "collapse": false,
                     "children": [
                         {
@@ -131,77 +145,63 @@
                     ]
                 },
                 {
-                    "name": "教程示例",
-                    "path": "教程示例",
-                    "collapse": false,
+                    "name": "3. UI示例",
+                    "path": "3. UI示例",
+                    "collapse": true,
                     "children": [
                         {
-                            "name": "基础UI教程示例",
-                            "path": "基础UI教程示例",
-                            "collapse": true,
-                            "children": [
-                                {
-                                    "name": "MyContainer的使用示例",
-                                    "content": {
-                                        "type": "m3tJsonUri",
-                                        "m3tJsonUri": "${M3T_CurrentDir}MyContainer的使用示例/MyContainer的使用示例.m3tjson"
-                                    },
-                                    "previewImageUri": "${M3T_CurrentDir}MyContainer的使用示例/MyContainer的使用示例.jpg"
-                                },
-                                {
-                                    "name": "MyImage的使用示例",
-                                    "content": {
-                                        "type": "m3tJsonUri",
-                                        "m3tJsonUri": "${M3T_CurrentDir}MyImage的使用示例/MyImage的使用示例.m3tjson"
-                                    },
-                                    "previewImageUri": "${M3T_CurrentDir}MyImage的使用示例/MyImage的使用示例.jpg"
-                                },
-                                {
-                                    "name": "MyLabel的使用示例",
-                                    "content": {
-                                        "type": "m3tJsonUri",
-                                        "m3tJsonUri": "${M3T_CurrentDir}MyLabel的使用示例/MyLabel的使用示例.m3tjson"
-                                    },
-                                    "previewImageUri": "${M3T_CurrentDir}MyLabel的使用示例/MyLabel的使用示例.jpg"
-                                },
-                                {
-                                    "name": "RectangleButton的使用示例",
-                                    "content": {
-                                        "type": "m3tJsonUri",
-                                        "m3tJsonUri": "${M3T_CurrentDir}RectangleButton的使用示例/RectangleButton的使用示例.m3tjson"
-                                    },
-                                    "previewImageUri": "${M3T_CurrentDir}RectangleButton的使用示例/RectangleButton的使用示例.jpg"
-                                }
-                            ]
+                            "name": "ECharts面板展示20241119",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}ECharts面板展示20241119/ECharts面板展示20241119.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}ECharts面板展示20241119/ECharts面板展示20241119.jpg"
                         },
                         {
-                            "name": "基础场景对象示例",
-                            "path": "基础场景对象示例",
-                            "collapse": true,
-                            "children": [
-                                {
-                                    "name": "3dtiles数据加载示例20241118",
-                                    "content": {
-                                        "type": "m3tJsonUri",
-                                        "m3tJsonUri": "${M3T_CurrentDir}3dtiles数据加载示例20241118/3dtiles数据加载示例20241118.m3tjson"
-                                    },
-                                    "previewImageUri": "${M3T_CurrentDir}3dtiles数据加载示例20241118/3dtiles数据加载示例20241118.jpg"
-                                },
-                                {
-                                    "name": "场景对象的飞入操作20241115",
-                                    "content": {
-                                        "type": "m3tJsonUri",
-                                        "m3tJsonUri": "${M3T_CurrentDir}场景对象的飞入操作20241115/场景对象的飞入操作20241115.m3tjson"
-                                    },
-                                    "previewImageUri": "${M3T_CurrentDir}场景对象的飞入操作20241115/场景对象的飞入操作20241115.jpg"
-                                }
-                            ]
+                            "name": "大屏UI布局20241118",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}大屏UI布局20241118/大屏UI布局20241118.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}大屏UI布局20241118/大屏UI布局20241118.jpg"
+                        },
+                        {
+                            "name": "常用对象创建工具栏",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}常用对象创建工具栏/常用对象创建工具栏.jpg"
+                        },
+                        {
+                            "name": "按钮控制视角20241119",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}按钮控制视角20241119/按钮控制视角20241119.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}按钮控制视角20241119/按钮控制视角20241119.jpg"
+                        },
+                        {
+                            "name": "数字面板20241118",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}数字面板20241118/数字面板20241118.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}数字面板20241118/数字面板20241118.jpg"
+                        },
+                        {
+                            "name": "背景图按钮工具栏20241118",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}背景图按钮工具栏20241118/背景图按钮工具栏20241118.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}背景图按钮工具栏20241118/背景图按钮工具栏20241118.jpg"
                         }
                     ]
                 },
                 {
-                    "name": "特效示例",
-                    "path": "特效示例",
+                    "name": "4. 特效示例",
+                    "path": "4. 特效示例",
                     "collapse": true,
                     "children": [
                         {
@@ -263,8 +263,55 @@
                     ]
                 },
                 {
-                    "name": "综合示例",
-                    "path": "综合示例",
+                    "name": "5. 高级示例",
+                    "path": "5. 高级示例",
+                    "collapse": true,
+                    "children": [
+                        {
+                            "name": "ECharts图表立起来案例20241011",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}ECharts图表立起来案例20241011/ECharts图表立起来案例20241011.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}ECharts图表立起来案例20241011/ECharts图表立起来案例20241011.jpg"
+                        },
+                        {
+                            "name": "加载CAD图纸20241107",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}加载CAD图纸20241107/加载CAD图纸20241107.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}加载CAD图纸20241107/加载CAD图纸20241107.jpg"
+                        },
+                        {
+                            "name": "双视口联动20240926",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}双视口联动20240926/双视口联动20240926.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}双视口联动20240926/双视口联动20240926.jpg"
+                        },
+                        {
+                            "name": "自定义场景对象拾取20241107",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.jpg"
+                        },
+                        {
+                            "name": "附着对象20241111",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}附着对象20241111/附着对象20241111.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}附着对象20241111/附着对象20241111.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "6. 综合示例",
+                    "path": "6. 综合示例",
                     "collapse": false,
                     "children": [
                         {
@@ -361,53 +408,6 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}运动的双箭头/运动的双箭头.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}运动的双箭头/运动的双箭头.jpg"
-                        }
-                    ]
-                },
-                {
-                    "name": "高级示例",
-                    "path": "高级示例",
-                    "collapse": true,
-                    "children": [
-                        {
-                            "name": "ECharts图表立起来案例20241011",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}ECharts图表立起来案例20241011/ECharts图表立起来案例20241011.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}ECharts图表立起来案例20241011/ECharts图表立起来案例20241011.jpg"
-                        },
-                        {
-                            "name": "加载CAD图纸20241107",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}加载CAD图纸20241107/加载CAD图纸20241107.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}加载CAD图纸20241107/加载CAD图纸20241107.jpg"
-                        },
-                        {
-                            "name": "双视口联动20240926",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}双视口联动20240926/双视口联动20240926.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}双视口联动20240926/双视口联动20240926.jpg"
-                        },
-                        {
-                            "name": "自定义场景对象拾取20241107",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.jpg"
-                        },
-                        {
-                            "name": "附着对象20241111",
-                            "content": {
-                                "type": "m3tJsonUri",
-                                "m3tJsonUri": "${M3T_CurrentDir}附着对象20241111/附着对象20241111.m3tjson"
-                            },
-                            "previewImageUri": "${M3T_CurrentDir}附着对象20241111/附着对象20241111.jpg"
                         }
                     ]
                 }
