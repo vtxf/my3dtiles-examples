@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.26",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-19T06:31:01.990Z",
+        "modifiedTime": "2024-11-20T09:31:54.224Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -16,7 +16,7 @@
                         "id": "4854f468-2278-4643-93d0-7086b5b68367",
                         "type": "Player",
                         "loop": true,
-                        "currentTime": 1248.3000001311302,
+                        "currentTime": 2627.7000001072884,
                         "playing": true,
                         "name": "播放器",
                         "ref": "播放器"
@@ -64,7 +64,7 @@
                         "type": "MyLabel",
                         "name": "播放器变化监测板",
                         "ref": "播放器变化监测板",
-                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n            const { 播放器 } = XE2.g.refs;\r\n            const update = () => {\r\n                sceneObject.text = `播放器属性变化\\nratio(比率): ${播放器.ratio}\\ncurrentTime(时间戳): ${播放器.currentTime}`;\r\n            };\r\n            update();\r\n            this.dispose(播放器.currentTimeChanged.disposableOn(update));\r\n            this.dispose(播放器.ratioChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n            const { 播放器 } = XE2.g.refs;\r\n            const update = () => {\r\n                sceneObject.text = `播放器属性变化\\nratio(比率): ${播放器.ratio.toFixed(4)}\\ncurrentTime(时间戳): ${播放器.currentTime.toFixed(2)}`;\r\n            };\r\n            update();\r\n            this.dispose(播放器.currentTimeChanged.disposableOn(update));\r\n            this.dispose(播放器.ratioChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "Center",
                         "width": 200,
                         "backgroundColor": [
@@ -80,7 +80,7 @@
                             1
                         ],
                         "cssText": "padding: 4px;\nborder-radius: 4px;\n",
-                        "text": "播放器属性变化\nratio(比率): 0.4102333333765467\ncurrentTime(时间戳): 1248.3000001311302",
+                        "text": "播放器属性变化\nratio(比率): 0.8704\ncurrentTime(时间戳): 2627.70",
                         "fontSize": 12
                     }
                 }
@@ -89,7 +89,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "dbbc823b-394e-4001-afb0-f18776a2a557",
+            "id": "f07506d9-553f-4559-94c4-28f589214b70",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -99,7 +99,7 @@
             "clockCurrentTime": 1731997053839
         },
         "offlineImagery": {
-            "id": "dc7547ca-7eec-4651-a06d-adcea738295e",
+            "id": "f44ffa0f-3f0f-4e07-ba94-45d761b014ae",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -109,7 +109,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "ba502bc5-ea9c-4687-909e-93c5fdffc901",
+            "id": "9997451d-edbf-4fed-9eeb-9d61a751511c",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -131,7 +131,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "c920be1d-18ed-4762-afb3-15ba2bf12922",
+            "id": "d5ea4b1e-96f2-4db6-9de6-d2af8bb70094",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -142,17 +142,17 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "8bd36894-0579-4bf3-85ae-b26aa4dae9fa",
+            "id": "9a3d54a3-a537-49e0-92c1-aa5bcb38f719",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "7c8a0e1a-2895-451d-96d4-be7f2816586a",
+            "id": "cbb5f3c6-15f0-480f-8e4f-84518199acc6",
             "type": "View",
             "position": [
                 115.64680573514623,
-                31.970118613421786,
-                2616663.8403370418
+                31.970118613421793,
+                2616663.8403365174
             ],
             "rotation": [
                 341.8250852929055,
@@ -162,7 +162,7 @@
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "fc3acddc-e3bb-41ad-a592-54259a571b88",
+            "id": "8836939b-a88d-4117-960c-9a7f73caa249",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
