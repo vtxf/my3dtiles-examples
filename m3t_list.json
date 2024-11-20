@@ -221,12 +221,84 @@
                                     "previewImageUri": "${M3T_CurrentDir}1. gif动画播放控制20241119/1. gif动画播放控制20241119.jpg"
                                 },
                                 {
+                                    "name": "10. 雨雪特效20241120",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}10. 雨雪特效20241120/10. 雨雪特效20241120.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}10. 雨雪特效20241120/10. 雨雪特效20241120.jpg"
+                                },
+                                {
+                                    "name": "11. 粒子特效20241120",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}11. 粒子特效20241120/11. 粒子特效20241120.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}11. 粒子特效20241120/11. 粒子特效20241120.jpg"
+                                },
+                                {
                                     "name": "2. 爆炸poi_20241119",
                                     "content": {
                                         "type": "m3tJsonUri",
                                         "m3tJsonUri": "${M3T_CurrentDir}2. 爆炸poi_20241119/2. 爆炸poi_20241119.m3tjson"
                                     },
                                     "previewImageUri": "${M3T_CurrentDir}2. 爆炸poi_20241119/2. 爆炸poi_20241119.jpg"
+                                },
+                                {
+                                    "name": "3. 视域分析20241120",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}3. 视域分析20241120/3. 视域分析20241120.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}3. 视域分析20241120/3. 视域分析20241120.jpg"
+                                },
+                                {
+                                    "name": "4. 视频融合20241120",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}4. 视频融合20241120/4. 视频融合20241120.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}4. 视频融合20241120/4. 视频融合20241120.jpg"
+                                },
+                                {
+                                    "name": "5. 侦照20241120",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}5. 侦照20241120/5. 侦照20241120.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}5. 侦照20241120/5. 侦照20241120.jpg"
+                                },
+                                {
+                                    "name": "6. 贴地道路20241120",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}6. 贴地道路20241120/6. 贴地道路20241120.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}6. 贴地道路20241120/6. 贴地道路20241120.jpg"
+                                },
+                                {
+                                    "name": "7. 信号线&信号线集合20241120",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}7. 信号线&信号线集合20241120/7. 信号线&信号线集合20241120.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}7. 信号线&信号线集合20241120/7. 信号线&信号线集合20241120.jpg"
+                                },
+                                {
+                                    "name": "8. 炫酷模型20241120",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}8. 炫酷模型20241120/8. 炫酷模型20241120.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}8. 炫酷模型20241120/8. 炫酷模型20241120.jpg"
+                                },
+                                {
+                                    "name": "9. 雷达探测体20241120",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}9. 雷达探测体20241120/9. 雷达探测体20241120.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}9. 雷达探测体20241120/9. 雷达探测体20241120.jpg"
                                 }
                             ]
                         },
