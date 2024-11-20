@@ -1,0 +1,454 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-20T01:46:54.219Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "Revit_School_3dtiles_1.1",
+                    "sceneObj": {
+                        "id": "95cd4d9a-dfff-430a-82f2-743a71df2fbe",
+                        "type": "Czm3DTiles",
+                        "name": "Revit_School_3dtiles_1.1",
+                        "position": [
+                            116.39173119262858,
+                            39.9069086094038,
+                            -1.0024450517217285
+                        ],
+                        "allowPicking": true,
+                        "url": "${SD}../../../../shared\\data\\3dtiles\\revit_school_3dtiles1.1/tileset.json",
+                        "show": true
+                    }
+                },
+                {
+                    "name": "MyContainer(命令按钮工具栏)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
+                        "type": "MyContainer",
+                        "name": "MyContainer(命令按钮工具栏)",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;\ngap: 4px;",
+                        "subIds": [
+                            "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                            "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                            "be496c33-57ec-43bb-a2d5-9550bbbe659e",
+                            "947d403a-0b75-432c-9578-e56fa630a1f3"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "飞到视角1",
+                            "sceneObj": {
+                                "id": "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                                "type": "RectangleButton",
+                                "name": "飞到视角1",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.视角1.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "视角1",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "飞到视角2",
+                            "sceneObj": {
+                                "id": "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                                "type": "RectangleButton",
+                                "name": "飞到视角2",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.视角2.flyTo();\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "视角2",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "开启/关闭雨后特效",
+                            "sceneObj": {
+                                "id": "be496c33-57ec-43bb-a2d5-9550bbbe659e",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭雨后特效",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.雨后处理特效.show = !XE2.g.refs.雨后处理特效.show;\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭雨后特效",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "开启/关闭雪后特效",
+                            "sceneObj": {
+                                "id": "947d403a-0b75-432c-9578-e56fa630a1f3",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭雪后特效",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.雪后处理特效.show = !XE2.g.refs.雪后处理特效.show;\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭雪后特效",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "视角1",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "cf8431ac-55eb-4504-aa90-a0c6c2139eb6",
+                        "type": "View",
+                        "position": [
+                            116.39221162438115,
+                            39.90714235038705,
+                            35.32856632288982
+                        ],
+                        "rotation": [
+                            245.49024258371614,
+                            -25.37409442365859,
+                            359.9999589458977
+                        ],
+                        "name": "视角1",
+                        "ref": "视角1"
+                    }
+                },
+                {
+                    "name": "视角2",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "192603f4-994f-4e74-9038-23aa566a8539",
+                        "type": "View",
+                        "position": [
+                            116.39199859625003,
+                            39.90625648825768,
+                            55.386667891193056
+                        ],
+                        "rotation": [
+                            333.33026081216263,
+                            -33.785866134176736,
+                            359.99990765365396
+                        ],
+                        "name": "视角2",
+                        "ref": "视角2"
+                    }
+                },
+                {
+                    "name": "粒子特效组",
+                    "children": [
+                        {
+                            "name": "普通粒子特效",
+                            "sceneObj": {
+                                "id": "ba8a060f-bca7-447b-aee8-604d209c41cc",
+                                "type": "CzmParticleSystemPrimitive",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39196474228912,
+                                    39.906698141208054,
+                                    0.03213272592096638
+                                ],
+                                "currentTime": 3992.799999997951,
+                                "name": "普通粒子特效"
+                            }
+                        },
+                        {
+                            "name": "烟雾粒子特效",
+                            "sceneObj": {
+                                "id": "d97c1cec-9da7-4a22-b732-0cb23ca0e56c",
+                                "type": "CzmParticleSystemPrimitive",
+                                "position": [
+                                    116.39165607303312,
+                                    39.906771142533415,
+                                    15.88665464333437
+                                ],
+                                "emitter": {
+                                    "type": "CircleEmitter",
+                                    "radius": 1
+                                },
+                                "emissionRate": 20,
+                                "startScale": 5,
+                                "endScale": 10,
+                                "startColor": [
+                                    0.058823529411764705,
+                                    0.03529411764705882,
+                                    0.03529411764705882,
+                                    0.34
+                                ],
+                                "endColor": [
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "sizeInMeters": true,
+                                "minimumSpeed": 1,
+                                "maximumSpeed": 2,
+                                "particleLife": 12,
+                                "currentTime": 4565.299998731352,
+                                "name": "烟雾粒子特效"
+                            }
+                        },
+                        {
+                            "name": "火焰粒子特效",
+                            "sceneObj": {
+                                "id": "3e44cd58-a100-4b1b-83f4-5fdcdce47aa2",
+                                "type": "CzmParticleSystemPrimitive",
+                                "position": [
+                                    116.39150416420921,
+                                    39.9069139431114,
+                                    13.893439191968504
+                                ],
+                                "emitter": {
+                                    "type": "CircleEmitter",
+                                    "radius": 5
+                                },
+                                "minimumImageSize": [
+                                    1,
+                                    1
+                                ],
+                                "maximumImageSize": [
+                                    10,
+                                    10
+                                ],
+                                "emissionRate": 100,
+                                "startScale": 1,
+                                "endScale": 2,
+                                "startColor": [
+                                    0.9803921568627451,
+                                    0.8352941176470589,
+                                    0.0196078431372549,
+                                    0.46
+                                ],
+                                "endColor": [
+                                    0.9803921568627451,
+                                    0.49411764705882355,
+                                    0.00784313725490196,
+                                    0
+                                ],
+                                "sizeInMeters": true,
+                                "minimumSpeed": 5,
+                                "maximumSpeed": 22,
+                                "particleLife": 1,
+                                "currentTime": 1075.9000000432134,
+                                "name": "火焰粒子特效"
+                            }
+                        },
+                        {
+                            "name": "爆炸粒子特效",
+                            "sceneObj": {
+                                "id": "1616d5ae-80de-4684-a23b-ce446dcf9b43",
+                                "type": "CzmParticleSystemPrimitive",
+                                "position": [
+                                    116.39152229415754,
+                                    39.907130081911696,
+                                    13.893439191968504
+                                ],
+                                "emitter": {
+                                    "type": "ConeEmitter",
+                                    "angle": 1.5
+                                },
+                                "imageSize": [
+                                    2,
+                                    2
+                                ],
+                                "emissionRate": 201,
+                                "loop": false,
+                                "startScale": 2,
+                                "endScale": 2,
+                                "startColor": [
+                                    0.9607843137254902,
+                                    0.9490196078431372,
+                                    0.6039215686274509,
+                                    0.86
+                                ],
+                                "endColor": [
+                                    1,
+                                    1,
+                                    1,
+                                    0
+                                ],
+                                "sizeInMeters": true,
+                                "minimumSpeed": 10,
+                                "maximumSpeed": 10,
+                                "lifetime": 0.8,
+                                "minimumParticleLife": 0.5,
+                                "maximumParticleLife": 0.8,
+                                "currentTime": 1902.4000004474074,
+                                "name": "爆炸粒子特效",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const t = setInterval(() => {\r\n                sceneObject.forceRecrete();\r\n            }, 1000);\r\n            this.dispose(() => clearInterval(t));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                            }
+                        },
+                        {
+                            "name": "排水粒子特效",
+                            "sceneObj": {
+                                "id": "45aeb562-c8bc-42a1-847b-d03c39bce1de",
+                                "type": "CzmParticleSystemPrimitive",
+                                "position": [
+                                    116.3918516867135,
+                                    39.90677053546184,
+                                    13.893439191968504
+                                ],
+                                "localRotation": [
+                                    0,
+                                    -90,
+                                    0
+                                ],
+                                "emitter": {
+                                    "type": "CircleEmitter",
+                                    "radius": 2
+                                },
+                                "updateCallbackStr": "function (particle, dt) {\n    const gravityVector = new Cesium.Cartesian3();\n    const gravity = -9.8;\n    // Compute a local up vector for each particle in geocentric space.\n    const position = particle.position;\n\n    Cesium.Cartesian3.normalize(position, gravityVector);\n    Cesium.Cartesian3.multiplyByScalar(\n        gravityVector,\n        gravity * dt,\n        gravityVector\n    );\n\n    particle.velocity = Cesium.Cartesian3.add(particle.velocity, gravityVector, particle.velocity);\n}\n",
+                                "emissionRate": 20,
+                                "loop": false,
+                                "startScale": 8,
+                                "endScale": 10,
+                                "startColor": [
+                                    0.7607843137254902,
+                                    0.9803921568627451,
+                                    1,
+                                    1
+                                ],
+                                "endColor": [
+                                    1,
+                                    1,
+                                    1,
+                                    0.55
+                                ],
+                                "sizeInMeters": true,
+                                "speed": 20,
+                                "minimumParticleLife": 5,
+                                "maximumParticleLife": 5,
+                                "currentTime": 4191.899999075569,
+                                "name": "排水粒子特效"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "cf8fa151-6e27-4394-bf99-27d65a528f34",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732063446847
+        },
+        "offlineImagery": {
+            "id": "9e39c1d7-3443-469e-9fa4-9ee7f1cae0cf",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "fb5ac851-d567-4247-b2a2-5d564b1187d7",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "8d7e32df-3fd9-48c4-9d0c-e4baae29c10e",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "61a605eb-9c85-47c7-930e-60a4f19104f2",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "c473f778-4763-4098-a476-08ac932b5fdb",
+            "type": "View",
+            "position": [
+                116.39214323846225,
+                39.90715492484333,
+                60.24674498292255
+            ],
+            "rotation": [
+                241.64976208866858,
+                -46.13081377998581,
+                359.9999884451038
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "d1765914-b582-4572-bb48-0e8a75dec3b7",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

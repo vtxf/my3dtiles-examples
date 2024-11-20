@@ -1,0 +1,283 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-20T01:38:48.863Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "Revit_School_3dtiles_1.1",
+                    "sceneObj": {
+                        "id": "95cd4d9a-dfff-430a-82f2-743a71df2fbe",
+                        "type": "Czm3DTiles",
+                        "name": "Revit_School_3dtiles_1.1",
+                        "position": [
+                            116.39173119262858,
+                            39.9069086094038,
+                            -1.0024450517217285
+                        ],
+                        "allowPicking": true,
+                        "url": "${SD}../../../../shared\\data\\3dtiles\\revit_school_3dtiles1.1/tileset.json",
+                        "show": true
+                    }
+                },
+                {
+                    "name": "MyContainer(命令按钮工具栏)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
+                        "type": "MyContainer",
+                        "name": "MyContainer(命令按钮工具栏)",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;\ngap: 4px;",
+                        "subIds": [
+                            "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                            "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                            "be496c33-57ec-43bb-a2d5-9550bbbe659e",
+                            "947d403a-0b75-432c-9578-e56fa630a1f3"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "飞到视角1",
+                            "sceneObj": {
+                                "id": "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                                "type": "RectangleButton",
+                                "name": "飞到视角1",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.视角1.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "视角1",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "飞到视角2",
+                            "sceneObj": {
+                                "id": "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                                "type": "RectangleButton",
+                                "name": "飞到视角2",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.视角2.flyTo();\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "视角2",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "开启/关闭雨后特效",
+                            "sceneObj": {
+                                "id": "be496c33-57ec-43bb-a2d5-9550bbbe659e",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭雨后特效",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.雨后处理特效.show = !XE2.g.refs.雨后处理特效.show;\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭雨后特效",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "开启/关闭雪后特效",
+                            "sceneObj": {
+                                "id": "947d403a-0b75-432c-9578-e56fa630a1f3",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭雪后特效",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.雪后处理特效.show = !XE2.g.refs.雪后处理特效.show;\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭雪后特效",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "视角1",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "cf8431ac-55eb-4504-aa90-a0c6c2139eb6",
+                        "type": "View",
+                        "position": [
+                            116.39221162438115,
+                            39.90714235038705,
+                            35.32856632288982
+                        ],
+                        "rotation": [
+                            245.49024258371614,
+                            -25.37409442365859,
+                            359.9999589458977
+                        ],
+                        "name": "视角1",
+                        "ref": "视角1"
+                    }
+                },
+                {
+                    "name": "视角2",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "192603f4-994f-4e74-9038-23aa566a8539",
+                        "type": "View",
+                        "position": [
+                            116.39199859625003,
+                            39.90625648825768,
+                            55.386667891193056
+                        ],
+                        "rotation": [
+                            333.33026081216263,
+                            -33.785866134176736,
+                            359.99990765365396
+                        ],
+                        "name": "视角2",
+                        "ref": "视角2"
+                    }
+                },
+                {
+                    "name": "雨后处理特效",
+                    "sceneObj": {
+                        "id": "1ef5d2ae-7f47-4f84-ab08-03141553412b",
+                        "type": "CzmRainPostProcess",
+                        "show": true,
+                        "name": "雨后处理特效",
+                        "ref": "雨后处理特效"
+                    }
+                },
+                {
+                    "name": "雪后处理特效",
+                    "sceneObj": {
+                        "id": "6520099c-d1af-4c5f-9982-861433e4973d",
+                        "type": "CzmSnowPostProcess",
+                        "show": true,
+                        "name": "雪后处理特效",
+                        "ref": "雪后处理特效"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "cf8fa151-6e27-4394-bf99-27d65a528f34",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732063446847
+        },
+        "offlineImagery": {
+            "id": "9e39c1d7-3443-469e-9fa4-9ee7f1cae0cf",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "fb5ac851-d567-4247-b2a2-5d564b1187d7",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "8d7e32df-3fd9-48c4-9d0c-e4baae29c10e",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "61a605eb-9c85-47c7-930e-60a4f19104f2",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "c473f778-4763-4098-a476-08ac932b5fdb",
+            "type": "View",
+            "position": [
+                116.39221162438115,
+                39.90714235038704,
+                35.32856632025618
+            ],
+            "rotation": [
+                245.49024258371614,
+                -25.37409442365859,
+                359.99995894589773
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "d1765914-b582-4572-bb48-0e8a75dec3b7",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

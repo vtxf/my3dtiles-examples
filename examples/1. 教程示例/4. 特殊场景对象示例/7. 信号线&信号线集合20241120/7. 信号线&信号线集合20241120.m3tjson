@@ -1,0 +1,444 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-20T01:24:31.347Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "Revit_School_3dtiles_1.1",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "95cd4d9a-dfff-430a-82f2-743a71df2fbe",
+                        "type": "Czm3DTiles",
+                        "name": "Revit_School_3dtiles_1.1",
+                        "position": [
+                            116.39173119262858,
+                            39.9069086094038,
+                            -1.0024450517217285
+                        ],
+                        "allowPicking": true,
+                        "url": "${SD}../../../../shared\\data\\3dtiles\\revit_school_3dtiles1.1/tileset.json",
+                        "show": false
+                    }
+                },
+                {
+                    "name": "MyContainer(命令按钮工具栏)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
+                        "type": "MyContainer",
+                        "name": "MyContainer(命令按钮工具栏)",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;\ngap: 4px;",
+                        "subIds": [
+                            "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                            "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                            "8b568979-58da-4f2a-b03f-1773d731e067",
+                            "7494a97c-b078-49d3-8135-a4eb13dd9c0f"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "飞到视角1",
+                            "sceneObj": {
+                                "id": "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                                "type": "RectangleButton",
+                                "name": "飞到视角1",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.视角1.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "视角1",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "飞到视角2",
+                            "sceneObj": {
+                                "id": "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                                "type": "RectangleButton",
+                                "name": "飞到视角2",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.视角2.flyTo();\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "视角2",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "视角1",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "cf8431ac-55eb-4504-aa90-a0c6c2139eb6",
+                        "type": "View",
+                        "position": [
+                            116.38183218505874,
+                            39.906258213078694,
+                            237.32331219051346
+                        ],
+                        "rotation": [
+                            323.15028923520146,
+                            -43.965399897654805,
+                            359.99968984809124
+                        ],
+                        "name": "视角1",
+                        "ref": "视角1"
+                    }
+                },
+                {
+                    "name": "视角2",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "192603f4-994f-4e74-9038-23aa566a8539",
+                        "type": "View",
+                        "position": [
+                            116.38269000529736,
+                            39.90974265940325,
+                            248.7153796314876
+                        ],
+                        "rotation": [
+                            233.3914213256007,
+                            -46.06823198381397,
+                            0.0008957105137812345
+                        ],
+                        "name": "视角2",
+                        "ref": "视角2"
+                    }
+                },
+                {
+                    "name": "信号线组",
+                    "collapsed": true,
+                    "children": [
+                        {
+                            "name": "普通信号线",
+                            "sceneObj": {
+                                "id": "9a7679b3-d872-4398-a920-1d76d64818fa",
+                                "type": "CzmSignalTransmission",
+                                "positions": [
+                                    [
+                                        116.37746838234644,
+                                        39.90718903725334,
+                                        0
+                                    ],
+                                    [
+                                        116.3785852728339,
+                                        39.9066393299239,
+                                        0.007065474420744458
+                                    ],
+                                    [
+                                        116.3800641091712,
+                                        39.906665692878846,
+                                        0
+                                    ],
+                                    [
+                                        116.38119418551392,
+                                        39.906978082035074,
+                                        0
+                                    ],
+                                    [
+                                        116.38194540354304,
+                                        39.90742299702721,
+                                        0
+                                    ],
+                                    [
+                                        116.38238206163719,
+                                        39.90781752961507,
+                                        0
+                                    ],
+                                    [
+                                        116.3825384531866,
+                                        39.908052494781636,
+                                        0.37648035587843237
+                                    ]
+                                ],
+                                "allowPicking": true,
+                                "currentTime": 2658.599999995902,
+                                "name": "普通信号线"
+                            }
+                        },
+                        {
+                            "name": "纯色渐变信号线",
+                            "sceneObj": {
+                                "id": "86aac9c8-3656-417b-95da-b113db653df2",
+                                "type": "CzmSignalTransmission",
+                                "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAABCAYAAABubagXAAAATUlEQVQYlaXLOQqEUBQF0SMmojgvpfe/JiccEvlNwwuM24IK7oXKUkof7ylQoUGHHsPDMf4WNcpociTcuHBgx4oFczg9/O0tPKP7D3wBky8UMt76XnoAAAAASUVORK5CYII=",
+                                "repeat": 2,
+                                "positions": [
+                                    [
+                                        116.37703980289602,
+                                        39.9086504518801,
+                                        0
+                                    ],
+                                    [
+                                        116.37801080705889,
+                                        39.907569233701224,
+                                        0
+                                    ],
+                                    [
+                                        116.37898402802925,
+                                        39.90715014767029,
+                                        0
+                                    ],
+                                    [
+                                        116.37974274609293,
+                                        39.907130055016616,
+                                        -0.07901683954636893
+                                    ],
+                                    [
+                                        116.3805999770298,
+                                        39.90733007432534,
+                                        0.2058762708021779
+                                    ],
+                                    [
+                                        116.38119413540005,
+                                        39.90763076690171,
+                                        0.007966250496579504
+                                    ],
+                                    [
+                                        116.38185691965091,
+                                        39.90799426828061,
+                                        0.013400313878272348
+                                    ],
+                                    [
+                                        116.38203009173425,
+                                        39.90828809132645,
+                                        0.0147719965547709
+                                    ],
+                                    [
+                                        116.38218259817039,
+                                        39.90864530227668,
+                                        0.44965407159999166
+                                    ]
+                                ],
+                                "allowPicking": true,
+                                "currentTime": 291.300000006333,
+                                "name": "纯色渐变信号线"
+                            }
+                        },
+                        {
+                            "name": "带图片信号线",
+                            "sceneObj": {
+                                "id": "4ea8019d-212c-4ecb-8ab6-f08621bfbe2a",
+                                "type": "CzmSignalTransmission",
+                                "imageUrl": "${xe2-assets-script-dir}/xe2-assets/scene-manager/images/signal.png",
+                                "repeat": 11,
+                                "width": 8,
+                                "positions": [
+                                    [
+                                        116.37742840642694,
+                                        39.90958797099276,
+                                        0.003959829230469937
+                                    ],
+                                    [
+                                        116.37751191823646,
+                                        39.90877233865299,
+                                        0
+                                    ],
+                                    [
+                                        116.378553960736,
+                                        39.90798833936425,
+                                        0.00579923669996034
+                                    ],
+                                    [
+                                        116.37966661898218,
+                                        39.90759283401774,
+                                        0.004488712619410148
+                                    ],
+                                    [
+                                        116.38046570263091,
+                                        39.907699616838,
+                                        0.020853942240636022
+                                    ],
+                                    [
+                                        116.38123061793716,
+                                        39.908083422286786,
+                                        0
+                                    ],
+                                    [
+                                        116.38176591869438,
+                                        39.908831972475234,
+                                        0.008114142154706643
+                                    ],
+                                    [
+                                        116.38182348967834,
+                                        39.90925328955203,
+                                        0
+                                    ]
+                                ],
+                                "allowPicking": true,
+                                "currentTime": 2857.8000000305474,
+                                "name": "带图片信号线"
+                            }
+                        },
+                        {
+                            "name": "改颜色信号线",
+                            "sceneObj": {
+                                "id": "7de2210e-5424-4131-b410-2e36d0ba0365",
+                                "type": "CzmSignalTransmission",
+                                "color": [
+                                    1,
+                                    1,
+                                    0,
+                                    1
+                                ],
+                                "bgColor": [
+                                    0.9176470588235294,
+                                    1,
+                                    0,
+                                    0.34
+                                ],
+                                "positions": [
+                                    [
+                                        116.37820538130552,
+                                        39.91006735710956,
+                                        0
+                                    ],
+                                    [
+                                        116.3780915358944,
+                                        39.90923370487716,
+                                        0.0037498249657745395
+                                    ],
+                                    [
+                                        116.37872623511315,
+                                        39.90846865714524,
+                                        0
+                                    ],
+                                    [
+                                        116.37962257549579,
+                                        39.908087281881485,
+                                        0.002430302735878028
+                                    ],
+                                    [
+                                        116.38044521558984,
+                                        39.908257803766645,
+                                        0
+                                    ],
+                                    [
+                                        116.38101802587038,
+                                        39.908864472837,
+                                        0.004483944785407677
+                                    ],
+                                    [
+                                        116.38123387919137,
+                                        39.909533315650734,
+                                        0.006542285816692429
+                                    ]
+                                ],
+                                "allowPicking": true,
+                                "currentTime": 1661.9999999720603,
+                                "name": "改颜色信号线"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "cf8fa151-6e27-4394-bf99-27d65a528f34",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732063446847
+        },
+        "offlineImagery": {
+            "id": "9e39c1d7-3443-469e-9fa4-9ee7f1cae0cf",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "fb5ac851-d567-4247-b2a2-5d564b1187d7",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "8d7e32df-3fd9-48c4-9d0c-e4baae29c10e",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "61a605eb-9c85-47c7-930e-60a4f19104f2",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "c473f778-4763-4098-a476-08ac932b5fdb",
+            "type": "View",
+            "position": [
+                116.38183218505874,
+                39.906258213078694,
+                237.3233121908122
+            ],
+            "rotation": [
+                323.15028923520146,
+                -43.965399897654805,
+                359.99968984809124
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "d1765914-b582-4572-bb48-0e8a75dec3b7",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
