@@ -1,0 +1,261 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-11-21T00:28:36.104Z",
+        "modifiedTime": "2024-11-21T07:21:26.598Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "MyContainer(命令按钮工具栏)",
+                    "sceneObj": {
+                        "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
+                        "type": "MyContainer",
+                        "name": "MyContainer(命令按钮工具栏)",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;\ngap: 4px;",
+                        "subIds": [
+                            "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                            "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                            "ef9fa0b6-2cab-4f29-aeec-1de39b0a992f",
+                            "2c476460-a43f-4a01-85a3-0d34fd8cab3d",
+                            "d1bc7e85-a6fb-41e1-82ba-a519bd5d7c8d"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "开启/关闭网格",
+                            "sceneObj": {
+                                "id": "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭网格",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs[\"经纬度网格\"].show = !XE2.g.refs[\"经纬度网格\"].show;\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭网格",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "近地视角",
+                            "sceneObj": {
+                                "id": "2c476460-a43f-4a01-85a3-0d34fd8cab3d",
+                                "type": "RectangleButton",
+                                "name": "近地视角",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.近地视角.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "近地视角",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "俯瞰视角",
+                            "sceneObj": {
+                                "id": "d1bc7e85-a6fb-41e1-82ba-a519bd5d7c8d",
+                                "type": "RectangleButton",
+                                "name": "俯瞰视角",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.俯瞰视角.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "俯瞰视角",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "视角",
+                    "collapsed": true,
+                    "children": [
+                        {
+                            "name": "近地视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "28e3eef1-e417-4fec-803a-e8ce8785567d",
+                                "type": "View",
+                                "position": [
+                                    97.03450723711379,
+                                    28.332600466499702,
+                                    16199.461726715741
+                                ],
+                                "rotation": [
+                                    26.972648876896624,
+                                    -40.739600818757935,
+                                    359.93722675003085
+                                ],
+                                "name": "近地视角",
+                                "ref": "近地视角"
+                            }
+                        },
+                        {
+                            "name": "俯瞰视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "f1145d3c-a31c-4eb9-849e-e4c283dbd583",
+                                "type": "View",
+                                "position": [
+                                    118.80455202724247,
+                                    23.117595311970522,
+                                    1623562.1404999604
+                                ],
+                                "rotation": [
+                                    358.63273079990824,
+                                    -84.22278908074483,
+                                    0.00405922384702523
+                                ],
+                                "name": "俯瞰视角",
+                                "ref": "俯瞰视角"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "经纬度网格",
+                    "sceneObj": {
+                        "id": "701e8dbe-7f20-4b1f-979f-6836302cb965",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "GridImageryProvider",
+                            "tilingScheme": {
+                                "type": "GeographicTilingScheme"
+                            },
+                            "backgroundColor": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            "glowColor": [
+                                1,
+                                1,
+                                1,
+                                0.05
+                            ],
+                            "glowWidth": 2,
+                            "canvasSize": 512,
+                            "cells": 4
+                        },
+                        "name": "经纬度网格",
+                        "ref": "经纬度网格"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "7d70cc94-a5e7-4078-948d-f6de4d6e6dda",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732148916107
+        },
+        "offlineImagery": {
+            "id": "81af5ef3-1ac3-4aa7-b083-0a9c54087fef",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "013eb666-9af5-4cf1-a8f2-0f7e6a6ecddf",
+            "type": "CzmImagery",
+            "show": false,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "5c9760b0-f944-4672-93fa-dcfce6232935",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "1b7bb2b5-46bc-4b9b-afd2-fc443b7f7901",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "3fa83f98-cb5f-4f3f-b3b3-1f9682c42944",
+            "type": "View",
+            "position": [
+                118.80455202724247,
+                23.117595311970554,
+                1623562.1404989345
+            ],
+            "rotation": [
+                358.6327307999082,
+                -84.22278908074483,
+                0.004059223847076119
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "6bf338b8-6e44-43a0-841a-18043399f411",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
