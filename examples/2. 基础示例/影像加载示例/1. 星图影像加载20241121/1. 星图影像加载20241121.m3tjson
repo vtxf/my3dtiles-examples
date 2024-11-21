@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.26",
         "createdTime": "2024-11-21T00:28:36.104Z",
-        "modifiedTime": "2024-11-21T06:07:23.236Z",
+        "modifiedTime": "2024-11-21T06:13:44.577Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -22,6 +22,20 @@
                         "zIndex": 1,
                         "name": "星图地球影像",
                         "ref": "星图地球影像"
+                    }
+                },
+                {
+                    "name": "星图地球地名",
+                    "sceneObj": {
+                        "id": "5667b561-6383-413e-9b6c-490432a807fd",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "UrlTemplateImageryProvider",
+                            "url": "//tiles1.geovisearth.com/base/v1/cat/{z}/{x}/{y}?format=png&tmsIds=w&token={请输入token}"
+                        },
+                        "zIndex": 2,
+                        "name": "星图地球地名",
+                        "ref": "星图地球地名"
                     }
                 },
                 {
@@ -50,6 +64,7 @@
                         "subIds": [
                             "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
                             "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                            "ef9fa0b6-2cab-4f29-aeec-1de39b0a992f",
                             "2c476460-a43f-4a01-85a3-0d34fd8cab3d",
                             "d1bc7e85-a6fb-41e1-82ba-a519bd5d7c8d"
                         ]
@@ -97,6 +112,29 @@
                                 "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.星图地球影像.show = !XE2.g.refs.星图地球影像.show;\n}\n",
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
                                 "text": "开启/关闭影像",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "开启/关闭地名",
+                            "sceneObj": {
+                                "id": "ef9fa0b6-2cab-4f29-aeec-1de39b0a992f",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭地名",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.星图地球地名.show = !XE2.g.refs.星图地球地名.show;\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭地名",
                                 "fontSize": 12,
                                 "textLayoutType": "None"
                             }
@@ -151,7 +189,6 @@
                 },
                 {
                     "name": "视角",
-                    "collapsed": true,
                     "children": [
                         {
                             "name": "近地视角",
@@ -180,14 +217,14 @@
                                 "id": "f1145d3c-a31c-4eb9-849e-e4c283dbd583",
                                 "type": "View",
                                 "position": [
-                                    114.5983393684687,
-                                    28.719203424758078,
-                                    3998868.3542477936
+                                    118.80455202724247,
+                                    23.117595311970522,
+                                    1623562.1404999604
                                 ],
                                 "rotation": [
-                                    355.493727230182,
-                                    -89.64578778919923,
-                                    0
+                                    358.63273079990824,
+                                    -84.22278908074483,
+                                    0.00405922384702523
                                 ],
                                 "name": "俯瞰视角",
                                 "ref": "俯瞰视角"
@@ -261,14 +298,14 @@
             "id": "52e76eb7-1a79-4175-9e88-627036f2df14",
             "type": "View",
             "position": [
-                97.03450723711379,
-                28.3326004664997,
-                16199.461726713635
+                118.80455202724247,
+                23.117595311970522,
+                1623562.1404999604
             ],
             "rotation": [
-                26.972648876896624,
-                -40.739600818757935,
-                359.9372267500309
+                358.63273079990824,
+                -84.22278908074483,
+                0.00405922384702523
             ],
             "name": "最近视角"
         },

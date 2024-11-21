@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.26",
         "createdTime": "2024-11-21T00:28:36.104Z",
-        "modifiedTime": "2024-11-21T06:07:23.236Z",
+        "modifiedTime": "2024-11-21T06:23:36.586Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -11,36 +11,7 @@
             "name": "root",
             "children": [
                 {
-                    "name": "星图地球影像",
-                    "sceneObj": {
-                        "id": "2335a5e9-fe52-4574-b96f-f77b246ae91a",
-                        "type": "CzmImagery",
-                        "imageryProvider": {
-                            "type": "UrlTemplateImageryProvider",
-                            "url": "//tiles1.geovisearth.com/base/v1/img/{z}/{x}/{y}?format=webp&tmsIds=w&token={请输入token}"
-                        },
-                        "zIndex": 1,
-                        "name": "星图地球影像",
-                        "ref": "星图地球影像"
-                    }
-                },
-                {
-                    "name": "星图地球地形",
-                    "sceneObj": {
-                        "id": "95ccc332-6420-4da0-9213-e23c5a32d62d",
-                        "type": "CzmTerrain",
-                        "show": true,
-                        "provider": {
-                            "type": "CesiumTerrainProvider",
-                            "url": "//tiles1.geovisearth.com/base/v1/terrain?token={请输入token}"
-                        },
-                        "name": "星图地球地形",
-                        "ref": "星图地球地形"
-                    }
-                },
-                {
                     "name": "MyContainer(命令按钮工具栏)",
-                    "collapsed": true,
                     "sceneObj": {
                         "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
                         "type": "MyContainer",
@@ -50,34 +21,12 @@
                         "subIds": [
                             "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
                             "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                            "ef9fa0b6-2cab-4f29-aeec-1de39b0a992f",
                             "2c476460-a43f-4a01-85a3-0d34fd8cab3d",
                             "d1bc7e85-a6fb-41e1-82ba-a519bd5d7c8d"
                         ]
                     },
                     "children": [
-                        {
-                            "name": "开启/关闭地形",
-                            "sceneObj": {
-                                "id": "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
-                                "type": "RectangleButton",
-                                "name": "开启/关闭地形",
-                                "width": 0,
-                                "height": 24,
-                                "backgroundColor": [
-                                    0.1,
-                                    0.1,
-                                    0.1,
-                                    0.8
-                                ],
-                                "borderWidth": 0,
-                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
-                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.星图地球地形.show = !XE2.g.refs.星图地球地形.show;\n}\n",
-                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
-                                "text": "开启/关闭地形",
-                                "fontSize": 12,
-                                "textLayoutType": "None"
-                            }
-                        },
                         {
                             "name": "开启/关闭影像",
                             "sceneObj": {
@@ -94,9 +43,32 @@
                                 ],
                                 "borderWidth": 0,
                                 "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
-                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.星图地球影像.show = !XE2.g.refs.星图地球影像.show;\n}\n",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs[\"百度影像(纠偏至wgs84)\"].show = !XE2.g.refs[\"百度影像(纠偏至wgs84)\"].show;\n}\n",
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
                                 "text": "开启/关闭影像",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "开启/关闭地名",
+                            "sceneObj": {
+                                "id": "ef9fa0b6-2cab-4f29-aeec-1de39b0a992f",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭地名",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs[\"百度影像带标签(纠偏至wgs84)\"].show = !XE2.g.refs[\"百度影像带标签(纠偏至wgs84)\"].show;\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭地名",
                                 "fontSize": 12,
                                 "textLayoutType": "None"
                             }
@@ -180,20 +152,50 @@
                                 "id": "f1145d3c-a31c-4eb9-849e-e4c283dbd583",
                                 "type": "View",
                                 "position": [
-                                    114.5983393684687,
-                                    28.719203424758078,
-                                    3998868.3542477936
+                                    118.80455202724247,
+                                    23.117595311970522,
+                                    1623562.1404999604
                                 ],
                                 "rotation": [
-                                    355.493727230182,
-                                    -89.64578778919923,
-                                    0
+                                    358.63273079990824,
+                                    -84.22278908074483,
+                                    0.00405922384702523
                                 ],
                                 "name": "俯瞰视角",
                                 "ref": "俯瞰视角"
                             }
                         }
                     ]
+                },
+                {
+                    "name": "百度影像(纠偏至wgs84)",
+                    "sceneObj": {
+                        "id": "3646cab3-b655-4cb7-82cb-f6c622828d20",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "BDImageryProvider",
+                            "wgs84": true,
+                            "url": "//shangetu1.map.bdimg.com/it/u=x={x};y={y};z={z};v=009;type=sate&fm=46"
+                        },
+                        "zIndex": 1,
+                        "name": "百度影像(纠偏至wgs84)",
+                        "ref": "百度影像(纠偏至wgs84)"
+                    }
+                },
+                {
+                    "name": "百度影像带标签(纠偏至wgs84)",
+                    "sceneObj": {
+                        "id": "a61ab298-3f5e-446a-b43d-bcba3841cb0b",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "BDImageryProvider",
+                            "wgs84": true,
+                            "url": "//online6.map.bdimg.com/tile/?qt=tile&x={x}&y={y}&z={z}&styles=sl&v=020"
+                        },
+                        "zIndex": 2,
+                        "name": "百度影像带标签(纠偏至wgs84)",
+                        "ref": "百度影像带标签(纠偏至wgs84)"
+                    }
                 }
             ]
         }
@@ -222,6 +224,7 @@
         "baseImagery": {
             "id": "bf3a6ffa-363d-4ad3-b3b1-4baf8d8ae291",
             "type": "CzmImagery",
+            "show": false,
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
                 "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
@@ -261,14 +264,14 @@
             "id": "52e76eb7-1a79-4175-9e88-627036f2df14",
             "type": "View",
             "position": [
-                97.03450723711379,
-                28.3326004664997,
-                16199.461726713635
+                118.95558252762473,
+                23.575150579138555,
+                1515868.350432304
             ],
             "rotation": [
-                26.972648876896624,
-                -40.739600818757935,
-                359.9372267500309
+                358.6327307999056,
+                -84.22278908074905,
+                0.004059223846414563
             ],
             "name": "最近视角"
         },

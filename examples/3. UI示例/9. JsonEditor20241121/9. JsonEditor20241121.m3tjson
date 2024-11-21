@@ -1,0 +1,114 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-21T06:42:21.284Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "JsonEditor",
+                    "sceneObj": {
+                        "id": "262d40bf-b2e0-4656-8d81-7596a512a4da",
+                        "type": "JsonEditor",
+                        "name": "JsonEditor",
+                        "layoutType": "Center",
+                        "width": 600,
+                        "height": 300,
+                        "content": {
+                            "标题": "JsonEditor功能展示",
+                            "内容": {
+                                "内容1": "这里可以按照JSON的格式要求来呈现",
+                                "提示": "如果格式出现问题，会标红哦"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "640e1d5c-8fb7-4451-b804-1b4b0a8f27c5",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732170634334
+        },
+        "offlineImagery": {
+            "id": "42db29fa-d4c9-4cef-b513-e29fead5f197",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "e3d02bbd-272a-4e25-8bea-f6b5dd716387",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "3d722a5c-e888-4739-862a-a73985a7135a",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "63e3d35b-ab76-45b0-892e-fb1be90bff8d",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "d52a026d-c035-4b39-a327-2f357c67a9d6",
+            "type": "View",
+            "position": [
+                83.51290904535351,
+                23.937709660785906,
+                1228388.4262753585
+            ],
+            "rotation": [
+                347.75175228048766,
+                -86.57504381378517,
+                0.26271763413198446
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "ca124723-f5c3-4b14-b871-d2b86ad19642",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
