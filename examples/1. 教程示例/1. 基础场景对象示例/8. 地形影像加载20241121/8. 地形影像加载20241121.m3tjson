@@ -1,0 +1,94 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-11-21T00:28:36.104Z",
+        "modifiedTime": "2024-11-21T00:28:56.595Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root"
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "36597f58-b3ad-4171-a224-a9b0e270e942",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732148916107
+        },
+        "offlineImagery": {
+            "id": "72a25c27-7899-4017-9ff7-8cdbd68699d2",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "9372fab4-6b4f-45eb-8087-ef266040b854",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "650f55f7-3a93-4d0f-857b-e1e4f5a2e1a0",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "90e31b3e-3a55-4e63-8f91-8ba405c44354",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "4fae7697-93ef-418a-bcd3-d360933a521a",
+            "type": "View",
+            "position": [
+                107.43493086601222,
+                20.04353300673004,
+                12632925.120380256
+            ],
+            "rotation": [
+                359.9999999999999,
+                -89.95972102457,
+                0
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "9bb297c9-1bf3-42e4-9a47-a0a0c4cba62d",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

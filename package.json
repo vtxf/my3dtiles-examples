@@ -6,7 +6,7 @@
     "example": "examples"
   },
   "scripts": {
-    "start": "http-server . -p 9123",
+    "start": "http-server . -p 9123 --cors",
     "make-list": "node m3t_make_list.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
