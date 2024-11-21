@@ -1,0 +1,151 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.26",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-21T11:47:20.579Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "MyContainer",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "dab0113a-9c50-450e-b8c7-9a47ec8534ba",
+                        "type": "MyContainer",
+                        "name": "MyContainer",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { ObjResettingWithEvent } = XE2['xe2-utils'];\r\n\r\n    class AppendedObj extends Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            do {\r\n                const item = g_app.sceneTree.sceneObjectItems.get(sceneObject);\r\n                if (!item) break;\r\n                this.disposeVar(new ObjResettingWithEvent(item.childrenChanged, () => new class extends Destroyable {\r\n                    constructor() {\r\n                        super();\r\n                        const childItems = [...item.children];\r\n\r\n                        const update = () => {\r\n                            const subIds = childItems.map(e => e.sceneObj && e.sceneObj.id).filter(e => !!e);\r\n                            console.log(`subIds: ${subIds.toString()}`);\r\n                            sceneObject.subIds = subIds;\r\n                        };\r\n                        update();\r\n                        for (const childItem of childItems) {\r\n                            this.dispose(childItem.sceneObjChanged.disposableOn(update));\r\n                        }\r\n                    }\r\n                }));\r\n            } while (false);\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "layoutType": "Center",
+                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\n"
+                    },
+                    "children": [
+                        {
+                            "name": "MyLabel",
+                            "sceneObj": {
+                                "id": "24226340-dcac-4343-9e15-4915eab57173",
+                                "type": "MyLabel",
+                                "name": "MyLabel",
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "color": [
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "cssText": "width: 100%;\nheight: 24px;\nline-height: 24px;\npadding: 0 4px;\nbox-sizing: border-box;",
+                                "text": "我是标题",
+                                "fontSize": 12,
+                                "fontWeight": 400
+                            }
+                        },
+                        {
+                            "name": "JsonEditor",
+                            "sceneObj": {
+                                "id": "262d40bf-b2e0-4656-8d81-7596a512a4da",
+                                "type": "JsonEditor",
+                                "name": "JsonEditor",
+                                "width": 400,
+                                "height": 300,
+                                "content": {
+                                    "标题": "JsonEditor功能展示",
+                                    "内容": {
+                                        "内容1": "这里可以按照JSON的格式要求来呈现",
+                                        "提示": "如果格式出现问题，会标红哦"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "0e92bd53-b6d9-4444-8f1d-b2b18cd06fdb",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732170634334
+        },
+        "offlineImagery": {
+            "id": "cb55d22a-c326-4312-9c5c-490f0f26ff81",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "3ec27e8e-f95f-4e48-b041-6deab5db8edf",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "4aefa477-48a0-4f98-852d-f44c965ab451",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "c5488950-69a5-4fe4-9aa3-4ed31e3706d9",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "47bdfafe-bb78-4fe0-af98-fde63cdade16",
+            "type": "View",
+            "position": [
+                84.15045764590698,
+                38.657760465696015,
+                16.255448675058485
+            ],
+            "rotation": [
+                346.6101217127396,
+                -61.33700286605453,
+                359.99996927485023
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "f3eabdb4-9b2f-4853-9b5d-b4987341f669",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
