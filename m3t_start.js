@@ -104,7 +104,7 @@
             "backgroundColor": [0.1, 0.1, 0.1, 0],
             "borderWidth": 0,
             "cssText": "cursor: pointer;\nline-height: 32px;\npadding: 0 4px;",
-            "clickFuncStr": "\nfunction(mouseEvent) {\n    window.open(`http://114.242.26.126:7000/examples/web/`);\n}\n",
+            "clickFuncStr": "\nfunction(mouseEvent) {\n    window.open(`https://p.czmtoy.com/m3t/examples/web/`);\n}\n",
             "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
             "text": "示例集合",
             "fontSize": 12,
