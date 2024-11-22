@@ -363,6 +363,37 @@
                     "collapse": false,
                     "children": [
                         {
+                            "name": "3dtiles示例",
+                            "path": "3dtiles示例",
+                            "collapse": true,
+                            "children": [
+                                {
+                                    "name": "1. BIM建筑",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}1. BIM建筑/1. BIM建筑.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}1. BIM建筑/1. BIM建筑.jpg"
+                                },
+                                {
+                                    "name": "2. 倾斜摄影",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}2. 倾斜摄影/2. 倾斜摄影.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}2. 倾斜摄影/2. 倾斜摄影.jpg"
+                                },
+                                {
+                                    "name": "3. 倾斜摄影单体化",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}3. 倾斜摄影单体化/3. 倾斜摄影单体化.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}3. 倾斜摄影单体化/3. 倾斜摄影单体化.jpg"
+                                }
+                            ]
+                        },
+                        {
                             "name": "gltf模型示例",
                             "path": "gltf模型示例",
                             "collapse": true,

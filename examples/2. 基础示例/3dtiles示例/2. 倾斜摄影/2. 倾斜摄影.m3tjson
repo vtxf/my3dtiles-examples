@@ -1,0 +1,204 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.29",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-22T10:11:32.113Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "tw3dtiles",
+                    "sceneObj": {
+                        "id": "95cd4d9a-dfff-430a-82f2-743a71df2fbe",
+                        "type": "Czm3DTiles",
+                        "name": "tw3dtiles",
+                        "allowPicking": true,
+                        "url": "${SD}../../../../shared\\data\\3dtiles\\tw-3dtiles-121.217432_24.954151\\3143415260736271/tileset.json",
+                        "show": true
+                    }
+                },
+                {
+                    "name": "工具栏(MyContainer)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "工具栏(MyContainer)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                            "56cd610f-4592-466f-b28a-2386984d3b3b",
+                            "5e5341a5-0c28-4c74-83ef-4f14f14174c1"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "视角1",
+                            "sceneObj": {
+                                "id": "63bacafe-4c60-41a0-9476-1fe3a4a367bb",
+                                "type": "RectangleButton",
+                                "name": "视角1",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function () {\r\n    XE2.g.refs.视角1.flyTo();\r\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "视角1",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "说明(MarkdownReader)",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                        "type": "MarkdownReader",
+                        "name": "说明(MarkdownReader)",
+                        "show": false,
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 4px;\ntop: 40px;",
+                        "content": "### 加载倾斜摄影数据\n"
+                    }
+                },
+                {
+                    "name": "视角1",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "1711d65a-6e31-4b66-aa3e-fc555e9c6319",
+                        "type": "View",
+                        "position": [
+                            121.22170181306608,
+                            24.952439964788237,
+                            225.38007857647702
+                        ],
+                        "rotation": [
+                            267.3548574930046,
+                            -42.8036021053684,
+                            359.99963853844326
+                        ],
+                        "name": "视角1",
+                        "ref": "视角1"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "1170885b-f61d-481e-a27e-cc15f93e507a",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731911033812
+        },
+        "offlineImagery": {
+            "id": "2069470e-f03b-4de2-8fae-e15060b4667b",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "d45dbcc5-296a-47b3-bf6d-8e504a74d7e4",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "3ac1a50a-1ded-49d0-a1da-f18cd8983d31",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "e1faf42a-6d3a-409e-941f-e0288cbc1d71",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "fa831f92-5db8-41cc-a1c5-e8e3ffc80cd6",
+            "type": "View",
+            "position": [
+                121.22214224716974,
+                24.952454150614642,
+                260.37868424740856
+            ],
+            "rotation": [
+                267.35485759347165,
+                -42.80360211038072,
+                359.9996383905855
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "b0f5d5e1-ab86-4ab8-bdeb-2060943661d5",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
