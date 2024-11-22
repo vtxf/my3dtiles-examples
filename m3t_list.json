@@ -398,6 +398,14 @@
                             "collapse": true,
                             "children": [
                                 {
+                                    "name": "地理热力图",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}地理热力图/地理热力图.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}地理热力图/地理热力图.jpg"
+                                },
+                                {
                                     "name": "视频纹理20241111",
                                     "content": {
                                         "type": "m3tJsonUri",
