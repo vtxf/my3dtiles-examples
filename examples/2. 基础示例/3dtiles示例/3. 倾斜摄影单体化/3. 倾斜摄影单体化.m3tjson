@@ -1,0 +1,336 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.29",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-22T10:03:46.409Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "tw3dtiles",
+                    "sceneObj": {
+                        "id": "95cd4d9a-dfff-430a-82f2-743a71df2fbe",
+                        "type": "Czm3DTiles",
+                        "name": "tw3dtiles",
+                        "allowPicking": true,
+                        "url": "${SD}../../../shared\\data\\3dtiles\\tw-3dtiles-121.217432_24.954151\\3143415260736271/tileset.json",
+                        "show": true
+                    }
+                },
+                {
+                    "name": "分类多边形",
+                    "sceneObj": {
+                        "id": "78336313-a3bb-4ef2-a93c-e0f106260d97",
+                        "type": "GeoClassificationPolygon",
+                        "allowPicking": true,
+                        "color": [
+                            0.05528914913624439,
+                            0.9818010180387686,
+                            0.5171572496550576,
+                            0.5
+                        ],
+                        "positions": [
+                            [
+                                121.22099964139329,
+                                24.952491166482346,
+                                161.9714346969534
+                            ],
+                            [
+                                121.22121450445093,
+                                24.9522488712585,
+                                160.0015633867793
+                            ],
+                            [
+                                121.22146136077697,
+                                24.952428347619843,
+                                162.31805312608762
+                            ],
+                            [
+                                121.22126211825298,
+                                24.952669041868937,
+                                162.05272162158477
+                            ]
+                        ],
+                        "depth": 50,
+                        "name": "分类多边形",
+                        "ref": "分类多边形",
+                        "extras": {
+                            "props": [
+                                [
+                                    "建筑类型",
+                                    "高楼"
+                                ],
+                                [
+                                    "建筑名称",
+                                    "XXX大厦"
+                                ],
+                                [
+                                    "地址",
+                                    "北京路123号"
+                                ]
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "工具栏(MyContainer)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "工具栏(MyContainer)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                            "56cd610f-4592-466f-b28a-2386984d3b3b",
+                            "5e5341a5-0c28-4c74-83ef-4f14f14174c1"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "多边形轮廓",
+                            "sceneObj": {
+                                "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                "type": "RectangleButton",
+                                "name": "多边形轮廓",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const { 分类多边形 } = XE2.g.refs;\r\n            if (!分类多边形) return;\r\n\r\n            // enabledScaleInput\r\n            const { bind } = XE2['xe2-base-utils'];\r\n            this.dispose(bind([分类多边形, 'showHelper'], [sceneObject, 'highlighted']))\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlightOnClick": true,
+                                "text": "多边形轮廓",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "随机着色",
+                            "sceneObj": {
+                                "id": "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                "type": "RectangleButton",
+                                "name": "随机着色",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function () {\r\n    XE2.g.refs.分类多边形.color = [Math.random(), Math.random(), Math.random(), 0.5];\r\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "随机着色",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "设置透明色",
+                            "sceneObj": {
+                                "id": "d36efacb-3b83-4d26-be70-43496caf22fd",
+                                "type": "RectangleButton",
+                                "name": "设置透明色",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function () {\r\n    XE2.g.refs.分类多边形.color = [0, 0, 0, 0.001];\r\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "设置透明色",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "说明(MarkdownReader)",
+                    "sceneObj": {
+                        "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                        "type": "MarkdownReader",
+                        "name": "说明(MarkdownReader)",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 4px;\ntop: 40px;",
+                        "content": "### 分类多边形\n\n分类多边形有两个作用：  \n1 可以给物体的一部分进行着色  \n2 还可以结合拾取操作，对倾斜摄影模型进行单体化  \n\n"
+                    }
+                },
+                {
+                    "name": "MySceneObjectPicking",
+                    "sceneObj": {
+                        "id": "25979bda-2b5e-4161-bed5-c685e7638c97",
+                        "type": "MySceneObjectPicking",
+                        "name": "MySceneObjectPicking",
+                        "enabled": true,
+                        "enableFeatureColor": false,
+                        "onPickedResultFuncStr": "function (pickedResult) {\n    let myProps = undefined;\n\n    do {\n        const { sceneObjectPickedInfo } = pickedResult;\n        if (!sceneObjectPickedInfo) break;\n        const { sceneObject } = sceneObjectPickedInfo;\n        if (!sceneObject) break;\n        if (sceneObject.typeName !== 'GeoClassificationPolygon') break;\n        const { extras } = sceneObject;\n        if (!extras) break;\n        const { props } = extras;\n        if (!props) break;\n        if (!Array.isArray(props)) break;\n        myProps = props;\n    } while (false);\n\n    if (myProps) {\n        XE2.g.refs.MyPropsPanel.show = true;\n        XE2.g.refs.MyPropsPanel.props = myProps;\n    } else {\n        XE2.g.refs.MyPropsPanel.show = false;\n        XE2.g.refs.MyPropsPanel.props = [];\n    }\n\n\n    return;\n}\n"
+                    }
+                },
+                {
+                    "name": "MyPropsPanel",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "329f1e60-dfbd-45e1-b919-087cc05bd660",
+                        "type": "MyPropsPanel",
+                        "name": "MyPropsPanel",
+                        "ref": "MyPropsPanel",
+                        "show": false,
+                        "props": []
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "1170885b-f61d-481e-a27e-cc15f93e507a",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1731911033812
+        },
+        "offlineImagery": {
+            "id": "2069470e-f03b-4de2-8fae-e15060b4667b",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "d45dbcc5-296a-47b3-bf6d-8e504a74d7e4",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "3ac1a50a-1ded-49d0-a1da-f18cd8983d31",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "e1faf42a-6d3a-409e-941f-e0288cbc1d71",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "fa831f92-5db8-41cc-a1c5-e8e3ffc80cd6",
+            "type": "View",
+            "position": [
+                121.22170181306608,
+                24.95243996478824,
+                225.38007857875184
+            ],
+            "rotation": [
+                267.35485749300466,
+                -42.80360210536829,
+                359.9996385384433
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "b0f5d5e1-ab86-4ab8-bdeb-2060943661d5",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
