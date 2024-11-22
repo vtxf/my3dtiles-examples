@@ -347,6 +347,21 @@
                     "collapse": false,
                     "children": [
                         {
+                            "name": "gltf模型示例",
+                            "path": "gltf模型示例",
+                            "collapse": true,
+                            "children": [
+                                {
+                                    "name": "gltf模型示例20241119",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}gltf模型示例20241119/gltf模型示例20241119.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}gltf模型示例20241119/gltf模型示例20241119.jpg"
+                                }
+                            ]
+                        },
+                        {
                             "name": "三维场景内UI",
                             "path": "三维场景内UI",
                             "collapse": true,
@@ -367,13 +382,6 @@
                             "collapse": true,
                             "children": [
                                 {
-                                    "name": "gltf模型示例20241119",
-                                    "content": {
-                                        "type": "m3tJsonUri",
-                                        "m3tJsonUri": "${M3T_CurrentDir}gltf模型示例20241119/gltf模型示例20241119.m3tjson"
-                                    }
-                                },
-                                {
                                     "name": "视频纹理20241111",
                                     "content": {
                                         "type": "m3tJsonUri",
@@ -388,6 +396,45 @@
                                         "m3tJsonUri": "${M3T_CurrentDir}贴地图形重叠示例20241106/贴地图形重叠示例20241106.m3tjson"
                                     },
                                     "previewImageUri": "${M3T_CurrentDir}贴地图形重叠示例20241106/贴地图形重叠示例20241106.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "地形加载示例",
+                            "path": "地形加载示例",
+                            "collapse": true,
+                            "children": [
+                                {
+                                    "name": "1. Cesium官方地形加载",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}1. Cesium官方地形加载/1. Cesium官方地形加载.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}1. Cesium官方地形加载/1. Cesium官方地形加载.jpg"
+                                },
+                                {
+                                    "name": "2. 星图地球地形加载",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}2. 星图地球地形加载/2. 星图地球地形加载.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}2. 星图地球地形加载/2. 星图地球地形加载.jpg"
+                                },
+                                {
+                                    "name": "3. giiiis地形加载",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}3. giiiis地形加载/3. giiiis地形加载.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}3. giiiis地形加载/3. giiiis地形加载.jpg"
+                                },
+                                {
+                                    "name": "4. mars地形加载",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}4. mars地形加载/4. mars地形加载.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}4. mars地形加载/4. mars地形加载.jpg"
                                 }
                             ]
                         },
@@ -440,7 +487,8 @@
                                     "content": {
                                         "type": "m3tJsonUri",
                                         "m3tJsonUri": "${M3T_CurrentDir}6. GeoServer的WMS影像加载20241121/6. GeoServer的WMS影像加载20241121.m3tjson"
-                                    }
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}6. GeoServer的WMS影像加载20241121/6. GeoServer的WMS影像加载20241121.jpg"
                                 },
                                 {
                                     "name": "7. 单图片影像20241108",
@@ -512,6 +560,14 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}1. 数字面板20241118/1. 数字面板20241118.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}1. 数字面板20241118/1. 数字面板20241118.jpg"
+                        },
+                        {
+                            "name": "10. JsonEditor组合20241121",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}10. JsonEditor组合20241121/10. JsonEditor组合20241121.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}10. JsonEditor组合20241121/10. JsonEditor组合20241121.jpg"
                         },
                         {
                             "name": "2. 大屏UI布局20241118",
