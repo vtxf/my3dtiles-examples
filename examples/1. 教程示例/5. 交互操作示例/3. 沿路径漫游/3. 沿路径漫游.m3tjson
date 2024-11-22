@@ -1,0 +1,380 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.29",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-11-22T08:01:42.165Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "路径",
+                    "collapsed": true,
+                    "children": [
+                        {
+                            "name": "地理路径相机控制器",
+                            "sceneObj": {
+                                "id": "125f03ae-7bdb-4277-9748-050fa593817a",
+                                "type": "GeoPathCameraController",
+                                "enabled": true,
+                                "pathId": "53cadab7-7a65-4c67-bfd8-3a5e6118965a",
+                                "viewDistance": 748.481937722611,
+                                "offsetRotation": [
+                                    373.6000000000004,
+                                    -21.400000000000116,
+                                    0
+                                ],
+                                "name": "地理路径相机控制器",
+                                "ref": "地理路径相机控制器"
+                            }
+                        },
+                        {
+                            "name": "曲线路径",
+                            "sceneObj": {
+                                "id": "53cadab7-7a65-4c67-bfd8-3a5e6118965a",
+                                "type": "GeoBezierPath",
+                                "allowPicking": true,
+                                "currentPoiShow": false,
+                                "positions": [
+                                    [
+                                        99.03869172367338,
+                                        27.753943497910896,
+                                        2715.903230632331
+                                    ],
+                                    [
+                                        99.04617389044765,
+                                        27.75526102719462,
+                                        2727.2783988536235
+                                    ],
+                                    [
+                                        99.04387350226521,
+                                        27.763593221489273,
+                                        2729.717994627537
+                                    ],
+                                    [
+                                        99.04341208820628,
+                                        27.771242941420397,
+                                        2724.738242176677
+                                    ],
+                                    [
+                                        99.04707865895921,
+                                        27.773955550395037,
+                                        2728.414714349579
+                                    ],
+                                    [
+                                        99.04215924808541,
+                                        27.776268208773917,
+                                        2730.9540952615894
+                                    ],
+                                    [
+                                        99.03884634896062,
+                                        27.779431847524513,
+                                        2739.0881606422486
+                                    ],
+                                    [
+                                        99.03501007067602,
+                                        27.7824604677453,
+                                        2737.949246088574
+                                    ],
+                                    [
+                                        99.02978038506983,
+                                        27.78316545168366,
+                                        2726.6742199231585
+                                    ],
+                                    [
+                                        99.03140543294954,
+                                        27.7906217539718,
+                                        2731.847272525201
+                                    ],
+                                    [
+                                        99.0303543030054,
+                                        27.797826623278706,
+                                        2735.7243125400455
+                                    ],
+                                    [
+                                        99.03019557909816,
+                                        27.803895689648606,
+                                        2737.521807534085
+                                    ]
+                                ],
+                                "color": [
+                                    1,
+                                    1,
+                                    1,
+                                    0.46
+                                ],
+                                "currentTime": 575.0235848660581,
+                                "resolution": 10000,
+                                "depthTest": true,
+                                "name": "曲线路径"
+                            }
+                        },
+                        {
+                            "name": "无人机glb",
+                            "sceneObj": {
+                                "id": "cdb977f3-e204-4fad-a34a-a4d33393903f",
+                                "type": "CzmModelPrimitive",
+                                "name": "无人机glb",
+                                "url": "${LP}http://114.242.26.126:7000/data/CesiumSampleData/models/CesiumDrone/CesiumDrone.glb",
+                                "allowPicking": true,
+                                "pixelSize": 22,
+                                "position": [
+                                    99.04472833211979,
+                                    27.760930182984,
+                                    2729.9795401645824
+                                ],
+                                "rotation": [
+                                    -21.181164459661204,
+                                    -0.004946719342342476,
+                                    0
+                                ],
+                                "activeAnimationsJson": [
+                                    {
+                                        "index": 0,
+                                        "loop": "REPEAT",
+                                        "animationTime": "(duration) => Date.now() / 1000 / duration"
+                                    }
+                                ],
+                                "activeAnimationsAnimateWhilePaused": true
+                            }
+                        },
+                        {
+                            "name": "场景对象路径播放器跟踪器",
+                            "sceneObj": {
+                                "id": "b01e5417-fa7c-4ecb-a1e7-b809a4a0947e",
+                                "type": "GeoSceneObjectPathPlayerTracker",
+                                "enabled": true,
+                                "name": "场景对象路径播放器跟踪器",
+                                "playerId": "06e6a203-fd1b-45aa-8a31-ab6707a62a7f",
+                                "pathId": "53cadab7-7a65-4c67-bfd8-3a5e6118965a",
+                                "targetObjId": "cdb977f3-e204-4fad-a34a-a4d33393903f"
+                            }
+                        },
+                        {
+                            "name": "播放器",
+                            "sceneObj": {
+                                "id": "06e6a203-fd1b-45aa-8a31-ab6707a62a7f",
+                                "type": "Player",
+                                "loop": true,
+                                "currentTime": 5750.235848660581,
+                                "duration": 30000,
+                                "name": "播放器"
+                            }
+                        },
+                        {
+                            "name": "播放器面板",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "f36d418a-353d-4a5f-a620-0e635bd86c79",
+                                "type": "MyPlayerUI",
+                                "name": "播放器面板",
+                                "targetID": "06e6a203-fd1b-45aa-8a31-ab6707a62a7f"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "工具栏",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "工具栏",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                            "56cd610f-4592-466f-b28a-2386984d3b3b",
+                            "5e5341a5-0c28-4c74-83ef-4f14f14174c1"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "姿态交互",
+                            "sceneObj": {
+                                "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                "type": "RectangleButton",
+                                "name": "姿态交互",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const { 地理路径相机控制器 } = XE2.g.refs;\r\n            if (!地理路径相机控制器) return;\r\n\r\n            // enabledScaleInput\r\n            const { bind } = XE2['xe2-base-utils'];\r\n            this.dispose(bind([地理路径相机控制器, 'enabledRotationInput'], [sceneObject, 'highlighted']))\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlighted": true,
+                                "highlightOnClick": true,
+                                "text": "姿态交互",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "缩放交互",
+                            "sceneObj": {
+                                "id": "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                "type": "RectangleButton",
+                                "name": "缩放交互",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const { 地理路径相机控制器 } = XE2.g.refs;\r\n            if (!地理路径相机控制器) return;\r\n\r\n            const { bind } = XE2['xe2-base-utils'];\r\n            this.dispose(bind([地理路径相机控制器, 'enabledScaleInput'], [sceneObject, 'highlighted']))\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlighted": true,
+                                "highlightOnClick": true,
+                                "text": "缩放交互",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "说明(MarkdownReader)",
+                    "sceneObj": {
+                        "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                        "type": "MarkdownReader",
+                        "name": "说明(MarkdownReader)",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 4px;\ntop: 40px;",
+                        "content": "### 沿路径漫游操控说明\n\n地理路径相机控制器 是相机的控制器。它的内部有两个属性enabledScaleInput、\nenabledRotationInput。分别用来控制姿态操控，和缩放操控。\n\n"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "72a34d98-c12e-447c-b988-853266be1f30",
+            "type": "CzmViewer",
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "firstPersonKeyboardEnabled": true,
+            "clockCurrentTime": 1710748559577
+        },
+        "offlineImagery": {
+            "id": "3a241950-035d-407d-8456-0358770c0d63",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "a758b40d-4e5b-4a62-937b-6bcbb764cb02",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "天地图影像"
+        },
+        "czmTerrain": {
+            "id": "de005662-efbc-4ca1-a988-02e442da2f6b",
+            "type": "CzmTerrain",
+            "show": true,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "6d16da70-3f3b-4f11-b35f-30852eae9722",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "2cebbf60-54c5-4e5b-8077-54b694275569",
+            "type": "View",
+            "position": [
+                99.04566046581287,
+                27.754699676019207,
+                3003.182427712153
+            ],
+            "rotation": [
+                352.41883554033916,
+                -21.40494671934246,
+                360
+            ],
+            "default": true,
+            "name": "View_d241"
+        },
+        "initOptions": {
+            "id": "65eb2ab1-ba5d-4029-ad45-0a7465e4b56a",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
