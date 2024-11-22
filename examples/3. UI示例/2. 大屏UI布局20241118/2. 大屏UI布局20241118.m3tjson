@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.29",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-22T02:24:48.080Z",
+        "modifiedTime": "2024-11-22T06:23:22.970Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -12,12 +12,13 @@
             "children": [
                 {
                     "name": "左侧边栏",
+                    "collapsed": true,
                     "sceneObj": {
                         "id": "7b37840f-81e9-4211-8fd1-268eeb9a1184",
                         "type": "MyContainer",
                         "name": "左侧边栏",
                         "ref": "左侧边栏",
-                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "LeftTop",
                         "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nheight: calc(100% - 60px);\nleft: 0px;\ntop: 60px;\ntransition: left 0.3s ease-in-out;\n"
                     },
@@ -29,7 +30,7 @@
                                 "id": "c63550ef-9784-4bbd-867a-dc85a5f57b40",
                                 "type": "MyContainer",
                                 "name": "内容",
-                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                 "width": 420,
                                 "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\ngap: 10px;\nheight: 100%;\nbox-sizing: border-box;\npadding: 10px;\nbackground: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(64, 64, 64, 0.25));\n"
                             },
@@ -41,7 +42,7 @@
                                         "id": "78dc390a-f1c7-4a14-923a-cda4500ca26c",
                                         "type": "MyContainer",
                                         "name": "ECharts面板(MyContainer)",
-                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;"
                                     },
                                     "children": [
@@ -52,7 +53,7 @@
                                                 "id": "cb69e029-c605-4749-99a4-ebc07a3309d8",
                                                 "type": "MyContainer",
                                                 "name": "标题栏(MyContainer)",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "height": 45,
                                                 "cssText": "width: 100%;"
                                             },
@@ -107,18 +108,17 @@
                                         "id": "1575f34c-3452-4852-927e-70de4ac7d305",
                                         "type": "MyContainer",
                                         "name": "数字面板(MyContainer)",
-                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;"
                                     },
                                     "children": [
                                         {
                                             "name": "标题栏(MyContainer)",
-                                            "collapsed": true,
                                             "sceneObj": {
                                                 "id": "018e8104-b7a7-431b-9ec0-cb496c3a461a",
                                                 "type": "MyContainer",
                                                 "name": "标题栏(MyContainer)",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "height": 45,
                                                 "cssText": "width: 100%;"
                                             },
@@ -162,7 +162,7 @@
                                                 "id": "90e1b282-966e-4b04-8b4a-aba395dde34f",
                                                 "type": "MyContainer",
                                                 "name": "数字内容展示",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "backgroundColor": [
                                                     0,
                                                     0,
@@ -179,7 +179,7 @@
                                                         "id": "da1543d5-b174-45fa-90ee-8c96d2ea8983",
                                                         "type": "MyContainer",
                                                         "name": "数字面板1",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -246,7 +246,7 @@
                                                         "id": "cb22376c-d9c6-4c6f-82a5-4e3170fd5462",
                                                         "type": "MyContainer",
                                                         "name": "数字面板2",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -313,7 +313,7 @@
                                                         "id": "87b64263-f8f5-4262-8058-9c2e1ce6f257",
                                                         "type": "MyContainer",
                                                         "name": "数字面板3",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -381,21 +381,20 @@
                                     "name": "数字面板(MyContainer)",
                                     "collapsed": true,
                                     "sceneObj": {
-                                        "id": "c196f736-8a8e-4bd3-8c2f-c499b4d8223d",
+                                        "id": "81fe0c29-b060-4245-8b55-2492da44bc46",
                                         "type": "MyContainer",
                                         "name": "数字面板(MyContainer)",
-                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;"
                                     },
                                     "children": [
                                         {
                                             "name": "标题栏(MyContainer)",
-                                            "collapsed": true,
                                             "sceneObj": {
-                                                "id": "f1f1d6ee-d714-4eb8-a612-bb6db6b5858c",
+                                                "id": "d91ba654-f235-4f69-9f3a-c523f3489437",
                                                 "type": "MyContainer",
                                                 "name": "标题栏(MyContainer)",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "height": 45,
                                                 "cssText": "width: 100%;"
                                             },
@@ -403,7 +402,7 @@
                                                 {
                                                     "name": "MyImage",
                                                     "sceneObj": {
-                                                        "id": "57530b88-78fc-4e71-8f54-ddbd3211b001",
+                                                        "id": "9d2403b4-aaa2-4265-adda-590c53b812e5",
                                                         "type": "MyImage",
                                                         "name": "MyImage",
                                                         "layoutType": "LeftTop",
@@ -416,7 +415,7 @@
                                                 {
                                                     "name": "MyLabel",
                                                     "sceneObj": {
-                                                        "id": "947cc4ed-4959-4d14-b5ab-222a6cd6255a",
+                                                        "id": "a73d8928-e1dd-44e4-8600-023ab9cdf13e",
                                                         "type": "MyLabel",
                                                         "name": "MyLabel",
                                                         "layoutType": "LeftTop",
@@ -436,10 +435,10 @@
                                             "name": "数字内容展示",
                                             "collapsed": true,
                                             "sceneObj": {
-                                                "id": "0884c99f-609f-48a3-964a-6322c1ae39eb",
+                                                "id": "61c4201c-1997-43fb-9ab3-bff83a3aef62",
                                                 "type": "MyContainer",
                                                 "name": "数字内容展示",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "backgroundColor": [
                                                     0,
                                                     0,
@@ -453,10 +452,10 @@
                                                     "name": "数字面板1",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "158da95b-67d6-45bb-a946-c4aae0d2bcae",
+                                                        "id": "1b812245-1c2a-49d7-845c-3b254e9acfe3",
                                                         "type": "MyContainer",
                                                         "name": "数字面板1",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -464,7 +463,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "566c03c5-e30e-4550-b92c-ce11be765f8c",
+                                                                "id": "09eac916-9b93-4dcd-87a5-b00a46b6a7f8",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -482,7 +481,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "7ceb1dc6-7133-44d7-95c0-5ff12e7047c8",
+                                                                "id": "fc2b824f-b113-4e7e-891c-c903b237e31f",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -500,7 +499,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "84db8697-d4f4-4863-993d-38f90cf543e3",
+                                                                "id": "85e5cd7d-d171-4826-9af2-512b0fccb31c",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -520,10 +519,10 @@
                                                     "name": "数字面板2",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "1124f6df-e7e8-4b8d-8478-ec5f6e339e68",
+                                                        "id": "88d9f794-97b9-4a00-b0e7-9520053a6c5a",
                                                         "type": "MyContainer",
                                                         "name": "数字面板2",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -531,7 +530,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "f1f2b05c-5e49-4603-8204-6a79b8526af0",
+                                                                "id": "0bd990ee-544d-46aa-916d-dea85f3521a7",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -549,7 +548,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "b244a6b4-10cd-44d4-9327-507b46511024",
+                                                                "id": "7be0c9dd-9186-4258-868f-a51939388a7b",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -567,7 +566,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "d3a21066-f1c8-4a9f-8995-dccba78bbaad",
+                                                                "id": "09011321-6938-4b57-a464-2e57eeefd2e8",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -587,10 +586,10 @@
                                                     "name": "数字面板3",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "ac5e1408-090c-413a-a016-21bc1b88e971",
+                                                        "id": "46afad87-1614-4a3f-8695-30410b5a1463",
                                                         "type": "MyContainer",
                                                         "name": "数字面板3",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -598,7 +597,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "3ac4a779-c27b-4bdd-af7e-0dab630619e4",
+                                                                "id": "0af9fe50-4d8f-4b3b-bfc9-b06f1560b150",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -616,7 +615,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "0a56f0e7-9009-4ee4-b083-c30ec4f71d90",
+                                                                "id": "cf05eb7b-f8be-4540-bd88-338d90336bf8",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -634,7 +633,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "81cee179-0696-40d5-a63e-497fb4d37bdd",
+                                                                "id": "2bea1fdd-18ed-46d9-a2fa-6d0f39a4e517",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -658,21 +657,20 @@
                                     "name": "数字面板(MyContainer)",
                                     "collapsed": true,
                                     "sceneObj": {
-                                        "id": "f31356da-6838-4c34-b732-f51675392aae",
+                                        "id": "f7b2a30c-162b-4ead-bc46-d88ee3b4a682",
                                         "type": "MyContainer",
                                         "name": "数字面板(MyContainer)",
-                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;"
                                     },
                                     "children": [
                                         {
                                             "name": "标题栏(MyContainer)",
-                                            "collapsed": true,
                                             "sceneObj": {
-                                                "id": "c6981615-f0ec-49f3-9f8b-bf03c856d315",
+                                                "id": "78a7ff99-ea82-4c16-b803-714f30478f85",
                                                 "type": "MyContainer",
                                                 "name": "标题栏(MyContainer)",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "height": 45,
                                                 "cssText": "width: 100%;"
                                             },
@@ -680,7 +678,7 @@
                                                 {
                                                     "name": "MyImage",
                                                     "sceneObj": {
-                                                        "id": "7b050685-6bba-45c7-8565-6f28392798e9",
+                                                        "id": "a79b70dc-02da-4a6a-abdb-5eebb82cf7c3",
                                                         "type": "MyImage",
                                                         "name": "MyImage",
                                                         "layoutType": "LeftTop",
@@ -693,7 +691,7 @@
                                                 {
                                                     "name": "MyLabel",
                                                     "sceneObj": {
-                                                        "id": "a0c1404e-7436-489f-8b7c-522c710e0610",
+                                                        "id": "e4c57c56-7ad8-41de-9ca7-a8bbc2953159",
                                                         "type": "MyLabel",
                                                         "name": "MyLabel",
                                                         "layoutType": "LeftTop",
@@ -713,10 +711,10 @@
                                             "name": "数字内容展示",
                                             "collapsed": true,
                                             "sceneObj": {
-                                                "id": "3751bbd5-e803-41c8-9395-d455c9196d82",
+                                                "id": "91f0ba1f-02c0-4dda-bb3f-a55081693110",
                                                 "type": "MyContainer",
                                                 "name": "数字内容展示",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "backgroundColor": [
                                                     0,
                                                     0,
@@ -730,10 +728,10 @@
                                                     "name": "数字面板1",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "3db78c97-4817-4556-98e9-a866a8ea39af",
+                                                        "id": "dcb0e3e4-bd46-44a4-ac10-d2fc38ee4a2c",
                                                         "type": "MyContainer",
                                                         "name": "数字面板1",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -741,7 +739,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "c813a5a0-12eb-4678-a9c8-7625db462f59",
+                                                                "id": "e61e4a11-4a1f-47cb-8512-02ed7a38e0cd",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -759,7 +757,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "bf8728ea-ce89-4e65-a980-dc5b8e79f772",
+                                                                "id": "2c83cabc-3b00-455a-b4c2-e84747b1c558",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -777,7 +775,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "ed9d5bb3-7d62-4847-a7f9-ebc14f9b7087",
+                                                                "id": "8fe4b64a-7bcd-4c1b-bd20-9245c39897d7",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -797,10 +795,10 @@
                                                     "name": "数字面板2",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "3e70bf37-194d-4335-a815-6001c51a0748",
+                                                        "id": "39660f5e-02f4-424b-8666-1d21707c7161",
                                                         "type": "MyContainer",
                                                         "name": "数字面板2",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -808,7 +806,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "4a1e7764-a425-479d-a6e3-e507b86b0e29",
+                                                                "id": "2ee79a2e-01e8-4722-914a-4fd24271099e",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -826,7 +824,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "4df159b6-e88b-4dd3-b9a2-69168a7b379a",
+                                                                "id": "6c230cd1-a9a0-4afd-a2f6-b0f1b0d4436a",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -844,7 +842,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "9a2167f2-ce27-4127-8c5f-7faefef416ae",
+                                                                "id": "32b23c71-c291-411a-a9ba-867fe43178a2",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -864,10 +862,10 @@
                                                     "name": "数字面板3",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "0fa44fe3-e277-4888-a42b-1249d82b3c78",
+                                                        "id": "11d47cc0-7e01-4371-a90f-8e2021aeb813",
                                                         "type": "MyContainer",
                                                         "name": "数字面板3",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -875,7 +873,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "edb3ab58-fd79-4d21-84d0-b2e71aed6ede",
+                                                                "id": "f5ff68b9-0205-491e-b9e7-5cbf7a9dc20c",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -893,7 +891,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "971973ab-73e5-49b2-b908-6a53a624117b",
+                                                                "id": "9a1578a9-9ee2-46a7-bb47-500788a747af",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -911,7 +909,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "702c21e2-a3e9-43da-8540-773c70edc5fd",
+                                                                "id": "b8e9f453-8055-4c5c-9171-f6fa378995b3",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -971,12 +969,13 @@
                 },
                 {
                     "name": "右侧边栏",
+                    "collapsed": true,
                     "sceneObj": {
                         "id": "43f3ccef-981b-4d99-99cd-4277f720ba62",
                         "type": "MyContainer",
                         "name": "右侧边栏",
                         "ref": "右侧边栏",
-                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "RightTop",
                         "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nheight: calc(100% - 60px);\nright: 0px;\ntop: 60px;\ntransition: right 0.3s ease-in-out;\n"
                     },
@@ -1019,10 +1018,10 @@
                             "name": "内容",
                             "collapsed": true,
                             "sceneObj": {
-                                "id": "43a729c8-678e-4f2f-9cde-cc179ece32be",
+                                "id": "bddd8627-ed12-457b-a405-65755d33646e",
                                 "type": "MyContainer",
                                 "name": "内容",
-                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                 "width": 420,
                                 "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\ngap: 10px;\nheight: 100%;\nbox-sizing: border-box;\npadding: 10px;\nbackground: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(64, 64, 64, 0.25));\n"
                             },
@@ -1031,10 +1030,10 @@
                                     "name": "ECharts面板(MyContainer)",
                                     "collapsed": true,
                                     "sceneObj": {
-                                        "id": "62407bfd-3f6c-4819-9db1-8c2ebd1dec62",
+                                        "id": "cb459f54-fe8d-4b4d-a041-6ab41689ec2c",
                                         "type": "MyContainer",
                                         "name": "ECharts面板(MyContainer)",
-                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;"
                                     },
                                     "children": [
@@ -1042,10 +1041,10 @@
                                             "name": "标题栏(MyContainer)",
                                             "collapsed": true,
                                             "sceneObj": {
-                                                "id": "db4f0c09-9eff-41c1-bfcb-9f26d6e66b06",
+                                                "id": "f86e7983-8387-4dbc-b264-484c88449e6e",
                                                 "type": "MyContainer",
                                                 "name": "标题栏(MyContainer)",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "height": 45,
                                                 "cssText": "width: 100%;"
                                             },
@@ -1053,7 +1052,7 @@
                                                 {
                                                     "name": "MyImage",
                                                     "sceneObj": {
-                                                        "id": "a5c3729c-410c-4bb0-a510-f5077f1796aa",
+                                                        "id": "66687613-d76d-4822-821f-7813ce386ce4",
                                                         "type": "MyImage",
                                                         "name": "MyImage",
                                                         "layoutType": "LeftTop",
@@ -1066,7 +1065,7 @@
                                                 {
                                                     "name": "MyLabel",
                                                     "sceneObj": {
-                                                        "id": "19a94913-8986-4965-b8e4-e5e65624a759",
+                                                        "id": "8022ef28-d03f-462d-b629-9f247b1ef84f",
                                                         "type": "MyLabel",
                                                         "name": "MyLabel",
                                                         "layoutType": "LeftTop",
@@ -1085,7 +1084,7 @@
                                         {
                                             "name": "折线图-ECharts",
                                             "sceneObj": {
-                                                "id": "ce5d97fd-183a-4fb7-a119-98540b6232fc",
+                                                "id": "4965a369-2ea1-44f6-9c44-6519154b2627",
                                                 "type": "EChartsDiv",
                                                 "name": "折线图-ECharts",
                                                 "updateMyChartFuncStr": "\nlet xLabel = [\"3.26\", \"3.27\", \"3.28\", \"3.29\", \"3.30\", \"3.31\"];\nlet goToSchool = [\"40\", \"60\", \"22\", \"85\", \"50\", \"40\"];\n\noption = {\n  tooltip: {\n    trigger: \"axis\",\n    backgroundColor: \"transparent\",\n    axisPointer: {\n      lineStyle: {\n        color: {\n          type: \"linear\",\n          x: 0,\n          y: 0,\n          x2: 0,\n          y2: 1,\n          colorStops: [\n            {\n              offset: 0,\n              color: \"rgba(126,199,255,0)\", // 0% 处的颜色\n            },\n            {\n              offset: 0.5,\n              color: \"rgba(126,199,255,1)\", // 100% 处的颜色\n            },\n            {\n              offset: 1,\n              color: \"rgba(126,199,255,0)\", // 100% 处的颜色\n            },\n          ],\n          global: false, // 缺省为 false\n        },\n      },\n    },\n    formatter: (p) => {\n      let dom = `<div style=\"width: 79px;\n\theight: 50px;;color:#fff;position: relative;\">\n        <svg style=\"position: absolute;top: 50%;\n    left: 50%;\n    transform: translateX(-50%) translateY(-50%);\" class=\"svg\" xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"71\" viewBox=\"0 0 84 55\">\n      <defs>\n        <style>\n          .cls-1 {\n            fill: #07172c;\n            fill-opacity: 0.8;\n            stroke: #a7d8ff;\n            stroke-linejoin: round;\n            stroke-opacity: 0.2;\n            fill-rule: evenodd;\n          }\n\n        </style>\n      </defs>\n      <path id=\"矩形_419\" data-name=\"矩形 419\" class=\"cls-1\" d=\"M266,595h74v50H266V624.046L261,620l5-3.984V595Z\"\n        transform=\"translate(-258.5 -592.5)\" />\n    </svg>\n        <div style=\"padding: 4px 8px 4px 14px;display: flex;\n        justify-content: center;\n        align-items: center;\n        flex-direction: column;position: relative;z-index: 1;\">\n            <div style=\"margin-bottom: 4px;width:100%;display:${\n              p[0] ? \"flex\" : \"none\"\n            };justify-content:space-between;align-items:center;\">\n                <span style=\"font-size:14px;color:#7ec7ff;\">${\n                  p[0] ? p[0].seriesName : \"\"\n                }</span>\n                <span style=\"font-size:14px;color:#fff;\">${\n                  p[0] ? p[0].data : \"\"\n                }</span>\n            </div>\n        </div>\n    </div>`;\n      return dom;\n    },\n  },\n  legend: {\n    align: \"left\",\n    right: \"5%\",\n    top: \"14%\",\n    type: \"plain\",\n    textStyle: {\n      color: \"#7ec7ff\",\n      fontSize: 16,\n    },\n    // icon:'rect',\n    itemGap: 25,\n    itemWidth: 18,\n    icon: \"path://M0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z\",\n\n    data: [\n      {\n        name: \"上学\",\n      },\n    ],\n  },\n  grid: {\n    top: \"8%\",\n    left: \"15%\",\n    right: \"5%\",\n    bottom: \"20%\",\n    // containLabel: true\n  },\n  xAxis: [\n    {\n      type: \"category\",\n      boundaryGap: false,\n      axisLine: {\n        //坐标轴轴线相关设置。数学上的x轴\n        show: false,\n        lineStyle: {\n          color: \"#233653\",\n        },\n      },\n      axisLabel: {\n        //坐标轴刻度标签的相关设置\n        textStyle: {\n          color: \"#fff\",\n          padding: 16,\n          fontSize: 14,\n        },\n        formatter: function (data) {\n          return data;\n        },\n      },\n      splitLine: {\n        show: false,\n        lineStyle: {\n          color: \"#192a44\",\n        },\n      },\n      axisTick: {\n        show: false,\n      },\n      data: xLabel,\n    },\n  ],\n  yAxis: [\n    {\n      nameTextStyle: {\n        color: \"#fff\",\n        fontSize: 16,\n        padding: 10,\n      },\n      min: 0,\n      splitLine: {\n        show: false,\n        lineStyle: {\n          color: \"#192a44\",\n        },\n      },\n      axisLine: {\n        show: false,\n        lineStyle: {\n          color: \"#233653\",\n        },\n      },\n      axisLabel: {\n        show: true,\n        textStyle: {\n          color: \"#fff\",\n          padding: 16,\n        },\n        formatter: function (value) {\n          if (value === 0) {\n            return value;\n          }\n          return value;\n        },\n      },\n      axisTick: {\n        show: false,\n      },\n    },\n  ],\n  series: [\n    {\n      name: \"车辆\",\n      type: \"line\",\n      symbol: \"circle\", // 默认是空心圆（中间是白色的），改成实心圆\n      showAllSymbol: true,\n      symbolSize: 0,\n      smooth: true,\n      lineStyle: {\n        normal: {\n          width: 2,\n          color: \"rgba(25,163,223,1)\", // 线条颜色\n        },\n        borderColor: \"rgba(0,0,0,.4)\",\n      },\n      itemStyle: {\n        color: \"rgba(25,163,223,1)\",\n        borderColor: \"#646ace\",\n        borderWidth: 2,\n      },\n\n      areaStyle: {\n        //区域填充样式\n        normal: {\n          //线性渐变，前4个参数分别是x0,y0,x2,y2(范围0~1);相当于图形包围盒中的百分比。如果最后一个参数是‘true’，则该四个值是绝对像素位置。\n          color: new echarts.graphic.LinearGradient(\n            0,\n            0,\n            0,\n            1,\n            [\n              {\n                offset: 0,\n                color: \"rgba(25,163,223,.3)\",\n              },\n              {\n                offset: 1,\n                color: \"rgba(25,163,223, 0)\",\n              },\n            ],\n            false\n          ),\n          shadowColor: \"rgba(25,163,223, 0.5)\", //阴影颜色\n          shadowBlur: 20, //shadowBlur设图形阴影的模糊大小。配合shadowColor,shadowOffsetX/Y, 设置图形的阴影效果。\n        },\n      },\n      data: goToSchool,\n    },\n  ],\n};\n"
@@ -1097,21 +1096,20 @@
                                     "name": "数字面板(MyContainer)",
                                     "collapsed": true,
                                     "sceneObj": {
-                                        "id": "1cad857a-1c56-4463-8b0e-aff371fe25ed",
+                                        "id": "8efc90df-4cb8-43d1-895a-f6fe1b30646d",
                                         "type": "MyContainer",
                                         "name": "数字面板(MyContainer)",
-                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;"
                                     },
                                     "children": [
                                         {
                                             "name": "标题栏(MyContainer)",
-                                            "collapsed": true,
                                             "sceneObj": {
-                                                "id": "9eb6f575-9cbf-4070-972e-e62160862bac",
+                                                "id": "8fc8f822-5d93-4e0e-b4dc-50a3005ce756",
                                                 "type": "MyContainer",
                                                 "name": "标题栏(MyContainer)",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "height": 45,
                                                 "cssText": "width: 100%;"
                                             },
@@ -1119,7 +1117,7 @@
                                                 {
                                                     "name": "MyImage",
                                                     "sceneObj": {
-                                                        "id": "13849986-e864-4df5-989e-dff9a378b334",
+                                                        "id": "13d86def-da1a-47e5-9a3b-08a097ca77ca",
                                                         "type": "MyImage",
                                                         "name": "MyImage",
                                                         "layoutType": "LeftTop",
@@ -1132,7 +1130,7 @@
                                                 {
                                                     "name": "MyLabel",
                                                     "sceneObj": {
-                                                        "id": "6f441071-408c-4960-bda7-50ac3a8d954d",
+                                                        "id": "9ce042d7-da93-418c-9350-e35c42472eaf",
                                                         "type": "MyLabel",
                                                         "name": "MyLabel",
                                                         "layoutType": "LeftTop",
@@ -1152,10 +1150,10 @@
                                             "name": "数字内容展示",
                                             "collapsed": true,
                                             "sceneObj": {
-                                                "id": "44df86a8-e82d-4e18-ac3f-fb469773cd86",
+                                                "id": "002ecd9e-4a5d-494c-a67d-300a531b1475",
                                                 "type": "MyContainer",
                                                 "name": "数字内容展示",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "backgroundColor": [
                                                     0,
                                                     0,
@@ -1169,10 +1167,10 @@
                                                     "name": "数字面板1",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "9f5c8996-822e-4fc6-8da3-e57743ae3bf6",
+                                                        "id": "48ac9d96-364e-455f-9c3b-c98b851a642b",
                                                         "type": "MyContainer",
                                                         "name": "数字面板1",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -1180,7 +1178,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "cb619a10-4ffa-481a-86f4-3bff01c42121",
+                                                                "id": "c463144e-b5f6-4048-ad74-603a49fa968a",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -1198,7 +1196,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "5986c00a-2661-4713-b271-f4ee82df5312",
+                                                                "id": "5261c929-4d16-4266-8f84-10e892059ad8",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -1216,7 +1214,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "3de9c9fb-96bf-4436-92c0-8a8a1b77be28",
+                                                                "id": "fb2314c8-5639-42e3-9077-8f1cb7adb1d2",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -1236,10 +1234,10 @@
                                                     "name": "数字面板2",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "2c5fb281-515d-4342-9816-f323a405414a",
+                                                        "id": "3a992178-f151-473d-8a12-61ed8a63fdaa",
                                                         "type": "MyContainer",
                                                         "name": "数字面板2",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -1247,7 +1245,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "78cbdbbf-4cc8-4022-8e4d-0e7de89fc156",
+                                                                "id": "63b8fce6-0658-4489-aced-59914afa8f25",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -1265,7 +1263,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "940af4d1-3dc5-4614-95af-07f5e62b7e8c",
+                                                                "id": "275bf5a0-e7b7-4816-9de5-618d01ca713f",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -1283,7 +1281,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "cdf99efa-ac6f-44f6-b5df-237c9b9f9125",
+                                                                "id": "a49937e5-97b6-448e-b324-b32b0e97ae56",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -1303,10 +1301,10 @@
                                                     "name": "数字面板3",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "cead48a4-6383-4351-90a8-81e27414f3b5",
+                                                        "id": "e7d12438-b8ef-4b56-b0ef-f01691c17d7a",
                                                         "type": "MyContainer",
                                                         "name": "数字面板3",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -1314,7 +1312,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "9d862d62-bcae-484d-8d60-306f5983cd1b",
+                                                                "id": "f082473e-d829-46ff-8991-b0b0ad097758",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -1332,7 +1330,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "ba8ff497-c429-4c87-bddf-9bccd12f2acd",
+                                                                "id": "7e99fa13-6cdb-42bf-bb03-433a71b77256",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -1350,7 +1348,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "f6b7d2a0-5617-4cbb-955d-1812c36edf08",
+                                                                "id": "afd684c3-ee59-4210-882a-ccdbde0cc5de",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -1374,21 +1372,20 @@
                                     "name": "数字面板(MyContainer)",
                                     "collapsed": true,
                                     "sceneObj": {
-                                        "id": "a99b5e0f-630f-4fa2-b8d2-0f2ca4e2e75a",
+                                        "id": "aaf5a7ad-196b-4319-9ec7-c6633ccb1165",
                                         "type": "MyContainer",
                                         "name": "数字面板(MyContainer)",
-                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;"
                                     },
                                     "children": [
                                         {
                                             "name": "标题栏(MyContainer)",
-                                            "collapsed": true,
                                             "sceneObj": {
-                                                "id": "7899e74f-ae1a-4b92-8158-12d4db455dfa",
+                                                "id": "35b479a1-5718-4ef9-9e28-12a94e774d40",
                                                 "type": "MyContainer",
                                                 "name": "标题栏(MyContainer)",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "height": 45,
                                                 "cssText": "width: 100%;"
                                             },
@@ -1396,7 +1393,7 @@
                                                 {
                                                     "name": "MyImage",
                                                     "sceneObj": {
-                                                        "id": "605c81cf-3ce4-45fb-96cf-a61867002fa6",
+                                                        "id": "b7c62e12-c5d7-419b-aeda-73f496f69f93",
                                                         "type": "MyImage",
                                                         "name": "MyImage",
                                                         "layoutType": "LeftTop",
@@ -1409,7 +1406,7 @@
                                                 {
                                                     "name": "MyLabel",
                                                     "sceneObj": {
-                                                        "id": "a69f8b6b-d7d4-434d-81d9-624d62bbe7e7",
+                                                        "id": "2ddf8e0e-7ef8-4595-b586-e385e2e5a97d",
                                                         "type": "MyLabel",
                                                         "name": "MyLabel",
                                                         "layoutType": "LeftTop",
@@ -1429,10 +1426,10 @@
                                             "name": "数字内容展示",
                                             "collapsed": true,
                                             "sceneObj": {
-                                                "id": "ad091016-cdcf-486a-a2b3-f5791066fa41",
+                                                "id": "8fbd1fb3-d892-4666-8584-02a1c71c530a",
                                                 "type": "MyContainer",
                                                 "name": "数字内容展示",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "backgroundColor": [
                                                     0,
                                                     0,
@@ -1446,10 +1443,10 @@
                                                     "name": "数字面板1",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "4c015e94-2859-46b6-b6de-a433ca082f10",
+                                                        "id": "6f47f8c4-4a36-4cfc-8ee3-22b8a34d7282",
                                                         "type": "MyContainer",
                                                         "name": "数字面板1",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -1457,7 +1454,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "c99a9e8e-df02-4496-9141-b7a4b91756aa",
+                                                                "id": "f9648807-4a47-4f86-91b5-e5e1e043da23",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -1475,7 +1472,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "9cda0e54-a734-4dd0-9044-168fcbc89570",
+                                                                "id": "05c078d3-c764-4611-b94d-4b7b0cb200cf",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -1493,7 +1490,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "d622075f-1576-4553-b363-0a144093d409",
+                                                                "id": "61d35f82-df02-4b5b-bb69-cd3d2fb4786f",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -1513,10 +1510,10 @@
                                                     "name": "数字面板2",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "02cc87e6-5265-423c-81a6-c591ccc315ca",
+                                                        "id": "8f577d03-bf98-4c0c-a9b9-1d74b733f07c",
                                                         "type": "MyContainer",
                                                         "name": "数字面板2",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -1524,7 +1521,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "1c1d0ad2-c8f5-4bad-8fd7-992f02bbf00c",
+                                                                "id": "94fc1431-18cf-4e9a-ac64-19a209054f56",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -1542,7 +1539,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "6182493b-11a2-4088-ac97-a2b4cd972204",
+                                                                "id": "ea530d7e-cfc6-468c-a4eb-764635733cb7",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -1560,7 +1557,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "de87829b-8234-4aea-886d-ada5e47e4f5a",
+                                                                "id": "27f1e1b4-5b38-45ff-b973-94b92f86c957",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -1580,10 +1577,10 @@
                                                     "name": "数字面板3",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "cd3817ea-5303-4a91-abad-d6faed7a2a83",
+                                                        "id": "979cce79-f2e8-4654-93f2-061f55aba0ca",
                                                         "type": "MyContainer",
                                                         "name": "数字面板3",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -1591,7 +1588,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "3fd23d39-66a1-4626-b407-2baa640d1927",
+                                                                "id": "e7c8a008-25e2-4ea0-a861-11340e563fdc",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -1609,7 +1606,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "cd086b2e-ba17-454c-9985-228e3ae4b924",
+                                                                "id": "295cd04d-7d2a-44dd-bbfa-b285677edfc5",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -1627,7 +1624,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "404eb316-9209-4540-9eb3-93ecef9d8ff4",
+                                                                "id": "70be386f-4db4-41ee-b73b-72133650fcf3",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -1651,21 +1648,20 @@
                                     "name": "数字面板(MyContainer)",
                                     "collapsed": true,
                                     "sceneObj": {
-                                        "id": "e3c91cfe-06cd-41d1-a3a9-61e663da05a7",
+                                        "id": "dda9be56-a88d-4aa0-b82e-c33a90f8bcea",
                                         "type": "MyContainer",
                                         "name": "数字面板(MyContainer)",
-                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nwidth: 100%;"
                                     },
                                     "children": [
                                         {
                                             "name": "标题栏(MyContainer)",
-                                            "collapsed": true,
                                             "sceneObj": {
-                                                "id": "299946d8-def8-4196-a792-610e4cc16741",
+                                                "id": "fb48a66c-30b7-4afc-98ac-a46ae5f5f8c2",
                                                 "type": "MyContainer",
                                                 "name": "标题栏(MyContainer)",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "height": 45,
                                                 "cssText": "width: 100%;"
                                             },
@@ -1673,7 +1669,7 @@
                                                 {
                                                     "name": "MyImage",
                                                     "sceneObj": {
-                                                        "id": "92e7902b-2e01-40e8-9540-fe9d6510c5a4",
+                                                        "id": "ebf97a3c-29fa-4240-902a-1ef20975b2a4",
                                                         "type": "MyImage",
                                                         "name": "MyImage",
                                                         "layoutType": "LeftTop",
@@ -1686,7 +1682,7 @@
                                                 {
                                                     "name": "MyLabel",
                                                     "sceneObj": {
-                                                        "id": "0282c4f3-82f2-431b-b120-84846b916a12",
+                                                        "id": "b8b5fa73-c7f7-4da6-9942-c736d8cd5212",
                                                         "type": "MyLabel",
                                                         "name": "MyLabel",
                                                         "layoutType": "LeftTop",
@@ -1706,10 +1702,10 @@
                                             "name": "数字内容展示",
                                             "collapsed": true,
                                             "sceneObj": {
-                                                "id": "aafebcba-b41f-4890-94f6-f7b9d12ce91e",
+                                                "id": "a791cc74-1a85-4085-b20d-d136b70503b7",
                                                 "type": "MyContainer",
                                                 "name": "数字内容展示",
-                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                 "backgroundColor": [
                                                     0,
                                                     0,
@@ -1723,10 +1719,10 @@
                                                     "name": "数字面板1",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "8bc34b63-90a3-45fe-9960-dcc1b8f75dda",
+                                                        "id": "ca106ca4-c28e-448b-87f4-b3eb20e009df",
                                                         "type": "MyContainer",
                                                         "name": "数字面板1",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -1734,7 +1730,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "a08a2e6f-8421-4e90-bdee-4b2684cbf60a",
+                                                                "id": "579dca1a-0573-4428-a321-7b1446f274a5",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -1752,7 +1748,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "6ed9fb50-059d-46e8-802d-bffa60c6ead5",
+                                                                "id": "567bca11-279c-4abe-a4e7-4f13f5007d71",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -1770,7 +1766,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "3f6bed3d-cc9c-4c1f-b4ea-92032de51f5f",
+                                                                "id": "df98c07e-a5a7-4899-920e-acf15203dd03",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -1790,10 +1786,10 @@
                                                     "name": "数字面板2",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "4f516492-84c9-4aaa-98be-ed0f8aa10448",
+                                                        "id": "9d08d3bc-deb5-4db7-9d09-7fa7f4be0604",
                                                         "type": "MyContainer",
                                                         "name": "数字面板2",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -1801,7 +1797,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "81ce6e46-a88b-42fb-a78b-c77a04caba4f",
+                                                                "id": "f2edd944-fff9-4f26-84fd-1be5ac1dedad",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -1819,7 +1815,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "b1941e5c-8a7b-4f05-8cdc-8e1f6c12c3f7",
+                                                                "id": "b2dc4370-81df-44d3-b067-d56d0ff9ad51",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -1837,7 +1833,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "360e5dcc-2f69-4eb6-9c22-041e83a92936",
+                                                                "id": "5314dea0-726c-4bdd-b1b0-3123677563be",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -1857,10 +1853,10 @@
                                                     "name": "数字面板3",
                                                     "collapsed": true,
                                                     "sceneObj": {
-                                                        "id": "1bff904d-9b74-4c7e-ab70-b7230ceaf713",
+                                                        "id": "9eb7e30f-c9b5-4c32-a2ad-0c421fe6256d",
                                                         "type": "MyContainer",
                                                         "name": "数字面板3",
-                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                                         "width": 100,
                                                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\nmargin: 6px;"
                                                     },
@@ -1868,7 +1864,7 @@
                                                         {
                                                             "name": "MyLabel1",
                                                             "sceneObj": {
-                                                                "id": "45ad0761-a22a-48b6-ac2b-7dcfad0de04a",
+                                                                "id": "fc2a5a9d-203e-4458-9837-d129a38a1213",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel1",
                                                                 "color": [
@@ -1886,7 +1882,7 @@
                                                         {
                                                             "name": "MyLabel2",
                                                             "sceneObj": {
-                                                                "id": "4c4b76a2-b182-42e4-a8b7-bab8009b7d7b",
+                                                                "id": "43627563-dbec-4084-af4d-47c8b5f8ae73",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel2",
                                                                 "color": [
@@ -1904,7 +1900,7 @@
                                                         {
                                                             "name": "MyLabel3",
                                                             "sceneObj": {
-                                                                "id": "f5ee188b-8c50-4e5f-9015-eddaf52c5520",
+                                                                "id": "9d8eaf71-e050-4fa1-971f-639151f1e736",
                                                                 "type": "MyLabel",
                                                                 "name": "MyLabel3",
                                                                 "color": [
@@ -1984,7 +1980,6 @@
                         },
                         {
                             "name": "图片工具栏(中下)",
-                            "collapsed": true,
                             "sceneObj": {
                                 "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
                                 "type": "MyContainer",
@@ -2106,21 +2101,13 @@
                             ]
                         }
                     ]
-                },
-                {
-                    "name": "MyContainer",
-                    "sceneObj": {
-                        "id": "a52d4442-87fc-430b-bb59-d6098a706f84",
-                        "type": "MyContainer",
-                        "name": "MyContainer"
-                    }
                 }
             ]
         }
     },
     "builtin": {
         "czmViewer": {
-            "id": "bc525021-ca3e-4ee6-b9c0-6dbe82daeb6a",
+            "id": "33e96c86-122c-4e28-bd97-96454e27e567",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -2130,7 +2117,7 @@
             "clockCurrentTime": 1731911033812
         },
         "offlineImagery": {
-            "id": "c5bed340-d8e4-472c-9cc6-052a598fa826",
+            "id": "bcccbff3-4625-45fe-b73d-59c8a1403873",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -2140,7 +2127,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "08947af0-1794-4b91-ac23-5f4b68eb1595",
+            "id": "9a975968-77d3-41f5-8737-b34ea14b1dfb",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -2162,7 +2149,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "ed7d31ad-b290-4b75-b00d-902d5ecfccbe",
+            "id": "e122b373-3e3c-4da6-b110-b75f3e846f82",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -2173,27 +2160,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "46e9d390-aff1-4543-bb01-5e0f99adbcb1",
+            "id": "3b09fdcb-5899-43fb-9d69-64779a19e669",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "8ef695c6-fe5e-4021-9a13-82c279c7efce",
+            "id": "d9932f7d-e2c4-488d-bc3f-68080904d3ba",
             "type": "View",
             "position": [
                 101.01932079231212,
-                30.763423114849786,
+                30.763423114849797,
                 10788094.082068345
             ],
             "rotation": [
-                339.2706929666839,
-                -89.74979360939973,
+                339.27069296668395,
+                -89.74979360940118,
                 0
             ],
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "2b3b044e-8c38-4876-9616-583d0cc1e9b8",
+            "id": "32fe72ed-7a9d-4f3c-b1a2-edfc0b5597dd",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }

@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.26",
+        "version": "0.9.29",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-19T01:55:01.747Z",
+        "modifiedTime": "2024-11-22T06:20:23.809Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -37,11 +37,11 @@
                 },
                 {
                     "name": "MyContainer(仅包含提示模块)",
-                    "collapsed": true,
                     "sceneObj": {
                         "id": "d1178b57-5af3-4bb5-b293-f605a18003ac",
                         "type": "MyContainer",
                         "name": "MyContainer(仅包含提示模块)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "LeftTop",
                         "width": 300,
                         "height": 200,
@@ -51,10 +51,7 @@
                             0,
                             0.5
                         ],
-                        "cssText": "left: 2px;\ntop: 42px;\nborder-radius: 4px;",
-                        "subIds": [
-                            "289358e8-0c55-4212-aa11-7789e742aaa6"
-                        ]
+                        "cssText": "left: 2px;\ntop: 42px;\nborder-radius: 4px;"
                     },
                     "children": [
                         {
@@ -90,6 +87,7 @@
                         "id": "d29306aa-3ca8-44b9-84bb-6ff341ad541a",
                         "type": "MyContainer",
                         "name": "MyContainer(单行横向flex)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "LeftTop",
                         "height": 60,
                         "backgroundColor": [
@@ -98,15 +96,7 @@
                             0,
                             0.5
                         ],
-                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 2px;\ntop: 260px;\n",
-                        "subIds": [
-                            "a350fc09-ed54-4d9c-b89f-f828a9890da2",
-                            "be481f2d-561f-4ccc-837b-437e30c26813",
-                            "1e6caf6a-530e-43aa-ad4e-0463b1712186",
-                            "3c301811-f761-47f5-b97a-506b5d3b6395",
-                            "3c429eb8-cf3a-4d63-8235-2ce48bc6c4c3",
-                            "de8bad44-a2bb-4002-adbd-a45b5234fc27"
-                        ]
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 2px;\ntop: 260px;\n"
                     },
                     "children": [
                         {
@@ -178,6 +168,7 @@
                         "id": "e1b15d79-8be0-4e12-af0f-db62c0e374b5",
                         "type": "MyContainer",
                         "name": "MyContainer(多行横向flex)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "LeftTop",
                         "width": 300,
                         "backgroundColor": [
@@ -186,19 +177,7 @@
                             0,
                             0.5
                         ],
-                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 2px;\ntop: 330px;\npadding: 4px;\ngap: 4px;",
-                        "subIds": [
-                            "ce013ed3-df3f-42a7-88bb-f57ba014d3ca",
-                            "5e9a32c7-80e4-4227-a204-56420207538d",
-                            "73ace1e6-cb7b-4be4-8910-430fdaa38b08",
-                            "d7b2b3dd-0a99-46e8-a67d-e462133440fd",
-                            "e508317e-0826-4157-8f8f-1d33a3dc5c0a",
-                            "f8d18b4e-6560-4c38-aab2-4a286c45d54a",
-                            "cd734ec3-e294-4669-aa2f-09f46e6ed867",
-                            "846ee222-6b28-4d46-af9b-267fe10c5440",
-                            "394d8c8a-fe65-4dcf-8deb-5e2287188731",
-                            "65e4c89f-94de-4e5b-a1bf-7e02d9b248c1"
-                        ]
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 2px;\ntop: 330px;\npadding: 4px;\ngap: 4px;"
                     },
                     "children": [
                         {
@@ -310,6 +289,7 @@
                         "id": "8951ce4b-6d78-40c7-b796-d7fc5e2d6474",
                         "type": "MyContainer",
                         "name": "MyContainer(纵向flex)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "LeftTop",
                         "backgroundColor": [
                             0,
@@ -317,15 +297,7 @@
                             0,
                             0.5
                         ],
-                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 320px;\ntop: 2px;\ngap: 4px;",
-                        "subIds": [
-                            "9d2e8d97-ea16-4952-a620-fe26921f711f",
-                            "ad127dc5-de28-4d4e-9191-7a3af34bc2a1",
-                            "a45bb2db-dcf0-44e5-b370-771f411f6154",
-                            "c722c91c-9d05-4389-9d60-a429e54f4f77",
-                            "fd57555a-ee80-4e50-8080-478ede69da10",
-                            "8fae753c-103f-48ee-86fb-09858945907f"
-                        ]
+                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 320px;\ntop: 2px;\ngap: 4px;"
                     },
                     "children": [
                         {
@@ -392,11 +364,11 @@
                 },
                 {
                     "name": "MyContainer(容器内套容器)",
-                    "collapsed": true,
                     "sceneObj": {
                         "id": "4c31df8f-243e-4372-9798-1f6a50e0ff04",
                         "type": "MyContainer",
                         "name": "MyContainer(容器内套容器)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "LeftTop",
                         "backgroundColor": [
                             0,
@@ -404,12 +376,7 @@
                             0,
                             0.5
                         ],
-                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 380px;\ntop: 2px;\ngap: 10px;\npadding: 10px;",
-                        "subIds": [
-                            "2f2c4b30-11d1-4aee-b4af-0b82a1cd6f9c",
-                            "ea72216a-a3ac-4a9f-9766-e3a5a9799e39",
-                            "d6282777-38c2-4b5e-b5e5-f1eb409d030d"
-                        ]
+                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 380px;\ntop: 2px;\ngap: 10px;\npadding: 10px;"
                     },
                     "children": [
                         {
@@ -459,6 +426,22 @@
                                     0.93
                                 ]
                             }
+                        },
+                        {
+                            "name": "MyContainer(子容器)",
+                            "sceneObj": {
+                                "id": "ad936a62-eaa1-4587-86f9-7eec8f95046e",
+                                "type": "MyContainer",
+                                "name": "MyContainer(子容器)",
+                                "width": 100,
+                                "height": 100,
+                                "backgroundColor": [
+                                    0.0392156862745098,
+                                    0.9411764705882353,
+                                    0.24705882352941178,
+                                    0.93
+                                ]
+                            }
                         }
                     ]
                 }
@@ -467,7 +450,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "6d1f0614-5944-40ec-9f24-9a65d9267536",
+            "id": "bc2c9f06-4ada-46d6-906f-7de5617830cf",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -477,7 +460,7 @@
             "clockCurrentTime": 1731979922404
         },
         "offlineImagery": {
-            "id": "caf657cb-6311-479d-b044-2eb5dc27a5fe",
+            "id": "844129ed-0467-48ce-9c84-928c38c1b70b",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -487,7 +470,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "277a7cfa-e820-4c35-98f5-d71e4eff53ca",
+            "id": "a3b5b8f6-c7fe-48c5-9dd2-a0462107ead9",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -509,7 +492,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "9b988a9b-76e4-4c97-82bd-3231ff15a6f4",
+            "id": "499c1bdb-4d04-4490-a81f-97dc4e012aca",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -520,27 +503,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "0f390cac-ed87-4986-97ae-0573338244c8",
+            "id": "27591c37-c090-4941-b890-c6aab8eb6c00",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "83a014cc-a0e4-41c1-bd0b-8d39256a3b65",
+            "id": "fd3da715-bd51-41fe-acfe-8062e093d5a7",
             "type": "View",
             "position": [
                 116.66596624272802,
                 40.10881562058003,
-                6898.8513699446285
+                6898.851369944028
             ],
             "rotation": [
                 257.7686029434765,
-                -53.621242144875815,
+                -53.621242144875794,
                 359.91147171409443
             ],
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "81934296-952b-4e8c-8c59-64848d029ecd",
+            "id": "43828c58-7b46-44d5-9941-f395b3cf711b",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }

@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.26",
+        "version": "0.9.29",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-19T01:11:57.696Z",
+        "modifiedTime": "2024-11-22T06:26:01.401Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -12,17 +12,14 @@
             "children": [
                 {
                     "name": "图片工具栏(右上角)",
+                    "collapsed": true,
                     "sceneObj": {
                         "id": "b80f78bd-06b8-47a3-80f0-0cdb2b5944dc",
                         "type": "MyContainer",
                         "name": "图片工具栏(右上角)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "LeftTop",
-                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 6px;\ntop: 6px;\n",
-                        "subIds": [
-                            "d605cb9e-639e-4043-9149-e2dd6d717456",
-                            "c00a033c-575b-44c0-9c98-49f6c2903675",
-                            "728349c0-0207-472b-a36d-d807ebdf8935"
-                        ]
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 6px;\ntop: 6px;\n"
                     },
                     "children": [
                         {
@@ -138,13 +135,9 @@
                         "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
                         "type": "MyContainer",
                         "name": "图片工具栏(中下)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = undefined;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "CenterBottom",
-                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nbottom: 4px;",
-                        "subIds": [
-                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
-                            "56cd610f-4592-466f-b28a-2386984d3b3b",
-                            "5e5341a5-0c28-4c74-83ef-4f14f14174c1"
-                        ]
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nbottom: 4px;"
                     },
                     "children": [
                         {
@@ -259,7 +252,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "ef9cd035-9810-431f-8784-9b484e112143",
+            "id": "d4f5040e-3b0d-4047-b635-6bc9a5c3b167",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -269,7 +262,7 @@
             "clockCurrentTime": 1731916128017
         },
         "offlineImagery": {
-            "id": "ad428652-d6ba-43ad-80da-3e33ea1f70a6",
+            "id": "b8188c86-0b3f-4af9-8e9e-ea743e23522f",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -279,7 +272,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "85e00aec-cf26-4bb3-9e9d-68bb03b431b1",
+            "id": "2f3415f3-198c-42f5-a6b9-4432e247adbb",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -301,7 +294,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "fc61fee5-08cb-455e-8f61-de00410044e2",
+            "id": "f3c42597-4b68-445e-adf5-f4ba611eeac3",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -312,17 +305,17 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "75d418a6-6eb0-4830-9b3a-3ea1a4c87fa6",
+            "id": "2ac6eb07-3e78-4a4f-93b6-b7a3b40b3059",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "51b74cdf-3bc1-4cb8-9a45-5638614df20b",
+            "id": "42bba79c-74b0-45ca-91fa-dac21b7501c1",
             "type": "View",
             "position": [
                 124.37853485787873,
-                26.291811393089468,
-                685753.1645707943
+                26.291811393089482,
+                685753.1645696585
             ],
             "rotation": [
                 344.00985740738713,
@@ -332,7 +325,7 @@
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "af0ae3e1-c105-4acb-a023-703eed6a4462",
+            "id": "7cfba95e-694e-4d9b-bb9f-3fb68d943291",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
