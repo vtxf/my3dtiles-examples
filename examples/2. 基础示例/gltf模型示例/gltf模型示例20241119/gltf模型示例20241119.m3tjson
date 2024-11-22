@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.26",
+        "version": "0.9.29",
         "createdTime": "2024-11-19T03:05:02.649Z",
-        "modifiedTime": "2024-11-19T03:13:25.994Z",
+        "modifiedTime": "2024-11-22T03:34:25.023Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -211,13 +211,112 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "MyContainer(命令按钮工具栏)",
+                    "sceneObj": {
+                        "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
+                        "type": "MyContainer",
+                        "name": "MyContainer(命令按钮工具栏)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;\ngap: 4px;"
+                    },
+                    "children": [
+                        {
+                            "name": "飞到视角1",
+                            "sceneObj": {
+                                "id": "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                                "type": "RectangleButton",
+                                "name": "飞到视角1",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.视角1.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭地形",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "飞到视角2",
+                            "sceneObj": {
+                                "id": "55b62666-1fa3-490c-b438-573b2d567c93",
+                                "type": "RectangleButton",
+                                "name": "飞到视角2",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.视角2.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭地形",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "视角1",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "5b2a0f8a-56ff-4423-b199-ce5250a12211",
+                        "type": "View",
+                        "position": [
+                            116.39020852301547,
+                            39.90385929758239,
+                            20.351588045178822
+                        ],
+                        "rotation": [
+                            153.6473824319557,
+                            -50.4313170919242,
+                            359.9999517039117
+                        ],
+                        "name": "视角1",
+                        "ref": "视角1"
+                    }
+                },
+                {
+                    "name": "视角2",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "dfb9e817-84a8-4dec-893a-7f19b9f9db7a",
+                        "type": "View",
+                        "position": [
+                            116.39040460937687,
+                            39.904105181085505,
+                            45.318757544092634
+                        ],
+                        "rotation": [
+                            199.17837933216066,
+                            -41.99501294098985,
+                            0.00003688023498576799
+                        ],
+                        "name": "视角2",
+                        "ref": "视角2"
+                    }
                 }
             ]
         }
     },
     "builtin": {
         "czmViewer": {
-            "id": "e9cb77f1-a17b-4742-a2a2-84844df60fb5",
+            "id": "cb30676c-0c01-4987-94e0-29fb869c9df2",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -227,7 +326,7 @@
             "clockCurrentTime": 1731985502652
         },
         "offlineImagery": {
-            "id": "9397cf3f-5043-438d-a6fb-822da80b3c95",
+            "id": "da37b7ac-3eff-4d2b-9abc-bbba2523810f",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -237,7 +336,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "96f0bd4f-95bc-48a2-973f-76cd11e96ea5",
+            "id": "66927bc4-c0e7-4d27-a71a-2749a68685ed",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -259,7 +358,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "de9479a3-908d-47cf-87d8-ec0f8f5912ca",
+            "id": "73018f99-92a2-4c32-9d76-0cb6dc2b9aac",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -270,27 +369,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "ae79441f-cdd8-4d72-b413-9fbbe450ba17",
+            "id": "1a60df05-ecff-4246-b56e-7f83e9b3f70f",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "73fcc074-f280-4f2b-bce7-a1313528c52d",
+            "id": "a3ff7b40-5d79-457d-966d-675c839802bd",
             "type": "View",
             "position": [
-                116.39012111780524,
-                39.903806283254816,
-                9.211061215701967
+                116.3904716852394,
+                39.9038907668957,
+                22.10614650824894
             ],
             "rotation": [
-                131.23471887785013,
-                -30.225535479529235,
-                0.000022483828202465052
+                223.39568329044693,
+                -43.3183413973161,
+                359.9999947163916
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "9a0f4ab1-c0dd-4a41-add4-0c633f93e2be",
+            "id": "8896b4bd-0b18-460a-a6db-b5ba1ec0ca5e",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }

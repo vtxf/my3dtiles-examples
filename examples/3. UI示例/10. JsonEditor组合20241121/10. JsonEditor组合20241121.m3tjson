@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.29",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-22T02:59:43.691Z",
+        "modifiedTime": "2024-11-22T03:05:08.229Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -11,11 +11,12 @@
             "name": "root",
             "children": [
                 {
-                    "name": "MyContainer",
+                    "name": "Json编辑器(MyContainer)",
+                    "collapsed": true,
                     "sceneObj": {
                         "id": "dab0113a-9c50-450e-b8c7-9a47ec8534ba",
                         "type": "MyContainer",
-                        "name": "MyContainer",
+                        "name": "Json编辑器(MyContainer)",
                         "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                         "layoutType": "Center",
                         "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\n"
@@ -131,7 +132,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "3adc6a70-551d-477a-b65e-c82c6052391a",
+            "id": "24cb7696-5e02-43db-87c1-11b7b07049b5",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -141,7 +142,7 @@
             "clockCurrentTime": 1732170634334
         },
         "offlineImagery": {
-            "id": "2e869dda-04e0-422f-bf80-886c0ef4ecd7",
+            "id": "2da55073-9ee8-4cff-bae9-e78e2b4f93e2",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -151,7 +152,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "48aeb41f-20a6-4e29-b1e7-e787e1f59e6e",
+            "id": "c6517e97-0540-4d79-8dee-d50b3c9db746",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -173,7 +174,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "bcb1165b-72a5-44fe-ade3-288407a3497d",
+            "id": "4a443265-c2a0-4898-b705-cd17b6f0568b",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -184,12 +185,12 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "42317196-39ef-4d89-a06e-347792987720",
+            "id": "f237ccde-afb9-4a57-80bb-22de4b0ee55f",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "07216d8e-672a-438f-afee-d47024a36f84",
+            "id": "74195737-799a-4d4d-bb46-6cf1e3126570",
             "type": "View",
             "position": [
                 84.15045764590698,
@@ -204,7 +205,7 @@
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "49397c63-d8dc-4366-b399-588f45017734",
+            "id": "9888d2a2-2fed-4431-a174-e146412d2086",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }

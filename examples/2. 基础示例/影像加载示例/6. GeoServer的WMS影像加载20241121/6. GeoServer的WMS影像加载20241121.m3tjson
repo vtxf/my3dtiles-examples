@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.26",
+        "version": "0.9.29",
         "createdTime": "2024-11-21T00:28:36.104Z",
-        "modifiedTime": "2024-11-21T06:30:25.330Z",
+        "modifiedTime": "2024-11-22T03:14:39.832Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -152,7 +152,7 @@
                         "imageryProvider": {
                             "type": "WebMapServiceImageryProvider",
                             "url": "http://[ip]:[port]/wms",
-                            "layers": "[layerName]",
+                            "layers": "[layerNameX]",
                             "parameters": {
                                 "service": "WMS",
                                 "format": "image/png",
@@ -163,13 +163,113 @@
                         "name": "GeoServer的WMS影像",
                         "ref": "GeoServer的WMS影像"
                     }
+                },
+                {
+                    "name": "Json编辑器(MyContainer)",
+                    "sceneObj": {
+                        "id": "dab0113a-9c50-450e-b8c7-9a47ec8534ba",
+                        "type": "MyContainer",
+                        "name": "Json编辑器(MyContainer)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\ntop: 40px;\nleft: 4px;"
+                    },
+                    "children": [
+                        {
+                            "name": "MyLabel",
+                            "sceneObj": {
+                                "id": "24226340-dcac-4343-9e15-4915eab57173",
+                                "type": "MyLabel",
+                                "name": "MyLabel",
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "color": [
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "cssText": "width: 100%;\nheight: 30px;\nline-height: 30px;\npadding: 0 10px;\nbox-sizing: border-box;\nborder-top-right-radius: 6px;\nborder-top-left-radius: 6px;",
+                                "text": "GeoServer的WMS影像配置",
+                                "fontSize": 12,
+                                "fontWeight": 600
+                            }
+                        },
+                        {
+                            "name": "JsonEditor",
+                            "sceneObj": {
+                                "id": "262d40bf-b2e0-4656-8d81-7596a512a4da",
+                                "type": "JsonEditor",
+                                "name": "JsonEditor",
+                                "ref": "JsonEditor",
+                                "width": 400,
+                                "height": 300,
+                                "content": {
+                                    "type": "WebMapServiceImageryProvider",
+                                    "url": "http://[ip]:[port]/wms",
+                                    "layers": "[layerName]",
+                                    "parameters": {
+                                        "service": "WMS",
+                                        "format": "image/png",
+                                        "transparent": true
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "MyContainer",
+                            "sceneObj": {
+                                "id": "89c57ad4-65e9-4c7c-bda3-2fe17578c9ce",
+                                "type": "MyContainer",
+                                "name": "MyContainer",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: center;\nalign-items: center;\ngap: 10px;\nwidth: 100%;\nheight: 30px;\nborder-bottom-right-radius: 6px;\nborder-bottom-left-radius: 6px;"
+                            },
+                            "children": [
+                                {
+                                    "name": "更新",
+                                    "sceneObj": {
+                                        "id": "a444819b-997f-413c-95f7-609c84baf771",
+                                        "type": "RectangleButton",
+                                        "name": "更新",
+                                        "ref": "更新",
+                                        "width": 0,
+                                        "height": 24,
+                                        "backgroundColor": [
+                                            0.1,
+                                            0.1,
+                                            0.1,
+                                            0.8
+                                        ],
+                                        "borderWidth": 0,
+                                        "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 10px;\nborder-radius: 6px;",
+                                        "clickFuncStr": "\nasync function (mouseEvent) {\n    const { GeoServer的WMS影像, JsonEditor } = XE2.g.refs;\n    if (!GeoServer的WMS影像) return;\n    const result = await JsonEditor.getContent();\n    if (!result) {\n        alert('JSON可能存在错误！');\n        return;\n    }\n    GeoServer的WMS影像.imageryProvider = result;\n}\n",
+                                        "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                        "text": "更新",
+                                        "fontSize": 12,
+                                        "textLayoutType": "None"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
     },
     "builtin": {
         "czmViewer": {
-            "id": "db64ebf1-b7d9-4607-9068-b302ea2c8d52",
+            "id": "b55a5727-eb93-440d-90ed-e2f2fd355458",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -179,7 +279,7 @@
             "clockCurrentTime": 1732148916107
         },
         "offlineImagery": {
-            "id": "78513a8f-2f50-4013-b3bf-205004f272ea",
+            "id": "1234814d-0964-46a0-b063-8bfd7711ff6f",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -189,7 +289,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "bf3a6ffa-363d-4ad3-b3b1-4baf8d8ae291",
+            "id": "75236564-c98e-4e21-8dce-35c30c25105c",
             "type": "CzmImagery",
             "show": false,
             "imageryProvider": {
@@ -212,7 +312,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "b20e0d88-c9bb-463b-993b-38fa6c272f72",
+            "id": "4b23ce56-2157-4d00-8186-c11e5618b706",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -223,27 +323,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "31cac4ab-19e2-4ae6-9bc5-1708ab5c343e",
+            "id": "74a76edb-0a9c-42a1-be2c-355f6e9cf47b",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "52e76eb7-1a79-4175-9e88-627036f2df14",
+            "id": "153515f3-b507-476c-b589-3c03169567c0",
             "type": "View",
             "position": [
-                118.95558252762473,
-                23.575150579138555,
-                1515868.350432304
+                106.29523960427892,
+                31.536282335312436,
+                6479524.711894776
             ],
             "rotation": [
-                358.6327307999056,
-                -84.22278908074905,
-                0.004059223846414563
+                350.16786763122633,
+                -89.87853386214093,
+                0
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "3a4b52e6-8bda-4551-8696-7d3f74191556",
+            "id": "eb996e17-92f7-4d93-9410-5796ea5f61f0",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }

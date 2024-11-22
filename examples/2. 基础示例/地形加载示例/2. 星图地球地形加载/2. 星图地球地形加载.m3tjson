@@ -1,0 +1,313 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.29",
+        "createdTime": "2024-11-21T00:28:36.104Z",
+        "modifiedTime": "2024-11-22T03:24:53.099Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "星图地球影像",
+                    "sceneObj": {
+                        "id": "2335a5e9-fe52-4574-b96f-f77b246ae91a",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "UrlTemplateImageryProvider",
+                            "url": "//tiles1.geovisearth.com/base/v1/img/{z}/{x}/{y}?format=webp&tmsIds=w&token={请输入token}"
+                        },
+                        "zIndex": 1,
+                        "name": "星图地球影像",
+                        "ref": "星图地球影像"
+                    }
+                },
+                {
+                    "name": "星图地球地名",
+                    "sceneObj": {
+                        "id": "5667b561-6383-413e-9b6c-490432a807fd",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "UrlTemplateImageryProvider",
+                            "url": "//tiles1.geovisearth.com/base/v1/cat/{z}/{x}/{y}?format=png&tmsIds=w&token={请输入token}"
+                        },
+                        "zIndex": 2,
+                        "name": "星图地球地名",
+                        "ref": "星图地球地名"
+                    }
+                },
+                {
+                    "name": "MyContainer(命令按钮工具栏)",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
+                        "type": "MyContainer",
+                        "name": "MyContainer(命令按钮工具栏)",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;\ngap: 4px;"
+                    },
+                    "children": [
+                        {
+                            "name": "开启/关闭地形",
+                            "sceneObj": {
+                                "id": "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭地形",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.地形.show = !XE2.g.refs.地形.show;\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭地形",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "开启/关闭影像",
+                            "sceneObj": {
+                                "id": "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭影像",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.星图地球影像.show = !XE2.g.refs.星图地球影像.show;\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭影像",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "开启/关闭地名",
+                            "sceneObj": {
+                                "id": "ef9fa0b6-2cab-4f29-aeec-1de39b0a992f",
+                                "type": "RectangleButton",
+                                "name": "开启/关闭地名",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.星图地球地名.show = !XE2.g.refs.星图地球地名.show;\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "开启/关闭地名",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "近地视角",
+                            "sceneObj": {
+                                "id": "2c476460-a43f-4a01-85a3-0d34fd8cab3d",
+                                "type": "RectangleButton",
+                                "name": "近地视角",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.近地视角.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "近地视角",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        },
+                        {
+                            "name": "俯瞰视角",
+                            "sceneObj": {
+                                "id": "d1bc7e85-a6fb-41e1-82ba-a519bd5d7c8d",
+                                "type": "RectangleButton",
+                                "name": "俯瞰视角",
+                                "width": 0,
+                                "height": 24,
+                                "backgroundColor": [
+                                    0.1,
+                                    0.1,
+                                    0.1,
+                                    0.8
+                                ],
+                                "borderWidth": 0,
+                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.俯瞰视角.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                "text": "俯瞰视角",
+                                "fontSize": 12,
+                                "textLayoutType": "None"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "视角",
+                    "collapsed": true,
+                    "children": [
+                        {
+                            "name": "近地视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "28e3eef1-e417-4fec-803a-e8ce8785567d",
+                                "type": "View",
+                                "position": [
+                                    97.03450723711379,
+                                    28.332600466499702,
+                                    16199.461726715741
+                                ],
+                                "rotation": [
+                                    26.972648876896624,
+                                    -40.739600818757935,
+                                    359.93722675003085
+                                ],
+                                "name": "近地视角",
+                                "ref": "近地视角"
+                            }
+                        },
+                        {
+                            "name": "俯瞰视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "f1145d3c-a31c-4eb9-849e-e4c283dbd583",
+                                "type": "View",
+                                "position": [
+                                    118.80455202724247,
+                                    23.117595311970522,
+                                    1623562.1404999604
+                                ],
+                                "rotation": [
+                                    358.63273079990824,
+                                    -84.22278908074483,
+                                    0.00405922384702523
+                                ],
+                                "name": "俯瞰视角",
+                                "ref": "俯瞰视角"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "星图地球Terrain-3D",
+                    "sceneObj": {
+                        "id": "d0001adf-d359-49dc-955e-ebe535e149e6",
+                        "type": "CzmTerrain",
+                        "show": true,
+                        "provider": {
+                            "type": "CesiumTerrainProvider",
+                            "url": "//tiles1.geovisearth.com/base/v1/terrain?token={请输入token}"
+                        },
+                        "name": "星图地球Terrain-3D",
+                        "ref": "地形"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "acb1d101-dfde-410b-ae35-3dabb2986ce9",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1732148916107
+        },
+        "offlineImagery": {
+            "id": "63bdce44-80c8-4a03-8ea3-41a538112b83",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "beec5b0c-0bf2-43fc-9819-0a79213c9f9b",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "f5c4b8e9-74d8-4adf-b0bd-cb5e2d3ba3ac",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "9b59e401-5a9a-4e48-b1be-e5aaa3bb40e3",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "010a4ff6-7d08-4e41-9250-3b59d1a175f6",
+            "type": "View",
+            "position": [
+                97.03450723711379,
+                28.3326004664997,
+                16199.461726713635
+            ],
+            "rotation": [
+                26.972648876896624,
+                -40.739600818757935,
+                359.9372267500309
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "0241c4b9-6eab-447c-817e-5b99d32fac98",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
