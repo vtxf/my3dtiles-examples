@@ -336,6 +336,22 @@
                                         "m3tJsonUri": "${M3T_CurrentDir}1. 场景对象的飞入操作20241115/1. 场景对象的飞入操作20241115.m3tjson"
                                     },
                                     "previewImageUri": "${M3T_CurrentDir}1. 场景对象的飞入操作20241115/1. 场景对象的飞入操作20241115.jpg"
+                                },
+                                {
+                                    "name": "2. 第一人称漫游",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}2. 第一人称漫游/2. 第一人称漫游.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}2. 第一人称漫游/2. 第一人称漫游.jpg"
+                                },
+                                {
+                                    "name": "3. 沿路径漫游",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}3. 沿路径漫游/3. 沿路径漫游.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}3. 沿路径漫游/3. 沿路径漫游.jpg"
                                 }
                             ]
                         }
