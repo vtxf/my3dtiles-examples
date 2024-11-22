@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.29",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-22T00:52:02.556Z",
+        "modifiedTime": "2024-11-22T02:59:43.691Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -39,10 +39,10 @@
                                     1,
                                     1
                                 ],
-                                "cssText": "width: 100%;\nheight: 24px;\nline-height: 24px;\npadding: 0 4px;\nbox-sizing: border-box;",
+                                "cssText": "width: 100%;\nheight: 30px;\nline-height: 30px;\npadding: 0 10px;\nbox-sizing: border-box;\nborder-top-right-radius: 6px;\nborder-top-left-radius: 6px;",
                                 "text": "我是标题",
                                 "fontSize": 12,
-                                "fontWeight": 400
+                                "fontWeight": 600
                             }
                         },
                         {
@@ -61,6 +61,68 @@
                                     }
                                 }
                             }
+                        },
+                        {
+                            "name": "MyContainer",
+                            "sceneObj": {
+                                "id": "89c57ad4-65e9-4c7c-bda3-2fe17578c9ce",
+                                "type": "MyContainer",
+                                "name": "MyContainer",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { Destroyable } = XE2['xe2-base-utils'];\r\n    const { FSceneObjectSubIds } = XE2['my3dtiles-lib-main'];\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n\r\n    class AppendedObj extends Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            if (!FSceneObjectSubIds) return;\r\n\r\n            const fSceneObjectSubIds = this.disposeVar(new FSceneObjectSubIds(g_app.sceneTree, sceneObject));\r\n            const update = () => {\r\n                const { subIds } = fSceneObjectSubIds;\r\n                for (const subId of subIds) {\r\n                    const sceneObj = SceneObject.context.getSceneObjectById(subId);\r\n                    if (!('container' in sceneObj)) continue;\r\n                    sceneObj.container = sceneObject.div;\r\n                }\r\n            };\r\n            update();\r\n            this.dispose(fSceneObjectSubIds.subIdsChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: center;\nalign-items: center;\ngap: 10px;\nwidth: 100%;\nheight: 30px;\nborder-bottom-right-radius: 6px;\nborder-bottom-left-radius: 6px;"
+                            },
+                            "children": [
+                                {
+                                    "name": "取消",
+                                    "sceneObj": {
+                                        "id": "49e039df-4375-4234-82ef-bc17b1ad40b0",
+                                        "type": "RectangleButton",
+                                        "name": "取消",
+                                        "width": 0,
+                                        "height": 24,
+                                        "backgroundColor": [
+                                            0.1,
+                                            0.1,
+                                            0.1,
+                                            0.8
+                                        ],
+                                        "borderWidth": 0,
+                                        "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 10px;\nborder-radius: 6px;",
+                                        "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                        "text": "取消",
+                                        "fontSize": 12,
+                                        "textLayoutType": "None"
+                                    }
+                                },
+                                {
+                                    "name": "确定",
+                                    "sceneObj": {
+                                        "id": "a444819b-997f-413c-95f7-609c84baf771",
+                                        "type": "RectangleButton",
+                                        "name": "确定",
+                                        "width": 0,
+                                        "height": 24,
+                                        "backgroundColor": [
+                                            0.1,
+                                            0.1,
+                                            0.1,
+                                            0.8
+                                        ],
+                                        "borderWidth": 0,
+                                        "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 10px;\nborder-radius: 6px;",
+                                        "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                        "text": "确定",
+                                        "fontSize": 12,
+                                        "textLayoutType": "None"
+                                    }
+                                }
+                            ]
                         }
                     ]
                 }
@@ -69,7 +131,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "63876f2a-0b94-451c-bac4-15c89e288a8d",
+            "id": "3adc6a70-551d-477a-b65e-c82c6052391a",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -79,7 +141,7 @@
             "clockCurrentTime": 1732170634334
         },
         "offlineImagery": {
-            "id": "df044198-04d8-4f80-b9a4-a76e53f4a66a",
+            "id": "2e869dda-04e0-422f-bf80-886c0ef4ecd7",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -89,7 +151,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "c4391f97-4463-4a09-95dd-138d101dbec2",
+            "id": "48aeb41f-20a6-4e29-b1e7-e787e1f59e6e",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -111,7 +173,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "e9a0e219-4c8e-487a-8c12-ff801216c5e8",
+            "id": "bcb1165b-72a5-44fe-ade3-288407a3497d",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -122,12 +184,12 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "f2d5f2df-f048-40d5-9955-88b4dd3ab8f8",
+            "id": "42317196-39ef-4d89-a06e-347792987720",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "add629ac-ecaf-4a24-9063-f94b1936a266",
+            "id": "07216d8e-672a-438f-afee-d47024a36f84",
             "type": "View",
             "position": [
                 84.15045764590698,
@@ -142,7 +204,7 @@
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "411100da-f052-4e8d-9cc4-b52a7203e8dc",
+            "id": "49397c63-d8dc-4366-b399-588f45017734",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
