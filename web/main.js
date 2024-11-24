@@ -139,3 +139,40 @@ async function getM3tListJsonRoot() {
     return root;
 }
 
+async function getTreeItemFromTreePath(treePath) {
+    // 解码src参数
+    const decodedSrc = decodeURIComponent(treePath);
+    // 用/分割路径
+    const pathSegments = decodedSrc.split('/');
+
+    // console.log('解码后的路径:', decodedSrc);
+    // console.log('路径片段:', pathSegments);
+
+    const { ContentLeftTree } = XE2.g.refs;
+    if (!ContentLeftTree) return;
+    const { mySceneTreeUi } = ContentLeftTree;
+    if (!mySceneTreeUi) return;
+    const { sceneTree } = mySceneTreeUi;
+    if (!sceneTree) return;
+    const { root } = sceneTree;
+    if (!root) return;
+
+    // 获取子节点
+    var currentItem = root;
+
+    function getChild(item, func) {
+        for (let e of item.children) {
+            if (func(e)) return e;
+        }
+        return undefined;
+    }
+
+    pathSegments.reverse();
+
+    while (currentItem && (pathSegments.length > 0)) {
+        const childName = pathSegments.pop();
+        currentItem = getChild(currentItem, e => e.name === childName);
+    }
+
+    return currentItem;
+}
