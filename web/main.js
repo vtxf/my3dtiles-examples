@@ -14,7 +14,7 @@ function getTreePath(sceneTreeItem) {
 
 function replaceUrl(treePath) {
     treePath = encodeURIComponent(treePath);
-    history.replaceState({}, "", `?src=${treePath}`);
+    history.pushState({}, "", `?src=${treePath}`);
 }
 
 function getM3tJsonUri(treeItem) {
