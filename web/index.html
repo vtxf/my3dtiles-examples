@@ -41,22 +41,6 @@
             示例框架.height = 0;
             示例框架.layoutType = 'FullScreen';
 
-            (() => {
-                const processing = createProcessingFromAsyncFunc(async (cancelsManager) => {
-                    const { lastSelectedItem } = ContentLeftTree;
-                    if (!lastSelectedItem) return;
-                    const jsonContent = await cancelsManager.promise(getJsonContentFromTreeItem(lastSelectedItem));
-                    Json代码.content = jsonContent;
-                    return;
-                });
-
-                const update = () => {
-                    processing.restart();
-                };
-                update();
-                // this.dispose(this.树结构.lastSelectedItemChanged.disposableOn(update));
-                ContentLeftTree.lastSelectedItemChanged.disposableOn(update);
-            })();
 
             (() => {
                 const { ContentLeftTree } = XE2.g.refs;
@@ -87,10 +71,11 @@
                     三维视口.iframeSrc = `${baseHref}?s=${encodeURIComponent(uri)}`;
                     url按钮.text = uri;
 
+                    const jsonContent = await cancelsManager.promise(getJsonContentFromTreeItem(lastSelectedItem));
+                    Json代码.content = jsonContent;
+
                     const treePath = getTreePath(lastSelectedItem);
                     replaceUrl(treePath);
-
-                    return;
                 });
 
                 const update = () => {
