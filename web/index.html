@@ -7,59 +7,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="./my3dtiles.png">
     <title>My3dtiles示例集合</title>
+    <link rel="stylesheet" href="./main.css">
     <script src="../app/versions/last/js/m3t/load-common.js"></script>
-
-    <style>
-        body,
-        html {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        ::selection {
-            color: #ffffff;
-            background: #01ab36;
-        }
-
-        #m3tapp {
-            font-family: Avenir, Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            color: #2c3e50;
-            width: 100%;
-            height: 100%;
-        }
-
-        textarea::-webkit-scrollbar,
-        div::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-            cursor: pointer;
-        }
-
-        textarea::-webkit-scrollbar-track,
-        div::-webkit-scrollbar-track {
-            background: #00212b;
-            opacity: 0.5;
-            border-radius: 2px;
-            cursor: pointer;
-        }
-
-        textarea::-webkit-scrollbar-thumb,
-        div::-webkit-scrollbar-thumb {
-            background: #3f4347;
-            border-radius: 2px;
-            cursor: pointer;
-        }
-
-        textarea::-webkit-scrollbar-corner,
-        div::-webkit-scrollbar-corner {
-            background-color: rgba(0, 0, 0, 0);
-        }
-    </style>
+    <script src="./main.js"></script>
 </head>
 
 <body>
@@ -256,20 +206,8 @@
                             iframeSrc = `${baseHref}?s=${encodeURIComponent(c.m3tJsonUri)}`;
 
                             {
-                                // 修改网页地址
-                                const names = [];
-                                let currentItem = lastSelectedItem;
-                                while (currentItem && currentItem.name !== 'root') {
-                                    names.push(currentItem.name);
-                                    currentItem = currentItem.parent;
-                                }
-                                console.log(names)
-                                names.reverse();
-                                const src = names.join('/');
-                                console.log(src);
-                                const src2 = encodeURIComponent(src);
-                                console.log(src2);
-                                history.replaceState({}, "", `?src=${src2}`);
+                                const treePath = getTreePath(lastSelectedItem);
+                                replaceUrl(treePath);
                             }
                         } else if (c.type === 'm3toJson') {
                             // jsonContent = c.m3toJson;

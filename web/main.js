@@ -1,7 +1,7 @@
 function getTreePath(sceneTreeItem) {
     // 修改网页地址
     const names = [];
-    let currentItem = lastSelectedItem;
+    let currentItem = sceneTreeItem;
     while (currentItem && currentItem.name !== 'root') {
         names.push(currentItem.name);
         currentItem = currentItem.parent;

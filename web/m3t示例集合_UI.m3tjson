@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.29",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-24T03:10:55.693Z",
+        "modifiedTime": "2024-11-24T11:36:52.394Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -206,14 +206,11 @@
                                     "children": [
                                         {
                                             "name": "单示例",
-                                            "show": false,
-                                            "collapsed": true,
                                             "sceneObj": {
                                                 "id": "aa97b2ec-429f-484b-81be-1a653054378f",
                                                 "type": "MyContainer",
                                                 "name": "单示例",
                                                 "ref": "单示例",
-                                                "show": false,
                                                 "layoutType": "FullScreen",
                                                 "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\n",
                                                 "subIds": [
@@ -224,13 +221,11 @@
                                             "children": [
                                                 {
                                                     "name": "Content-Right-Top",
-                                                    "show": false,
                                                     "collapsed": true,
                                                     "sceneObj": {
                                                         "id": "d6c188d1-350d-4a4e-8ab0-9cd24788845f",
                                                         "type": "MyContainer",
                                                         "name": "Content-Right-Top",
-                                                        "show": false,
                                                         "height": 24,
                                                         "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nbackground: #222;\nwidth: 100%;\n",
                                                         "subIds": [
@@ -242,13 +237,11 @@
                                                     "children": [
                                                         {
                                                             "name": "显隐代码按钮",
-                                                            "show": false,
                                                             "sceneObj": {
                                                                 "id": "148a63e6-e79a-4faf-962c-4d595491a53f",
                                                                 "type": "RectangleButton",
                                                                 "name": "显隐代码按钮",
                                                                 "ref": "显隐代码按钮",
-                                                                "show": false,
                                                                 "width": 0,
                                                                 "height": 24,
                                                                 "backgroundColor": [
@@ -269,13 +262,11 @@
                                                         },
                                                         {
                                                             "name": "url按钮",
-                                                            "show": false,
                                                             "sceneObj": {
                                                                 "id": "2373f295-fe3d-4003-a031-3f7fb0fc5a59",
                                                                 "type": "RectangleButton",
                                                                 "name": "url按钮",
                                                                 "ref": "url按钮",
-                                                                "show": false,
                                                                 "width": 0,
                                                                 "height": 24,
                                                                 "backgroundColor": null,
@@ -306,13 +297,10 @@
                                                 },
                                                 {
                                                     "name": "Content-Right-Bottom",
-                                                    "show": false,
-                                                    "collapsed": true,
                                                     "sceneObj": {
                                                         "id": "b4393dd5-1508-4d6a-b280-283758fb3de3",
                                                         "type": "MyContainer",
                                                         "name": "Content-Right-Bottom",
-                                                        "show": false,
                                                         "layoutType": "FullScreen",
                                                         "cssText": "flex: 1;\n",
                                                         "subIds": [
@@ -323,13 +311,11 @@
                                                     "children": [
                                                         {
                                                             "name": "三维视口",
-                                                            "show": false,
                                                             "sceneObj": {
                                                                 "id": "14d839e3-92ae-4d48-8926-673d2509681e",
                                                                 "type": "IFrameDiv",
                                                                 "name": "三维视口",
                                                                 "ref": "三维视口",
-                                                                "show": false,
                                                                 "layoutType": "FullScreen",
                                                                 "width": 0,
                                                                 "height": 0,
@@ -357,11 +343,13 @@
                                         },
                                         {
                                             "name": "组画廊",
+                                            "show": false,
                                             "sceneObj": {
                                                 "id": "c67cbb05-3934-4a88-a436-baf034e74d90",
                                                 "type": "MyContainer",
                                                 "name": "组画廊",
                                                 "ref": "组画廊",
+                                                "show": false,
                                                 "layoutType": "FullScreen",
                                                 "backgroundColor": [
                                                     0.5019607843137255,
@@ -411,7 +399,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "a7545f60-a326-4943-b4b6-3d42fa249450",
+            "id": "78fb25e8-5f25-40b5-b379-6078a2fada90",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -421,7 +409,7 @@
             "clockCurrentTime": 1730698401758
         },
         "offlineImagery": {
-            "id": "de978afc-de71-4f2f-94dc-84e954b4a0d0",
+            "id": "2f1c80be-40bc-40d0-8044-5a9ac5135a51",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -431,7 +419,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "a66b2f00-672e-4cf6-9d68-ce7949b94285",
+            "id": "2f503014-401b-4259-b536-a3d843dcb493",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -453,7 +441,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "a589a441-73ff-4724-a78c-77f992a8c41a",
+            "id": "b4c5d7aa-f5a5-4c85-a626-05aafb3cd9ea",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -464,27 +452,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "bd68ab4a-ac9f-4a7a-ac6e-f0fc49743a70",
+            "id": "d17be326-2627-4d62-aa4e-e92692fb3e62",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "7efa6d24-a085-406a-9af3-d1bee5e61364",
+            "id": "ca562fe5-d9f2-43f7-a675-5bf14057a2bd",
             "type": "View",
             "position": [
                 92.97098767030714,
-                28.278130825871227,
+                28.278130825871216,
                 7842771.919754209
             ],
             "rotation": [
                 348.82401891857586,
-                -89.83614160565088,
+                -89.83614160565313,
                 0
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "41dbde75-09dc-4b28-a7fa-d66ec09f9bb4",
+            "id": "f15350c8-a6e7-41f5-87ca-2515cbe8795d",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }

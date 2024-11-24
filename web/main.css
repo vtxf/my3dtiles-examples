@@ -1,0 +1,49 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+::selection {
+    color: #ffffff;
+    background: #01ab36;
+}
+
+#m3tapp {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    width: 100%;
+    height: 100%;
+}
+
+textarea::-webkit-scrollbar,
+div::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track {
+    background: #00212b;
+    opacity: 0.5;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb {
+    background: #3f4347;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-corner,
+div::-webkit-scrollbar-corner {
+    background-color: rgba(0, 0, 0, 0);
+}
