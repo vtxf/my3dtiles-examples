@@ -21,13 +21,18 @@
     </script>
     <div id="m3tapp" style="overflow: hidden;"></div>
     <script>
+        const { createProcessingFromAsyncFunc } = XE2['xe2-utils'];
+        const { fetchJson } = XE2['xe2-base-utils'];
+
         // g_app.container = 'm3tapp';
         g_app.loadDataFromUrlOrFilePath('./m3t示例集合_UI.m3tjson');
 
+
         const loadedFunc = async () => {
-            const { createProcessingFromAsyncFunc } = XE2['xe2-utils'];
-            const { fetchJson } = XE2['xe2-base-utils'];
             const { 示例框架, 显隐代码按钮, 三维视口, Json代码, ContentLeftTree, url按钮 } = XE2.g.refs;
+
+            const root = await getM3tListJsonRoot();
+            ContentLeftTree.items = [root];
 
             Json代码.show = false;
 
@@ -36,37 +41,11 @@
             示例框架.height = 0;
             示例框架.layoutType = 'FullScreen';
 
-            await creatorUiFunc();
-
             (() => {
                 const processing = createProcessingFromAsyncFunc(async (cancelsManager) => {
-                    let jsonContent = {};
-                    do {
-                        const { lastSelectedItem } = ContentLeftTree;
-                        if (!lastSelectedItem) break;
-                        const { extras } = lastSelectedItem;
-                        if (!extras) break;
-
-                        const { content } = extras;
-                        if (!content) break;
-
-                        const c = content;
-                        if (c.type === 'm3tJson') {
-                            jsonContent = c.m3tJson;
-                        } else if (c.type === 'm3tJsonUri') {
-                            jsonContent = await cancelsManager.promise(fetchJson(c.m3tJsonUri));
-                        } else if (c.type === 'm3toJson') {
-                            jsonContent = c.m3toJson;
-                        } else if (c.type === 'm3toJsonUri') {
-                            jsonContent = await cancelsManager.promise(fetchJson(c.m3toJsonUri));
-                        } else if (c.type === 'sceneObjJson') {
-                            jsonContent = c.sceneObjJson;
-                        } else if (c.type === 'sceneObjJsonUri') {
-                            jsonContent = await cancelsManager.promise(fetchJson(c.sceneObjJsonUri));
-                        } else {
-                            jsonContent = {};
-                        }
-                    } while (false);
+                    const { lastSelectedItem } = ContentLeftTree;
+                    if (!lastSelectedItem) return;
+                    const jsonContent = await cancelsManager.promise(getJsonContentFromTreeItem(lastSelectedItem));
                     Json代码.content = jsonContent;
                     return;
                 });

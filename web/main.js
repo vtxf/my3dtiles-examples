@@ -91,7 +91,36 @@ function convertPathForItems(item, currentPath = '') {
     }
 }
 
-const creatorUiFunc = async () => {
+async function getJsonContentFromTreeItem(treeItem) {
+    let jsonContent = {};
+    do {
+        const { extras } = treeItem;
+        if (!extras) break;
+
+        const { content } = extras;
+        if (!content) break;
+
+        const c = content;
+        if (c.type === 'm3tJson') {
+            jsonContent = c.m3tJson;
+        } else if (c.type === 'm3tJsonUri') {
+            jsonContent = await (fetchJson(c.m3tJsonUri));
+        } else if (c.type === 'm3toJson') {
+            jsonContent = c.m3toJson;
+        } else if (c.type === 'm3toJsonUri') {
+            jsonContent = await (fetchJson(c.m3toJsonUri));
+        } else if (c.type === 'sceneObjJson') {
+            jsonContent = c.sceneObjJson;
+        } else if (c.type === 'sceneObjJsonUri') {
+            jsonContent = await (fetchJson(c.sceneObjJsonUri));
+        } else {
+            jsonContent = {};
+        }
+    } while (false);
+    return jsonContent;
+}
+
+async function getM3tListJsonRoot() {
     // 加载脚本所在目录下面的m3t_list.json文件
     const m3tListJsonResponse = await fetch("../m3t_list.json");
     if (!m3tListJsonResponse.ok) {
@@ -107,10 +136,6 @@ const creatorUiFunc = async () => {
     const href = new URL('../', window.location.href).href;
     convertPathForItems(root, href);
 
-    /** @type {MyTreeItemJsonType[]} */
-    // const items = [...app.creatorUi.items, root];
-    // app.creatorUi.items = items;
-    const { ContentLeftTree } = XE2.g.refs;
-    ContentLeftTree.items = [root];
+    return root;
 }
 
