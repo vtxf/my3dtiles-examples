@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.29",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-24T14:07:41.586Z",
+        "modifiedTime": "2024-11-24T14:25:15.829Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -206,12 +206,13 @@
                                     "children": [
                                         {
                                             "name": "单示例",
-                                            "collapsed": true,
+                                            "show": false,
                                             "sceneObj": {
                                                 "id": "aa97b2ec-429f-484b-81be-1a653054378f",
                                                 "type": "MyContainer",
                                                 "name": "单示例",
                                                 "ref": "单示例",
+                                                "show": false,
                                                 "layoutType": "FullScreen",
                                                 "cssText": "display: flex;\nflex-direction: column;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: flex-start;\n",
                                                 "subIds": [
@@ -355,7 +356,7 @@
                                                     0.5019607843137255,
                                                     1
                                                 ],
-                                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: flex-start;\nalign-items:  flex-start;\nalign-content: flex-start;\n"
+                                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: flex-start;\nalign-items:  flex-start;\nalign-content: flex-start;\noverflow-y: auto;"
                                             }
                                         }
                                     ]

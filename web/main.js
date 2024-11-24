@@ -179,7 +179,11 @@ async function getTreeItemFromTreePath(treePath) {
 
 function getTreeItemAllPreviewImages(treeItem, previewImageUriAndTreeItems) {
     if (treeItem.extras.previewImageUri) {
-        previewImageUriAndTreeItems.push({ previewImageUri: treeItem.extras.previewImageUri, treeItem });
+        previewImageUriAndTreeItems.push({ 
+            previewImageUri: treeItem.extras.previewImageUri, 
+            name: treeItem.name, 
+            treeItem 
+        });
     }
     if (treeItem.children && treeItem.children.length > 0) {
         for (const child of treeItem.children) {

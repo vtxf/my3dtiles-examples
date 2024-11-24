@@ -24,8 +24,9 @@ class ImagesIndex extends Destroyable {
             const obj = g_app.xe2ProjectManager.createSceneObjectFromJson({
                 ...imageButtonTemplateJson,
                 normalImageUri: e.previewImageUri,
+                tooltip: e.name,
             });
-            obj.clickFunc = () => { treeItem.selected = true; };
+            obj.clickFunc = () => { e.treeItem.selected = true; };
             return obj;
         });
 
