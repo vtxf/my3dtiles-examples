@@ -55,12 +55,14 @@
                 // 获取当前网址，示例如上，获取src参数，先解码，然后使用/进行分割
                 // 获取当前URL
                 const currentUrl = new URL(window.location.href);
+
                 // 获取src参数
-                const treePath = currentUrl.searchParams.get('src');
-                if (!treePath) return;
+                let treePath = currentUrl.searchParams.get('src');
+                treePath = treePath || root.name;
                 const treeItem = getTreeItemFromTreePath(treePath);
-                if (!treeItem) return;
-                treeItem.selected = true;
+                if (treeItem) {
+                    treeItem.selected = true;
+                }
             })();
 
             (() => {
