@@ -31,7 +31,7 @@ function getM3tJsonUri(treeItem) {
             // jsonContent = c.m3tJson;
         } else if (c.type === 'm3tJsonUri') {
             // jsonContent = await cancelsManager.promise(fetchJson(c.m3tJsonUri));
-            uri = `${baseHref}?s=${encodeURIComponent(c.m3tJsonUri)}`;
+            uri = c.m3tJsonUri;
         } else if (c.type === 'm3toJson') {
             // jsonContent = c.m3toJson;
         } else if (c.type === 'm3toJsonUri') {

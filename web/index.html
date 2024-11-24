@@ -193,7 +193,7 @@
 
                     const uri = getM3tJsonUri(lastSelectedItem);
                     三维视口.iframeSrc = `${baseHref}?s=${encodeURIComponent(uri)}`;
-                    url按钮.text = decodeURI(iframeSrc);
+                    url按钮.text = uri;
 
                     const treePath = getTreePath(lastSelectedItem);
                     replaceUrl(treePath);
