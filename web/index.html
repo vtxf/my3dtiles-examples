@@ -29,7 +29,7 @@
 
 
         const loadedFunc = async () => {
-            const { 示例框架, 显隐代码按钮, 三维视口, Json代码, ContentLeftTree, url按钮 } = XE2.g.refs;
+            const { 示例框架, 显隐代码按钮, 三维视口, Json代码, ContentLeftTree, url按钮, 单示例, 组画廊 } = XE2.g.refs;
 
             const root = await getM3tListJsonRoot();
             ContentLeftTree.items = [root];
@@ -67,9 +67,20 @@
                     const { lastSelectedItem } = ContentLeftTree;
                     if (!lastSelectedItem) return;
 
-                    const uri = getM3tJsonUri(lastSelectedItem);
-                    三维视口.iframeSrc = `${baseHref}?s=${encodeURIComponent(uri)}`;
-                    url按钮.text = uri;
+                    if (lastSelectedItem.children.length > 0) {
+                        const previewImageUriAndTreeItems = [];
+                        getTreeItemAllPreviewImages(lastSelectedItem, previewImageUriAndTreeItems);
+                        单示例.show = false;
+                        组画廊.show = true;
+                    } else {
+                        单示例.show = true;
+                        组画廊.show = false;
+                        const uri = getM3tJsonUri(lastSelectedItem);
+                        if (uri) {
+                            三维视口.iframeSrc = `${baseHref}?s=${encodeURIComponent(uri)}`;
+                            url按钮.text = uri;
+                        }
+                    }
 
                     const jsonContent = await cancelsManager.promise(getJsonContentFromTreeItem(lastSelectedItem));
                     Json代码.content = jsonContent;

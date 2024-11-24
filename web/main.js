@@ -176,3 +176,14 @@ async function getTreeItemFromTreePath(treePath) {
 
     return currentItem;
 }
+
+function getTreeItemAllPreviewImages(treeItem, previewImageUriAndTreeItems) {
+    if (treeItem.extras.previewImageUri) {
+        previewImageUriAndTreeItems.push({ previewImageUri: treeItem.extras.previewImageUri, treeItem });
+    }
+    if (treeItem.children && treeItem.children.length > 0) {
+        for (const child of treeItem.children) {
+            getTreeItemAllPreviewImages(child, previewImageUriAndTreeItems);
+        }
+    }
+}
