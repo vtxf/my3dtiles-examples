@@ -50,12 +50,11 @@
             {
                 const update = () => {
                     const { ContentLeftTree } = XE2.g.refs;
-                    console.log('11');
-
                     // 示例网址：http://127.0.0.1:5500/web/index.html?src=m3t%E5%AE%98%E6%96%B9%E7%A4%BA%E4%BE%8B(%E6%9D%A5%E8%87%AA%E7%BD%91%E7%BB%9C)%2F%E7%BB%BC%E5%90%88%E7%A4%BA%E4%BE%8B%2F%E5%8C%97%E4%BA%AC%E5%85%AC%E4%BA%A4%E6%B5%81%E7%BA%BF%2F%E5%8C%97%E4%BA%AC%E5%85%AC%E4%BA%A4%E6%B5%81%E7%BA%BF1
                     // 获取当前网址，示例如上，获取src参数，先解码，然后使用/进行分割
                     // 获取当前URL
                     const currentUrl = new URL(window.location.href);
+                    // console.log(`currentUrl: ${currentUrl}`);
 
                     // 获取src参数
                     let treePath = currentUrl.searchParams.get('src');
@@ -63,6 +62,7 @@
                     const treeItem = getTreeItemFromTreePath(treePath);
                     if (treeItem) {
                         treeItem.selected = true;
+                        // console.log(treeItem);
                     }
                 };
                 update();
