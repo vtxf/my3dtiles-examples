@@ -139,7 +139,7 @@ async function getM3tListJsonRoot() {
     return root;
 }
 
-async function getTreeItemFromTreePath(treePath) {
+function getTreeItemFromTreePath(treePath) {
     // 解码src参数
     const decodedSrc = decodeURIComponent(treePath);
     // 用/分割路径
