@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.29",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-24T11:36:52.394Z",
+        "modifiedTime": "2024-11-24T14:07:41.586Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -206,6 +206,7 @@
                                     "children": [
                                         {
                                             "name": "单示例",
+                                            "collapsed": true,
                                             "sceneObj": {
                                                 "id": "aa97b2ec-429f-484b-81be-1a653054378f",
                                                 "type": "MyContainer",
@@ -297,6 +298,7 @@
                                                 },
                                                 {
                                                     "name": "Content-Right-Bottom",
+                                                    "collapsed": true,
                                                     "sceneObj": {
                                                         "id": "b4393dd5-1508-4d6a-b280-283758fb3de3",
                                                         "type": "MyContainer",
@@ -324,13 +326,11 @@
                                                         },
                                                         {
                                                             "name": "Json代码",
-                                                            "show": false,
                                                             "sceneObj": {
                                                                 "id": "349e3748-dab2-437c-a44f-d1715e1f0941",
                                                                 "type": "JsonEditor",
                                                                 "name": "Json代码",
                                                                 "ref": "Json代码",
-                                                                "show": false,
                                                                 "layoutType": "FullScreen",
                                                                 "width": 0,
                                                                 "height": 0,
@@ -343,13 +343,11 @@
                                         },
                                         {
                                             "name": "组画廊",
-                                            "show": false,
                                             "sceneObj": {
                                                 "id": "c67cbb05-3934-4a88-a436-baf034e74d90",
                                                 "type": "MyContainer",
                                                 "name": "组画廊",
                                                 "ref": "组画廊",
-                                                "show": false,
                                                 "layoutType": "FullScreen",
                                                 "backgroundColor": [
                                                     0.5019607843137255,
@@ -357,7 +355,7 @@
                                                     0.5019607843137255,
                                                     1
                                                 ],
-                                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: flex-start;\nalign-items: center;\n"
+                                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: flex-start;\nalign-items:  flex-start;\nalign-content: flex-start;\n"
                                             }
                                         }
                                     ]

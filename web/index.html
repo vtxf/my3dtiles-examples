@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./main.css">
     <script src="../app/versions/last/js/m3t/load-common.js"></script>
     <script src="./main.js"></script>
+    <script src="./ImagesIndex.js"></script>
 </head>
 
 <body>
@@ -41,6 +42,10 @@
             示例框架.height = 0;
             示例框架.layoutType = 'FullScreen';
 
+            const 组画廊重置 = new XE2['xe2-utils'].ObjResetting((treeItem) => {
+                if (!treeItem || !treeItem.children || treeItem.children.length === 0) return undefined;
+                return new ImagesIndex(组画廊, treeItem);
+            }, undefined);
 
             (() => {
                 const { ContentLeftTree } = XE2.g.refs;
@@ -68,11 +73,12 @@
                     if (!lastSelectedItem) return;
 
                     if (lastSelectedItem.children.length > 0) {
-                        const previewImageUriAndTreeItems = [];
                         单示例.show = false;
                         组画廊.show = true;
-                        getTreeItemAllPreviewImages(lastSelectedItem, previewImageUriAndTreeItems);
+                        组画廊重置.reset(lastSelectedItem);
                     } else {
+                        组画廊重置.reset(undefined);
+
                         单示例.show = true;
                         组画廊.show = false;
                         const uri = getM3tJsonUri(lastSelectedItem);
