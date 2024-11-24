@@ -17,4 +17,40 @@ function replaceUrl(treePath) {
     history.replaceState({}, "", `?src=${treePath}`);
 }
 
+function getM3tJsonUri(treeItem) {
+    let uri = '';
+    do {
+        const { extras } = treeItem;
+        if (!extras) break;
 
+        const { content } = extras;
+        if (!content) break;
+
+        const c = content;
+        if (c.type === 'm3tJson') {
+            // jsonContent = c.m3tJson;
+        } else if (c.type === 'm3tJsonUri') {
+            // jsonContent = await cancelsManager.promise(fetchJson(c.m3tJsonUri));
+            uri = `${baseHref}?s=${encodeURIComponent(c.m3tJsonUri)}`;
+        } else if (c.type === 'm3toJson') {
+            // jsonContent = c.m3toJson;
+        } else if (c.type === 'm3toJsonUri') {
+            // jsonContent = await cancelsManager.promise(fetchJson(c.m3toJsonUri));
+        } else if (c.type === 'sceneObjJson') {
+            // jsonContent = c.sceneObjJson;
+        } else if (c.type === 'sceneObjJsonUri') {
+            // jsonContent = await cancelsManager.promise(fetchJson(c.sceneObjJsonUri));
+        } else {
+            // jsonContent = {};
+            // iframeSrc = baseHref;
+        }
+    } while (false);
+
+    return uri;
+}
+
+function getBaseHref() {
+    const href = new URL('../', window.location.href).href;
+    const baseHref = `${href}app/versions/last/`;
+    return baseHref;
+}

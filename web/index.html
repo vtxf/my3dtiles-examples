@@ -183,47 +183,21 @@
             })();
 
             (() => {
+                const baseHref = getBaseHref();
+
                 const { ContentLeftTree } = XE2.g.refs;
-                const href = new URL('../', window.location.href).href;
-                const baseHref = `${href}app/versions/last/`;
 
                 const processing = createProcessingFromAsyncFunc(async (cancelsManager) => {
-                    let iframeSrc = baseHref;
-                    do {
-                        const { lastSelectedItem } = ContentLeftTree;
-                        if (!lastSelectedItem) break;
-                        const { extras } = lastSelectedItem;
-                        if (!extras) break;
+                    const { lastSelectedItem } = ContentLeftTree;
+                    if (!lastSelectedItem) return;
 
-                        const { content } = extras;
-                        if (!content) break;
-
-                        const c = content;
-                        if (c.type === 'm3tJson') {
-                            // jsonContent = c.m3tJson;
-                        } else if (c.type === 'm3tJsonUri') {
-                            // jsonContent = await cancelsManager.promise(fetchJson(c.m3tJsonUri));
-                            iframeSrc = `${baseHref}?s=${encodeURIComponent(c.m3tJsonUri)}`;
-
-                            {
-                                const treePath = getTreePath(lastSelectedItem);
-                                replaceUrl(treePath);
-                            }
-                        } else if (c.type === 'm3toJson') {
-                            // jsonContent = c.m3toJson;
-                        } else if (c.type === 'm3toJsonUri') {
-                            // jsonContent = await cancelsManager.promise(fetchJson(c.m3toJsonUri));
-                        } else if (c.type === 'sceneObjJson') {
-                            // jsonContent = c.sceneObjJson;
-                        } else if (c.type === 'sceneObjJsonUri') {
-                            // jsonContent = await cancelsManager.promise(fetchJson(c.sceneObjJsonUri));
-                        } else {
-                            // jsonContent = {};
-                            // iframeSrc = baseHref;
-                        }
-                    } while (false);
-                    三维视口.iframeSrc = iframeSrc;
+                    const uri = getM3tJsonUri(lastSelectedItem);
+                    三维视口.iframeSrc = `${baseHref}?s=${encodeURIComponent(uri)}`;
                     url按钮.text = decodeURI(iframeSrc);
+
+                    const treePath = getTreePath(lastSelectedItem);
+                    replaceUrl(treePath);
+
                     return;
                 });
 
