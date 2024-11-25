@@ -1,4 +1,24 @@
 
+const statusFuncStr = `\
+function (status, sceneObject) {
+    if (status === 'normal') {
+        sceneObject.borderColor = [0, 0, 0, 1];
+        sceneObject.borderWidth = .5;
+    } else if (status === 'hovered') {
+        sceneObject.borderColor = [.9, .9, .9, 1];
+        sceneObject.borderWidth = 2;
+    } else if (status === 'pressed') {
+        sceneObject.borderColor = [1, 1, 1, 1];
+        sceneObject.borderWidth = 2;
+    }
+}
+`;
+
+const cssText = `
+cursor: pointer;
+box-sizing: border-box;
+`;
+
 const imageButtonTemplateJson = {
     "type": "RectangleButton",
     "name": "ImageButton",
@@ -6,8 +26,9 @@ const imageButtonTemplateJson = {
     "width": 128,
     "height": 128,
     "backgroundColor": null,
-    "borderColor": [ 0.8, 0.8, 0.8, 0.8 ],
-    "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    //sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    //sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
+    "borderColor": [0, 0, 0, 1],
+    "statusFuncStr": statusFuncStr,
+    cssText,
     "normalImageUri": "https://czmtoy.com/p/my3dtiles/assets/images/my3dtiles_s.png"
 }
 
