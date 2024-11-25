@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.26",
+        "version": "0.9.29",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-20T01:46:54.219Z",
+        "modifiedTime": "2024-11-25T00:35:37.742Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -28,7 +28,6 @@
                 },
                 {
                     "name": "MyContainer(命令按钮工具栏)",
-                    "collapsed": true,
                     "sceneObj": {
                         "id": "9b1c9812-788b-4355-913a-98b5d7e88d44",
                         "type": "MyContainer",
@@ -38,8 +37,7 @@
                         "subIds": [
                             "e88adc1c-f0b6-468e-81ad-ceebcb3caa1a",
                             "8db30dcc-2f33-40f3-a56a-e3b42fbb29c0",
-                            "be496c33-57ec-43bb-a2d5-9550bbbe659e",
-                            "947d403a-0b75-432c-9578-e56fa630a1f3"
+                            "3941a1e6-c352-4bfc-994e-129faef04507"
                         ]
                     },
                     "children": [
@@ -90,11 +88,11 @@
                             }
                         },
                         {
-                            "name": "开启/关闭雨后特效",
+                            "name": "点击触发爆炸",
                             "sceneObj": {
-                                "id": "be496c33-57ec-43bb-a2d5-9550bbbe659e",
+                                "id": "3941a1e6-c352-4bfc-994e-129faef04507",
                                 "type": "RectangleButton",
-                                "name": "开启/关闭雨后特效",
+                                "name": "点击触发爆炸",
                                 "width": 0,
                                 "height": 24,
                                 "backgroundColor": [
@@ -105,32 +103,9 @@
                                 ],
                                 "borderWidth": 0,
                                 "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
-                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.雨后处理特效.show = !XE2.g.refs.雨后处理特效.show;\n}",
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.爆炸粒子特效.forceRecrete();\n}",
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
-                                "text": "开启/关闭雨后特效",
-                                "fontSize": 12,
-                                "textLayoutType": "None"
-                            }
-                        },
-                        {
-                            "name": "开启/关闭雪后特效",
-                            "sceneObj": {
-                                "id": "947d403a-0b75-432c-9578-e56fa630a1f3",
-                                "type": "RectangleButton",
-                                "name": "开启/关闭雪后特效",
-                                "width": 0,
-                                "height": 24,
-                                "backgroundColor": [
-                                    0.1,
-                                    0.1,
-                                    0.1,
-                                    0.8
-                                ],
-                                "borderWidth": 0,
-                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nborder-radius: 4px;",
-                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.雪后处理特效.show = !XE2.g.refs.雪后处理特效.show;\n}",
-                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
-                                "text": "开启/关闭雪后特效",
+                                "text": "点击触发爆炸",
                                 "fontSize": 12,
                                 "textLayoutType": "None"
                             }
@@ -191,7 +166,7 @@
                                     39.906698141208054,
                                     0.03213272592096638
                                 ],
-                                "currentTime": 3992.799999997951,
+                                "currentTime": 1481.3000000142492,
                                 "name": "普通粒子特效"
                             }
                         },
@@ -200,6 +175,7 @@
                             "sceneObj": {
                                 "id": "d97c1cec-9da7-4a22-b732-0cb23ca0e56c",
                                 "type": "CzmParticleSystemPrimitive",
+                                "allowPicking": true,
                                 "position": [
                                     116.39165607303312,
                                     39.906771142533415,
@@ -228,7 +204,7 @@
                                 "minimumSpeed": 1,
                                 "maximumSpeed": 2,
                                 "particleLife": 12,
-                                "currentTime": 4565.299998731352,
+                                "currentTime": 2133.599998735357,
                                 "name": "烟雾粒子特效"
                             }
                         },
@@ -237,6 +213,7 @@
                             "sceneObj": {
                                 "id": "3e44cd58-a100-4b1b-83f4-5fdcdce47aa2",
                                 "type": "CzmParticleSystemPrimitive",
+                                "allowPicking": true,
                                 "position": [
                                     116.39150416420921,
                                     39.9069139431114,
@@ -273,7 +250,7 @@
                                 "minimumSpeed": 5,
                                 "maximumSpeed": 22,
                                 "particleLife": 1,
-                                "currentTime": 1075.9000000432134,
+                                "currentTime": 4645.000000041444,
                                 "name": "火焰粒子特效"
                             }
                         },
@@ -282,6 +259,7 @@
                             "sceneObj": {
                                 "id": "1616d5ae-80de-4684-a23b-ce446dcf9b43",
                                 "type": "CzmParticleSystemPrimitive",
+                                "allowPicking": true,
                                 "position": [
                                     116.39152229415754,
                                     39.907130081911696,
@@ -317,9 +295,10 @@
                                 "lifetime": 0.8,
                                 "minimumParticleLife": 0.5,
                                 "maximumParticleLife": 0.8,
-                                "currentTime": 1902.4000004474074,
+                                "currentTime": 5479.200000450481,
                                 "name": "爆炸粒子特效",
-                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const t = setInterval(() => {\r\n                sceneObject.forceRecrete();\r\n            }, 1000);\r\n            this.dispose(() => clearInterval(t));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                                "ref": "爆炸粒子特效",
+                                "createAppendedObjFuncStr": "// function (sceneObject) {\r\n//     class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n//         constructor() {\r\n//             super();\r\n\r\n//             const t = setInterval(() => {\r\n//                 sceneObject.forceRecrete();\r\n//             }, 1000);\r\n//             this.dispose(() => clearInterval(t));\r\n//         }\r\n//     }\r\n//     return new AppendedObj();\r\n// }"
                             }
                         },
                         {
@@ -327,6 +306,7 @@
                             "sceneObj": {
                                 "id": "45aeb562-c8bc-42a1-847b-d03c39bce1de",
                                 "type": "CzmParticleSystemPrimitive",
+                                "allowPicking": true,
                                 "position": [
                                     116.3918516867135,
                                     39.90677053546184,
@@ -362,7 +342,7 @@
                                 "speed": 20,
                                 "minimumParticleLife": 5,
                                 "maximumParticleLife": 5,
-                                "currentTime": 4191.899999075569,
+                                "currentTime": 1763.3999990709126,
                                 "name": "排水粒子特效"
                             }
                         }
@@ -373,7 +353,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "cf8fa151-6e27-4394-bf99-27d65a528f34",
+            "id": "ec2942ab-76d6-4d72-88a7-ae20b338ea07",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -383,7 +363,7 @@
             "clockCurrentTime": 1732063446847
         },
         "offlineImagery": {
-            "id": "9e39c1d7-3443-469e-9fa4-9ee7f1cae0cf",
+            "id": "45f80cd4-d874-4655-b637-520bff2530ba",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -393,7 +373,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "fb5ac851-d567-4247-b2a2-5d564b1187d7",
+            "id": "48121a88-e9d6-4fe7-b539-79221e7dbba1",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -415,7 +395,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "8d7e32df-3fd9-48c4-9d0c-e4baae29c10e",
+            "id": "89526b99-a56f-499f-92bb-577991632e64",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -426,27 +406,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "61a605eb-9c85-47c7-930e-60a4f19104f2",
+            "id": "68bb7d6c-3a06-41c6-a4df-393561de81cf",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "c473f778-4763-4098-a476-08ac932b5fdb",
+            "id": "16181bd9-3e2c-4452-9407-4232aa235442",
             "type": "View",
             "position": [
-                116.39214323846225,
-                39.90715492484333,
-                60.24674498292255
+                116.39214366083749,
+                39.907155368615854,
+                60.24690776111012
             ],
             "rotation": [
-                241.64976208866858,
-                -46.13081377998581,
-                359.9999884451038
+                241.64976208915976,
+                -46.13081378024122,
+                359.99998844442257
             ],
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "d1765914-b582-4572-bb48-0e8a75dec3b7",
+            "id": "95b12f76-0d72-4edd-a5cb-3470e30e4bf8",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
