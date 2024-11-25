@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.29",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-25T00:07:53.538Z",
+        "modifiedTime": "2024-11-25T03:14:10.650Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -207,7 +207,6 @@
                                         {
                                             "name": "单示例",
                                             "show": false,
-                                            "collapsed": true,
                                             "sceneObj": {
                                                 "id": "aa97b2ec-429f-484b-81be-1a653054378f",
                                                 "type": "MyContainer",
@@ -224,7 +223,6 @@
                                             "children": [
                                                 {
                                                     "name": "Content-Right-Top",
-                                                    "collapsed": true,
                                                     "sceneObj": {
                                                         "id": "d6c188d1-350d-4a4e-8ab0-9cd24788845f",
                                                         "type": "MyContainer",
@@ -233,7 +231,7 @@
                                                         "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nbackground: #222;\nwidth: 100%;\n",
                                                         "subIds": [
                                                             "148a63e6-e79a-4faf-962c-4d595491a53f",
-                                                            "a00cab33-148d-4cd5-a0f5-f500c57c8be2",
+                                                            "3bdee1c7-896f-41dc-925c-5ab532123541",
                                                             "2373f295-fe3d-4003-a031-3f7fb0fc5a59"
                                                         ]
                                                     },
@@ -248,15 +246,14 @@
                                                                 "width": 0,
                                                                 "height": 24,
                                                                 "backgroundColor": [
-                                                                    0.3,
-                                                                    0.3,
-                                                                    0,
-                                                                    1
+                                                                    0.1,
+                                                                    0.1,
+                                                                    0.1,
+                                                                    0
                                                                 ],
                                                                 "borderWidth": 0,
                                                                 "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;",
                                                                 "statusFuncStr": "function (status, sceneObject) {\n    if (sceneObject.highlighted) {\n        sceneObject.backgroundColor = [0.3, 0.3, 0.0, 1];\n        sceneObject.textColor = [1, 1, 1, 1];\n        return;\n    }\n\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, r - 0.1];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
-                                                                "highlighted": true,
                                                                 "highlightOnClick": true,
                                                                 "text": "显示/隐藏代码",
                                                                 "fontSize": 12,
@@ -264,43 +261,33 @@
                                                             }
                                                         },
                                                         {
-                                                            "name": "url按钮",
+                                                            "name": "独立页面按钮",
                                                             "sceneObj": {
-                                                                "id": "2373f295-fe3d-4003-a031-3f7fb0fc5a59",
+                                                                "id": "3bdee1c7-896f-41dc-925c-5ab532123541",
                                                                 "type": "RectangleButton",
-                                                                "name": "url按钮",
-                                                                "ref": "url按钮",
+                                                                "name": "独立页面按钮",
+                                                                "ref": "独立页面按钮",
                                                                 "width": 0,
                                                                 "height": 24,
-                                                                "backgroundColor": null,
-                                                                "borderColor": [
-                                                                    0.8,
-                                                                    0.8,
-                                                                    0.8,
-                                                                    0.8
+                                                                "backgroundColor": [
+                                                                    0.1,
+                                                                    0.1,
+                                                                    0.1,
+                                                                    0
                                                                 ],
                                                                 "borderWidth": 0,
-                                                                "cssText": "cursor: pointer;\noverflow: hidden;",
-                                                                "clickFuncStr": "\nasync function(mouseEvent, context) {\n    // console.log(context);\n    // console.log(mouseEvent, context);\n    const { rectangleButton } = context;\n    const textToCopy = rectangleButton.text;\n    try {\n        await navigator.clipboard.writeText(textToCopy);\n        console.log('已复制到剪切板！' + textToCopy);\n    } catch (err) {\n        console.error('可能是浏览器安全限制导致。', err);\n        alert('复制失败, 可能是浏览器安全限制导致。请在此处手动复制：${textToCopy}', err);\n    }\n}\n",
-                                                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.8,\n        hovered: 0.9,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    // sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1*r];\n}\n",
-                                                                "text": "abcdef123456",
-                                                                "textColor": [
-                                                                    0.8,
-                                                                    0.8,
-                                                                    0.8,
-                                                                    0.8
-                                                                ],
+                                                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;",
+                                                                "statusFuncStr": "function (status, sceneObject) {\n    if (sceneObject.highlighted) {\n        sceneObject.backgroundColor = [0.3, 0.3, 0.0, 1];\n        sceneObject.textColor = [1, 1, 1, 1];\n        return;\n    }\n\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, r - 0.1];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                                                "highlightOnClick": true,
+                                                                "text": "打开独立页面",
                                                                 "fontSize": 12,
-                                                                "textLayoutType": "None",
-                                                                "textCssText": "line-height: 24px;",
-                                                                "tooltip": "点击复制"
+                                                                "textLayoutType": "None"
                                                             }
                                                         }
                                                     ]
                                                 },
                                                 {
                                                     "name": "Content-Right-Bottom",
-                                                    "collapsed": true,
                                                     "sceneObj": {
                                                         "id": "b4393dd5-1508-4d6a-b280-283758fb3de3",
                                                         "type": "MyContainer",
@@ -399,7 +386,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "907f80c2-41db-42b0-9973-8d74623e4897",
+            "id": "9794ff64-ba5f-4729-8e6a-c39a97f53c3c",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -409,7 +396,7 @@
             "clockCurrentTime": 1730698401758
         },
         "offlineImagery": {
-            "id": "e091f9e0-d67d-4b65-b6d9-2a46dc250199",
+            "id": "ab8e6657-7a7c-46db-98b0-984f43ddb489",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -419,7 +406,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "7ff0f394-0fbe-4ac4-b5c4-c3cafa8b83ce",
+            "id": "1a3da2dd-abad-4b7a-bc44-99846df43927",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -441,7 +428,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "fccb4c74-cb88-4c03-87e9-70e2eb938282",
+            "id": "4fee5ad6-7492-492c-bb1f-c4e611efb1ab",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -452,12 +439,12 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "71276ca2-063a-49b2-a0a6-4c0198f0f439",
+            "id": "a825acf2-4d7d-45ad-856f-c04fef8b3fcd",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "3d27f300-d2ab-4479-a92e-52d2e57d89d3",
+            "id": "362a9112-7eb1-400a-b9aa-4221f3bcfa70",
             "type": "View",
             "position": [
                 122.21589597525654,
@@ -466,13 +453,13 @@
             ],
             "rotation": [
                 348.824006204452,
-                -89.81494442926794,
+                -89.81494442927188,
                 0
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "88d1ead1-65cc-42fe-bb15-0ad6256e255e",
+            "id": "fc375d3d-25c8-420d-9fc1-aa54af013d53",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
