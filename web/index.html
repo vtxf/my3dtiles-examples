@@ -30,7 +30,7 @@
 
 
         const loadedFunc = async () => {
-            const { 示例框架, 显隐代码按钮, 三维视口, Json代码, ContentLeftTree, 独立页面按钮, 单示例, 组画廊 } = XE2.g.refs;
+            const { 示例框架, 显隐代码按钮, 三维视口, Json代码, ContentLeftTree, 显隐编辑器UI按钮, 独立页面按钮, 单示例, 组画廊 } = XE2.g.refs;
 
             const root = await getM3tListJsonRoot();
             ContentLeftTree.items = [root];
@@ -92,7 +92,10 @@
                         组画廊.show = false;
                         const uri = getM3tJsonUri(lastSelectedItem);
                         if (uri) {
-                            const standaloneUri = `${baseHref}?s=${encodeURIComponent(uri)}`;
+                            let standaloneUri = `${baseHref}?s=${encodeURIComponent(uri)}`;
+                            if (显隐编辑器UI按钮.highlighted) {
+                                standaloneUri += '&e';
+                            }
                             三维视口.iframeSrc = standaloneUri
                             // url按钮.text = uri;
                             独立页面按钮.clickFunc = () => {
@@ -113,6 +116,7 @@
                 };
                 update();
                 ContentLeftTree.lastSelectedItemChanged.disposableOn(update);
+                显隐编辑器UI按钮.highlightedChanged.disposableOn(update);
             })();
 
             (() => {

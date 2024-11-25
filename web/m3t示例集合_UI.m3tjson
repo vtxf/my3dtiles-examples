@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.29",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-25T03:15:36.715Z",
+        "modifiedTime": "2024-11-25T03:21:05.410Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -231,8 +231,8 @@
                                                         "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nbackground: #222;\nwidth: 100%;\n",
                                                         "subIds": [
                                                             "148a63e6-e79a-4faf-962c-4d595491a53f",
-                                                            "3bdee1c7-896f-41dc-925c-5ab532123541",
-                                                            "2373f295-fe3d-4003-a031-3f7fb0fc5a59"
+                                                            "eb31e743-4b61-4ed0-a2c0-5824f53c3f53",
+                                                            "3bdee1c7-896f-41dc-925c-5ab532123541"
                                                         ]
                                                     },
                                                     "children": [
@@ -256,6 +256,30 @@
                                                                 "statusFuncStr": "function (status, sceneObject) {\n    if (sceneObject.highlighted) {\n        sceneObject.backgroundColor = [0.3, 0.3, 0.0, 1];\n        sceneObject.textColor = [1, 1, 1, 1];\n        return;\n    }\n\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, r - 0.1];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
                                                                 "highlightOnClick": true,
                                                                 "text": "显示/隐藏代码",
+                                                                "fontSize": 12,
+                                                                "textLayoutType": "None"
+                                                            }
+                                                        },
+                                                        {
+                                                            "name": "显隐编辑器UI按钮",
+                                                            "sceneObj": {
+                                                                "id": "eb31e743-4b61-4ed0-a2c0-5824f53c3f53",
+                                                                "type": "RectangleButton",
+                                                                "name": "显隐编辑器UI按钮",
+                                                                "ref": "显隐编辑器UI按钮",
+                                                                "width": 0,
+                                                                "height": 24,
+                                                                "backgroundColor": [
+                                                                    0.1,
+                                                                    0.1,
+                                                                    0.1,
+                                                                    0
+                                                                ],
+                                                                "borderWidth": 0,
+                                                                "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;",
+                                                                "statusFuncStr": "function (status, sceneObject) {\n    if (sceneObject.highlighted) {\n        sceneObject.backgroundColor = [0.3, 0.3, 0.0, 1];\n        sceneObject.textColor = [1, 1, 1, 1];\n        return;\n    }\n\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, r - 0.1];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                                                "highlightOnClick": true,
+                                                                "text": "显隐编辑器UI",
                                                                 "fontSize": 12,
                                                                 "textLayoutType": "None"
                                                             }
@@ -385,7 +409,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "7ae2f150-3daf-498a-b18d-995406adb127",
+            "id": "70e8ebd7-dff9-464c-94fe-fcad05749934",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -395,7 +419,7 @@
             "clockCurrentTime": 1730698401758
         },
         "offlineImagery": {
-            "id": "3999aa88-af2e-4eb0-ae5f-f728292cf286",
+            "id": "bfe944f2-865d-4bd8-8475-bf0a02c7294a",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -405,7 +429,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "91f08be4-157a-4fb3-b2c2-f7840180ea60",
+            "id": "ef23e118-fb13-4134-b441-afc97c61b6d7",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -427,7 +451,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "6c56b7fb-6993-4e50-a95e-955061cbfc48",
+            "id": "7623560a-cc23-4e5f-85e0-852e6a4a019a",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -438,12 +462,12 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "69ff9299-f564-4a55-a290-999cb6cca8dc",
+            "id": "0d25b93a-c3a9-485f-95e9-94a66e8fa2aa",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "cf763ed3-cd26-42ae-a760-5e9ca9c5201c",
+            "id": "5e39af80-843e-4523-bef5-4595720abf16",
             "type": "View",
             "position": [
                 122.21589597525654,
@@ -458,7 +482,7 @@
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "01791d73-dc6f-4173-9031-da2030e34862",
+            "id": "004a104b-febb-4114-a1fa-894715196f9a",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
