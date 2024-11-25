@@ -1,4 +1,4 @@
-function getTreePath(sceneTreeItem) {
+function getTreePathFromTreeItem(sceneTreeItem) {
     // 修改网页地址
     const names = [];
     let currentItem = sceneTreeItem;
@@ -49,7 +49,7 @@ function getM3tJsonUri(treeItem) {
     return uri;
 }
 
-function getBaseHref() {
+function getM3tAppBaseHref() {
     const href = new URL('../', window.location.href).href;
     const baseHref = `${href}app/versions/last/`;
     return baseHref;
@@ -182,7 +182,7 @@ function getTreeItemAllPreviewImages(treeItem, previewImageUriAndTreeItems) {
         previewImageUriAndTreeItems.push({ 
             previewImageUri: treeItem.extras.previewImageUri, 
             name: treeItem.name, 
-            treePath: getTreePath(treeItem),
+            treePath: getTreePathFromTreeItem(treeItem),
             treeItem 
         });
     }

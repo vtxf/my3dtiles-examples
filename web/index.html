@@ -73,7 +73,7 @@
             }
 
             (() => {
-                const baseHref = getBaseHref();
+                const baseHref = getM3tAppBaseHref();
 
                 const { ContentLeftTree } = XE2.g.refs;
 
@@ -100,7 +100,7 @@
                     const jsonContent = await cancelsManager.promise(getJsonContentFromTreeItem(lastSelectedItem));
                     Json代码.content = jsonContent;
 
-                    const treePath = getTreePath(lastSelectedItem);
+                    const treePath = getTreePathFromTreeItem(lastSelectedItem);
                     replaceUrl(treePath);
                 });
 
