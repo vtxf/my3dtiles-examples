@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.29",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-25T00:00:51.894Z",
+        "modifiedTime": "2024-11-25T00:07:53.538Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -352,9 +352,9 @@
                                                 "ref": "组画廊",
                                                 "layoutType": "FullScreen",
                                                 "backgroundColor": [
-                                                    0.25882352941176473,
-                                                    0.25882352941176473,
-                                                    0.25882352941176473,
+                                                    0.4117647058823529,
+                                                    0.4117647058823529,
+                                                    0.4117647058823529,
                                                     1
                                                 ],
                                                 "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: flex-start;\nalign-items:  flex-start;\nalign-content: flex-start;\noverflow-y: auto;"
@@ -460,13 +460,13 @@
             "id": "3d27f300-d2ab-4479-a92e-52d2e57d89d3",
             "type": "View",
             "position": [
-                92.97098767030714,
-                28.278130825871216,
-                7842771.919754209
+                122.21589597525654,
+                51.08654577627449,
+                9515852.110669639
             ],
             "rotation": [
-                348.82401891857586,
-                -89.83614160565313,
+                348.824006204452,
+                -89.81494442926794,
                 0
             ],
             "name": "最近视角"

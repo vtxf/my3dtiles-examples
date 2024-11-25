@@ -182,6 +182,7 @@ function getTreeItemAllPreviewImages(treeItem, previewImageUriAndTreeItems) {
         previewImageUriAndTreeItems.push({ 
             previewImageUri: treeItem.extras.previewImageUri, 
             name: treeItem.name, 
+            treePath: getTreePath(treeItem),
             treeItem 
         });
     }
