@@ -14,9 +14,33 @@ M3T示例代码的官网地址：https://p.czmtoy.com/m3t/examples/web/
 
 ## 2 使用说明
 
-查看示例场景的方式有两种：在浏览器中查看示例场景，或者在My3dtiles桌面程序中查看示例。
+查看示例场景有以下多种方式。
 
-### 2.1 在浏览器中查看示例
+### 2.1 使用My3dtiles直接查看示例(最快的方式)
+
+需要首先安装My3dtiles软件，安装地址在这里：
+https://www.wolai.com/vtxf/85sBNQP1KsdkFSrtbRGPyG
+
+把web/index.html文件拖拽到My3dtiles中。
+![拖拽到m3t](./md/images/drag.jpg)]
+
+就会自动打开示例。
+![自动打开示例](./md/images/image-1.png)
+
+实际上，My3dtiles可以当作浏览器打开任意本地html文件！
+
+#### 2.2 用My3dtiles直接打开m3tjson场景文件 
+
+需要首先安装My3dtiles软件，安装地址在这里：
+https://www.wolai.com/vtxf/85sBNQP1KsdkFSrtbRGPyG
+
+打开examples文件夹。
+![examples文件夹](./md/images/examples-folder.jpg)
+
+双击其中的任意m3tjson文件，即可打开相应的场景
+![examples文件夹](./md/images/examples-folder2.jpg)
+
+### 2.3 本地建立http服务器，在浏览器中查看示例
 
 浏览器中查看示例，需要首先在本地运行http服务器，您可以通过以下两种方式来运行http服务器。
 
@@ -41,20 +65,6 @@ M3T示例代码的官网地址：https://p.czmtoy.com/m3t/examples/web/
 3. 双击运行http-server-vtxf20221104.exe
 4. 在浏览器中打开
    http://127.0.0.1:9123/web/
-
-### 2.2 在My3dtiles桌面程序中查看示例
-
-需要首先安装My3dtiles软件，安装地址在这里：
-https://www.wolai.com/vtxf/85sBNQP1KsdkFSrtbRGPyG
-
-msi文件是安装文件，如下图所示
-![下载m3t安装程序](./md/images/m3t-download.jpg)
-
-安装好以后，打开examples文件夹。
-![examples文件夹](./md/images/examples-folder.jpg)
-
-双击其中的任意m3tjson文件，即可打开相应的场景
-![examples文件夹](./md/images/examples-folder2.jpg)
 
 ## 3 m3tjson场景文件的说明
 使用My3dtiles搭建数字孪生场景以后，可以将搭建好的场景保存成m3tjson文件，以后双击即可再次访问该场景。
