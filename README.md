@@ -18,26 +18,26 @@ M3T示例代码的官网地址：https://p.czmtoy.com/m3t/examples/web/
 
 ### 2.1 使用My3dtiles直接查看示例(最快的方式)
 
-需要首先安装My3dtiles软件，安装地址在这里：
+1. 需要首先安装My3dtiles软件，安装地址在这里：
 https://www.wolai.com/vtxf/85sBNQP1KsdkFSrtbRGPyG
 
-把web/index.html文件拖拽到My3dtiles中。
+2. 把web/index.html文件拖拽到My3dtiles中。
 ![拖拽到m3t](./md/images/drag.jpg)]
 
-就会自动打开示例。
+3. 就会自动打开示例。
 ![自动打开示例](./md/images/image-1.png)
 
-实际上，My3dtiles可以当作浏览器打开任意本地html文件！
+4. 实际上，My3dtiles可以当作浏览器打开任意本地html文件！
 
 #### 2.2 用My3dtiles直接打开m3tjson场景文件 
 
-需要首先安装My3dtiles软件，安装地址在这里：
+1. 需要首先安装My3dtiles软件，安装地址在这里：
 https://www.wolai.com/vtxf/85sBNQP1KsdkFSrtbRGPyG
 
-打开examples文件夹。
+2. 打开examples文件夹。
 ![examples文件夹](./md/images/examples-folder.jpg)
 
-双击其中的任意m3tjson文件，即可打开相应的场景
+3. 双击其中的任意m3tjson文件，即可打开相应的场景
 ![examples文件夹](./md/images/examples-folder2.jpg)
 
 ### 2.3 本地建立http服务器，在浏览器中查看示例
