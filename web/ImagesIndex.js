@@ -25,7 +25,8 @@ const imageButtonTemplateJson = {
     "text": '',
     "width": 128,
     "height": 128,
-    "backgroundColor": null,
+    // "backgroundColor": null, // 会导致控制台报错
+    "backgroundColor": [0, 0, 0, 0],
     "borderColor": [0, 0, 0, 1],
     "statusFuncStr": statusFuncStr,
     cssText,

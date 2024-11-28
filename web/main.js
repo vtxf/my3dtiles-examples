@@ -6,7 +6,7 @@ function getTreePathFromTreeItem(sceneTreeItem) {
         names.push(currentItem.name);
         currentItem = currentItem.parent;
     }
-    console.log(names)
+    // console.log(names)
     names.reverse();
     const treePath = names.join('/');
     return treePath;
