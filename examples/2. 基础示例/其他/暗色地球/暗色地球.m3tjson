@@ -1,0 +1,280 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.29",
+        "createdTime": "2024-11-28T02:47:11.740Z",
+        "modifiedTime": "2024-11-28T03:08:11.150Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "城市信号基站",
+                    "sceneObj": {
+                        "id": "60dcb4e7-b62c-4dc6-8827-27ed1dfaed42",
+                        "type": "CzmCityBasePoint",
+                        "name": "城市信号基站",
+                        "show": true,
+                        "position": [
+                            116.386210296605,
+                            39.90629352253922,
+                            0.0032425399836871678
+                        ],
+                        "positionEditing": false,
+                        "allowPicking": true
+                    }
+                },
+                {
+                    "name": "城市信号基站",
+                    "sceneObj": {
+                        "id": "fecad913-98cc-4c2b-8580-838ca1f12ae8",
+                        "type": "CzmCityBasePoint",
+                        "name": "城市信号基站",
+                        "show": true,
+                        "position": [
+                            116.38902806168153,
+                            39.90481390810385,
+                            0.0032425399836871678
+                        ],
+                        "positionEditing": false,
+                        "color": [
+                            0.058823529411764705,
+                            0.9686274509803922,
+                            0.28627450980392155,
+                            1
+                        ],
+                        "allowPicking": true
+                    }
+                },
+                {
+                    "name": "城市信号基站",
+                    "sceneObj": {
+                        "id": "ff396fa7-f9d1-4f62-8178-b54bf25613f3",
+                        "type": "CzmCityBasePoint",
+                        "name": "城市信号基站",
+                        "show": true,
+                        "position": [
+                            116.38959159425292,
+                            39.9075154297792,
+                            0.0032425399836871678
+                        ],
+                        "positionEditing": false,
+                        "color": [
+                            0.9607843137254902,
+                            0.23137254901960785,
+                            0.027450980392156862,
+                            1
+                        ],
+                        "allowPicking": true
+                    }
+                },
+                {
+                    "name": "MarkdownReader",
+                    "sceneObj": {
+                        "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                        "type": "MarkdownReader",
+                        "name": "MarkdownReader",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 4px;\ntop: 40px;",
+                        "content": "### 暗色地球设置\n\n辉光效果  \n```\ng_app.czmViewer.scenePpsBloomEnabled = true;\n```\n\n影像变暗  \n```\nXE2.g.refs.基础地球影像.brightness = 0.3;\n```"
+                    }
+                },
+                {
+                    "name": "工具栏",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "工具栏",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                            "56cd610f-4592-466f-b28a-2386984d3b3b",
+                            "5e5341a5-0c28-4c74-83ef-4f14f14174c1"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "辉光",
+                            "sceneObj": {
+                                "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                "type": "RectangleButton",
+                                "name": "辉光",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const { bind } = XE2['xe2-base-utils'];\r\n            this.dispose(bind([g_app.czmViewer, 'scenePpsBloomEnabled'], [sceneObject, 'highlighted']))\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlighted": true,
+                                "highlightOnClick": true,
+                                "text": "辉光",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 20,
+                                "textLayoutType": "RightCenter",
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "影像变暗",
+                            "sceneObj": {
+                                "id": "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                "type": "RectangleButton",
+                                "name": "影像变暗",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            {   \r\n                const update = () => {\r\n                    XE2.g.refs.基础地球影像.brightness = sceneObject.highlighted ? 0.3 : 1.0;\r\n                };\r\n                update();\r\n                this.dispose(sceneObject.highlightedChanged.disposableOn(update));\r\n            }\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlighted": true,
+                                "highlightOnClick": true,
+                                "text": "影像变暗",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "3acdc53c-ce8f-4ec8-86f1-ebbd3eafc638",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "resolutionScale": 1.5,
+            "sceneSkyAtmosphereShow": false,
+            "sceneSsccZoomFactor": 2,
+            "scenePpsBloomEnabled": true,
+            "firstPersonKeyboardEnabled": true,
+            "clockCurrentTime": 1732762031743
+        },
+        "offlineImagery": {
+            "id": "600d5d5f-2789-4cf2-8ee2-538a656b3b20",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "916ff2af-ab6b-4506-9188-c67c047edbd6",
+            "type": "CzmImagery",
+            "brightness": 0.3,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像",
+            "ref": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "afc3de80-5785-47aa-8c5b-67683fac5e16",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "bf85279f-d860-4409-9538-9a69fe878eda",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "efc28eda-f0dc-456e-9e1a-0933a61fb363",
+            "type": "View",
+            "position": [
+                116.38291406272344,
+                39.902533546926584,
+                611.006720094008
+            ],
+            "rotation": [
+                33.29910164174128,
+                -40.70039081564575,
+                359.99793461458535
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "b3c8e0ad-9624-4e92-a1e1-fc1f2e60c932",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
