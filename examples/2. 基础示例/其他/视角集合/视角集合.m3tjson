@@ -1,0 +1,275 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.29",
+        "createdTime": "2024-11-28T02:14:57.456Z",
+        "modifiedTime": "2024-11-28T02:34:17.482Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "视角集合",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "dfd5d7f4-f028-4d72-927b-10a02a88916d",
+                        "type": "ViewCollection",
+                        "name": "视角集合",
+                        "ref": "视角集合",
+                        "views": [
+                            {
+                                "position": [
+                                    121.22129219886203,
+                                    22.529317379093552,
+                                    510012.0650171614
+                                ],
+                                "rotation": [
+                                    349.38603876114007,
+                                    -80.59002109385874,
+                                    0.07352896982913684
+                                ],
+                                "thumbnail": "data:image/jpeg;base64,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",
+                                "name": "视角"
+                            },
+                            {
+                                "position": [
+                                    110.26738020578519,
+                                    17.998015948193178,
+                                    326124.2499136912
+                                ],
+                                "rotation": [
+                                    353.78370728803776,
+                                    -69.3158569038377,
+                                    0.09824477033265618
+                                ],
+                                "thumbnail": "data:image/jpeg;base64,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",
+                                "name": "视角"
+                            },
+                            {
+                                "position": [
+                                    121.34156487408305,
+                                    36.229403612908044,
+                                    661793.7072779321
+                                ],
+                                "rotation": [
+                                    353.8091415789946,
+                                    -69.22730657770114,
+                                    0.07105014042563654
+                                ],
+                                "thumbnail": "data:image/jpeg;base64,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",
+                                "name": "视角"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "视角集合ui",
+                    "sceneObj": {
+                        "id": "c8310800-05a7-4861-a80e-dd48f8325c53",
+                        "type": "ViewCollectionUI",
+                        "name": "视角集合ui",
+                        "ref": "视角集合ui",
+                        "targetID": "dfd5d7f4-f028-4d72-927b-10a02a88916d"
+                    }
+                },
+                {
+                    "name": "MarkdownReader",
+                    "sceneObj": {
+                        "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                        "type": "MarkdownReader",
+                        "name": "MarkdownReader",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 4px;\ntop: 40px;",
+                        "content": "### 视角集合使用说明\n\n视角集合用来展示多个视角。\n\n视角集合编辑UI  是内部编辑实际使用的。\n\n视角集合UI 是呈现给用户看的。\n"
+                    }
+                },
+                {
+                    "name": "工具栏",
+                    "collapsed": true,
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "工具栏",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                            "56cd610f-4592-466f-b28a-2386984d3b3b",
+                            "5e5341a5-0c28-4c74-83ef-4f14f14174c1"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "视角集合编辑UI",
+                            "sceneObj": {
+                                "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                "type": "RectangleButton",
+                                "name": "视角集合编辑UI",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const { bind } = XE2['xe2-base-utils'];\r\n            const { 视角集合 } = XE2.g.refs;\r\n            this.dispose(bind([视角集合, 'show'], [sceneObject, 'highlighted']));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 100,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlightOnClick": true,
+                                "text": "视角集合编辑UI",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "视角集合UI",
+                            "sceneObj": {
+                                "id": "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                "type": "RectangleButton",
+                                "name": "视角集合UI",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const { bind } = XE2['xe2-base-utils'];\r\n            const { 视角集合ui } = XE2.g.refs;\r\n            this.dispose(bind([视角集合ui, 'show'], [sceneObject, 'highlighted']));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlighted": true,
+                                "highlightOnClick": true,
+                                "text": "视角集合UI",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "9bfdee13-8b20-45c2-9c41-11dcf4eb344e",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "firstPersonKeyboardEnabled": true,
+            "clockCurrentTime": 1732760097461
+        },
+        "offlineImagery": {
+            "id": "70d4fbbb-3f03-4718-9d29-232748f7a6dc",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "084c0ec0-8f92-4d5f-9783-5824e6f31657",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "62cf6ac3-6852-4fd3-a78e-1936c338c6b2",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "073fd03c-3178-413a-8604-f75a5f56ad35",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "48e91f8e-d436-416e-8ee2-9ad1a6a469f2",
+            "type": "View",
+            "position": [
+                120.78343295439423,
+                24.292088164856484,
+                734823.2656091693
+            ],
+            "rotation": [
+                349.3941698818084,
+                -80.58282457720416,
+                0.06528685618565895
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "3a0b5d18-b7d6-4ce0-92e0-59cdb6ce96ac",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

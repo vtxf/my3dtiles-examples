@@ -429,6 +429,14 @@
                             "collapse": true,
                             "children": [
                                 {
+                                    "name": "ArcGIS历史影像",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}ArcGIS历史影像/ArcGIS历史影像.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}ArcGIS历史影像/ArcGIS历史影像.jpg"
+                                },
+                                {
                                     "name": "地理热力图",
                                     "content": {
                                         "type": "m3tJsonUri",
@@ -437,12 +445,36 @@
                                     "previewImageUri": "${M3T_CurrentDir}地理热力图/地理热力图.jpg"
                                 },
                                 {
+                                    "name": "街景地图",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}街景地图/街景地图.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}街景地图/街景地图.jpg"
+                                },
+                                {
+                                    "name": "视角集合",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}视角集合/视角集合.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}视角集合/视角集合.jpg"
+                                },
+                                {
                                     "name": "视频纹理20241111",
                                     "content": {
                                         "type": "m3tJsonUri",
                                         "m3tJsonUri": "${M3T_CurrentDir}视频纹理20241111/视频纹理20241111.m3tjson"
                                     },
                                     "previewImageUri": "${M3T_CurrentDir}视频纹理20241111/视频纹理20241111.jpg"
+                                },
+                                {
+                                    "name": "谷歌历史影像",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}谷歌历史影像/谷歌历史影像.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}谷歌历史影像/谷歌历史影像.jpg"
                                 },
                                 {
                                     "name": "贴地图形重叠示例20241106",
