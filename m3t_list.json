@@ -445,6 +445,14 @@
                                     "previewImageUri": "${M3T_CurrentDir}地理热力图/地理热力图.jpg"
                                 },
                                 {
+                                    "name": "暗色地球",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}暗色地球/暗色地球.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}暗色地球/暗色地球.jpg"
+                                },
+                                {
                                     "name": "街景地图",
                                     "content": {
                                         "type": "m3tJsonUri",
