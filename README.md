@@ -29,7 +29,7 @@ https://www.wolai.com/vtxf/85sBNQP1KsdkFSrtbRGPyG
 
 4. 实际上，My3dtiles可以当作浏览器打开任意本地html文件！
 
-#### 2.2 用My3dtiles直接打开m3tjson场景文件 
+### 2.2 用My3dtiles直接打开m3tjson场景文件 
 
 1. 需要首先安装My3dtiles软件，安装地址在这里：
 https://www.wolai.com/vtxf/85sBNQP1KsdkFSrtbRGPyG
