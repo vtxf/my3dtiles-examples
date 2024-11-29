@@ -1,0 +1,297 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.30",
+        "createdTime": "2024-11-29T00:44:39.928Z",
+        "modifiedTime": "2024-11-29T01:18:29.602Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "工具栏",
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "工具栏",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                            "56cd610f-4592-466f-b28a-2386984d3b3b",
+                            "18979f05-c5da-4335-9c8b-73a1136295cd"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "切换天空盒",
+                            "sceneObj": {
+                                "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                "type": "RectangleButton",
+                                "name": "切换天空盒",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "async function (mouseEvent) {\n    const { ui } = vtxf['xr-base-utils'];\n    const selects = ['内置天空盒', '天空盒1', '天空盒2', '天空盒3', '天空盒4', '天空盒5', '天空盒6', '天空盒7'];\n    const s = await ui.select(selects, '请选择天空盒');\n    if (s === undefined) {\n        return;\n    }\n\n    const defaultLocalSkySources = {\n        \"positiveX\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/east.jpg\",\n        \"negativeX\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/west.jpg\",\n        \"positiveY\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/bottom.jpg\",\n        \"negativeY\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/top.jpg\",\n        \"positiveZ\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/north.jpg\",\n        \"negativeZ\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/south.jpg\"\n    };\n\n    const localSkys = [...new Array(7).keys()].map(i => ({\n        \"positiveX\": `\\${SD}/skyboxes/sky${i+1}/east.jpg`,\n        \"negativeX\": `\\${SD}/skyboxes/sky${i+1}/west.jpg`,\n        \"positiveY\": `\\${SD}/skyboxes/sky${i+1}/bottom.jpg`,\n        \"negativeY\": `\\${SD}/skyboxes/sky${i+1}/top.jpg`,\n        \"positiveZ\": `\\${SD}/skyboxes/sky${i+1}/north.jpg`,\n        \"negativeZ\": `\\${SD}/skyboxes/sky${i+1}/south.jpg`\n    }));\n\n    const skys = [defaultLocalSkySources, ...localSkys];\n\n    g_app.czmViewer.xbsjLocalBoxSources = skys[s];\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlighted": true,
+                                "text": "切换天空盒",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "近地视角按钮",
+                            "sceneObj": {
+                                "id": "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                "type": "RectangleButton",
+                                "name": "近地视角按钮",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function () {\r\n    XE2.g.refs.近地视角.flyTo(3000);\r\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "近地视角",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "太空视角按钮",
+                            "sceneObj": {
+                                "id": "18979f05-c5da-4335-9c8b-73a1136295cd",
+                                "type": "RectangleButton",
+                                "name": "太空视角按钮",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function () {\r\n    XE2.g.refs.太空视角.flyTo(3000);\r\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "太空视角",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MarkdownReader",
+                    "sceneObj": {
+                        "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                        "type": "MarkdownReader",
+                        "name": "MarkdownReader",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 4px;\ntop: 40px;",
+                        "content": "### 近地天空盒使用说明\n\n只有在距离地面较近时才会逐渐出现。\n\n当视角升高到某个临界值，近地天空盒将消息，转而看到星空。"
+                    }
+                },
+                {
+                    "name": "视角",
+                    "children": [
+                        {
+                            "name": "近地视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "bc95b37b-5fbf-48de-a223-4f5ae3e65ff9",
+                                "type": "View",
+                                "position": [
+                                    116.39128442845062,
+                                    39.90538781815454,
+                                    40.20013618741313
+                                ],
+                                "rotation": [
+                                    358.61119212437,
+                                    11.019467198940788,
+                                    0.011268524489166692
+                                ],
+                                "name": "近地视角",
+                                "ref": "近地视角"
+                            }
+                        },
+                        {
+                            "name": "太空视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "9b8145fa-8642-4619-89b2-cd83b1260958",
+                                "type": "View",
+                                "position": [
+                                    115.02472620564029,
+                                    20.679870010386967,
+                                    1403276.979735648
+                                ],
+                                "rotation": [
+                                    358.2926845988649,
+                                    -19.370237342070247,
+                                    0.009652140846205122
+                                ],
+                                "name": "太空视角",
+                                "ref": "太空视角"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "e4e37a3d-db90-4174-a595-952ef7c2057e",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "xbsjLocalBoxSources": {
+                "positiveX": "${SD}/skyboxes/sky3/east.jpg",
+                "negativeX": "${SD}/skyboxes/sky3/west.jpg",
+                "positiveY": "${SD}/skyboxes/sky3/bottom.jpg",
+                "negativeY": "${SD}/skyboxes/sky3/top.jpg",
+                "positiveZ": "${SD}/skyboxes/sky3/north.jpg",
+                "negativeZ": "${SD}/skyboxes/sky3/south.jpg"
+            },
+            "sceneSsccZoomFactor": 2,
+            "firstPersonKeyboardEnabled": true,
+            "clockCurrentTime": 1732841079930
+        },
+        "offlineImagery": {
+            "id": "ff8ad98b-ffb1-4c4b-b784-d0f60f9cc7f9",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "906f484a-f2af-47af-97b4-e77394d3c87e",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "772715e5-4ee9-4a41-bf2e-01edc5534a32",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "331954ac-8554-4ac2-b548-c8ec74ad5bef",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "64c9971f-c816-47c1-a11c-aa05c9c58e44",
+            "type": "View",
+            "position": [
+                116.39128442845062,
+                39.90538781815456,
+                40.20013618681567
+            ],
+            "rotation": [
+                276.0149696589084,
+                12.330364012449504,
+                359.84151209673104
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "9478481b-16be-4e28-9b7e-8757e5cf893a",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
