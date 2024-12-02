@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.10",
+        "version": "0.9.30",
         "createdTime": "2022-06-17T05:54:41.744Z",
-        "modifiedTime": "2024-09-17T13:33:19.954Z",
+        "modifiedTime": "2024-12-02T00:39:14.922Z",
         "name": "数字城市"
     },
     "sceneTree": {
@@ -12,6 +12,7 @@
             "children": [
                 {
                     "name": "基础场景",
+                    "collapsed": true,
                     "children": [
                         {
                             "name": "视角(90f8)",
@@ -573,7 +574,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 300.299970398657,
+                                "currentTime": 353.9999703974463,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器1"
@@ -1101,7 +1102,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2945.6000049393624,
+                                "currentTime": 28.500004939036444,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器2"
@@ -1629,7 +1630,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2809.7999845035374,
+                                "currentTime": 2893.099984504748,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器3"
@@ -2157,7 +2158,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 441.29999847803265,
+                                "currentTime": 527.7999984777998,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器4"
@@ -2684,7 +2685,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2687.5999922184274,
+                                "currentTime": 2772.99999221717,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器5"
@@ -3212,7 +3213,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2527.0000170702115,
+                                "currentTime": 2614.300017070025,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器1_copy"
@@ -3739,7 +3740,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2619.000002624467,
+                                "currentTime": 2706.100002621766,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器2_copy"
@@ -4266,7 +4267,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2488.0000045625493,
+                                "currentTime": 2574.9000045619905,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器3_copy"
@@ -4793,7 +4794,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 76.49999844934791,
+                                "currentTime": 158.89999844995327,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器4_copy"
@@ -5320,7 +5321,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 388.39999912586063,
+                                "currentTime": 475.39999912586063,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器5_copy"
@@ -5483,7 +5484,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2035.6000123620033,
+                                "currentTime": 8100.400012361351,
                                 "duration": 30000,
                                 "playing": true,
                                 "name": "信号传输器1"
@@ -5588,7 +5589,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 91335.20001499075,
+                                "currentTime": 27406.000014991267,
                                 "duration": 100000,
                                 "playing": true,
                                 "name": "信号传输器2"
@@ -5663,7 +5664,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 90724.19999522064,
+                                "currentTime": 26792.699995219707,
                                 "duration": 100000,
                                 "playing": true,
                                 "name": "信号传输器3"
@@ -5688,7 +5689,7 @@
                                     273.2628062118763
                                 ],
                                 "rotation": [
-                                    296.28600000023835,
+                                    200.2310000000009,
                                     90,
                                     0
                                 ],
@@ -5784,6 +5785,7 @@
                 },
                 {
                     "name": "YLJ UI",
+                    "collapsed": true,
                     "children": [
                         {
                             "name": "Header",
@@ -6091,13 +6093,13 @@
                 {
                     "name": "EChartsDiv前置脚本",
                     "sceneObj": {
-                        "id": "03c28d42-caf2-4324-afc3-ad20b9e82abf",
+                        "id": "e797a9f3-c50b-4385-bc51-2c3e42daa569",
                         "type": "ScriptsLoader",
                         "enabled": true,
                         "uris": [
-                            "http://114.242.26.126:7000/data/js/jquery/3.7.1/jquery.min.js",
-                            "http://114.242.26.126:7000/data/js/echarts/5.5.0/dist/echarts.min.js",
-                            "http://114.242.26.126:7000/data/js/echarts-gl/2.0.9/dist/echarts-gl.js"
+                            "${my3dtiles-assets-script-dir}/js/jquery/3.7.1/jquery.min.js",
+                            "${my3dtiles-assets-script-dir}/js/echarts/5.5.0/dist/echarts.min.js",
+                            "${my3dtiles-assets-script-dir}/js/echarts-gl/2.0.9/dist/echarts-gl.js"
                         ],
                         "name": "EChartsDiv前置脚本"
                     }
@@ -6107,7 +6109,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "c7cf83fa-5a87-41c8-bf7f-ef472016c1d3",
+            "id": "28c8a4df-a4fb-4d7c-b03f-a4b02f65bd98",
             "type": "CzmViewer",
             "actived": true,
             "name": "默认视口",
@@ -6120,7 +6122,7 @@
             "clockCurrentTime": 1710462729067
         },
         "offlineImagery": {
-            "id": "d6ff2522-dfa0-4cfe-ae3b-8691e7f39204",
+            "id": "1f9a62e7-70e3-4874-a842-ba5a0bb07b36",
             "type": "CzmImagery",
             "brightness": 0.1,
             "imageryProvider": {
@@ -6131,7 +6133,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "c99d6b49-c3bc-4a01-8e86-85e2295e0456",
+            "id": "39825dd8-bda8-4be5-bf10-0b670c45f73e",
             "type": "CzmImagery",
             "brightness": 0.3,
             "imageryProvider": {
@@ -6154,31 +6156,31 @@
             "name": "天地图影像"
         },
         "czmTerrain": {
-            "id": "59904024-3a31-4faf-936f-1c494c885374",
+            "id": "5dd1c14b-3680-4df6-825d-881091de8ba6",
             "type": "CzmTerrain",
             "show": true
         },
         "czmClassicNavigator": {
-            "id": "75f7037c-51fd-4124-af0d-17e354e5848e",
+            "id": "851318ab-e423-40cc-b64a-f43fd0af78f2",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "be7734dd-8abb-450b-8f75-e705ce83a86d",
+            "id": "e6d11876-c9f3-449a-a02e-b055af106d03",
             "type": "View",
             "position": [
                 121.48397654040883,
                 31.244374233190225,
-                1753.3210193992395
+                1753.3210193958541
             ],
             "rotation": [
                 120.8633772680651,
-                -39.52487501933449,
+                -39.524875019334615,
                 0.0003648299149713995
             ]
         },
         "initOptions": {
-            "id": "897626e4-bdd8-44f9-a4a7-227c2c03e045",
+            "id": "88fd598c-7745-4f33-9b25-464312f6c087",
             "type": "M3tInitOptions",
             "fullScreen": "全屏"
         }
