@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.22",
+        "version": "0.9.30",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-11-07T08:21:23.148Z",
+        "modifiedTime": "2024-12-02T01:33:46.731Z",
         "name": "雪后特效20241107"
     },
     "sceneTree": {
@@ -26,7 +26,7 @@
                         "type": "Czm3DTiles",
                         "name": "大雁塔3dtiles",
                         "allowPicking": true,
-                        "url": "http://114.242.26.126:7000/data/3dtiles/dayanta-3dtiles-202211/tileset.json",
+                        "url": "${SD}../../../shared/data/3dtiles/dayanta_3dtiles_20241202/tileset.json",
                         "show": true
                     }
                 }
@@ -35,7 +35,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "65cd9324-c00f-4166-9d14-36099cc6edd7",
+            "id": "6dd928d2-d191-4aeb-afcf-a89d907e0308",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -45,7 +45,7 @@
             "clockCurrentTime": 1730967537566
         },
         "offlineImagery": {
-            "id": "610c3c62-a192-4519-b2a3-58cbc54e6657",
+            "id": "8b78b840-d179-4239-bbbf-1df32d9b293a",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -55,7 +55,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "369c60ee-ae8e-41e9-a47e-6ea9d5bc4bca",
+            "id": "376a0997-4718-482f-82a0-2b254412ce75",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -77,7 +77,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "cd54e3ee-8a9c-4cdc-a5d9-405d8f3ddc2a",
+            "id": "33c2d800-9098-44c7-a7c7-05377bacbb2d",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -88,27 +88,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "a45e8061-a145-4aad-948a-8b9e32c28d9b",
+            "id": "73c14a5a-9a1f-4730-8c55-a04324302011",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "c5b3e1a7-192a-4248-98b9-8f99cbb204c3",
+            "id": "1a2ca0a9-fe23-41fd-a95c-0af94f1b8aaf",
             "type": "View",
             "position": [
-                108.95973854891668,
+                108.95973854891669,
                 34.21882052458272,
-                478.93851526136774
+                478.93851525979125
             ],
             "rotation": [
-                349.1918198337566,
+                349.19181983375654,
                 -28.90610095773904,
                 359.99993281262863
             ],
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "743a444e-b467-45b4-b1ec-3eff1c324e46",
+            "id": "1e6a7625-bacf-4145-8730-362d9ef81e89",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
