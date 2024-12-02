@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.30",
         "createdTime": "2022-06-17T05:54:41.744Z",
-        "modifiedTime": "2024-12-02T01:27:14.192Z",
+        "modifiedTime": "2024-12-02T02:11:27.866Z",
         "name": "数字城市"
     },
     "sceneTree": {
@@ -573,7 +573,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2351.099970391486,
+                                "currentTime": 167.19997038831934,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器1"
@@ -1101,7 +1101,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2035.1000049433205,
+                                "currentTime": 2862.300004943507,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器2"
@@ -1629,7 +1629,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 1899.3999845045619,
+                                "currentTime": 2727.7999845030718,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器3"
@@ -2157,7 +2157,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2531.7999984852504,
+                                "currentTime": 355.0999984925147,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器4"
@@ -2684,7 +2684,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 1778.4999922190327,
+                                "currentTime": 2603.399992212886,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器5"
@@ -3212,7 +3212,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 1620.0000170702115,
+                                "currentTime": 2447.50001706928,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器1_copy"
@@ -3739,7 +3739,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 1710.9000026206486,
+                                "currentTime": 2535.7000026204623,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器2_copy"
@@ -4266,7 +4266,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 1579.4000045610592,
+                                "currentTime": 2403.4000045526773,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器3_copy"
@@ -4793,7 +4793,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2162.999998450512,
+                                "currentTime": 2987.599998451071,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器4_copy"
@@ -5320,7 +5320,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2479.2999991243705,
+                                "currentTime": 302.99999912828207,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器5_copy"
@@ -5483,7 +5483,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 13086.400012359489,
+                                "currentTime": 4896.400012358557,
                                 "duration": 30000,
                                 "playing": true,
                                 "name": "信号传输器1"
@@ -5588,7 +5588,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 41390.0000149922,
+                                "currentTime": 66198.20001499052,
                                 "duration": 100000,
                                 "playing": true,
                                 "name": "信号传输器2"
@@ -5663,7 +5663,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 43776.19999521412,
+                                "currentTime": 65584.79999521375,
                                 "duration": 100000,
                                 "playing": true,
                                 "name": "信号传输器3"
@@ -5673,7 +5673,6 @@
                 },
                 {
                     "name": "其他",
-                    "collapsed": true,
                     "children": [
                         {
                             "name": "图片模型(96f5)",
@@ -5681,14 +5680,14 @@
                                 "id": "55edfca5-4442-4128-8e1b-2dffcbb596f5",
                                 "type": "GeoImageModel",
                                 "allowPicking": true,
-                                "uri": "http://114.242.26.126:7000/data/images/billboard.png",
+                                "uri": "${xe2-assets-script-dir}/xe2-assets/xe2-objects/city/images/billboard.png",
                                 "position": [
                                     121.49895548382301,
                                     31.240411679628956,
                                     273.2628062118763
                                 ],
                                 "rotation": [
-                                    69.70700000000187,
+                                    298.1119999999926,
                                     90,
                                     0
                                 ],
@@ -6108,7 +6107,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "8ac31b81-55b6-42a9-a8b0-ee5ab5c6cecd",
+            "id": "537ac632-2e3c-4b8b-a3d8-3542d22c8655",
             "type": "CzmViewer",
             "actived": true,
             "name": "默认视口",
@@ -6121,7 +6120,7 @@
             "clockCurrentTime": 1710462729067
         },
         "offlineImagery": {
-            "id": "3953dc82-faa1-4a38-9b49-8b8dc909fd9b",
+            "id": "72a17327-a7ef-43e1-92d4-3e34067e9413",
             "type": "CzmImagery",
             "brightness": 0.1,
             "imageryProvider": {
@@ -6132,7 +6131,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "8cda2e46-7dea-41d2-8f5b-3e3f2c2ab180",
+            "id": "5bce4bf7-8398-4dab-8cc4-fd0fa022b6a5",
             "type": "CzmImagery",
             "brightness": 0.3,
             "imageryProvider": {
@@ -6155,31 +6154,31 @@
             "name": "天地图影像"
         },
         "czmTerrain": {
-            "id": "430a68d7-88b1-4d7f-a52b-2566630dc957",
+            "id": "1180cdc0-09a5-4423-8fc3-502463c746bd",
             "type": "CzmTerrain",
             "show": true
         },
         "czmClassicNavigator": {
-            "id": "5fd65c25-cdd0-42b7-9f71-79869ed51df8",
+            "id": "f7ab1082-03c6-4764-a278-de5904c038e9",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "fe8ebb74-8662-4542-9643-debb804fa4c5",
+            "id": "4c453038-856a-4b8f-96f9-0c0e6f4a2949",
             "type": "View",
             "position": [
-                121.48449366408792,
-                31.24582100085941,
-                1120.9560721381522
+                121.48388848919738,
+                31.245926346451842,
+                1131.328651961984
             ],
             "rotation": [
-                122.67877883947153,
-                -29.507240368459193,
-                359.9992236010863
+                122.67877869086799,
+                -29.5072405368945,
+                359.9992239027983
             ]
         },
         "initOptions": {
-            "id": "26655f9c-06e8-4ea1-a0b8-d0f1fed6c245",
+            "id": "b317711b-50b0-4c12-9108-24772a4876b3",
             "type": "M3tInitOptions"
         }
     }

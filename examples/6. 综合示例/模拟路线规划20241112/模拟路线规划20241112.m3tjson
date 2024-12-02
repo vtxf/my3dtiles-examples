@@ -24,7 +24,7 @@
                                         "type": "CzmModelPrimitive",
                                         "name": "雷达",
                                         "ref": "ld",
-                                        "url": "${LP}http://114.242.26.126:7000/data/models/JieShouZhan.glb",
+                                        "url": "${xe2-assets-script-dir}/xe2-assets/scene-manager/glbs/JieShouZhan.glb",
                                         "allowPicking": true,
                                         "minimumScale": 1,
                                         "pixelSize": 0.5,

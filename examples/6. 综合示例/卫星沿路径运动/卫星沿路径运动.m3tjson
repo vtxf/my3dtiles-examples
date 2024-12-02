@@ -48,7 +48,7 @@
                         "id": "ff27619d-7801-46ec-bcae-5812f349d924",
                         "type": "CzmModelPrimitive",
                         "name": "卫星",
-                        "url": "http://114.242.26.126:7000/data/models/WeiXing.glb",
+                        "url": "${xe2-assets-script-dir}/xe2-assets/scene-manager/glbs/WeiXing.glb",
                         "allowPicking": true,
                         "pixelSize": 1,
                         "position": [
@@ -102,7 +102,7 @@
                         "id": "ba4a128d-43a2-412a-9c51-df8087d6b81e",
                         "type": "CzmModelPrimitive",
                         "name": "接收站",
-                        "url": "${LP}http://114.242.26.126:7000/data/models/JieShouZhan.glb",
+                        "url": "${xe2-assets-script-dir}/xe2-assets/scene-manager/glbs/JieShouZhan.glb",
                         "allowPicking": true,
                         "pixelSize": 1,
                         "position": [

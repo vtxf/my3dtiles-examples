@@ -118,7 +118,7 @@
                                 "id": "cdb977f3-e204-4fad-a34a-a4d33393903f",
                                 "type": "CzmModelPrimitive",
                                 "name": "无人机glb",
-                                "url": "${LP}http://114.242.26.126:7000/data/CesiumSampleData/models/CesiumDrone/CesiumDrone.glb",
+                                "url": "${xe2-assets-script-dir}/xe2-assets/scene-manager/glbs/CesiumDrone.glb",
                                 "allowPicking": true,
                                 "pixelSize": 22,
                                 "position": [
