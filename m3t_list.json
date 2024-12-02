@@ -491,6 +491,14 @@
                                         "m3tJsonUri": "${M3T_CurrentDir}贴地图形重叠示例20241106/贴地图形重叠示例20241106.m3tjson"
                                     },
                                     "previewImageUri": "${M3T_CurrentDir}贴地图形重叠示例20241106/贴地图形重叠示例20241106.jpg"
+                                },
+                                {
+                                    "name": "近地天空盒",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}近地天空盒/近地天空盒.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}近地天空盒/近地天空盒.jpg"
                                 }
                             ]
                         },
@@ -829,6 +837,14 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.jpg"
+                        },
+                        {
+                            "name": "融合WebGPU20241202",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}融合WebGPU20241202/融合WebGPU20241202.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}融合WebGPU20241202/融合WebGPU20241202.jpg"
                         },
                         {
                             "name": "这里可以写字20241107",
