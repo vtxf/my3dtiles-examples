@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.30",
         "createdTime": "2022-06-17T05:54:41.744Z",
-        "modifiedTime": "2024-12-02T00:39:14.922Z",
+        "modifiedTime": "2024-12-02T01:27:14.192Z",
         "name": "数字城市"
     },
     "sceneTree": {
@@ -12,7 +12,6 @@
             "children": [
                 {
                     "name": "基础场景",
-                    "collapsed": true,
                     "children": [
                         {
                             "name": "视角(90f8)",
@@ -42,7 +41,7 @@
                                 "type": "Czm3DTiles",
                                 "name": "Czm3DTiles(3118)",
                                 "allowPicking": true,
-                                "url": "${SD}../../../../shared/data/3dtiles/shanghai2-3dtiles-20230907/tileset.json",
+                                "url": "${SD}../../../shared/data/3dtiles/shanghai_jianshazui_3dtiles_20241202/tileset.json",
                                 "show": true,
                                 "customShaderInstanceClassStr": "\n// shader定义请参见文档：https://github.com/CesiumGS/cesium/tree/main/Documentation/CustomShaderGuide#customshader-documentation\nclass CheckerboardMaskShaderInstance extends vtxf['xr-base-utils'].Destroyable {\n    constructor(sceneObject, viewer) {\n        super();\n\n        // Use the checkerboard red channel as a mask\n        const shader = this.disposeVar(new Cesium.CustomShader({\n            //lightingModel: Cesium.LightingModel.UNLIT,\n            fragmentShaderText: `\n              // Color tiles by distance to the camera\n              void fragmentMain(FragmentInput fsInput, inout czm_modelMaterial material)\n              {\n            // 可以修改的参数\n            // 注意shader中写浮点数是，一定要带小数点，否则会报错，比如0需要写成0.0，1要写成1.0\n            float _baseHeight = 0.0; // 物体的基础高度，需要修改成一个合适的建筑基础高度\n            float _heightRange = 100.0; // 高亮的范围(_baseHeight ~ _baseHeight + _heightRange) 默认是 0-60米\n            float _glowRange = 300.0; // 光环的移动范围(高度)\n\n            // 建筑基础色\n            float vtxf_height = fsInput.attributes.positionMC.z - _baseHeight;\n            float vtxf_a11 = fract(czm_frameNumber / 120.0) * 3.14159265 * 2.0;\n            float vtxf_a12 = vtxf_height / _heightRange + sin(vtxf_a11) * 0.1;\n            material.diffuse *= vec3(vtxf_a12, vtxf_a12, vtxf_a12);\n            material.diffuse *= vec3(0, .5, 1.);\n\n            // 动态光环\n            float vtxf_a13 = fract(czm_frameNumber / 360.0);\n            float vtxf_h = clamp(vtxf_height / _glowRange, 0.0, 1.0);\n            vtxf_a13 = abs(vtxf_a13 - 0.5) * 2.0;\n            float vtxf_diff = step(0.005, abs(vtxf_h - vtxf_a13));\n            material.diffuse += material.diffuse * (1.0 - vtxf_diff);\n\n                  //material.diffuse = vec3(0.0, 0.0, 1.0);\n                  //material.diffuse.g = -fsInput.attributes.positionEC.z / 1.0e4;\n              }\n              `,\n          }));\n\n        this._customShader = shader;\n    }\n\n    update() {\n        alert('暂未实现!');\n    }\n\n    get customShader() {\n        return this._customShader;\n    }\n}\n"
                             }
@@ -574,7 +573,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 353.9999703974463,
+                                "currentTime": 2351.099970391486,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器1"
@@ -1102,7 +1101,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 28.500004939036444,
+                                "currentTime": 2035.1000049433205,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器2"
@@ -1630,7 +1629,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2893.099984504748,
+                                "currentTime": 1899.3999845045619,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器3"
@@ -2158,7 +2157,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 527.7999984777998,
+                                "currentTime": 2531.7999984852504,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器4"
@@ -2685,7 +2684,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2772.99999221717,
+                                "currentTime": 1778.4999922190327,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器5"
@@ -3213,7 +3212,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2614.300017070025,
+                                "currentTime": 1620.0000170702115,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器1_copy"
@@ -3740,7 +3739,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2706.100002621766,
+                                "currentTime": 1710.9000026206486,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器2_copy"
@@ -4267,7 +4266,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 2574.9000045619905,
+                                "currentTime": 1579.4000045610592,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器3_copy"
@@ -4794,7 +4793,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 158.89999844995327,
+                                "currentTime": 2162.999998450512,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器4_copy"
@@ -5321,7 +5320,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 475.39999912586063,
+                                "currentTime": 2479.2999991243705,
                                 "duration": 3000,
                                 "playing": true,
                                 "name": "信号传输器5_copy"
@@ -5484,7 +5483,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 8100.400012361351,
+                                "currentTime": 13086.400012359489,
                                 "duration": 30000,
                                 "playing": true,
                                 "name": "信号传输器1"
@@ -5589,7 +5588,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 27406.000014991267,
+                                "currentTime": 41390.0000149922,
                                 "duration": 100000,
                                 "playing": true,
                                 "name": "信号传输器2"
@@ -5664,7 +5663,7 @@
                                 ],
                                 "allowPicking": true,
                                 "loop": true,
-                                "currentTime": 26792.699995219707,
+                                "currentTime": 43776.19999521412,
                                 "duration": 100000,
                                 "playing": true,
                                 "name": "信号传输器3"
@@ -5689,7 +5688,7 @@
                                     273.2628062118763
                                 ],
                                 "rotation": [
-                                    200.2310000000009,
+                                    69.70700000000187,
                                     90,
                                     0
                                 ],
@@ -6109,7 +6108,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "28c8a4df-a4fb-4d7c-b03f-a4b02f65bd98",
+            "id": "8ac31b81-55b6-42a9-a8b0-ee5ab5c6cecd",
             "type": "CzmViewer",
             "actived": true,
             "name": "默认视口",
@@ -6122,7 +6121,7 @@
             "clockCurrentTime": 1710462729067
         },
         "offlineImagery": {
-            "id": "1f9a62e7-70e3-4874-a842-ba5a0bb07b36",
+            "id": "3953dc82-faa1-4a38-9b49-8b8dc909fd9b",
             "type": "CzmImagery",
             "brightness": 0.1,
             "imageryProvider": {
@@ -6133,7 +6132,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "39825dd8-bda8-4be5-bf10-0b670c45f73e",
+            "id": "8cda2e46-7dea-41d2-8f5b-3e3f2c2ab180",
             "type": "CzmImagery",
             "brightness": 0.3,
             "imageryProvider": {
@@ -6156,33 +6155,32 @@
             "name": "天地图影像"
         },
         "czmTerrain": {
-            "id": "5dd1c14b-3680-4df6-825d-881091de8ba6",
+            "id": "430a68d7-88b1-4d7f-a52b-2566630dc957",
             "type": "CzmTerrain",
             "show": true
         },
         "czmClassicNavigator": {
-            "id": "851318ab-e423-40cc-b64a-f43fd0af78f2",
+            "id": "5fd65c25-cdd0-42b7-9f71-79869ed51df8",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "e6d11876-c9f3-449a-a02e-b055af106d03",
+            "id": "fe8ebb74-8662-4542-9643-debb804fa4c5",
             "type": "View",
             "position": [
-                121.48397654040883,
-                31.244374233190225,
-                1753.3210193958541
+                121.48449366408792,
+                31.24582100085941,
+                1120.9560721381522
             ],
             "rotation": [
-                120.8633772680651,
-                -39.524875019334615,
-                0.0003648299149713995
+                122.67877883947153,
+                -29.507240368459193,
+                359.9992236010863
             ]
         },
         "initOptions": {
-            "id": "88fd598c-7745-4f33-9b25-464312f6c087",
-            "type": "M3tInitOptions",
-            "fullScreen": "全屏"
+            "id": "26655f9c-06e8-4ea1-a0b8-d0f1fed6c245",
+            "type": "M3tInitOptions"
         }
     }
 }
