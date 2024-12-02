@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.22",
+        "version": "0.9.30",
         "createdTime": "2024-08-12T09:35:12.449Z",
-        "modifiedTime": "2024-11-07T06:56:19.223Z",
+        "modifiedTime": "2024-12-02T01:32:30.455Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -17,7 +17,7 @@
                         "type": "Czm3DTiles",
                         "name": "大雁塔3dtiles",
                         "allowPicking": true,
-                        "url": "http://114.242.26.126:7000/data/3dtiles/dayanta-3dtiles-202211/tileset.json",
+                        "url": "${SD}../../../shared/data/3dtiles/dayanta_3dtiles_20241202/tileset.json",
                         "show": true
                     }
                 },
@@ -55,7 +55,7 @@
                         "minimumSpeed": 1,
                         "maximumSpeed": 2,
                         "particleLife": 12,
-                        "currentTime": 2977.6999993715435,
+                        "currentTime": 517.7999993758276,
                         "name": "烟雾"
                     }
                 },
@@ -101,7 +101,7 @@
                         "minimumSpeed": 5,
                         "maximumSpeed": 22,
                         "particleLife": 1,
-                        "currentTime": 892.9999995082617,
+                        "currentTime": 4436.399999508634,
                         "name": "火焰"
                     }
                 },
@@ -146,7 +146,7 @@
                         "lifetime": 0.8,
                         "minimumParticleLife": 0.5,
                         "maximumParticleLife": 0.8,
-                        "currentTime": 4323.1000005137175,
+                        "currentTime": 1866.3000005157664,
                         "name": "爆炸"
                     }
                 },
@@ -196,7 +196,7 @@
                         "speed": 20,
                         "minimumParticleLife": 5,
                         "maximumParticleLife": 5,
-                        "currentTime": 729.19999881275,
+                        "currentTime": 4270.799998811446,
                         "name": "大坝排水"
                     }
                 }
@@ -205,7 +205,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "73214aa7-4b4f-48a4-b739-0a427a602f25",
+            "id": "84d6f039-d8bb-4004-a3e3-aac065ae10d7",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -215,7 +215,7 @@
             "clockCurrentTime": 1723455312459
         },
         "offlineImagery": {
-            "id": "c3c56796-571a-4af0-a2c4-7e81dbb25b75",
+            "id": "17eeb383-ab5a-4102-8ada-ebaaeb9298d5",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -225,7 +225,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "ff8e2315-fbf5-467d-ad54-1580c639b279",
+            "id": "9c844fba-94f7-47ef-ba03-067d5d72ce05",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -247,7 +247,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "af20766f-d44f-49d3-91c0-9c68a7d4c92b",
+            "id": "5e17e304-0df7-44b6-af59-330a404e093c",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -258,27 +258,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "76885ad5-7a30-4aa2-9ba2-847b211e6786",
+            "id": "0f577a07-2503-444f-b8f6-765dce373c7e",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "5b1d70f3-8759-4e22-849b-7d77d3cc51f2",
+            "id": "16975480-9b49-4c8a-b035-f264d587457c",
             "type": "View",
             "position": [
-                108.95851625633487,
+                108.95851625633489,
                 34.21927246217946,
-                529.8022331419636
+                529.8022331411727
             ],
             "rotation": [
                 61.5501244659839,
-                -37.7485488178076,
+                -37.74854881780763,
                 359.9996757420968
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "82a12e54-492b-4eb0-9b6b-12b3f0f682a0",
+            "id": "fec646fc-68d6-4180-99b9-ac0b1a669745",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
