@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.30",
         "createdTime": "2024-12-02T03:19:48.621Z",
-        "modifiedTime": "2024-12-02T05:56:56.657Z",
+        "modifiedTime": "2024-12-02T06:00:58.698Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -20,7 +20,7 @@
                                 "type": "IFrameDiv",
                                 "name": "webgpu_house",
                                 "ref": "webgpu_house",
-                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function updateCameraInfo() {\r\n        var { camera } = g_app.czmViewer.viewer;\r\n        if (!camera) return;\r\n        var m = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(116.39, 39.9, 0));\r\n        var inverseM = Cesium.Matrix4.inverse(m, new Cesium.Matrix4());\r\n        var p = camera.positionWC;\r\n        var target = Cesium.Cartesian3.add(p, camera.direction, new Cesium.Cartesian3());\r\n        var up = Cesium.Cartesian3.add(p, camera.up, new Cesium.Cartesian3());\r\n        var p2 = Cesium.Matrix4.multiplyByPoint(inverseM, p, new Cesium.Cartesian3());\r\n        var target2 = Cesium.Matrix4.multiplyByPoint(inverseM, target, new Cesium.Cartesian3());\r\n        var up2 = Cesium.Matrix4.multiplyByPoint(inverseM, up, new Cesium.Cartesian3());\r\n        var up3 = Cesium.Cartesian3.subtract(up2, p2, new Cesium.Cartesian3());\r\n        Cesium.Cartesian3.normalize(up3, up3);\r\n        sceneObject.postMessage({\r\n            type: \"camera\",\r\n            pos: [p2.x, p2.y, p2.z],\r\n            target: [target2.x, target2.y, target2.z],\r\n            up: [up3.x, up3.y, up3.z],\r\n            fovy: g_app.czmViewer.viewer.camera.frustum.fovy * 180 / Math.PI,\r\n        }, { targetOrigin: '*' });\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            updateCameraInfo();\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(updateCameraInfo));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function updateCameraInfo() {\r\n        var { viewer} = g_app.czmViewer;\r\n        if (!viewer) return;\r\n        var { camera } = g_app.czmViewer.viewer;\r\n        if (!camera) return;\r\n        var m = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(116.39, 39.9, 0));\r\n        var inverseM = Cesium.Matrix4.inverse(m, new Cesium.Matrix4());\r\n        var p = camera.positionWC;\r\n        var target = Cesium.Cartesian3.add(p, camera.direction, new Cesium.Cartesian3());\r\n        var up = Cesium.Cartesian3.add(p, camera.up, new Cesium.Cartesian3());\r\n        var p2 = Cesium.Matrix4.multiplyByPoint(inverseM, p, new Cesium.Cartesian3());\r\n        var target2 = Cesium.Matrix4.multiplyByPoint(inverseM, target, new Cesium.Cartesian3());\r\n        var up2 = Cesium.Matrix4.multiplyByPoint(inverseM, up, new Cesium.Cartesian3());\r\n        var up3 = Cesium.Cartesian3.subtract(up2, p2, new Cesium.Cartesian3());\r\n        Cesium.Cartesian3.normalize(up3, up3);\r\n        sceneObject.postMessage({\r\n            type: \"camera\",\r\n            pos: [p2.x, p2.y, p2.z],\r\n            target: [target2.x, target2.y, target2.z],\r\n            up: [up3.x, up3.y, up3.z],\r\n            fovy: g_app.czmViewer.viewer.camera.frustum.fovy * 180 / Math.PI,\r\n        }, { targetOrigin: '*' });\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            updateCameraInfo();\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(updateCameraInfo));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                 "width": 0,
                                 "height": 0,
                                 "cssText": "\nwidth: 100%;\nheight: 100%;\npointer-events: none;\nopacity: 1.0;\ntransition: opacity 1s ease-in-out;\n",
@@ -195,7 +195,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "3c73e987-08e0-4b6a-8beb-3c16133da9e5",
+            "id": "8d787fda-ff08-47a0-8347-46ff2d935f89",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -210,7 +210,7 @@
             "clockCurrentTime": 1733109588624
         },
         "offlineImagery": {
-            "id": "3ded98dc-ddf0-47bf-805c-cb9f118cbace",
+            "id": "51d6b62a-87c2-457f-ac97-830ece074e34",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -220,7 +220,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "5b3806cc-6689-4774-aaef-5c456f09a8e4",
+            "id": "9946d532-ddf7-4a11-9b9f-21a75c3c18b0",
             "type": "CzmImagery",
             "brightness": 0.3,
             "imageryProvider": {
@@ -243,7 +243,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "9d34f925-6741-4082-9ec7-762b3ffcaf7b",
+            "id": "f1b64d95-c835-482a-9efb-a6594d6cacd4",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -254,27 +254,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "d2bcca34-f731-4a22-9e19-80e2646cb4e8",
+            "id": "18c4d9cc-50b4-474b-b0d0-670031a9802a",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "f72afb61-de31-4306-8ad8-88a83ab8ac3d",
+            "id": "d9fbcb06-4ab2-4626-8548-2762087285df",
             "type": "View",
             "position": [
-                116.38993559999528,
+                116.38993559999531,
                 39.89995037864265,
-                5.3873418038635625
+                5.3873418044609584
             ],
             "rotation": [
-                47.48022216577541,
+                47.48022216577546,
                 -38.152855185911676,
                 0.000008341589467088463
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "d5da6996-1338-4828-8b3b-4dec641477d4",
+            "id": "7c7716a1-6622-4ce9-97fd-3e868959746b",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
