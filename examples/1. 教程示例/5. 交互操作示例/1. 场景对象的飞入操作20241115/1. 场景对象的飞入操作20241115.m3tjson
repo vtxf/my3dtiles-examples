@@ -18,7 +18,7 @@
                         "name": "大雁塔3dtiles",
                         "ref": "大雁塔3dtiles",
                         "allowPicking": true,
-                        "url": "http://114.242.26.126:7000/data/3dtiles/dayanta-3dtiles-202211/tileset.json",
+                        "url": "${SD}../../../../shared/data/3dtiles/dayanta_3dtiles_20241202/tileset.json",
                         "show": true
                     }
                 },
