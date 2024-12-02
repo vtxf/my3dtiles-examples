@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.30",
         "createdTime": "2024-12-02T03:19:48.621Z",
-        "modifiedTime": "2024-12-02T05:50:23.813Z",
+        "modifiedTime": "2024-12-02T05:56:56.657Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -12,7 +12,6 @@
             "children": [
                 {
                     "name": "场景",
-                    "collapsed": true,
                     "children": [
                         {
                             "name": "webgpu_house",
@@ -21,7 +20,7 @@
                                 "type": "IFrameDiv",
                                 "name": "webgpu_house",
                                 "ref": "webgpu_house",
-                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function updateCameraInfo() {\r\n\r\n        var { camera } = g_app.czmViewer.viewer;\r\n        var m = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(116.39, 39.9, 0));\r\n        var inverseM = Cesium.Matrix4.inverse(m, new Cesium.Matrix4());\r\n        var p = camera.positionWC;\r\n        var target = Cesium.Cartesian3.add(p, camera.direction, new Cesium.Cartesian3());\r\n        var up = Cesium.Cartesian3.add(p, camera.up, new Cesium.Cartesian3());\r\n        var p2 = Cesium.Matrix4.multiplyByPoint(inverseM, p, new Cesium.Cartesian3());\r\n        var target2 = Cesium.Matrix4.multiplyByPoint(inverseM, target, new Cesium.Cartesian3());\r\n        var up2 = Cesium.Matrix4.multiplyByPoint(inverseM, up, new Cesium.Cartesian3());\r\n        var up3 = Cesium.Cartesian3.subtract(up2, p2, new Cesium.Cartesian3());\r\n        Cesium.Cartesian3.normalize(up3, up3);\r\n        sceneObject.postMessage({\r\n            type: \"camera\",\r\n            pos: [p2.x, p2.y, p2.z],\r\n            target: [target2.x, target2.y, target2.z],\r\n            up: [up3.x, up3.y, up3.z],\r\n            fovy: g_app.czmViewer.viewer.camera.frustum.fovy * 180 / Math.PI,\r\n        }, { targetOrigin: '*' });\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            updateCameraInfo();\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(updateCameraInfo));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function updateCameraInfo() {\r\n        var { camera } = g_app.czmViewer.viewer;\r\n        if (!camera) return;\r\n        var m = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(116.39, 39.9, 0));\r\n        var inverseM = Cesium.Matrix4.inverse(m, new Cesium.Matrix4());\r\n        var p = camera.positionWC;\r\n        var target = Cesium.Cartesian3.add(p, camera.direction, new Cesium.Cartesian3());\r\n        var up = Cesium.Cartesian3.add(p, camera.up, new Cesium.Cartesian3());\r\n        var p2 = Cesium.Matrix4.multiplyByPoint(inverseM, p, new Cesium.Cartesian3());\r\n        var target2 = Cesium.Matrix4.multiplyByPoint(inverseM, target, new Cesium.Cartesian3());\r\n        var up2 = Cesium.Matrix4.multiplyByPoint(inverseM, up, new Cesium.Cartesian3());\r\n        var up3 = Cesium.Cartesian3.subtract(up2, p2, new Cesium.Cartesian3());\r\n        Cesium.Cartesian3.normalize(up3, up3);\r\n        sceneObject.postMessage({\r\n            type: \"camera\",\r\n            pos: [p2.x, p2.y, p2.z],\r\n            target: [target2.x, target2.y, target2.z],\r\n            up: [up3.x, up3.y, up3.z],\r\n            fovy: g_app.czmViewer.viewer.camera.frustum.fovy * 180 / Math.PI,\r\n        }, { targetOrigin: '*' });\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            updateCameraInfo();\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(updateCameraInfo));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                 "width": 0,
                                 "height": 0,
                                 "cssText": "\nwidth: 100%;\nheight: 100%;\npointer-events: none;\nopacity: 1.0;\ntransition: opacity 1s ease-in-out;\n",
@@ -263,14 +262,14 @@
             "id": "f72afb61-de31-4306-8ad8-88a83ab8ac3d",
             "type": "View",
             "position": [
-                116.38992398309139,
-                39.89994183146364,
-                6.338722359161314
+                116.38993559999528,
+                39.89995037864265,
+                5.3873418038635625
             ],
             "rotation": [
-                51.05392655662606,
-                -32.994389012156546,
-                0.000016154648300763043
+                47.48022216577541,
+                -38.152855185911676,
+                0.000008341589467088463
             ],
             "name": "最近视角"
         },
