@@ -30,7 +30,7 @@
                         "name": "上海3dtiles",
                         "ref": "上海3dtiles",
                         "allowPicking": true,
-                        "url": "http://114.242.26.126:7000/data/3dtiles/shanghai2-3dtiles-20230907/tileset.json",
+                        "url": "${SD}../../../../shared/data/3dtiles/shanghai2-3dtiles-20230907/tileset.json",
                         "show": true
                     }
                 },
