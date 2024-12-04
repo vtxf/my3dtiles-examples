@@ -760,6 +760,14 @@
                             "previewImageUri": "${M3T_CurrentDir}地球自转20241107/地球自转20241107.jpg"
                         },
                         {
+                            "name": "尾迹效果20241204",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}尾迹效果20241204/尾迹效果20241204.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}尾迹效果20241204/尾迹效果20241204.jpg"
+                        },
+                        {
                             "name": "海水&热力图20241025",
                             "content": {
                                 "type": "m3tJsonUri",
