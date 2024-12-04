@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.30",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-12-04T11:05:17.822Z",
+        "modifiedTime": "2024-12-04T11:17:06.754Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -33,9 +33,9 @@
                                 "type": "CzmParticleSystemPrimitive",
                                 "allowPicking": true,
                                 "position": [
-                                    116.3908390316924,
-                                    39.89849899668656,
-                                    -0.0007407460361719131
+                                    116.39434895269697,
+                                    39.882623110888034,
+                                    0.0006879745051264763
                                 ],
                                 "rotation": [
                                     86.89175423789908,
@@ -70,7 +70,7 @@
                                 "sizeInMeters": true,
                                 "speed": 50,
                                 "mass": 0,
-                                "currentTime": 4803.0999975577,
+                                "currentTime": 903.6999975182116,
                                 "name": "航母尾浪"
                             }
                         },
@@ -84,37 +84,38 @@
                                 "polylineShow": false,
                                 "positions": [
                                     [
-                                        116.38792685632403,
-                                        39.898358133919444,
+                                        116.38913935191633,
+                                        39.899956209187934,
                                         0
                                     ],
                                     [
-                                        116.39195510092622,
-                                        39.89853112388778,
+                                        116.39443249057695,
+                                        39.895503352226385,
+                                        0.0045039093142334235
+                                    ],
+                                    [
+                                        116.39602977687056,
+                                        39.88770792322594,
                                         0
                                     ],
                                     [
-                                        116.39515416806273,
-                                        39.898482642572155,
+                                        116.39434449680726,
+                                        39.87917863372049,
                                         0
                                     ],
                                     [
-                                        116.398663335484,
-                                        39.89800923064485,
-                                        0
-                                    ],
-                                    [
-                                        116.40046755411913,
-                                        39.894193689516285,
+                                        116.40302026533678,
+                                        39.87362004451741,
                                         0
                                     ]
                                 ],
                                 "hasDash": true,
                                 "loop": true,
-                                "currentTime": 1089.699999993667,
+                                "currentTime": 3660.1000000089407,
                                 "duration": 6000,
                                 "playing": true,
-                                "name": "曲线路径"
+                                "name": "曲线路径",
+                                "ref": "曲线路径"
                             }
                         },
                         {
@@ -140,13 +141,13 @@
                                 "minimumScale": 1,
                                 "pixelSize": 5,
                                 "position": [
-                                    116.39087723932296,
-                                    39.89850041330532,
-                                    -0.0007164152339100838
+                                    116.39434895269697,
+                                    39.882623110888034,
+                                    0.0006879745051264763
                                 ],
                                 "rotation": [
-                                    87.17828699230233,
-                                    0.00039325206097373666,
+                                    -162.45194017910336,
+                                    0.00017555114999368016,
                                     0
                                 ]
                             }
@@ -175,7 +176,6 @@
                 },
                 {
                     "name": "UI",
-                    "collapsed": true,
                     "children": [
                         {
                             "name": "工具栏",
@@ -186,9 +186,8 @@
                                 "layoutType": "LeftTop",
                                 "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
                                 "subIds": [
-                                    "93de608e-4358-4c6d-92e8-81a49aeb055f",
                                     "56cd610f-4592-466f-b28a-2386984d3b3b",
-                                    "5e5341a5-0c28-4c74-83ef-4f14f14174c1"
+                                    "2130ab85-2011-40a8-b6a3-e6c3b709dfe2"
                                 ]
                             },
                             "children": [
@@ -215,9 +214,46 @@
                                         "borderWidth": 0,
                                         "clickFuncStr": "function () {\r\n    XE2.g.refs.视角.flyTo();\r\n}",
                                         "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
-                                        "highlighted": true,
                                         "highlightOnClick": true,
                                         "text": "鼠标视角",
+                                        "textColor": [
+                                            0.95,
+                                            0.95,
+                                            0.95,
+                                            1
+                                        ],
+                                        "fontSize": 12,
+                                        "fontWeight": "400",
+                                        "letterSpacing": 2,
+                                        "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                        "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                                    }
+                                },
+                                {
+                                    "name": "编辑路径按钮",
+                                    "sceneObj": {
+                                        "id": "2130ab85-2011-40a8-b6a3-e6c3b709dfe2",
+                                        "type": "RectangleButton",
+                                        "name": "编辑路径按钮",
+                                        "width": 82,
+                                        "height": 29,
+                                        "backgroundColor": [
+                                            0.08000000000000002,
+                                            0.08000000000000002,
+                                            0.08000000000000002,
+                                            0
+                                        ],
+                                        "borderColor": [
+                                            0.95,
+                                            0.95,
+                                            0.95,
+                                            0.95
+                                        ],
+                                        "borderWidth": 0,
+                                        "clickFuncStr": "function () {\r\n    XE2.g.refs.曲线路径.positions = undefined;\r\n    XE2.g.refs.曲线路径.editing = true;\r\n}",
+                                        "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                        "highlightOnClick": true,
+                                        "text": "编辑路径",
                                         "textColor": [
                                             0.95,
                                             0.95,
@@ -259,7 +295,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "68f9c2c8-595c-456d-9cd5-45c56d79d643",
+            "id": "f5b84e1f-fc4b-4a6d-9d63-086649d6cc94",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -271,7 +307,7 @@
             "clockCurrentTime": 1723514223271
         },
         "offlineImagery": {
-            "id": "a9d4916c-b8d9-4579-9cfe-3bb3deb9c0c1",
+            "id": "c97dab58-27d7-4acd-b634-0aee97294f7e",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -281,7 +317,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "462cef39-46fa-4178-b860-b6136937362e",
+            "id": "a2306772-e2e1-460c-9e3f-7f88a3deee57",
             "type": "CzmImagery",
             "show": false,
             "imageryProvider": {
@@ -304,7 +340,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "2036bcd3-fd8c-49ad-bd32-6e49ab5f5e67",
+            "id": "317a99f3-9fca-47f6-8d04-6dac642994b9",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -315,13 +351,13 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "ba6bb468-ec74-47bb-be51-72fbf181adc7",
+            "id": "f3c05d05-7a61-425e-9100-a36caa65b4cf",
             "type": "CzmClassicNavigator",
             "showCompass": true,
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "55e18f86-3641-475c-bf24-27757230c3ac",
+            "id": "b85cb315-b0f0-4b2e-9c15-ad540d2feeb0",
             "type": "View",
             "position": [
                 116.39114521065527,
@@ -336,7 +372,7 @@
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "dfc669b8-fc8b-4ba5-be1e-b0dff8fcef7b",
+            "id": "46f9b4b1-3328-4a6e-a1f2-d93bce708e06",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
