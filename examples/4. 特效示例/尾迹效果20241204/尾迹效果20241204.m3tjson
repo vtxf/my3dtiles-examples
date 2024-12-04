@@ -1,0 +1,343 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.30",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-12-04T10:53:49.719Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "尾迹跟踪效果",
+                    "children": [
+                        {
+                            "name": "属性跟踪器",
+                            "sceneObj": {
+                                "id": "8815bbfa-9daa-498f-a9ab-e73f79a8e020",
+                                "type": "PropertyTracker",
+                                "enabled": true,
+                                "sourceObjId": "b0efebe7-8b29-48d4-b7b5-47602f7622ce",
+                                "sourcePropertyName": "position",
+                                "targetObjId": "eddc1e4b-1f7f-4ffd-876d-aea3a3384e4f",
+                                "targetPropertyName": "position",
+                                "name": "属性跟踪器"
+                            }
+                        },
+                        {
+                            "name": "航母尾浪",
+                            "sceneObj": {
+                                "id": "eddc1e4b-1f7f-4ffd-876d-aea3a3384e4f",
+                                "type": "CzmParticleSystemPrimitive",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39923576822501,
+                                    39.897337231177275,
+                                    -0.0014705415815114975
+                                ],
+                                "rotation": [
+                                    86.89175423789908,
+                                    0.0002747559701958835,
+                                    0
+                                ],
+                                "localRotation": [
+                                    0,
+                                    90,
+                                    0
+                                ],
+                                "emitter": {
+                                    "type": "CircleEmitter",
+                                    "radius": 1
+                                },
+                                "emissionRate": 20,
+                                "loop": false,
+                                "startScale": 20,
+                                "endScale": 100,
+                                "startColor": [
+                                    0.9019607843137255,
+                                    0.9450980392156862,
+                                    0.9882352941176471,
+                                    1
+                                ],
+                                "endColor": [
+                                    0.7098039215686275,
+                                    0.7098039215686275,
+                                    0.7098039215686275,
+                                    0
+                                ],
+                                "sizeInMeters": true,
+                                "speed": 50,
+                                "mass": 0,
+                                "currentTime": 1568.0999973639846,
+                                "name": "航母尾浪"
+                            }
+                        },
+                        {
+                            "name": "曲线路径",
+                            "sceneObj": {
+                                "id": "e57292c3-7f35-4524-9e2d-071dcea7fec6",
+                                "type": "GeoBezierPath",
+                                "allowPicking": true,
+                                "currentPoiShow": false,
+                                "polylineShow": false,
+                                "positions": [
+                                    [
+                                        116.38792685632403,
+                                        39.898358133919444,
+                                        0
+                                    ],
+                                    [
+                                        116.39195510092622,
+                                        39.89853112388778,
+                                        0
+                                    ],
+                                    [
+                                        116.39515416806273,
+                                        39.898482642572155,
+                                        0
+                                    ],
+                                    [
+                                        116.398663335484,
+                                        39.89800923064485,
+                                        0
+                                    ],
+                                    [
+                                        116.40046755411913,
+                                        39.894193689516285,
+                                        0
+                                    ]
+                                ],
+                                "hasDash": true,
+                                "loop": true,
+                                "currentTime": 4438.800000013784,
+                                "duration": 6000,
+                                "playing": true,
+                                "name": "曲线路径"
+                            }
+                        },
+                        {
+                            "name": "场景对象路径播放器跟踪器",
+                            "sceneObj": {
+                                "id": "3e5963d8-c5c3-4560-a35b-af10f5362459",
+                                "type": "GeoSceneObjectPathPlayerTracker",
+                                "enabled": true,
+                                "name": "场景对象路径播放器跟踪器",
+                                "pathId": "e57292c3-7f35-4524-9e2d-071dcea7fec6",
+                                "targetObjId": "b0efebe7-8b29-48d4-b7b5-47602f7622ce"
+                            }
+                        },
+                        {
+                            "name": "卡车glb",
+                            "sceneObj": {
+                                "id": "b0efebe7-8b29-48d4-b7b5-47602f7622ce",
+                                "type": "CzmModelPrimitive",
+                                "name": "卡车glb",
+                                "url": "${LP}https://sandcastle.cesium.com/SampleData/models/CesiumMilkTruck/CesiumMilkTruck.glb",
+                                "allowPicking": true,
+                                "maximumScale": 20,
+                                "minimumScale": 1,
+                                "pixelSize": 5,
+                                "position": [
+                                    116.39925342733446,
+                                    39.89731015748781,
+                                    -0.0015224646776914597
+                                ],
+                                "rotation": [
+                                    152.72369790888183,
+                                    -0.0009293665129916917,
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "name": "视角",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "3a4b173e-719c-4ef1-948c-210a68e0f880",
+                                "type": "View",
+                                "position": [
+                                    116.39114521065527,
+                                    39.904090035879086,
+                                    628.7587329914172
+                                ],
+                                "rotation": [
+                                    157.75886130134688,
+                                    -31.071905814846357,
+                                    359.99832648919516
+                                ],
+                                "name": "视角",
+                                "ref": "视角"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "UI",
+                    "children": [
+                        {
+                            "name": "工具栏",
+                            "sceneObj": {
+                                "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                                "type": "MyContainer",
+                                "name": "工具栏",
+                                "layoutType": "LeftTop",
+                                "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                                "subIds": [
+                                    "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                    "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                    "5e5341a5-0c28-4c74-83ef-4f14f14174c1"
+                                ]
+                            },
+                            "children": [
+                                {
+                                    "name": "视角按钮",
+                                    "sceneObj": {
+                                        "id": "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                        "type": "RectangleButton",
+                                        "name": "视角按钮",
+                                        "width": 82,
+                                        "height": 29,
+                                        "backgroundColor": [
+                                            0.08000000000000002,
+                                            0.08000000000000002,
+                                            0.08000000000000002,
+                                            0
+                                        ],
+                                        "borderColor": [
+                                            0.95,
+                                            0.95,
+                                            0.95,
+                                            0.95
+                                        ],
+                                        "borderWidth": 0,
+                                        "clickFuncStr": "function () {\r\n    XE2.g.refs.视角.flyTo();\r\n}",
+                                        "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                        "highlighted": true,
+                                        "highlightOnClick": true,
+                                        "text": "鼠标视角",
+                                        "textColor": [
+                                            0.95,
+                                            0.95,
+                                            0.95,
+                                            1
+                                        ],
+                                        "fontSize": 12,
+                                        "fontWeight": "400",
+                                        "letterSpacing": 2,
+                                        "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                        "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "MarkdownReader",
+                            "sceneObj": {
+                                "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                                "type": "MarkdownReader",
+                                "name": "MarkdownReader",
+                                "layoutType": "LeftTop",
+                                "width": 300,
+                                "height": 200,
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    0,
+                                    0.5
+                                ],
+                                "cssText": "left: 4px;\ntop: 40px;",
+                                "content": "### 尾迹跟踪效果\n\n小车和尾迹通过属性跟踪器绑定。这样小车移动，尾迹就会跟着移动。\n\n"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "9132e0de-c7e5-473d-9934-6f8319e880e7",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneGlobeDepthTestAgainstTerrain": true,
+            "sceneSsccZoomFactor": 2,
+            "firstPersonKeyboardEnabled": true,
+            "clockCurrentTime": 1723514223271
+        },
+        "offlineImagery": {
+            "id": "2b26c76f-aedc-42b4-b117-6e1aeac8ce41",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "6a8a0aee-5825-4d8c-a731-71b4d951b688",
+            "type": "CzmImagery",
+            "show": false,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "06ef3dee-0918-4aca-90e2-8f50788b7964",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "4033c0a8-f32a-48f9-91dc-376de53c4d10",
+            "type": "CzmClassicNavigator",
+            "showCompass": true,
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "b0683b76-5f2b-4d56-bdcf-c432eb5582bd",
+            "type": "View",
+            "position": [
+                116.39114521065527,
+                39.904090035879086,
+                628.7587329914172
+            ],
+            "rotation": [
+                157.7588613013469,
+                -31.071905814846303,
+                359.99832648919516
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "9bc59dab-8da1-415b-8833-d55d01be814a",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
