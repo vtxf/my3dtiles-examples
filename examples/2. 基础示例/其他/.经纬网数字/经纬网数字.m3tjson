@@ -1,0 +1,185 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.30",
+        "createdTime": "2024-12-08T02:49:49.318Z",
+        "modifiedTime": "2024-12-09T02:08:01.873Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "墨卡托网格",
+                    "sceneObj": {
+                        "id": "46de7184-2a6e-4f8c-848a-d2dcc1f094b2",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "GridImageryProvider",
+                            "tilingScheme": {
+                                "type": "WebMercatorTilingScheme"
+                            },
+                            "backgroundColor": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            "glowColor": [
+                                1,
+                                1,
+                                1,
+                                0.05
+                            ],
+                            "glowWidth": 2,
+                            "canvasSize": 512,
+                            "cells": 4
+                        },
+                        "name": "墨卡托网格"
+                    }
+                },
+                {
+                    "name": "经纬度网格",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "bac0b48e-7ad2-4a46-9d5b-1991b2d6a478",
+                        "type": "CzmImagery",
+                        "show": false,
+                        "imageryProvider": {
+                            "type": "GridImageryProvider",
+                            "tilingScheme": {
+                                "type": "GeographicTilingScheme"
+                            },
+                            "backgroundColor": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            "glowColor": [
+                                1,
+                                1,
+                                1,
+                                0.05
+                            ],
+                            "glowWidth": 2,
+                            "canvasSize": 512,
+                            "cells": 4
+                        },
+                        "name": "经纬度网格"
+                    }
+                },
+                {
+                    "name": "瓦片坐标(经纬度)",
+                    "sceneObj": {
+                        "id": "13f71007-9c97-422c-b596-074115a618ea",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "TileCoordinatesImageryProvider",
+                            "tilingScheme": {
+                                "type": "GeographicTilingScheme"
+                            }
+                        },
+                        "name": "瓦片坐标(经纬度)"
+                    }
+                },
+                {
+                    "name": "瓦片坐标(墨卡托)",
+                    "sceneObj": {
+                        "id": "4c40109a-c431-4881-8d3a-dab0f6d8eb9d",
+                        "type": "CzmImagery",
+                        "imageryProvider": {
+                            "type": "TileCoordinatesImageryProvider",
+                            "tilingScheme": {
+                                "type": "WebMercatorTilingScheme"
+                            }
+                        },
+                        "name": "瓦片坐标(墨卡托)"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "c4c5c294-ae28-4016-8307-e50ae46a3fe4",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1733626189322
+        },
+        "offlineImagery": {
+            "id": "76190e1c-734f-46de-b66d-242d241ee897",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "2d754604-d4e7-4afa-8f45-5e8e612f592d",
+            "type": "CzmImagery",
+            "brightness": 0.3,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "adc779ad-0dbb-4f5f-982f-89e81b90edd2",
+            "type": "CzmTerrain",
+            "show": true,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "17ac22cb-8f58-4fb4-8005-3732fa414e1e",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "067282e1-34ae-4593-968c-d0c3df5e56a9",
+            "type": "View",
+            "position": [
+                117.30381647145148,
+                38.299328671317184,
+                41810.55600645224
+            ],
+            "rotation": [
+                327.7331060243137,
+                -63.48194301968882,
+                0.005351598167950265
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "91bfc98e-f84a-4455-b084-2e2eec6c18de",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

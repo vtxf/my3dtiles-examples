@@ -41,6 +41,8 @@ function generateTree(dirPath, relativePath = '') {
 
     // 处理子目录
     for (const dir of dirs) {
+        if (dir.startsWith('.')) continue;
+
         if (shouldFlatten(dirPath, dir)) {
             // 扁平化节点是叶子节点，不需要path属性
             const result = {
