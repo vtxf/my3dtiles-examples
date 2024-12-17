@@ -31,7 +31,7 @@ function generateTree(dirPath, relativePath = '') {
     if (!stats.isDirectory()) return null;
 
     const items = fs.readdirSync(dirPath);
-    const m3tJsonFiles = items.filter(item => item.endsWith('.m3tjson'));
+    const m3tJsonFiles = items.filter(item => item.endsWith('.m3tjson')).filter(item => !item.startsWith('.'));
     const dirs = items.filter(item => 
         fs.statSync(path.join(dirPath, item)).isDirectory()
     );
