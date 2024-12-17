@@ -1,0 +1,304 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.30",
+        "createdTime": "2024-12-17T03:20:19.785Z",
+        "modifiedTime": "2024-12-17T09:08:12.093Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "图片模型",
+                    "children": [
+                        {
+                            "name": "icons8-bookmark-138 (1)",
+                            "sceneObj": {
+                                "id": "ddc8887c-2492-4cca-8fee-280e6d5efe54",
+                                "type": "CzmImageModel",
+                                "allowPicking": true,
+                                "uri": "${SD}/icons8-bookmark-138 (1).png",
+                                "position": [
+                                    116.39163666724085,
+                                    39.9060047496636,
+                                    0
+                                ],
+                                "rotation": [
+                                    0,
+                                    90,
+                                    0
+                                ],
+                                "rotationMode": "WithCameraOnlyZ",
+                                "size": [
+                                    1,
+                                    1.2
+                                ],
+                                "scale": 100,
+                                "pixelSize": 0,
+                                "name": "icons8-bookmark-138 (1)"
+                            }
+                        },
+                        {
+                            "name": "icons8-plus-138 (1)",
+                            "sceneObj": {
+                                "id": "7825c806-49c5-4395-8024-cdce4b9a27f0",
+                                "type": "CzmImageModel",
+                                "allowPicking": true,
+                                "uri": "${SD}/icons8-plus-138 (1).png",
+                                "position": [
+                                    116.39323583713588,
+                                    39.907767503709856,
+                                    0
+                                ],
+                                "rotation": [
+                                    0,
+                                    90,
+                                    0
+                                ],
+                                "rotationMode": "WithCameraOnlyZ",
+                                "size": [
+                                    1,
+                                    1.2
+                                ],
+                                "scale": 100,
+                                "pixelSize": 0,
+                                "name": "icons8-plus-138 (1)"
+                            }
+                        },
+                        {
+                            "name": "icons8-download-from-the-cloud-138",
+                            "sceneObj": {
+                                "id": "c07c3a04-e985-4ed6-97c1-8676747bb982",
+                                "type": "CzmImageModel",
+                                "allowPicking": true,
+                                "uri": "${SD}/icons8-download-from-the-cloud-138.png",
+                                "position": [
+                                    116.3910258161074,
+                                    39.907455988483186,
+                                    0
+                                ],
+                                "rotation": [
+                                    0,
+                                    90,
+                                    0
+                                ],
+                                "rotationMode": "WithCameraOnlyZ",
+                                "size": [
+                                    1,
+                                    1.2
+                                ],
+                                "scale": 100,
+                                "pixelSize": 0,
+                                "name": "icons8-download-from-the-cloud-138"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "拾取控制",
+                    "children": [
+                        {
+                            "name": "hoveredPoi",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "83d82610-0fe6-4664-9988-383688bd8fcc",
+                                "type": "GeoDivTextPoi",
+                                "name": "hoveredPoi",
+                                "ref": "hoveredPoi",
+                                "show": false,
+                                "text": "icons8-plus-138 (1)"
+                            }
+                        },
+                        {
+                            "name": "MySceneObjectPicking",
+                            "sceneObj": {
+                                "id": "529db730-f847-41de-98fc-90d110336bba",
+                                "type": "MySceneObjectPicking",
+                                "name": "MySceneObjectPicking",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    const { SceneObject } = XE2['xe2-base-objects'];\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            {\r\n                let lastSceneObj = undefined;\r\n                const update = () => {\r\n                    if (lastSceneObj) {\r\n                        lastSceneObj.scale = lastSceneObj.__originScale;\r\n                        XE2.g.refs.hoveredPoi.position = undefined;\r\n                        XE2.g.refs.hoveredPoi.show = false;\r\n                        XE2.g.refs.hoveredPoi.updateCssTextFunc = cssText => cssText + `opacity: 0;`;\r\n\r\n                        lastSceneObj = undefined;\r\n                    }\r\n\r\n                    const { hoveredProps } = sceneObject;\r\n                    if (!hoveredProps) return;\r\n                    const obj = Object.fromEntries(hoveredProps);\r\n                    if (!obj) return;\r\n                    if (!obj.id) return;\r\n                    const sceneObj = SceneObject.getSceneObjById(obj.id);\r\n                    if (!sceneObj) return;\r\n                    // if (!sceneObj.typeName)\r\n                    if (sceneObj.typeName !== 'CzmImageModel') return;\r\n\r\n                    lastSceneObj = sceneObj;\r\n                    lastSceneObj.__originScale = lastSceneObj.__originScale ?? sceneObj.scale;\r\n                    lastSceneObj.scale = sceneObj.scale * 1.05;\r\n                    const { position: p } = lastSceneObj;\r\n                    XE2.g.refs.hoveredPoi.position = [p[0], p[1], p[2] + lastSceneObj.size[1] * lastSceneObj.scale];\r\n                    XE2.g.refs.hoveredPoi.text = lastSceneObj.name;\r\n                    XE2.g.refs.hoveredPoi.updateCssTextFunc = cssText => cssText + `transition: opacity 0.5s ease; opacity: 1;`;\r\n                    XE2.g.refs.hoveredPoi.show = true;\r\n                }\r\n                update();\r\n                this.dispose(sceneObject.hoveredPropsChanged.disposableOn(update));\r\n            }\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "enabled": true,
+                                "enableHover": true,
+                                "onPickedResultFuncStr": "function (pickedResult) {\n    const { ui } = vtxf['xr-base-utils'];\n    const { clickSymbol } = XE2['my3dtiles-lib-main'].MySceneObjectPicking;\n    if (clickSymbol !== pickedResult.symbol) return;\n\n    const { sceneObjectPickedInfo } = pickedResult;\n    if (sceneObjectPickedInfo) {\n        const sceneObjectName = sceneObjectPickedInfo.sceneObject?.name ?? '未知';\n        ui.alert(`当前拾取到的对象名字是${sceneObjectName }`);\n    }\n    // if (czmPickedResult) {\n    //     console.log(`获取到Cesium的原生拾取对象`);\n    //     console.log(czmPickedResult);\n    // }\n}\n"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "工具栏",
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "工具栏",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "视角按钮",
+                            "sceneObj": {
+                                "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                "type": "RectangleButton",
+                                "name": "视角按钮",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const { bind } = XE2['xe2-base-utils'];\r\n            this.dispose(bind([g_app.czmViewer, 'firstPersonKeyboardEnabled'], [sceneObject, 'highlighted']))\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n    XE2.g.refs.视角.flyTo();\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlightOnClick": true,
+                                "text": "视角",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MarkdownReader",
+                    "sceneObj": {
+                        "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                        "type": "MarkdownReader",
+                        "name": "MarkdownReader",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 4px;\ntop: 40px;",
+                        "content": "### 图片模型的交互操作\n\n当鼠标滑过图片模型时会变大，并出现提示。\n点击图片模型会弹窗，也可自定义其他操作。\n\n图标来源自 icon8.com"
+                    }
+                },
+                {
+                    "name": "视角",
+                    "sceneObj": {
+                        "id": "ffff66e9-47a5-4bdb-8847-54a3616de8f2",
+                        "type": "View",
+                        "position": [
+                            116.39559396014431,
+                            39.90538764337165,
+                            395.01462867125554
+                        ],
+                        "show": true,
+                        "rotation": [
+                            306.15888745531373,
+                            -41.655160994057965,
+                            359.9993785561568
+                        ],
+                        "name": "视角",
+                        "ref": "视角"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "e12e028e-9228-4f36-9224-525174256dcf",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1734405619788
+        },
+        "offlineImagery": {
+            "id": "d9348786-398f-4d88-8f44-a5f55acec521",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "518fa888-a325-40e2-8a38-a97fb3222d45",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "e34c4f2a-85db-4285-8f87-c36c5215e13e",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "b8b4543e-8bb5-4fb0-9ee8-9c6bb19d4757",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "77e8431e-9565-4da3-b53b-98f20f133ec1",
+            "type": "View",
+            "position": [
+                116.39590460326957,
+                39.905538092922235,
+                395.06981316023973
+            ],
+            "rotation": [
+                306.15888758598663,
+                -41.65516088670806,
+                359.99937835955075
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "da5bfcc6-4c18-4151-8bd9-49da6d4d0fc0",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
