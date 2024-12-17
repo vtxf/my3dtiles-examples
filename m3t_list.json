@@ -426,7 +426,7 @@
                         {
                             "name": "其他",
                             "path": "其他",
-                            "collapse": true,
+                            "collapse": false,
                             "children": [
                                 {
                                     "name": "ArcGIS历史影像",
@@ -451,6 +451,29 @@
                                         "m3tJsonUri": "${M3T_CurrentDir}地下模式/地下模式.m3tjson"
                                     },
                                     "previewImageUri": "${M3T_CurrentDir}地下模式/地下模式.jpg"
+                                },
+                                {
+                                    "name": "地球网格标签",
+                                    "path": "地球网格标签",
+                                    "collapse": true,
+                                    "children": [
+                                        {
+                                            "name": "墨卡托网格标签",
+                                            "content": {
+                                                "type": "m3tJsonUri",
+                                                "m3tJsonUri": "${M3T_CurrentDir}墨卡托网格标签.m3tjson"
+                                            },
+                                            "previewImageUri": "${M3T_CurrentDir}墨卡托网格标签.jpg"
+                                        },
+                                        {
+                                            "name": "经纬度网格标签",
+                                            "content": {
+                                                "type": "m3tJsonUri",
+                                                "m3tJsonUri": "${M3T_CurrentDir}经纬度网格标签.m3tjson"
+                                            },
+                                            "previewImageUri": "${M3T_CurrentDir}经纬度网格标签.jpg"
+                                        }
+                                    ]
                                 },
                                 {
                                     "name": "地理热力图",
