@@ -437,6 +437,14 @@
                                     "previewImageUri": "${M3T_CurrentDir}ArcGIS历史影像/ArcGIS历史影像.jpg"
                                 },
                                 {
+                                    "name": "图片模型滑动交互",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}图片模型滑动交互/图片模型滑动交互.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}图片模型滑动交互/图片模型滑动交互.jpg"
+                                },
+                                {
                                     "name": "地下模式",
                                     "content": {
                                         "type": "m3tJsonUri",
