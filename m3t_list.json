@@ -492,6 +492,14 @@
                                     "previewImageUri": "${M3T_CurrentDir}暗色地球/暗色地球.jpg"
                                 },
                                 {
+                                    "name": "模拟飞行",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}模拟飞行/模拟飞行.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}模拟飞行/模拟飞行.jpg"
+                                },
+                                {
                                     "name": "街景地图",
                                     "content": {
                                         "type": "m3tJsonUri",
