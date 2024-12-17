@@ -2,7 +2,7 @@ const { Color } = Cesium;
 const { defaultValue } = Cesium;
 const { defined } = Cesium;
 const { Event } = Cesium;
-const { GeographicTilingScheme } = Cesium;
+const { WebMercatorTilingScheme, GeographicTilingScheme } = Cesium;
 
 /**
  * @typedef {object} TileCoordinatesImageryProvider.ConstructorOptions
@@ -226,11 +226,8 @@ TileCoordinatesImageryProvider.prototype.requestImage = function (
   request
 ) {
   const canvas = document.createElement("canvas");
-
-  const gridSize = 512;
-
-  canvas.width = gridSize;
-  canvas.height = gridSize;
+  canvas.width = 512;
+  canvas.height = 512;
   const context = canvas.getContext("2d");
 
   const cssColor = this._color.toCssColorString();
@@ -297,13 +294,13 @@ TileCoordinatesImageryProvider.prototype.requestImage = function (
   })();
 
   context.fillStyle = "white";
-  context.font = "48px Arial";
+  context.font = "24px Arial";
   context.textAlign = "center";
 
-  context.fillText(`${window.m3tDegreeToHumanFormat(latitude)}`, gridSize * 0.5, gridSize * (512 - 6) / 512);
+  context.fillText(`${window.m3tDegreeToHumanFormat(latitude)}`, 256, 512 - 6);
 
   context.save();
-  context.translate(gridSize, gridSize * 0.5);
+  context.translate(512, 256);
   context.rotate(-Math.PI * 0.5);
   context.fillText(
     `${window.m3tDegreeToHumanFormat(longitude, "E", "W")}`,
@@ -337,4 +334,4 @@ TileCoordinatesImageryProvider.prototype.pickFeatures = function (
 };
 
 
-window.TileCoordinatesImageryProvider = TileCoordinatesImageryProvider;
+window.GridLabelTileCoordinatesImageryProvider = TileCoordinatesImageryProvider;
