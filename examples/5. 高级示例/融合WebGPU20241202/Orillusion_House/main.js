@@ -26,8 +26,11 @@ class Sample_FlightHelmet {
         camera.z = 20;
         this.scene.addChild(camera);
         let mainCamera = camera.addComponent(Camera3D);
-        mainCamera.perspective(90, webGPUContext.aspect, 0.1, 1000.0);
-        mainCamera.lookAt(new Vector3(2000, 0, 0), new Vector3(0, 0, 0), new Vector3(0, 1, 0));
+        // mainCamera.perspective(90, webGPUContext.aspect, 0.1, 1000.0);
+        // mainCamera.lookAt(new Vector3(2000, 0, 0), new Vector3(0, 0, 0), new Vector3(0, 1, 0));
+
+        mainCamera.perspective(70, 1.427, 0.01, 5000.0);
+        mainCamera.lookAt(new Vector3(-8.667, 7.76, 6.2), new Vector3(-7.98, 7.214, 5.61), new Vector3(0.4462, 0.8371, -0.3165));
 
         window.addEventListener('message', e => {
             // console.log(e);
