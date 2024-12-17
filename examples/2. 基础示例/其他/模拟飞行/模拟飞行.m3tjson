@@ -1,0 +1,294 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.30",
+        "createdTime": "2024-12-13T01:09:42.431Z",
+        "modifiedTime": "2024-12-17T12:07:55.451Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "airbus_a300.glb",
+                    "sceneObj": {
+                        "id": "5e358541-0833-41bb-a489-48044ad27928",
+                        "type": "CzmModelPrimitive",
+                        "name": "airbus_a300.glb",
+                        "url": "${SD}\\airbus_a300.glb",
+                        "allowPicking": true,
+                        "maximumScale": 10000,
+                        "minimumScale": 1,
+                        "pixelSize": 5,
+                        "position": [
+                            120.42697726558855,
+                            33.72415647490919,
+                            10325.023269447498
+                        ],
+                        "rotation": [
+                            -24.466721395590145,
+                            0.2070055569890685,
+                            0
+                        ],
+                        "localRotation": [
+                            90,
+                            0,
+                            0
+                        ],
+                        "localScale": [
+                            0.01,
+                            0.01,
+                            0.01
+                        ]
+                    }
+                },
+                {
+                    "name": "飞行路径",
+                    "sceneObj": {
+                        "id": "c325e15a-1a8a-4eb1-85f3-2a49fae45796",
+                        "type": "GeoPolylinePath",
+                        "allowPicking": true,
+                        "currentPoiShow": false,
+                        "positions": [
+                            [
+                                121.80119422763755,
+                                31.127210628665907,
+                                0.008101099144138509
+                            ],
+                            [
+                                121.7932217702861,
+                                31.147858679735712,
+                                0.0019670128119925884
+                            ],
+                            [
+                                121.79177264069199,
+                                31.15216560765982,
+                                38.943678126986526
+                            ],
+                            [
+                                121.79151077831965,
+                                31.152896965648832,
+                                62.23763260334171
+                            ],
+                            [
+                                121.7912629333374,
+                                31.15371596081779,
+                                114.38747823951596
+                            ],
+                            [
+                                121.75021897363297,
+                                31.211780685693036,
+                                3382.1272915015606
+                            ],
+                            [
+                                121.70978568885437,
+                                31.3309275504854,
+                                9419.102234417747
+                            ],
+                            [
+                                116.72527714108026,
+                                39.865507076716675,
+                                13214.00496895591
+                            ],
+                            [
+                                116.70616201661778,
+                                39.90732373471327,
+                                11551.140418530122
+                            ],
+                            [
+                                116.70030059808312,
+                                39.921860640940835,
+                                11048.811372397573
+                            ],
+                            [
+                                116.69443670006524,
+                                39.936397214199594,
+                                10471.80144777191
+                            ],
+                            [
+                                116.67756014643427,
+                                39.96832938047889,
+                                9380.801655094658
+                            ],
+                            [
+                                116.66066788143927,
+                                40.00025891108618,
+                                8087.145949402175
+                            ],
+                            [
+                                116.6437598738784,
+                                40.03218580095726,
+                                5802.655465670111
+                            ],
+                            [
+                                116.64354414957768,
+                                40.04981168353485,
+                                1853.7279659858868
+                            ],
+                            [
+                                116.62367349575754,
+                                40.07140127213374,
+                                859.1174061005217
+                            ],
+                            [
+                                116.62097784812079,
+                                40.07882104352646,
+                                607.7402385297901
+                            ],
+                            [
+                                116.61064995845823,
+                                40.09469633649531,
+                                0.0036697961275670484
+                            ],
+                            [
+                                116.60983071256146,
+                                40.10242486199873,
+                                0
+                            ]
+                        ],
+                        "width": 2,
+                        "color": [
+                            0.9176470588235294,
+                            1,
+                            0.0196078431372549,
+                            1
+                        ],
+                        "currentTime": 860.6499999932945,
+                        "depthTest": true,
+                        "name": "飞行路径"
+                    }
+                },
+                {
+                    "name": "场景对象路径播放器跟踪器",
+                    "sceneObj": {
+                        "id": "3ba22eb4-61a5-42f2-8c73-574add42dcef",
+                        "type": "GeoSceneObjectPathPlayerTracker",
+                        "enabled": true,
+                        "name": "场景对象路径播放器跟踪器",
+                        "playerId": "98357e64-18d0-4bf4-acf8-fa26a40548c9",
+                        "pathId": "c325e15a-1a8a-4eb1-85f3-2a49fae45796",
+                        "targetObjId": "5e358541-0833-41bb-a489-48044ad27928"
+                    }
+                },
+                {
+                    "name": "播放器",
+                    "sceneObj": {
+                        "id": "98357e64-18d0-4bf4-acf8-fa26a40548c9",
+                        "type": "Player",
+                        "loop": true,
+                        "currentTime": 8623.799999937415,
+                        "duration": 30000,
+                        "playing": true,
+                        "name": "播放器"
+                    }
+                },
+                {
+                    "name": "播放器面板",
+                    "sceneObj": {
+                        "id": "cd6bff0a-611c-4326-9fdb-7a5c07096b53",
+                        "type": "MyPlayerUI",
+                        "name": "播放器面板",
+                        "targetID": "98357e64-18d0-4bf4-acf8-fa26a40548c9"
+                    }
+                },
+                {
+                    "name": "地理路径相机控制器",
+                    "sceneObj": {
+                        "id": "6ccefbad-4fd4-454a-9021-18351f730e6c",
+                        "type": "GeoPathCameraController",
+                        "enabled": true,
+                        "pathId": "c325e15a-1a8a-4eb1-85f3-2a49fae45796",
+                        "viewDistance": 47.05382974591682,
+                        "offsetRotation": [
+                            -373.40000000000003,
+                            -32.59999999999992,
+                            0
+                        ],
+                        "name": "地理路径相机控制器"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "93216211-a7b8-447a-b4de-6c7cd3012765",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1734052182434
+        },
+        "offlineImagery": {
+            "id": "270b6b98-5ee7-46be-bb20-6d35b7e34a01",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "598c9ea8-b586-433a-b5a3-637d2e7b6a80",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "495a8f89-3d15-47f7-b08f-e856c890f65e",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "c8f3e95c-0ff6-4b1b-82a7-33e0599f4e16",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "69277397-ebe0-45b7-bb72-d82ffb32d078",
+            "type": "View",
+            "position": [
+                120.42723997994803,
+                33.72387414845458,
+                10350.231395773892
+            ],
+            "rotation": [
+                322.13327860440984,
+                -32.39299444301086,
+                360
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "205892d6-6bb9-4cbe-a75b-e8aec5ff3ef9",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
