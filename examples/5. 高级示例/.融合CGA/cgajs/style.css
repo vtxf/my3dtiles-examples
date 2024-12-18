@@ -1,0 +1,13 @@
+.lhs {
+  margin-top: 10px;
+}
+
+#out {
+  margin-top: 10px;
+  white-space: pre-wrap;
+}
+#out.error { color: red; }
+
+canvas { width: 100% ; height: 90% }
+
+textarea { font-family: monospace }

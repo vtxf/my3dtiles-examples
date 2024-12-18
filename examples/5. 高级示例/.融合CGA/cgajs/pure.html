@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title>Shape Grammars in Javascript - CGAjs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.css">
+        <link rel="icon" href="favicon.png" type="image/png">
+    </head>
+    <body style="background-color: rgba(0, 0, 0, 0); overflow: hidden;">
+        <canvas style="pointer-events: none;"></canvas>
+        <div id="editor_btn" style="position: absolute; right: 4px; top: 4px; width: 30px; height: 14px; color: white; background: black; cursor: pointer;">
+            编辑
+        </div>
+        <div id="layout" class="container-fluid" style="display: none; position: absolute; left: 0px; top: 30px; width: 100%; height: 100%">
+            <div class="row">
+                <div class="col-sm-8">
+                    <!-- <canvas></canvas> -->
+                </div>
+                <div class="col-sm-4 lhs">
+                    <div class="form-group">
+                        <textarea rows="20" class="form-control"></textarea>
+                        <pre id="out">
+                        </pre>
+
+                    </div>
+
+                    <form class="form">
+                        <div class="form-group">
+                            <button type="button" id="updateBtn" class="btn btn-primary">regenerate</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Lot
+                                <select class="lot-selector form-control">
+                                    <option>triangle</option>
+                                    <option>square</option>
+                                    <option>rectangle</option>
+                                    <option>circle</option>
+                                    <option value="4squares">4 squares</option>
+                                    <option value="9squares">9 squares</option>
+                                    <option value="25random">25 random</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" class="grid-checkbox">
+                                Show grid
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" checked class="regenerate-checkbox">
+                                Regenerate on changes
+
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Example
+                                <select class="example-selector form-control">
+                                    <optgroup label="tutorials">
+                                        <option value="tut1">Basics</option>
+                                        <option value="tut2">More rules</option>
+                                        <option value="tut3">Splitting</option>
+                                        <option value="tut4">Components</option>
+                                        <option value="tut5">addng randomness</option>
+                                    </optgroup>
+                                    <optgroup label="examples">
+                                        <option>house</option>
+                                        <option>church</option>
+                                        <option>castle</option>
+                                        <option value="officebuilding">office building</option>
+                                    </optgroup>
+                                </select>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Read this:</h1>
+                    <p>This is a parser, processor and visualiser for CGA Shape Grammars. It currently only implements a very small subset, and is certainly very buggy. It is only really tested in Chrome. </p>
+
+                    <p>Rotate the 3d view with left-mouse button, pan with the right, zoom with the scroll wheel. Type in the box, see changes in the 3d view. Chose the things from the drop-down menus.</p>
+
+                    <p>You grammar will be saved in localStorage, so you can come back later!</p>
+
+                    <p>
+                        Go look at the complete <a href="https://esri.github.io/esri-cityengine-sdk/html/cgaref/cgareference/cgaindex.html">CGA reference</a>.
+                    </p>
+                    <p>
+                        Grab <a href="https://github.com/gromgull/cgajs">the source from GitHub</a>.
+                    </p>
+
+                    <h2>Implemented bits:</h2>
+                    <ul>
+                        <li>the grammar eval stack</li>
+                        <li>the world/object/pivot coordinate systems/transforms</li>
+                        <li>splitting in x/y/z axis (<code>split</code>)</li>
+                        <li>splitting faces into components (<code>comp</code>)</li>
+                        <li>single level stochastic rules</li>
+                        <li>setting color (<code>color("red")</code>)</li>
+                        <li><code>extrude</code> and <code>taper</code></li>
+                        <li>scale, rotate, translate by absolute/relative amounts<code>s, t, r</code></li>
+                        <li>stack push/pop operator <code>[ .. ]</code></li>
+                        <li>the <code>rand</code> function</li>
+                        <li>inserting primitives</li>
+
+                    </ul>
+
+                    <h2>Missing bits I'd like to add</h2>
+                    <ul>
+                        <li>aritmetic <code>scope.width/2</code> / comparisons <code>scope.height>3</code></li>
+                        <li>parameterised rules</li>
+                        <li>builtin math functions</li>
+                        <li>nested splitting blocks</li>
+                        <li>conditional rules</li>
+                        <li>nested stochastic/conditional rules</li>
+                        <li>rotating in other coordinate systems</li>
+                        <li><code>roof*</code></li>
+                        <li><code>envelope, offset, setback, ...</code></li>
+                    </ul>
+
+                    <h2>Missing bits I have no intention of adding</h2>
+                    <ul>
+                        <li>texture support</li>
+                        <li>inserting predefined obj files</li>
+                        <li>styles</li>
+                        <li>imports</li>
+                    </ul>
+
+                    <p>
+                        Have fun! If you make anything cool I'd love for you to tell me on twitter: <a href=""https://twitter.com/gromgull">@gromgull</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <script src="build/bundle.js"></script>
+        <script src="./pure.js"></script>
+    </body>
+</html>

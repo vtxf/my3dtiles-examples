@@ -1,0 +1,296 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.30",
+        "createdTime": "2024-12-02T03:19:48.621Z",
+        "modifiedTime": "2024-12-18T03:00:18.733Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "场景",
+                    "children": [
+                        {
+                            "name": "cga_iframe",
+                            "sceneObj": {
+                                "id": "433219b9-f8bd-4367-80af-073cb1988c5d",
+                                "type": "IFrameDiv",
+                                "name": "cga_iframe",
+                                "ref": "cga_iframe",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function updateCameraInfo() {\r\n        var { viewer} = g_app.czmViewer;\r\n        if (!viewer) return;\r\n        var { camera } = g_app.czmViewer.viewer;\r\n        if (!camera) return;\r\n        var m = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(116.39, 39.9, -1));\r\n        var inverseM = Cesium.Matrix4.inverse(m, new Cesium.Matrix4());\r\n        var p = camera.positionWC;\r\n        var target = Cesium.Cartesian3.add(p, camera.direction, new Cesium.Cartesian3());\r\n        var up = Cesium.Cartesian3.add(p, camera.up, new Cesium.Cartesian3());\r\n        var p2 = Cesium.Matrix4.multiplyByPoint(inverseM, p, new Cesium.Cartesian3());\r\n        var target2 = Cesium.Matrix4.multiplyByPoint(inverseM, target, new Cesium.Cartesian3());\r\n        var up2 = Cesium.Matrix4.multiplyByPoint(inverseM, up, new Cesium.Cartesian3());\r\n        var up3 = Cesium.Cartesian3.subtract(up2, p2, new Cesium.Cartesian3());\r\n        Cesium.Cartesian3.normalize(up3, up3);\r\n        sceneObject.postMessage({\r\n            type: \"camera\",\r\n            pos: [p2.x, p2.y, p2.z],\r\n            target: [target2.x, target2.y, target2.z],\r\n            up: [up3.x, up3.y, up3.z],\r\n            fovy: g_app.czmViewer.viewer.camera.frustum.fovy * 180 / Math.PI,\r\n        }, { targetOrigin: '*' });\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            updateCameraInfo();\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(updateCameraInfo));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "interaction": false,
+                                "width": 0,
+                                "height": 0,
+                                "cssText": "\nwidth: 100%;\nheight: 100%;\nopacity: 1.0;\ntransition: opacity 1s ease-in-out;\n",
+                                "iframeSrc": "${SD}/cgajs/pure.html"
+                            }
+                        },
+                        {
+                            "name": "视角0",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "f14f0110-3c07-4426-900c-f3c41cdb5ff7",
+                                "type": "View",
+                                "position": [
+                                    116.38992799510856,
+                                    39.899944944358076,
+                                    6.284618145711913
+                                ],
+                                "rotation": [
+                                    47.62979755562237,
+                                    -37.14754192706963,
+                                    359.999984966301
+                                ],
+                                "name": "视角0",
+                                "ref": "视角0"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "工具栏",
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "工具栏",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                            "56cd610f-4592-466f-b28a-2386984d3b3b",
+                            "88431a91-7c6e-409e-8ee1-fe95630a71fd"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "CGA渲染",
+                            "sceneObj": {
+                                "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                "type": "RectangleButton",
+                                "name": "CGA渲染",
+                                "ref": "CGA渲染",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n    const showCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\nopacity: 1.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n    const hiddenCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\nopacity: 0.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n\r\n            const update = () => {\r\n                const { highlighted } = sceneObject;\r\n                XE2.g.refs.cga_iframe.cssText = highlighted ? showCss : hiddenCss;\r\n            };\r\n            update();\r\n            this.dispose(sceneObject.highlightedChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 92,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlighted": true,
+                                "highlightOnClick": true,
+                                "text": "CGA渲染",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "视角0按钮",
+                            "sceneObj": {
+                                "id": "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                "type": "RectangleButton",
+                                "name": "视角0按钮",
+                                "ref": "视角0按钮",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function () {\r\n    XE2.g.refs.视角0.flyTo();\r\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "视角0",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "编辑按钮",
+                            "sceneObj": {
+                                "id": "88431a91-7c6e-409e-8ee1-fe95630a71fd",
+                                "type": "RectangleButton",
+                                "name": "编辑按钮",
+                                "ref": "编辑按钮",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function () {\r\n    //window.open('http://127.0.0.1:5500/index.html');\r\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n\n    XE2.g.refs.cga_iframe.interaction = sceneObject.highlighted;\n}\n",
+                                "highlightOnClick": true,
+                                "text": "编辑",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MarkdownReader",
+                    "sceneObj": {
+                        "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                        "type": "MarkdownReader",
+                        "name": "MarkdownReader",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 4px;\ntop: 40px;",
+                        "content": "### 融合CGA\n\n\n"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "298386c9-3aef-4bf9-98f8-02e2ffc71fb6",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "resolutionScale": 1.5,
+            "sceneGlobeDepthTestAgainstTerrain": true,
+            "sceneSkyAtmosphereShow": false,
+            "sceneSsccZoomFactor": 2,
+            "scenePpsBloomEnabled": true,
+            "firstPersonKeyboardEnabled": true,
+            "firstPersonWalkingSpeed": 16,
+            "clockCurrentTime": 1733109588624
+        },
+        "offlineImagery": {
+            "id": "45a91413-5fa1-41ef-b977-487c7d58361e",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "9612af16-5f6e-478b-94dd-63619ffb8433",
+            "type": "CzmImagery",
+            "brightness": 0.3,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "d17ec6d8-53db-4eed-87ce-abe3000e5523",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "c478dbcf-613e-4be2-8534-27d88af69361",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "2435f938-74b7-4981-b71c-c2d4aaeaadea",
+            "type": "View",
+            "position": [
+                116.38998921444927,
+                39.899981666261084,
+                1.2551751286627282
+            ],
+            "rotation": [
+                26.65572202371615,
+                -47.27100089659002,
+                359.999993383126
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "304b47e0-d65c-4619-a109-2f1f011982a0",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
