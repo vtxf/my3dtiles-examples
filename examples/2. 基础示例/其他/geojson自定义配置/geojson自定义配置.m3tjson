@@ -1,0 +1,115 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.30",
+        "createdTime": "2024-12-18T10:24:13.355Z",
+        "modifiedTime": "2024-12-18T11:10:13.744Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "china.geojson",
+                    "sceneObj": {
+                        "id": "093ba642-fcca-45ca-8218-a68914119ee6",
+                        "type": "CzmGeoJson",
+                        "uri": "${SD}/china.geojson",
+                        "fill": [
+                            0.79,
+                            0.91,
+                            0.06,
+                            0.05
+                        ],
+                        "allowPicking": true,
+                        "loadFuncStr": "// dataSource\n(dataSource) => {\n    if (!dataSource) return;\n    dataSource.show = true;\n\n    const entities = [...dataSource.entities.values];\n\n    for (let i = 0; i < entities.length; i++) {\n        const entity = entities[i];\n\n        const c = entity.properties.center.getValue();\n        const n = entity.properties.name.getValue();\n        dataSource.entities.add({\n            position: Cesium.Cartesian3.fromDegrees(c[0], c[1]),\n            label: {\n                text: n,\n                font: \"32px 楷体\",\n                scale: 0.5,\n                translucencyByDistance: new Cesium.NearFarScalar(4e6, 1.0, 5e6, 0.0),\n            },\n        });\n    }\n}\n",
+                        "name": "china.geojson"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "f8e033e5-1eca-4a33-9925-61b589bac5ab",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "resolutionScale": 1.5,
+            "sceneSsccZoomFactor": 2,
+            "sceneDebugShowFramesPerSecond": false,
+            "clockCurrentTime": 1734517453357
+        },
+        "offlineImagery": {
+            "id": "d4ee4d9c-e65e-45cb-8e6c-4571d507631a",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "3202388a-cdb3-464b-bc91-3fa6e060a5a0",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "691c4520-b8a1-44da-a4fd-03266e57da4a",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "401d66ad-53bc-4a20-86eb-9530d5df49a9",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "76203bf4-2192-4c95-94ad-25ac0fc3974c",
+            "type": "View",
+            "position": [
+                111.42924621456216,
+                31.84292220628157,
+                1769377.9032032532
+            ],
+            "rotation": [
+                352.9313509310782,
+                -87.86926374727058,
+                0
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "7a6f7bb0-940e-431c-bafc-718542020008",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
