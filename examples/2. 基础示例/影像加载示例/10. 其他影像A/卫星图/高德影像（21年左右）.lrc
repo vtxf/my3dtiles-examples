@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>map</Name>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<MapSpaceType>GCJ02</MapSpaceType>
+<TileRowDir>NorthToSouth</TileRowDir>
+<UrlParamOrder>X,Y,Z</UrlParamOrder>
+<NetPath>https://webst01.is.autonavi.com/appmaptile?style=6&x=%d&y=%d&z=%d</NetPath>
+<FileExt></FileExt>
+<ServerParts>1 2 3 4</ServerParts>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>1</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+<HttpHeaders>
+	<Referer>https://map.bmcx.com/</Referer>
+	<Connection>keep-alive</Connection>
+	<Accept-Language>h-CN,zh;q=0.9</Accept-Language>
+	<Accept-Encoding>gzip, deflate, br</Accept-Encoding>
+	<Accept>image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8</Accept>
+	<User-Agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36</User-Agent>
+</HttpHeaders>
+<attribution href="https://map.bmcx.com/">bmcx地图</attribution>
+</DataDefine>

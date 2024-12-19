@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt></FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<MapSpaceType>GCJ02</MapSpaceType>
+<TileRowDir>NorthToSouth</TileRowDir>
+<LocalPath></LocalPath>  
+<UrlParamOrder>Z,Y,X</UrlParamOrder>    <!--  下面网址中三个%d表示含义，Z是层数，X行数，Y是列数  -->
+<NetPath>http://thematic.geoq.cn/arcgis/rest/services/ThematicMaps/administrative_division_boundaryandlabel/MapServer/WMTS/tile/1.0.0/administrative_division_boundaryandlabel/default/default028mm/%d/%d/%d.png</NetPath>  <!--  %d表示可变量  -->
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+</DataDefine>

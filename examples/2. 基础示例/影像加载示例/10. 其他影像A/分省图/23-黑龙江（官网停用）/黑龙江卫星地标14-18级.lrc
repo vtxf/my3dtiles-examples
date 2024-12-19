@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<FileExt></FileExt>
+<NetPath>./黑龙江卫星地标.lua</NetPath>
+<Range>
+<West>120</West>
+<East>136</East>
+<South>42</South>
+<North>54</North>
+<LevelBegin>14</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+</DataDefine>

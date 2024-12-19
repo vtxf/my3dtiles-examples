@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt></FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>SouthToNorth</TileRowDir>
+<UrlParamOrder>Z,Y,X</UrlParamOrder>
+<LocalPath></LocalPath>
+<NetPath>http://222.247.40.204:8091/iserver/services/map-img/wmts/img/default/Custom_img/%d/%d/%d.png</NetPath>
+<Range>
+<West>108</West>
+<East>114</East>
+<South>24</South>
+<North>30</North>
+<LevelBegin>7</LevelBegin>
+<LevelEnd>19</LevelEnd>
+</Range>
+</DataDefine>

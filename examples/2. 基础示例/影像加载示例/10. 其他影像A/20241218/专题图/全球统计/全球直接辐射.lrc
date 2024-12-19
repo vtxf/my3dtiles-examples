@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<FileExt></FileExt>
+<NetPath></NetPath>  <!--  %d表示可变量  -->
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>0</LevelBegin>
+<LevelEnd>6</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	return "tiles1.static.solargis.com/dni_yr_avg/" .. zoom .. "/0_0/z" .. zoom .. "_" .. x .. "x" .. y .. ".jpg"
+end
+</UrlScript>
+
+</DataDefine>

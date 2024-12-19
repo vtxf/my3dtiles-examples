@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>1024</SampleSize>
+<FileExt></FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>NorthToSouth</TileRowDir>
+<LocalPath></LocalPath>  
+<UrlParamOrder>Z,X,Y</UrlParamOrder>    <!--  下面网址中三个%d表示含义，Z是层数，X行数，Y是列数  -->
+<NetPath>https://api.maptiler.com/maps/hybrid/%d/%d/%d@2x.jpg?key=rFw5yP5Y2FBoU1CBRMRc</NetPath>  <!--  %d表示可变量  -->
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>21</LevelEnd>
+</Range>
+</DataDefine>

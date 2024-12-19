@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<FileExt></FileExt>
+<NetPath></NetPath>
+<Range>
+<West>89</West>
+<East>104</East>
+<South>31</South>
+<North>40</North>
+<LevelBegin>7</LevelBegin>
+<LevelEnd>20</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	zoom=zoom-1
+	return "http://www.tilesqh.cn:8084/arcgis/rest/services/QingHaiVectorLabelMapService15_17/MapServer/tile/" .. zoom .. "/" .. y .. "/" .. x
+end
+</UrlScript>
+
+</DataDefine>

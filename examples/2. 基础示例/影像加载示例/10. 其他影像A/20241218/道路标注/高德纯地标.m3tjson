@@ -1,0 +1,127 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.30",
+        "createdTime": "2024-12-19T13:26:01.319Z",
+        "modifiedTime": "2024-12-19T13:29:41.252Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "高德纯地标(img)",
+                    "sceneObj": {
+                        "id": "4eb41d1a-60a0-470d-8e05-186883431b7e",
+                        "type": "CzmImagery",
+                        "rectangle": [
+                            -180,
+                            -85,
+                            180,
+                            85
+                        ],
+                        "imageryProvider": {
+                            "type": "UrlTemplateImageryProvider",
+                            "url": "https://wprd{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=8&x={x}&y={y}&z={z}&scl=1&ltype=4",
+                            "subdomains": [
+                                "01",
+                                "02",
+                                "03",
+                                "04"
+                            ],
+                            "minimumLevel": 3,
+                            "maximumLevel": 18,
+                            "tileWidth": 256,
+                            "tileHeight": 256,
+                            "tilingScheme": {
+                                "type": "ToWGS84WebMercatorTilingScheme"
+                            }
+                        },
+                        "name": "高德纯地标(img)"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "d2bb8ca8-b5d3-4fd2-ab28-279a736b1f6c",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1734614761324
+        },
+        "offlineImagery": {
+            "id": "c63636a9-827c-4a1e-8518-16d12ef9d435",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "dc80c20e-ee47-44ec-a672-960f15373e56",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "465204a5-47a0-4619-94db-209fd6b43350",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "795dd57e-f5ca-4eea-b4b5-5d35d09f3b7c",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "7b01b669-2a78-4d09-8d18-22fff90a683e",
+            "type": "View",
+            "position": [
+                115.62788491739796,
+                27.476233433857843,
+                4870857.245966034
+            ],
+            "rotation": [
+                359.99999571742364,
+                -85.74921993212583,
+                0.000004416170863220149
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "3de48e9e-8d3c-4260-bb30-e16ceaa62339",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

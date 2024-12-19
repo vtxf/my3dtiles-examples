@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>map</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>NorthToSouth</TileRowDir>
+<UrlParamOrder>X,Y,Z</UrlParamOrder>
+<NetPath>http://t{$serverpart}.tianditu.gov.cn/DataServer?T=cia_c&x=%d&y=%d&l=%d&tk=75f0434f240669f4a2df6359275146d2</NetPath>
+<FileExt></FileExt>
+<ServerParts>0 1 2 3 4</ServerParts>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+<HttpHeaders>
+	<Referer>https://map.tianditu.gov.cn/</Referer>
+	<Connection>keep-alive</Connection>
+	<Accept-Language>zh-CN,zh;q=0.9</Accept-Language>
+	<Accept-Encoding>gzip, deflate, br, zstd</Accept-Encoding>
+	<Accept>image/webp,*/*</Accept>
+	<User-Agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36</User-Agent>
+</HttpHeaders>
+<attribution href="https://t2.tianditu.gov.cn">天地图</attribution>
+</DataDefine>

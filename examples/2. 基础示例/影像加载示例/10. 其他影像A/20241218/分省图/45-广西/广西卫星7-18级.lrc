@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<FileExt></FileExt>
+<NetPath></NetPath>
+<Range>
+<West>104</West>
+<East>112</East>
+<South>20</South>
+<North>27</North>
+<LevelBegin>7</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	zoom=zoom-1
+	return "http://www.mapgx.com/arcgis/rest/services/cityimg_nn/MapServer/tile/" .. zoom .. "/" .. y .. "/" .. x
+end
+</UrlScript>
+
+</DataDefine>

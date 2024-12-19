@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>map</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>NorthToSouth</TileRowDir>
+<UrlParamOrder>Z,X,Y</UrlParamOrder>
+<NetPath>https://service.siweiearth.com/wmts/seis/v3/wmts/tile/1012/0?mgt_token=guest&product_id=5&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%%2Fpng&TileMatrix=%d&TileCol=%d&TileRow=%d</NetPath>
+<FileExt></FileExt>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+<attribution href="https://siweiearth.com/explorer/#/">四维地球</attribution>
+</DataDefine>

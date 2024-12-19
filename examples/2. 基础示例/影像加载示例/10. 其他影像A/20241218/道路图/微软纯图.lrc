@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>bingmap</Name>
+<GeoGridType>BingMap</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<LocalPath></LocalPath>
+<DataType>urlformat</DataType>
+<MapSpaceType>GCJ02</MapSpaceType>
+<TileRowDir>NorthToSouth</TileRowDir>
+<UrlParamOrder>X,Y,Z</UrlParamOrder>			 
+<NetPath>https://dynamic.t2.tiles.ditu.live.com/comp/ch/%s?it=G&mkt=zh-cn&og=268&cstl=w4c&ur=CN&n=z</NetPath>
+<FileExt></FileExt>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+<attribution href="http://cn.bing.com/ditu/">微软地图</attribution>
+</DataDefine>

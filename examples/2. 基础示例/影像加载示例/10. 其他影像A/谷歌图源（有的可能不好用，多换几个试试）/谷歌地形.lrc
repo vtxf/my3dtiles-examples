@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?>
+<DataDefine>
+<Version>0</Version>
+<Name>geterrain</Name>
+<GeoGridType>8</GeoGridType>
+<SampleSize>129</SampleSize>
+<DataVersion></DataVersion>
+<FileExt>gett</FileExt>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<NetPath>http://kh.google.com</NetPath>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-90</South>
+<North>90</North>
+<LevelBegin>0</LevelBegin>
+<LevelEnd>20</LevelEnd>
+</Range>
+</DataDefine>
+

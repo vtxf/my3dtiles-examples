@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Name>img</Name>
+<Version>0</Version>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<LocalPath></LocalPath>
+<MapSpaceType>GCJ02</MapSpaceType>
+<UrlParamOrder>x,y,z</UrlParamOrder>
+<TileRowDir>NorthToSouth</TileRowDir>
+<NetPath>http://t1.supermapcloud.com/FileService/image?map=quanguo&type=web&x=%d&y=%d&z=%d</NetPath>
+<FileExt>png</FileExt>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+</DataDefine>

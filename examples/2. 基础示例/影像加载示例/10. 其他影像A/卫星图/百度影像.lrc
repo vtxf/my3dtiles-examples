@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Name>img</Name>
+<Version>0</Version>
+<GeoGridType>13</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<LocalPath></LocalPath>
+<MapSpaceType>BD09</MapSpaceType>
+<UrlParamOrder>x,y,z</UrlParamOrder>
+<TileRowDir>SouthToNorth</TileRowDir>
+<NetPath>https://ss2.bdstatic.com/8bo_dTSlR1gBo1vgoIiO_jowehsv/starpic/?qt=satepc&u=x=%d;y=%d;z=%d;v=009;type=sate</NetPath>
+<FileExt>jpeg</FileExt>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>20</LevelEnd>
+</Range>
+</DataDefine>

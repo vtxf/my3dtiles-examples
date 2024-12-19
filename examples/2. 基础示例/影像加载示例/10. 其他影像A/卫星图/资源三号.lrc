@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<FileExt></FileExt>
+<NetPath></NetPath>
+<Range>
+<West>71</West>
+<East>135</East>
+<South>16</South>
+<North>55</North>
+<LevelBegin>1</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	zoom=zoom-1
+	return "http://123.56.192.226:7090/stbserver/rest/wmts?layer=satImage&style=default&tilematrixset=matrix_id&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fjpeg&TileMatrix=" .. zoom .. "&TileCol=" .. x .. "&TileRow=" .. y
+end
+</UrlScript>
+
+</DataDefine>

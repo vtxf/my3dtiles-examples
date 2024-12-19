@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt></FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>SouthToNorth</TileRowDir>
+<UrlParamOrder>Z,Y,X</UrlParamOrder>
+<LocalPath></LocalPath>
+<NetPath>http://www.sdmap.gov.cn/tileservice/SdRasterPubMap?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=sdimg2017&STYLE=default&TILEMATRIXSET=img2017&TILEMATRIX=%d&TILEROW=%d&TILECOL=%d&FORMAT=image%2Fpng</NetPath>
+<Range>
+<West>114</West>
+<East>123</East>
+<South>34</South>
+<North>39</North>
+<LevelBegin>7</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+</DataDefine>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt></FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>SouthToNorth</TileRowDir>
+<UrlParamOrder>Z,Y,X</UrlParamOrder>
+<LocalPath></LocalPath>
+<NetPath>http://www.scgis.net.cn/imap/iMapServer/defaultrest/services/schisdom//tile/%d/%d/%d</NetPath>
+<Range>
+<West>95</West>
+<East>110</East>
+<South>25</South>
+<North>34</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+
+<HttpHeaders>
+	<Referer>http://www.scgis.net/scgcmap/map.html</Referer>
+	<Connection>keep-alive</Connection>
+	<Accept-Language>zh-CN,zh;q=0.8</Accept-Language>
+</HttpHeaders>
+
+</DataDefine>

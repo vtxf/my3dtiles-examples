@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt>gzip</FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>SouthToNorth</TileRowDir>
+<UrlParamOrder>Z,Y,X</UrlParamOrder>
+<LocalPath></LocalPath>
+<NetPath>http://218.2.231.246/mapservice/wmts/slzj?tilematrix=%d&tilerow=%d&tilecol=%d</NetPath>
+<Range>
+<West>115</West>
+<East>122</East>
+<South>30</South>
+<North>35</North>
+<LevelBegin>7</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+</DataDefine>

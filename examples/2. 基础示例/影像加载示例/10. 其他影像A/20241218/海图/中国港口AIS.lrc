@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name></Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<NetPath></NetPath>
+<FileExt></FileExt>
+<CacheUsed>0</CacheUsed> /<!--关闭缓存-->
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>0</LevelBegin>
+<LevelEnd>20</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	url = "http://gis.chinaports.com/geoserver/gwc/service/wms?"
+	layers = "greennodes%3Aship_pos"
+	styles = ""
+
+	service = "WMS"
+	version = "1.1.1"
+	request = "GetMap"
+	format = "image/png"
+	transparent = "true"
+	tiled = "true"
+	width = "256"
+	height = "256"
+	srs = "EPSG:4326"
+	
+	return url .. "SERVICE=" .. service .. "&VERSION=" .. version .. "&REQUEST=" .. request .. "&FORMAT=" .. format .. "&TRANSPARENT=" .. transparent .. "&LAYERS=" .. layers .. "&TILED=" .. tiled .. "&WIDTH=" .. width .. "&HEIGHT=" .. height .. "&sRS=" .. srs .. "&STYLES=" .. styles .. "&BBOX=" .. box(zoom,x,y)
+end
+
+function box(zoom,x,y)
+	west = (x/2^zoom)*360-180
+	south= 90-180*(y+1)/2^(zoom-1)
+	east = ((x+1)/2^zoom)*360-180
+	north= 90-180*y/2^(zoom-1)
+	boxx = west ..",".. south ..",".. east ..",".. north
+	return boxx
+end
+</UrlScript>
+
+<HttpHeaders>
+	<Referer>http://www.chinaports.com/shiptracker/olv3/index.jsp</Referer>
+	<Connection>keep-alive</Connection>
+	<Accept-Language>zh-CN,zh;q=0.8</Accept-Language>
+</HttpHeaders>
+
+</DataDefine>

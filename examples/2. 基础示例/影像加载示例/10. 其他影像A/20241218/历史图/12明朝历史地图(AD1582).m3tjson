@@ -1,0 +1,121 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.30",
+        "createdTime": "2024-12-19T13:51:57.803Z",
+        "modifiedTime": "2024-12-19T14:05:28.075Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "12明朝历史地图(AD1582)(img)",
+                    "sceneObj": {
+                        "id": "9d4f86ed-78c4-4292-9e03-496d04573139",
+                        "type": "CzmImagery",
+                        "rectangle": [
+                            -160,
+                            -85,
+                            160,
+                            85
+                        ],
+                        "imageryProvider": {
+                            "type": "UrlTemplateImageryProvider",
+                            "url": "http://gis.sinica.edu.tw/ccts/file-exists.php?img=ad1582-png-{z}-{x}-{y}",
+                            "minimumLevel": 1,
+                            "maximumLevel": 12,
+                            "tileWidth": 256,
+                            "tileHeight": 256,
+                            "tilingScheme": {
+                                "type": "WebMercatorTilingScheme"
+                            }
+                        },
+                        "name": "12明朝历史地图(AD1582)(img)"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "35811595-f431-46c4-815d-487aaa03cd28",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1734616317806
+        },
+        "offlineImagery": {
+            "id": "549643f2-1afa-4530-ba9f-464802fb3d93",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "4a020ea2-7af2-4d72-84f2-4bb3cfd157c6",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "4f9e1403-23fa-40b5-8363-5bc642e090d9",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "00bb2ae9-ea07-4ab7-8c0b-6887e6925e64",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "b3d70018-5f18-4548-9c8d-ffc841ddcbcf",
+            "type": "View",
+            "position": [
+                113.70446007440322,
+                25.509286154629645,
+                1851394.7730638753
+            ],
+            "rotation": [
+                354.18848297901184,
+                -78.40655219680228,
+                0.014983990745106902
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "89895f6d-a218-45ae-9c7e-a342dfb602a5",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

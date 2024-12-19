@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<NetPath></NetPath>
+<FileExt></FileExt>
+<Range>
+<West>108</West>
+<East>117</East>
+<South>28</South>
+<North>34</North>
+<LevelBegin>7</LevelBegin>
+<LevelEnd>17</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	zoom=zoom-1
+	return "http://www.tiandituhubei.com:6080/arcgis/rest/services/IMG_HB_7_17/MapServer/tile/" .. zoom .. "/" .. y .. "/" .. x
+end
+</UrlScript>
+
+</DataDefine>

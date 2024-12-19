@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GB18030"?>
+<DataDefine>
+<Name>geterrain</Name>
+<GeoGridType>5</GeoGridType>
+<SampleSize>150</SampleSize>
+<FileExt>tdtt</FileExt>
+<DataType>urlformat</DataType>
+<UrlParamOrder>x,y,z</UrlParamOrder>
+<LocalPath></LocalPath>
+<NetPath>https://t{$Serverpart}.tianditu.gov.cn/mapservice/swdx?tk=75f0434f240669f4a2df6359275146d2&x=%d&y=%d&l=%d</NetPath>
+<ServerParts>0 1 2 3 4 5 6 7</ServerParts>
+<TileRowDir>NorthToSouth</TileRowDir>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-90</South>
+<North>90</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>20</LevelEnd>
+</Range>
+<HttpHeaders>
+	<Referer>https://map.tianditu.gov.cn/</Referer>
+	<Connection>keep-alive</Connection>
+	<Accept-Language>zh-CN,zh;q=0.9</Accept-Language>
+	<Accept-Encoding>gzip, deflate, br</Accept-Encoding>
+	<User-Agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36</User-Agent>
+</HttpHeaders>
+</DataDefine>
+

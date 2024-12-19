@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>map</Name>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>NorthToSouth</TileRowDir>
+<UrlParamOrder>X,Y,Z</UrlParamOrder>
+<NetPath>https://t{$serverpart}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILECOL=%d&TILEROW=%d&TILEMATRIX=%d&tk=0b79a07d2808103ab84aa56485c331a8</NetPath>
+<FileExt></FileExt>
+<ServerParts>0 1 2 3 4 5 6 7</ServerParts>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+<HttpHeaders>
+	<Referer>https://www.tianditu.gov.cn/</Referer>
+	<Connection>keep-alive</Connection>
+	<Accept-Language>zh-CN,zh;q=0.9</Accept-Language>
+	<Accept-Encoding>gzip, deflate</Accept-Encoding>
+	<Accept>image/webp,image/apng,image/*,*/*;q=0.8</Accept>
+	<User-Agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36</User-Agent>
+</HttpHeaders>
+<attribution href="http://map.tianditu.gov.cn/">天地图</attribution>
+</DataDefine>

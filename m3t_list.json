@@ -437,6 +437,14 @@
                                     "previewImageUri": "${M3T_CurrentDir}ArcGIS历史影像/ArcGIS历史影像.jpg"
                                 },
                                 {
+                                    "name": "geojson自定义配置",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}geojson自定义配置/geojson自定义配置.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}geojson自定义配置/geojson自定义配置.jpg"
+                                },
+                                {
                                     "name": "图片模型滑动交互",
                                     "content": {
                                         "type": "m3tJsonUri",
@@ -600,6 +608,611 @@
                                         "m3tJsonUri": "${M3T_CurrentDir}1. 星图影像加载20241121/1. 星图影像加载20241121.m3tjson"
                                     },
                                     "previewImageUri": "${M3T_CurrentDir}1. 星图影像加载20241121/1. 星图影像加载20241121.jpg"
+                                },
+                                {
+                                    "name": "10. 其他影像A",
+                                    "path": "10. 其他影像A",
+                                    "collapse": false,
+                                    "children": [
+                                        {
+                                            "name": "20241218",
+                                            "path": "20241218",
+                                            "collapse": false,
+                                            "children": [
+                                                {
+                                                    "name": "卫星图",
+                                                    "path": "卫星图",
+                                                    "collapse": true,
+                                                    "children": [
+                                                        {
+                                                            "name": "ArcGIS影像",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}ArcGIS影像.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}ArcGIS影像.jpg"
+                                                        },
+                                                        {
+                                                            "name": "FatMap影像",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}FatMap影像.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}FatMap影像.jpg"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "历史图",
+                                                    "path": "历史图",
+                                                    "collapse": true,
+                                                    "children": [
+                                                        {
+                                                            "name": "01西汉历史地图(BC0007)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}01西汉历史地图(BC0007).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}01西汉历史地图(BC0007).jpg"
+                                                        },
+                                                        {
+                                                            "name": "02东汉历史地图(AD0140)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}02东汉历史地图(AD0140).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}02东汉历史地图(AD0140).jpg"
+                                                        },
+                                                        {
+                                                            "name": "03三国历史地图(AD0262)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}03三国历史地图(AD0262).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}03三国历史地图(AD0262).jpg"
+                                                        },
+                                                        {
+                                                            "name": "04西晋历史地图(AD0281)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}04西晋历史地图(AD0281).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}04西晋历史地图(AD0281).jpg"
+                                                        },
+                                                        {
+                                                            "name": "05东晋历史地图(AD0382)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}05东晋历史地图(AD0382).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}05东晋历史地图(AD0382).jpg"
+                                                        },
+                                                        {
+                                                            "name": "06南北朝历史地图(AD0497)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}06南北朝历史地图(AD0497).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}06南北朝历史地图(AD0497).jpg"
+                                                        },
+                                                        {
+                                                            "name": "07隋朝历史地图(AD0612)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}07隋朝历史地图(AD0612).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}07隋朝历史地图(AD0612).jpg"
+                                                        },
+                                                        {
+                                                            "name": "08唐朝历史地图(AD0741)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}08唐朝历史地图(AD0741).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}08唐朝历史地图(AD0741).jpg"
+                                                        },
+                                                        {
+                                                            "name": "09北宋历史地图(AD1111)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}09北宋历史地图(AD1111).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}09北宋历史地图(AD1111).jpg"
+                                                        },
+                                                        {
+                                                            "name": "10南宋历史地图(AD1208)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}10南宋历史地图(AD1208).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}10南宋历史地图(AD1208).jpg"
+                                                        },
+                                                        {
+                                                            "name": "11元朝历史地图(AD1330)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}11元朝历史地图(AD1330).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}11元朝历史地图(AD1330).jpg"
+                                                        },
+                                                        {
+                                                            "name": "12明朝历史地图(AD1582)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}12明朝历史地图(AD1582).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}12明朝历史地图(AD1582).jpg"
+                                                        },
+                                                        {
+                                                            "name": "13清朝历史地图(AD1820)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}13清朝历史地图(AD1820).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}13清朝历史地图(AD1820).jpg"
+                                                        },
+                                                        {
+                                                            "name": "14中国地图(AD1903)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}14中国地图(AD1903).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}14中国地图(AD1903).jpg"
+                                                        },
+                                                        {
+                                                            "name": "15民国初年地图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}15民国初年地图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}15民国初年地图.jpg"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "地形图",
+                                                    "path": "地形图",
+                                                    "collapse": true,
+                                                    "children": [
+                                                        {
+                                                            "name": "Landscape等高线",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}Landscape等高线.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}Landscape等高线.jpg"
+                                                        },
+                                                        {
+                                                            "name": "OCM等高线",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}OCM等高线.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}OCM等高线.jpg"
+                                                        },
+                                                        {
+                                                            "name": "Sigma等高线",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}Sigma等高线.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}Sigma等高线.jpg"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "天地图",
+                                                    "path": "天地图",
+                                                    "collapse": true,
+                                                    "children": [
+                                                        {
+                                                            "name": "天地图地标标注",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图地标标注.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图地标标注.jpg"
+                                                        },
+                                                        {
+                                                            "name": "天地图水系",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图水系.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图水系.jpg"
+                                                        },
+                                                        {
+                                                            "name": "天地图行政区划",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图行政区划.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图行政区划.jpg"
+                                                        },
+                                                        {
+                                                            "name": "天地图道路标注-墨卡托",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图道路标注-墨卡托.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图道路标注-墨卡托.jpg"
+                                                        },
+                                                        {
+                                                            "name": "天地图道路标注",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图道路标注.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图道路标注.jpg"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "气象图",
+                                                    "path": "气象图",
+                                                    "collapse": true,
+                                                    "children": [
+                                                        {
+                                                            "name": "OPG气压",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}OPG气压.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}OPG气压.jpg"
+                                                        },
+                                                        {
+                                                            "name": "OPG海浪",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}OPG海浪.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}OPG海浪.jpg"
+                                                        },
+                                                        {
+                                                            "name": "OPG温度",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}OPG温度.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}OPG温度.jpg"
+                                                        },
+                                                        {
+                                                            "name": "OPG降雨",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}OPG降雨.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}OPG降雨.jpg"
+                                                        },
+                                                        {
+                                                            "name": "OWM降雨",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}OWM降雨.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}OWM降雨.jpg"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "海图",
+                                                    "path": "海图",
+                                                    "collapse": true,
+                                                    "children": [
+                                                        {
+                                                            "name": "船讯网海图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}船讯网海图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}船讯网海图.jpg"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "谷歌图源（有的可能不好用，多换几个试试）",
+                                                    "path": "谷歌图源（有的可能不好用，多换几个试试）",
+                                                    "collapse": true,
+                                                    "children": [
+                                                        {
+                                                            "name": "2022谷歌卫星地图图源18级",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}2022谷歌卫星地图图源18级.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}2022谷歌卫星地图图源18级.jpg"
+                                                        },
+                                                        {
+                                                            "name": "【高清-快】google影像地图1",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}【高清-快】google影像地图1.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}【高清-快】google影像地图1.jpg"
+                                                        },
+                                                        {
+                                                            "name": "【高清-快】google影像地图4",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}【高清-快】google影像地图4.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}【高清-快】google影像地图4.jpg"
+                                                        },
+                                                        {
+                                                            "name": "谷歌卫星影像2",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}谷歌卫星影像2.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}谷歌卫星影像2.jpg"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "道路图",
+                                                    "path": "道路图",
+                                                    "collapse": true,
+                                                    "children": [
+                                                        {
+                                                            "name": "360地图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}360地图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}360地图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "OSM交通地图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}OSM交通地图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}OSM交通地图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "OSM人文地图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}OSM人文地图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}OSM人文地图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "Transport地图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}Transport地图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}Transport地图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "天地图-墨卡托",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图-墨卡托.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图-墨卡托.jpg"
+                                                        },
+                                                        {
+                                                            "name": "天地图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "百度地图(大字体)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}百度地图(大字体).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}百度地图(大字体).jpg"
+                                                        },
+                                                        {
+                                                            "name": "百度地图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}百度地图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}百度地图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "百度地图2",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}百度地图2.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}百度地图2.jpg"
+                                                        },
+                                                        {
+                                                            "name": "百度纯图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}百度纯图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}百度纯图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "腾讯地图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}腾讯地图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}腾讯地图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "腾讯地图（夜间）",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}腾讯地图（夜间）.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}腾讯地图（夜间）.jpg"
+                                                        },
+                                                        {
+                                                            "name": "高德底图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}高德底图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}高德底图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "高德简图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}高德简图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}高德简图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "高德纯图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}高德纯图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}高德纯图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "高德纯地标（大字体）",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}高德纯地标（大字体）.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}高德纯地标（大字体）.jpg"
+                                                        },
+                                                        {
+                                                            "name": "高德详图",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}高德详图.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}高德详图.jpg"
+                                                        },
+                                                        {
+                                                            "name": "高德详图（大字体）",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}高德详图（大字体）.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}高德详图（大字体）.jpg"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "道路标注",
+                                                    "path": "道路标注",
+                                                    "collapse": true,
+                                                    "children": [
+                                                        {
+                                                            "name": "天地图地标标注",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图地标标注.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图地标标注.jpg"
+                                                        },
+                                                        {
+                                                            "name": "天地图行政区划",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图行政区划.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图行政区划.jpg"
+                                                        },
+                                                        {
+                                                            "name": "天地图道路标注-墨卡托",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图道路标注-墨卡托.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图道路标注-墨卡托.jpg"
+                                                        },
+                                                        {
+                                                            "name": "天地图道路标注",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}天地图道路标注.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}天地图道路标注.jpg"
+                                                        },
+                                                        {
+                                                            "name": "智图行政区划",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}智图行政区划.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}智图行政区划.jpg"
+                                                        },
+                                                        {
+                                                            "name": "百度纯地标",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}百度纯地标.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}百度纯地标.jpg"
+                                                        },
+                                                        {
+                                                            "name": "百度纯道路",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}百度纯道路.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}百度纯道路.jpg"
+                                                        },
+                                                        {
+                                                            "name": "百度道路标注(大字体)",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}百度道路标注(大字体).m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}百度道路标注(大字体).jpg"
+                                                        },
+                                                        {
+                                                            "name": "百度道路标注",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}百度道路标注.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}百度道路标注.jpg"
+                                                        },
+                                                        {
+                                                            "name": "腾讯道路标注",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}腾讯道路标注.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}腾讯道路标注.jpg"
+                                                        },
+                                                        {
+                                                            "name": "腾讯道路标注（含水域）",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}腾讯道路标注（含水域）.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}腾讯道路标注（含水域）.jpg"
+                                                        },
+                                                        {
+                                                            "name": "高德纯地标",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}高德纯地标.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}高德纯地标.jpg"
+                                                        },
+                                                        {
+                                                            "name": "高德纯道路",
+                                                            "content": {
+                                                                "type": "m3tJsonUri",
+                                                                "m3tJsonUri": "${M3T_CurrentDir}高德纯道路.m3tjson"
+                                                            },
+                                                            "previewImageUri": "${M3T_CurrentDir}高德纯道路.jpg"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 },
                                 {
                                     "name": "2. 天地图影像加载20241121",

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<NetPath></NetPath>
+<FileExt></FileExt>
+<Range>
+<West>108</West>
+<East>114</East>
+<South>24</South>
+<North>30</North>
+<LevelBegin>7</LevelBegin>
+<LevelEnd>19</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	s = 0.00000010817046858256987 * 2^(zoom-6)
+	return "http://222.247.40.204:8091/iserver/services/map-tdt/rest/maps/vec/tileImage.png?transparent=true&cacheEnabled=true&width=256&height=256&x=" ..x.. "&y=" ..y.. "&scale=" ..s.. "&redirect=false&overlapDisplayed=false"
+end
+</UrlScript>
+
+</DataDefine>

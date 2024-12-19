@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<FileExt></FileExt>
+<NetPath></NetPath>
+<Range>
+<West>120</West>
+<East>123</East>
+<South>30</South>
+<North>32</North>
+<LevelBegin>10</LevelBegin>
+<LevelEnd>20</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	zoom=zoom-9
+	return "http://mape.shanghai-map.net/ArcGIS/rest/services/SHMAP_DZJ/MapServer/tile/" .. zoom .. "/" .. y .. "/" .. x
+end
+</UrlScript>
+
+</DataDefine>

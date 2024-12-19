@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt>png</FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>SouthToNorth</TileRowDir>
+<UrlParamOrder>Z,Y,X</UrlParamOrder>
+<LocalPath></LocalPath>
+<NetPath>www.gsigrid.cgs.gov.cn/newgsigrid/CGSGeoData/Handler.ashx?url=10.90.3.198:6163/igs/rest/mrms/tile/chs20/%d/%d/%d</NetPath>
+<Range>
+<West>71</West>
+<East>135</East>
+<South>16</South>
+<North>55</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>12</LevelEnd>
+</Range>
+</DataDefine>

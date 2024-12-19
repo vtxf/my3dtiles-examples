@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt></FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>NorthToSouth</TileRowDir>
+<LocalPath></LocalPath>  
+<UrlParamOrder>X,Y,Z</UrlParamOrder>    <!--  下面网址中三个%d表示含义，Z是层数，X行数，Y是列数  -->
+<NetPath>http://gis.chinaports.com:5010/map/getMap/%d/%d/%d</NetPath>  <!--  %d表示可变量  -->
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>1</LevelBegin>
+<LevelEnd>20</LevelEnd>
+</Range>
+
+<HttpHeaders>
+	<Referer>http://www.chinaports.com/shiptracker/olv3/index.jsp</Referer>
+	<Connection>keep-alive</Connection>
+	<Accept-Language>zh-CN,zh;q=0.8</Accept-Language>
+</HttpHeaders>
+
+</DataDefine>

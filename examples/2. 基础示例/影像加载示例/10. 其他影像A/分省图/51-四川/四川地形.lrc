@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<FileExt></FileExt>
+<NetPath>./四川地形.lua</NetPath>
+<Range>
+<West>95</West>
+<East>110</East>
+<South>25</South>
+<North>34</North>
+<LevelBegin>6</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	zoom=zoom-6
+	return "http://www.scgis.net.cn/imap/imapserver/defaultrest/services/scTileMap_dem_dem//tile/" .. zoom .. "/" .. y .. "/" .. x
+end
+</UrlScript>
+
+</DataDefine>

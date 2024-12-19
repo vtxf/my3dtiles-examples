@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<FileExt></FileExt>
+<NetPath></NetPath>
+<Range>
+<West>110</West>
+<East>117</East>
+<South>31</South>
+<North>36</North>
+<LevelBegin>8</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	zoom=zoom-7
+	return "http://map.hnchj.com/newmapserver4/ogc/wmts?servicename=henansldmtile&layer=henansldmtile&tileMatrixSet=epsg:4490&version=1.0.0&format=image%2Fpng&service=WMTS&request=gettile&style=Default&TileMatrix=" .. zoom .. "&TileRow=" .. y .. "&TileCol=" .. x
+end
+</UrlScript>
+
+</DataDefine>

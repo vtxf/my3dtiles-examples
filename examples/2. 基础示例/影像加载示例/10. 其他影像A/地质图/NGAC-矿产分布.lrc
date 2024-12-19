@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>天地图img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType></DataType>
+<LocalPath></LocalPath>
+<NetPath></NetPath>
+<FileExt>png</FileExt>
+<Range>
+<West>-160</West>
+<East>160</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>4</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+<attribution href="http://ngac.org.cn/Kuangchandi/index.html">国家地质资料数据中心（NGAC）</attribution>
+
+<UrlScript>
+function getTileUrl (zoom,x,y)
+	 zoom=zoom-1
+	return "http://219.142.81.85/arcgis/rest/services/TAS30P51000001/MapServer/WMTS/tile/1.0.0/TAS30P51000001/default/default028mm/"..zoom.."/"..y.."/"..x..".png"
+end
+</UrlScript>
+
+<HttpHeaders>
+	<Referer>http://ngac.org.cn/Kuangchandi/index.html</Referer>
+	<Connection>keep-alive</Connection>
+	<Accept-Language>zh-CN,zh;q=0.8</Accept-Language>
+	<Accept-Encoding>gzip, deflate</Accept-Encoding>
+	<Accept>image/webp,image/apng,image/*,*/*;q=0.8</Accept>
+	<User-Agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36</User-Agent>
+</HttpHeaders>
+
+</DataDefine>
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt></FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>NorthToSouth</TileRowDir>
+<LocalPath></LocalPath>  
+<UrlParamOrder>X,Y,Z</UrlParamOrder>    <!--  下面网址中三个%d表示含义，Z是层数，X行数，Y是列数  -->
+<NetPath>http://t{$serverpart}.tianditu.gov.cn/DataServer?T=ibo_w&x=%d&y=%d&l=%d&tk=a4cf58a5a1091c0fa0604d748a7ef72e</NetPath>  <!--  %d表示可变量  -->
+<ServerParts>0 1 2 3 4</ServerParts>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>1</LevelBegin>
+<LevelEnd>12</LevelEnd>
+</Range>
+</DataDefine>

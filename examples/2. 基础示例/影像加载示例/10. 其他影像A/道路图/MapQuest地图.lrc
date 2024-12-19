@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Name>img</Name>
+<Version>0</Version>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<LocalPath></LocalPath>
+<UrlParamOrder>z,x,y</UrlParamOrder>
+<TileRowDir>NorthToSouth</TileRowDir>
+<NetPath>https://{$serverpart}.tiles.mapbox.com/v4/mapquest.streets-mb/%d/%d/%d.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg</NetPath>
+<ServerParts>a b c d</ServerParts>
+<FileExt></FileExt>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>17</LevelEnd>
+</Range>
+</DataDefine>

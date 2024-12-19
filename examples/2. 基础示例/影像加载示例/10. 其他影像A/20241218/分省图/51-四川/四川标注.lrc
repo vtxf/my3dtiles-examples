@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt>png</FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>SouthToNorth</TileRowDir>
+<UrlParamOrder>Z,Y,X</UrlParamOrder>
+<LocalPath></LocalPath>
+<NetPath>http://www.scgis.net.cn/imap/imapserver/defaultrest/services/sctilemap_dom_dlg//tile/%d/%d/%d</NetPath>
+<Range>
+<West>95</West>
+<East>110</East>
+<South>25</South>
+<North>34</North>
+<LevelBegin>6</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+</DataDefine>

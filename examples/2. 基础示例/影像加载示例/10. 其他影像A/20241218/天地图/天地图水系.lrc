@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt>png</FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>SouthToNorth</TileRowDir>
+<UrlParamOrder>X,Y,Z</UrlParamOrder>
+<LocalPath></LocalPath>
+<NetPath>http://t{$serverpart}.tianditu.gov.cn/DataServer?T=wat_c&x=%d&y=%d&l=%d&tk=9a02b3cdd29cd346de4df04229797710</NetPath>
+<ServerParts>0 1 2 3 4</ServerParts>
+<Range>
+<West>70</West>
+<East>140</East>
+<South>10</South>
+<North>65</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>12</LevelEnd>
+</Range>
+<HttpHeaders>
+	<Referer>https://www.tianditu.gov.cn/</Referer>
+	<Connection>keep-alive</Connection>
+	<Accept-Language>zh-CN,zh;q=0.8</Accept-Language>
+	<Accept-Encoding>gzip, deflate</Accept-Encoding>
+	<Accept>image/webp,image/apng,image/*,*/*;q=0.8</Accept>
+	<User-Agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36</User-Agent>
+</HttpHeaders>
+</DataDefine>

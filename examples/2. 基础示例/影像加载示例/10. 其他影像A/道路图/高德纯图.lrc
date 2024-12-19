@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Name>img</Name>
+<Version>0</Version>
+<GeoGridType>WebMercatorWGS84</GeoGridType>
+<SampleSize>256</SampleSize>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<LocalPath></LocalPath>
+<MapSpaceType>GCJ02</MapSpaceType>
+<UrlParamOrder>x,y,z</UrlParamOrder>
+<TileRowDir>NorthToSouth</TileRowDir>
+<NetPath>https://wprd{$serverpart}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x=%d&y=%d&z=%d&scl=1&ltype=2</NetPath>
+<FileExt>png</FileExt>
+<ServerParts>01 02 03 04</ServerParts>
+<Range>
+<West>-180</West>
+<East>180</East>
+<South>-85</South>
+<North>85</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+<attribution href="https://www.amap.com/">高德地图</attribution>
+</DataDefine>

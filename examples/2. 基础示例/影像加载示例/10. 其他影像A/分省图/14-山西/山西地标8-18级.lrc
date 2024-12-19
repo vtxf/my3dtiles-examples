@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?><DataDefine>
+<Version>0</Version>
+<Name>img</Name>
+<GeoGridType>TianDiTuLatLon</GeoGridType>
+<SampleSize>256</SampleSize>
+<FileExt></FileExt>
+<DataVersion></DataVersion>
+<DataType>urlformat</DataType>
+<TileRowDir>SouthToNorth</TileRowDir>
+<UrlParamOrder>Z,Y,X</UrlParamOrder>
+<LocalPath></LocalPath>
+<NetPath>http://services.sxch.com.cn/ServiceRight/proxy/2e42171fc9468f70c9f2aec03e180dac/001001/WMTS/SX_DOM_WMTS_new?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=SX_DOM_DLG_2K&STYLE=SX_DOM_DLG_2K&TILEMATRIXSET=Matrix_0&TILEMATRIX=%d&TILEROW=%d&TILECOL=%d&FORMAT=image%%2Ftile</NetPath>
+<Range>
+<West>110</West>
+<East>115</East>
+<South>34</South>
+<North>41</North>
+<LevelBegin>3</LevelBegin>
+<LevelEnd>18</LevelEnd>
+</Range>
+</DataDefine>
