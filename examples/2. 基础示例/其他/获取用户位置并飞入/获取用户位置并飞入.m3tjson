@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.31",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-12-20T10:59:00.273Z",
+        "modifiedTime": "2024-12-20T11:09:40.522Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -27,7 +27,7 @@
                             0
                         ],
                         "name": "视角",
-                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const notify = vtxf['xr-base-utils'].ui.notify;\r\n\r\n            const getLngLat = () => {\r\n                if (navigator.geolocation) {\r\n                    navigator.geolocation.getCurrentPosition(function (position) {\r\n                        var lat = position.coords.latitude;\r\n                        var lng = position.coords.longitude;\r\n                        notify('您的位置：' + lng + ',' + lat, undefined, 10000);\r\n                        return [lng, lat];\r\n                    }, function (error) {\r\n                        notify('获取位置失败：' + error.message, undefined, 10000);\r\n                        return undefined;\r\n                    }, { enableHighAccuracy: true });\r\n                } else {\r\n                    notify('您的浏览器不支持地理位置功能', undefined, 10000);\r\n                    return undefined;\r\n                }\r\n            };\r\n\r\n            setTimeout(() => {\r\n                const lngLat = getLngLat();\r\n                if (!lngLat) return;\r\n                const { position } = sceneObject;\r\n                sceneObject.position = [lngLat[0], lngLat[1], position[2]];\r\n                XE2.g.refs.定位.position = sceneObject.position;\r\n                sceneObject.flyTo();\r\n            }, 1000);\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable { \r\n        constructor() {\r\n            super();\r\n\r\n            const notify = vtxf['xr-base-utils'].ui.notify;\r\n\r\n            const getLngLat = () => {\r\n                return new Promise((resolve, reject) => {\r\n                    if (navigator.geolocation) {\r\n                        navigator.geolocation.getCurrentPosition(function (position) {\r\n                            var lat = position.coords.latitude;\r\n                            var lng = position.coords.longitude;\r\n                            notify('您的位置：' + lng + ',' + lat, undefined, 10000);\r\n                            resolve([lng, lat]);\r\n                        }, function (error) {\r\n                            notify('获取位置失败：' + error.message, undefined, 10000);\r\n                            resolve(undefined);\r\n                        }, { enableHighAccuracy: true });\r\n                    } else {\r\n                        notify('您的浏览器不支持地理位置功能', undefined, 10000);\r\n                        resolve(undefined);\r\n                    }\r\n                });\r\n            };\r\n\r\n            setTimeout(async () => {\r\n                const lngLat = await getLngLat();\r\n                if (!lngLat) return;\r\n                const { position } = sceneObject;\r\n                sceneObject.position = [lngLat[0], lngLat[1], position[2]];\r\n                XE2.g.refs.定位.position = [lngLat[0], lngLat[1], 0];\r\n                sceneObject.flyTo();\r\n            }, 1000);\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
                     }
                 },
                 {
@@ -115,13 +115,13 @@
             "id": "f9a58b1b-40e2-437b-8870-ca08c669bdf9",
             "type": "View",
             "position": [
-                116.39352977574686,
-                39.90962269249172,
-                15067.17779221333
+                116.39411709957193,
+                39.89582062303836,
+                9412.713235545645
             ],
             "rotation": [
-                357.4521056657989,
-                -89.6442799927005,
+                357.45210567106506,
+                -89.64429905537096,
                 0
             ],
             "name": "最近视图"
