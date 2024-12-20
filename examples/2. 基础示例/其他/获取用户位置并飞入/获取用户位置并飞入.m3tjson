@@ -1,0 +1,135 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.31",
+        "createdTime": "2024-03-18T07:55:59.569Z",
+        "modifiedTime": "2024-12-20T10:59:00.273Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "视角",
+                    "show": false,
+                    "sceneObj": {
+                        "id": "928237fc-0cbe-4b7e-b733-82976ae2d11a",
+                        "type": "View",
+                        "position": [
+                            116.40897348704368,
+                            39.904355134733926,
+                            10000
+                        ],
+                        "rotation": [
+                            357.452105660568,
+                            -89.64426105748224,
+                            0
+                        ],
+                        "name": "视角",
+                        "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            const notify = vtxf['xr-base-utils'].ui.notify;\r\n\r\n            const getLngLat = () => {\r\n                if (navigator.geolocation) {\r\n                    navigator.geolocation.getCurrentPosition(function (position) {\r\n                        var lat = position.coords.latitude;\r\n                        var lng = position.coords.longitude;\r\n                        notify('您的位置：' + lng + ',' + lat, undefined, 10000);\r\n                        return [lng, lat];\r\n                    }, function (error) {\r\n                        notify('获取位置失败：' + error.message, undefined, 10000);\r\n                        return undefined;\r\n                    }, { enableHighAccuracy: true });\r\n                } else {\r\n                    notify('您的浏览器不支持地理位置功能', undefined, 10000);\r\n                    return undefined;\r\n                }\r\n            };\r\n\r\n            setTimeout(() => {\r\n                const lngLat = getLngLat();\r\n                if (!lngLat) return;\r\n                const { position } = sceneObject;\r\n                sceneObject.position = [lngLat[0], lngLat[1], position[2]];\r\n                XE2.g.refs.定位.position = sceneObject.position;\r\n                sceneObject.flyTo();\r\n            }, 1000);\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}"
+                    }
+                },
+                {
+                    "name": "定位",
+                    "sceneObj": {
+                        "id": "cb2d4773-393d-4486-93a2-4addc15741a1",
+                        "type": "GeoCanvasImagePoi",
+                        "name": "定位",
+                        "ref": "定位",
+                        "position": [
+                            116.39348125615057,
+                            39.910462373855516,
+                            0
+                        ],
+                        "size": [
+                            45,
+                            45
+                        ],
+                        "imageUri": "${my3dtiles-assets-script-dir}/assets/images/canvasImagePoi/dingwei.png"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "404bf111-e890-4b35-9fe5-da10ad21927a",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1734691529432
+        },
+        "offlineImagery": {
+            "id": "0bd477b4-b12a-4617-95b9-0d5a8faf3ccf",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "3f98a06b-fe26-4a5a-8fca-1ef9e290e917",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "c719b8ce-70e8-40fd-a29e-e68ba072a507",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "b1ea3451-0ff7-41c8-b8c0-705bdf9b47f3",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "f9a58b1b-40e2-437b-8870-ca08c669bdf9",
+            "type": "View",
+            "position": [
+                116.39352977574686,
+                39.90962269249172,
+                15067.17779221333
+            ],
+            "rotation": [
+                357.4521056657989,
+                -89.6442799927005,
+                0
+            ],
+            "name": "最近视图"
+        },
+        "initOptions": {
+            "id": "9cff1ff1-0a86-4626-8ed8-14ad88e9531e",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
