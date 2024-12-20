@@ -508,6 +508,14 @@
                                     "previewImageUri": "${M3T_CurrentDir}模拟飞行/模拟飞行.jpg"
                                 },
                                 {
+                                    "name": "获取用户位置并飞入",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}获取用户位置并飞入/获取用户位置并飞入.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}获取用户位置并飞入/获取用户位置并飞入.jpg"
+                                },
+                                {
                                     "name": "街景地图",
                                     "content": {
                                         "type": "m3tJsonUri",
