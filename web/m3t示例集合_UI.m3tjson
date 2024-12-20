@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.29",
+        "version": "0.9.31",
         "createdTime": "2024-11-04T05:33:21.751Z",
-        "modifiedTime": "2024-11-25T03:21:05.410Z",
+        "modifiedTime": "2024-12-20T08:39:02.975Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -38,7 +38,8 @@
                                     "24d18169-5c0b-4b1c-8385-130aa3fa951a",
                                     "8f3acd17-d0cd-48e4-830b-416f1b5b96cd",
                                     "f48d0a85-4162-4536-9cb7-35eb216d00dc",
-                                    "67b412ba-59d9-4505-8b3a-cf7102e37269"
+                                    "67b412ba-59d9-4505-8b3a-cf7102e37269",
+                                    "5b236010-f0d0-4905-8078-dd95a4386112"
                                 ]
                             },
                             "children": [
@@ -74,9 +75,32 @@
                                     }
                                 },
                                 {
-                                    "name": "使用说明",
+                                    "name": "示例复用视频",
                                     "sceneObj": {
                                         "id": "67b412ba-59d9-4505-8b3a-cf7102e37269",
+                                        "type": "RectangleButton",
+                                        "name": "示例复用视频",
+                                        "width": 0,
+                                        "height": 24,
+                                        "backgroundColor": [
+                                            0.1,
+                                            0.1,
+                                            0.1,
+                                            0.8
+                                        ],
+                                        "borderWidth": 0,
+                                        "cssText": "cursor: pointer;\nline-height: 24px;\npadding: 0 4px;\nmargin: 0 6px;",
+                                        "clickFuncStr": "\nfunction(mouseEvent) {\n    window.open('https://www.bilibili.com/video/BV19RqRY5E7q');\n}\n",
+                                        "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.1,\n        hovered: 0.3,\n        pressed: 0.35,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.backgroundColor = [r, r, r, 0.8];\n    sceneObject.textColor = [0.9+r, 0.9+r, 0.9+r, 1];\n}\n",
+                                        "text": "示例复用视频",
+                                        "fontSize": 12,
+                                        "textLayoutType": "None"
+                                    }
+                                },
+                                {
+                                    "name": "使用说明",
+                                    "sceneObj": {
+                                        "id": "5b236010-f0d0-4905-8078-dd95a4386112",
                                         "type": "RectangleButton",
                                         "name": "使用说明",
                                         "width": 0,
@@ -409,7 +433,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "70e8ebd7-dff9-464c-94fe-fcad05749934",
+            "id": "989eef77-120d-46a0-a8da-fa027e7de277",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -419,7 +443,7 @@
             "clockCurrentTime": 1730698401758
         },
         "offlineImagery": {
-            "id": "bfe944f2-865d-4bd8-8475-bf0a02c7294a",
+            "id": "91e4f249-3779-4e4f-93ed-14bb571382a5",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -429,7 +453,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "ef23e118-fb13-4134-b441-afc97c61b6d7",
+            "id": "ae37eb8e-439a-4485-b4ae-848051303f9b",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -451,7 +475,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "7623560a-cc23-4e5f-85e0-852e6a4a019a",
+            "id": "6eac4163-f4cb-446f-b1db-58862599eb66",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -462,12 +486,12 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "0d25b93a-c3a9-485f-95e9-94a66e8fa2aa",
+            "id": "7ea2fb8c-dcaa-4dca-b811-39ec89f3c4d2",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "5e39af80-843e-4523-bef5-4595720abf16",
+            "id": "21ae7c94-d269-41ad-8d13-9aaa9adc7b0f",
             "type": "View",
             "position": [
                 122.21589597525654,
@@ -482,7 +506,7 @@
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "004a104b-febb-4114-a1fa-894715196f9a",
+            "id": "3e0a4e5f-00cc-4c07-99b3-ba3fcf301653",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
