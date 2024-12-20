@@ -1,9 +1,9 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.9.22",
+        "version": "0.9.31",
         "createdTime": "2024-05-14T10:07:50.210Z",
-        "modifiedTime": "2024-11-05T07:35:57.728Z",
+        "modifiedTime": "2024-12-20T08:32:44.976Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -16,10 +16,10 @@
                         "id": "89e175cf-3b2d-4de9-8234-83f7c0d510c1",
                         "type": "CzmSignalTransmissionCollection",
                         "width": 1,
-                        "geoJsonUrl": "https://a.amap.com/Loca/static/loca-v2/demos/mock_data/bj_bus.json",
+                        "geoJsonUrl": "${SD}/bj_bus.geojson",
                         "allowPicking": true,
                         "loop": true,
-                        "currentTime": 458.8000007867813,
+                        "currentTime": 711.600000757724,
                         "duration": 1000,
                         "speed": 1,
                         "playing": true,
@@ -31,7 +31,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "481f2bb5-e228-41f0-92eb-b9c91c958025",
+            "id": "1ea5ede0-21a6-4e61-aef9-0fd6ed821a10",
             "type": "CzmViewer",
             "actived": true,
             "name": "默认视口",
@@ -43,7 +43,7 @@
             "clockCurrentTime": 1710748559577
         },
         "offlineImagery": {
-            "id": "2d57e313-e6e4-4d9e-b483-ac2f4361029c",
+            "id": "fab5bb2e-ac5d-4f51-8613-fed283dae554",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -53,7 +53,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "2fae5f44-dbfc-4919-a33f-7f9ad56d765c",
+            "id": "05050b94-0113-4267-9c46-5dba2c1c06df",
             "type": "CzmImagery",
             "brightness": 0.3,
             "imageryProvider": {
@@ -76,7 +76,7 @@
             "name": "天地图影像"
         },
         "czmTerrain": {
-            "id": "5dc40e10-3f31-4c6e-ab73-283bffdc8a1a",
+            "id": "04fde38a-5890-4c0f-beb5-da297f345305",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -87,28 +87,28 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "814bd843-ff62-4a1b-8632-4d851005306f",
+            "id": "dc9bc11d-b237-40af-bc8f-618af9de4229",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "cfefb7f5-e3a7-42bc-8116-b97bcebe2792",
+            "id": "88c6dd98-76ca-458b-9fba-762f78d6104d",
             "type": "View",
             "position": [
                 116.53376037866146,
                 39.665143160523556,
-                53339.904339074536
+                53339.90433903634
             ],
             "rotation": [
                 341.1331324808919,
                 -62.726591094647326,
-                359.974445321928
+                359.97444532192793
             ],
             "default": true,
             "name": "View_4968"
         },
         "initOptions": {
-            "id": "153abc1b-85f5-4d9d-8740-50e4a5ac6f57",
+            "id": "8d4e4c3c-096d-4d02-8f81-8c3337179c76",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }

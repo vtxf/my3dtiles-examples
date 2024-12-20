@@ -1,13 +1,14 @@
 {
     "asset": {
         "type": "My3dtiles",
-        "version": "0.6.0",
+        "version": "0.9.31",
         "createdTime": "2024-05-15T00:24:21.855Z",
-        "modifiedTime": "2024-05-15T00:45:38.358Z",
+        "modifiedTime": "2024-12-20T08:31:53.418Z",
         "name": "未命名项目"
     },
     "sceneTree": {
         "root": {
+            "name": "root",
             "children": [
                 {
                     "name": "信号线集合",
@@ -16,24 +17,22 @@
                         "id": "00b12c6b-dc7a-4d1a-ae25-fa428e9782f7",
                         "type": "CzmSignalTransmissionCollection",
                         "width": 1,
-                        "geoJsonUrl": "${SD}/bj_bus2.geojson",
+                        "geoJsonUrl": "${SD}/bj_bus.geojson",
                         "allowPicking": true,
-                        "editing": true,
                         "loop": true,
-                        "currentTime": 638.6000003814697,
+                        "currentTime": 1938.5000003799796,
                         "duration": 3000,
                         "speed": 1,
                         "playing": true,
                         "name": "信号线集合"
-                    },
-                    "children": []
+                    }
                 }
             ]
         }
     },
     "builtin": {
         "czmViewer": {
-            "id": "3b5085c2-3db8-46be-9938-1d89f6505fd3",
+            "id": "4fdc50ff-8353-4025-a309-c8d77f5172ac",
             "type": "CzmViewer",
             "actived": true,
             "name": "默认视口",
@@ -45,7 +44,7 @@
             "clockCurrentTime": 1710748559577
         },
         "offlineImagery": {
-            "id": "5dc1c10f-b650-4494-89c1-a3a8aac60d01",
+            "id": "79c922cc-db77-44de-8f61-6488ac388069",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -54,19 +53,8 @@
             "zIndex": -2,
             "name": "默认离线影像"
         },
-        "googleImagery": {
-            "id": "b6a34a4b-c807-4490-9620-90910264e140",
-            "type": "CzmImagery",
-            "show": false,
-            "imageryProvider": {
-                "type": "UrlTemplateImageryProvider",
-                "url": "https://gac-geo.googlecnapps.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
-            },
-            "zIndex": -1,
-            "name": "谷歌影像"
-        },
-        "tdtImagery": {
-            "id": "79543271-de9c-4faa-8e87-362eb8084388",
+        "baseImagery": {
+            "id": "c9a1db20-e7bf-4eeb-9af5-ff9d376233e1",
             "type": "CzmImagery",
             "brightness": 0.3,
             "imageryProvider": {
@@ -89,7 +77,7 @@
             "name": "天地图影像"
         },
         "czmTerrain": {
-            "id": "28d66a57-7576-40f5-9515-4db0ac578ca7",
+            "id": "f31eff72-b941-47fc-9c0b-e042d4a6d189",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -99,24 +87,29 @@
             },
             "name": "Cesium官方地形"
         },
+        "czmClassicNavigator": {
+            "id": "a68dab92-ef24-423c-9985-dd9cdc0c734b",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
         "lastView": {
-            "id": "aaebcf7a-f84f-4eb1-867c-0abf4b44929a",
+            "id": "1157077d-31d3-42e8-8449-91b5076442da",
             "type": "View",
             "position": [
-                116.51279121573926,
-                39.740791740737926,
-                39823.47874271915
+                116.52110163521576,
+                39.79614229124173,
+                38990.714071458984
             ],
             "rotation": [
-                340.17037831248336,
-                -62.31150427199626,
-                359.9417572594435
+                340.1704654543198,
+                -62.31137746221148,
+                359.94165884817676
             ],
             "default": true,
             "name": "View_098e"
         },
         "initOptions": {
-            "id": "88bc57da-db46-4d46-b9e4-1f8b187781c3",
+            "id": "0f5c18c6-ecb8-40ef-b7d8-168197e49762",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
