@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.31",
         "createdTime": "2024-03-18T07:55:59.569Z",
-        "modifiedTime": "2024-12-20T11:09:40.522Z",
+        "modifiedTime": "2024-12-20T11:18:44.104Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -54,7 +54,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "404bf111-e890-4b35-9fe5-da10ad21927a",
+            "id": "043856f7-f864-4e62-9b49-3a5c80d54997",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -64,7 +64,7 @@
             "clockCurrentTime": 1734691529432
         },
         "offlineImagery": {
-            "id": "0bd477b4-b12a-4617-95b9-0d5a8faf3ccf",
+            "id": "53c0f1ca-83cc-4452-a378-2f3108249639",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -74,7 +74,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "3f98a06b-fe26-4a5a-8fca-1ef9e290e917",
+            "id": "b4baacd0-f726-4953-965f-ed1b7f02aa7e",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -96,7 +96,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "c719b8ce-70e8-40fd-a29e-e68ba072a507",
+            "id": "c91a8952-73d8-4e22-ae23-67a9b88244c5",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -107,27 +107,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "b1ea3451-0ff7-41c8-b8c0-705bdf9b47f3",
+            "id": "0dca810a-f8ef-4b44-bfd6-78e735cbe86e",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "f9a58b1b-40e2-437b-8870-ca08c669bdf9",
+            "id": "58ae8bbf-1e70-41b5-8ac7-e7fa0c9c56cc",
             "type": "View",
             "position": [
-                116.39411709957193,
-                39.89582062303836,
-                9412.713235545645
+                112.38168250070864,
+                35.7797222989223,
+                3713735.300599259
             ],
             "rotation": [
-                357.45210567106506,
-                -89.64429905537096,
+                352.8918248898811,
+                -89.58500323903887,
                 0
             ],
             "name": "最近视图"
         },
         "initOptions": {
-            "id": "9cff1ff1-0a86-4626-8ed8-14ad88e9531e",
+            "id": "01305fc4-146f-4d39-af18-07df85c37f63",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
