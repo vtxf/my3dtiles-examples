@@ -1,3 +1,3 @@
-/*! vtxf-renderer(0.3.41-c598b9d0-2024-11-28T03:27:22.000Z) 版权所有@vtxf */
+/*! vtxf-renderer(0.3.42-59e8a7ec-2024-12-20T03:36:20.000Z) 版权所有@vtxf */
 
 //!!! 注意Animation的destroy只会删除自身，不会销毁其孩子节点！

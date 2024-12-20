@@ -23,7 +23,7 @@
                         ],
                         "imageryProvider": {
                             "type": "UrlTemplateImageryProvider",
-                            "url": "http://gis.sinica.edu.tw/ccts/file-exists.php?img=ad0497-png-{z}-{x}-{y}",
+                            "url": "https://gis.sinica.edu.tw/ccts/file-exists.php?img=ad0497-png-{z}-{x}-{y}",
                             "minimumLevel": 1,
                             "maximumLevel": 12,
                             "tileWidth": 256,

@@ -51,7 +51,7 @@
 
 /*! For license information please see index.js.LICENSE.txt */
 
-/*! my3dtiles-lib(0.9.30-ff17d120-2024-11-28T03:55:52.000Z) 版权所有@beijing jinfei technology co.,ltd */
+/*! my3dtiles-lib(0.9.31-780914d9-2024-12-20T03:52:04.000Z) 版权所有@beijing jinfei technology co.,ltd */
 
 /**
      * splaytree v3.1.2
