@@ -51,7 +51,7 @@ function getM3tJsonUri(treeItem) {
 
 function getM3tAppBaseHref() {
     const href = new URL('../', window.location.href).href;
-    const baseHref = `${href}app/versions/last/`;
+    const baseHref = `${href}app/versions/last/index.html`;
     return baseHref;
 }
 
