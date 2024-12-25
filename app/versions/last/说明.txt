@@ -1,0 +1,2 @@
+1. 打开场景文件(scene/default.m3tjson)进行自定义配置，获取直接替换已有的场景文件
+2. 双击 windows系统双击自动打开网页.cmd
