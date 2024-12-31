@@ -84,21 +84,15 @@
                         {
                             "name": "2. 基础UI教程示例",
                             "path": "2. 基础UI教程示例",
-                            "collapse": false,
+                            "collapse": true,
                             "children": [
                                 {
                                     "name": "1. 基础布局Div(LayoutDiv)",
-                                    "path": "1. 基础布局Div(LayoutDiv)",
-                                    "collapse": true,
-                                    "children": [
-                                        {
-                                            "name": "基础布局Div(LayoutDiv)",
-                                            "content": {
-                                                "type": "m3tJsonUri",
-                                                "m3tJsonUri": "${M3T_CurrentDir}基础布局Div(LayoutDiv).m3tjson"
-                                            }
-                                        }
-                                    ]
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}1. 基础布局Div(LayoutDiv)/1. 基础布局Div(LayoutDiv).m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}1. 基础布局Div(LayoutDiv)/1. 基础布局Div(LayoutDiv).jpg"
                                 },
                                 {
                                     "name": "2. 容器(MyContainer)",
@@ -1513,6 +1507,22 @@
                                 "m3tJsonUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}自定义场景对象拾取20241107/自定义场景对象拾取20241107.jpg"
+                        },
+                        {
+                            "name": "融合Babylonjs",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}融合Babylonjs/融合Babylonjs.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}融合Babylonjs/融合Babylonjs.jpg"
+                        },
+                        {
+                            "name": "融合Babylonjs(非IFrame)",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}融合Babylonjs(非IFrame)/融合Babylonjs(非IFrame).m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}融合Babylonjs(非IFrame)/融合Babylonjs(非IFrame).jpg"
                         },
                         {
                             "name": "融合WebGPU20241202",
