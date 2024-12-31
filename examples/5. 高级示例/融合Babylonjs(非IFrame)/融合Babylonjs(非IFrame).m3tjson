@@ -1,0 +1,344 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.34",
+        "createdTime": "2024-12-02T03:19:48.621Z",
+        "modifiedTime": "2024-12-31T03:18:56.276Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "场景",
+                    "children": [
+                        {
+                            "name": "babylonjs_house",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "433219b9-f8bd-4367-80af-073cb1988c5d",
+                                "type": "IFrameDiv",
+                                "name": "babylonjs_house",
+                                "ref": "babylonjs_house",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function updateCameraInfo() {\r\n        var { viewer} = g_app.czmViewer;\r\n        if (!viewer) return;\r\n        var { camera } = g_app.czmViewer.viewer;\r\n        if (!camera) return;\r\n        var m = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(116.39, 39.9, 0));\r\n        var inverseM = Cesium.Matrix4.inverse(m, new Cesium.Matrix4());\r\n        var p = camera.positionWC;\r\n        var target = Cesium.Cartesian3.add(p, camera.direction, new Cesium.Cartesian3());\r\n        var up = Cesium.Cartesian3.add(p, camera.up, new Cesium.Cartesian3());\r\n        var p2 = Cesium.Matrix4.multiplyByPoint(inverseM, p, new Cesium.Cartesian3());\r\n        var target2 = Cesium.Matrix4.multiplyByPoint(inverseM, target, new Cesium.Cartesian3());\r\n        var up2 = Cesium.Matrix4.multiplyByPoint(inverseM, up, new Cesium.Cartesian3());\r\n        var up3 = Cesium.Cartesian3.subtract(up2, p2, new Cesium.Cartesian3());\r\n        Cesium.Cartesian3.normalize(up3, up3);\r\n        sceneObject.postMessage({\r\n            type: \"camera\",\r\n            pos: [p2.x, p2.y, p2.z],\r\n            target: [target2.x, target2.y, target2.z],\r\n            up: [up3.x, up3.y, up3.z],\r\n            fovy: g_app.czmViewer.viewer.camera.frustum.fovy * 180 / Math.PI,\r\n        }, { targetOrigin: '*' });\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            updateCameraInfo();\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(updateCameraInfo));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "show": false,
+                                "width": 0,
+                                "height": 0,
+                                "cssText": "\nwidth: 100%;\nheight: 100%;\npointer-events: none;\nopacity: 1.0;\ntransition: opacity 1s ease-in-out;\n",
+                                "iframeSrc": "${SD}house/index.html"
+                            }
+                        },
+                        {
+                            "name": "ScriptsLoader",
+                            "sceneObj": {
+                                "id": "dbece5ae-aafe-4f1d-bf71-12081b4b821d",
+                                "type": "ScriptsLoader",
+                                "enabled": true,
+                                "uris": [
+                                    "${SD}../../../shared/scripts//babylon/babylon.js",
+                                    "${SD}../../../shared/scripts/babylon/babylonjs.loaders.min.js"
+                                ],
+                                "name": "ScriptsLoader"
+                            }
+                        },
+                        {
+                            "name": "MyContainer",
+                            "sceneObj": {
+                                "id": "41880a75-fce4-4a50-a458-55799840efec",
+                                "type": "MyContainer",
+                                "name": "MyContainer",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n            const div = sceneObject.layoutDiv.div;\r\n\r\n            const canvas = document.createElement('canvas');\r\n            {\r\n                canvas.style.width = '100%'\r\n                canvas.style.height = '100%'\r\n                canvas.setAttribute('babylonjs', `${sceneObject.id}`);\r\n                div.appendChild(canvas);\r\n                this.dispose(() => div.removeChild(canvas));\r\n            }\r\n\r\n            const engine = new BABYLON.Engine(canvas, true);\r\n            this.dispose(() => engine.dispose());\r\n\r\n            // 创建场景\r\n            const scene = new BABYLON.Scene(engine);\r\n            this.dispose(() => scene.dispose());\r\n            scene.clearColor = new BABYLON.Color4(0, 0, 0, 0); // 设置canvas背景透明\r\n            // 设置为右手坐标系\r\n            scene.useRightHandedSystem = true;\r\n\r\n            // 创建相机\r\n            const camera = new BABYLON.FreeCamera(\"Camera\", BABYLON.Vector3.Zero(), scene);\r\n            this.dispose(() => camera.dispose());\r\n            // 初始相机位置设置\r\n            {\r\n                // camera.attachControl(canvas, true);\r\n                // 设置相机的近裁和远裁\r\n                camera.minZ = 0.01;\r\n                camera.maxZ = 5000;\r\n                camera.fov = BABYLON.Tools.ToRadians(70);\r\n                camera.position = new BABYLON.Vector3(6.454080615661778, 6.377902589742007, 3.9602961614727974);\r\n                camera.setTarget(new BABYLON.Vector3(5.804354174531736, 5.719789407685312, 3.579845651984215));\r\n                camera.upVector = new BABYLON.Vector3(-0.2672885352198342, -0.27073867394813395, 0.9248012810160037);\r\n            }\r\n\r\n            // 创建灯光\r\n            const light = new BABYLON.HemisphericLight(\"light\", new BABYLON.Vector3(0, 1, 0), scene);\r\n            this.dispose(() => light.dispose());\r\n\r\n            BABYLON.SceneLoader.ImportMesh(\"\", \"../../../../shared/data/gltfs/orhouse/\", \"orhouse.glb\", scene, function (meshes) {\r\n                const rootMesh = new BABYLON.Mesh(\"root\", scene);\r\n                this.dispose(() => rootMesh.dispose());\r\n                meshes.forEach(mesh => {\r\n                    mesh.parent = rootMesh;\r\n                    this.dispose(() => mesh.dispose());\r\n                });\r\n                rootMesh.scaling = new BABYLON.Vector3(0.01, 0.01, 0.01);\r\n                rootMesh.position.z += 0.8;\r\n                rootMesh.rotation.x = BABYLON.Tools.ToRadians(90); // 绕x轴旋转90度\r\n            });\r\n\r\n            // 渲染循环\r\n            engine.runRenderLoop(() => {\r\n                scene.render();\r\n            });\r\n\r\n            // 窗口大小改变时的响应\r\n            // window.addEventListener('resize', () => {\r\n            //     engine.resize();\r\n            // });\r\n            // 窗口大小改变时的响应\r\n            const resizeObserver = new ResizeObserver(() => {\r\n                engine.resize();\r\n            });\r\n            resizeObserver.observe(canvas);\r\n            this.dispose(() => resizeObserver.unobserve(canvas));\r\n\r\n            this.dispose(sceneObject.extrasChanged.disposalbeOn(() => {\r\n                const { extras } = sceneObject;\r\n                if (!extras) return;\r\n                const { camera } = extras;\r\n                const { pos, target, up, fovy } = camera;\r\n                if (!pos || !target || !up || !fovy) return;\r\n\r\n                camera.fov = BABYLON.Tools.ToRadians(fovy);\r\n                camera.position = new BABYLON.Vector3(pos[0], pos[1], pos[2]);\r\n                camera.setTarget(new BABYLON.Vector3(target[0], target[1], target[2]));\r\n                camera.upVector = new BABYLON.Vector3(up[0], up[1], up[2]);\r\n            }));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "cssText": "position: absolute;\nleft: 0px;\ntop: 0px;\nwidth: 100%;\nheight: 100%;\nbackground-color: rgba(255, 0, 0, 0.5);\n"
+                            }
+                        },
+                        {
+                            "name": "czm_house",
+                            "sceneObj": {
+                                "id": "68abd6d0-1d96-4cbc-9d60-c6bf9e1fa45c",
+                                "type": "CzmModelPrimitive",
+                                "name": "czm_house",
+                                "ref": "czm_house",
+                                "url": "https://cdn.orillusion.com/gltfs/glb/BuildingWithCharacters/scene.glb",
+                                "allowPicking": true,
+                                "position": [
+                                    116.39,
+                                    39.9,
+                                    0.8
+                                ],
+                                "localRotation": [
+                                    180,
+                                    0,
+                                    0
+                                ],
+                                "localScale": [
+                                    0.01,
+                                    0.01,
+                                    0.01
+                                ]
+                            }
+                        },
+                        {
+                            "name": "视角0",
+                            "show": false,
+                            "sceneObj": {
+                                "id": "f14f0110-3c07-4426-900c-f3c41cdb5ff7",
+                                "type": "View",
+                                "position": [
+                                    116.38992799510856,
+                                    39.899944944358076,
+                                    6.284618145711913
+                                ],
+                                "rotation": [
+                                    47.62979755562237,
+                                    -37.14754192706963,
+                                    359.999984966301
+                                ],
+                                "name": "视角0",
+                                "ref": "视角0"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "工具栏",
+                    "sceneObj": {
+                        "id": "a6a42bc3-c044-4c69-9cab-2ac77159ac25",
+                        "type": "MyContainer",
+                        "name": "工具栏",
+                        "layoutType": "LeftTop",
+                        "cssText": "display: flex;\nflex-direction: row;\nflex-wrap: nowrap;\njustify-content: flex-start;\nalign-items: center;\nleft: 4px;\ntop: 4px;",
+                        "subIds": [
+                            "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                            "56cd610f-4592-466f-b28a-2386984d3b3b",
+                            "88431a91-7c6e-409e-8ee1-fe95630a71fd"
+                        ]
+                    },
+                    "children": [
+                        {
+                            "name": "WebGPU渲染",
+                            "sceneObj": {
+                                "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
+                                "type": "RectangleButton",
+                                "name": "WebGPU渲染",
+                                "ref": "WebGPU渲染",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n    const showCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 1.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n    const hiddenCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 0.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n\r\n            const update = () => {\r\n                const { highlighted } = sceneObject;\r\n                XE2.g.refs.babylonjs_house.cssText = highlighted ? showCss : hiddenCss;\r\n            };\r\n            update();\r\n            this.dispose(sceneObject.highlightedChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "width": 92,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function(mouseEvent) {\n\n}\n",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "highlighted": true,
+                                "highlightOnClick": true,
+                                "text": "WebGPU渲染",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "视角0按钮",
+                            "sceneObj": {
+                                "id": "56cd610f-4592-466f-b28a-2386984d3b3b",
+                                "type": "RectangleButton",
+                                "name": "视角0按钮",
+                                "ref": "视角0按钮",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function () {\r\n    XE2.g.refs.视角0.flyTo();\r\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "视角0",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        },
+                        {
+                            "name": "说明文档",
+                            "sceneObj": {
+                                "id": "88431a91-7c6e-409e-8ee1-fe95630a71fd",
+                                "type": "RectangleButton",
+                                "name": "说明文档",
+                                "ref": "说明文档",
+                                "width": 82,
+                                "height": 29,
+                                "backgroundColor": [
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0.08000000000000002,
+                                    0
+                                ],
+                                "borderColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    0.95
+                                ],
+                                "borderWidth": 0,
+                                "clickFuncStr": "function () {\r\n    window.open('https://www.wolai.com/vtxf/cwzBwpDuCvihvjftK4jmeE');\r\n}",
+                                "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
+                                "text": "说明文档",
+                                "textColor": [
+                                    0.95,
+                                    0.95,
+                                    0.95,
+                                    1
+                                ],
+                                "fontSize": 12,
+                                "fontWeight": "400",
+                                "letterSpacing": 2,
+                                "normalImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/weixuanzhong.png",
+                                "hoveredImageUri": "${my3dtiles-assets-script-dir}/assets/images/YLJ/xuanzhong.png"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MarkdownReader",
+                    "sceneObj": {
+                        "id": "e0f5bf47-9634-4104-935d-908feaaa36b4",
+                        "type": "MarkdownReader",
+                        "name": "MarkdownReader",
+                        "layoutType": "LeftTop",
+                        "width": 300,
+                        "height": 200,
+                        "backgroundColor": [
+                            0,
+                            0,
+                            0,
+                            0.5
+                        ],
+                        "cssText": "left: 4px;\ntop: 40px;",
+                        "content": "### 融合Babylonjs渲染\n\nCesium渲染效果一般，可以结合babylonjs渲染，来提升局部渲染效果。\n\n这里演示的是将babylonjs渲染的模型融合到Cesium场景中的效果。\n"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "d58b65a7-7197-4b02-a070-ec3501722210",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "resolutionScale": 1.5,
+            "sceneGlobeDepthTestAgainstTerrain": true,
+            "sceneSkyAtmosphereShow": false,
+            "sceneSsccZoomFactor": 2,
+            "scenePpsBloomEnabled": true,
+            "firstPersonKeyboardEnabled": true,
+            "clockCurrentTime": 1733109588624
+        },
+        "offlineImagery": {
+            "id": "55dfe63f-4233-481f-acdc-a82dff3bd923",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "475ec60d-b219-4efc-a93f-1d73e48f1c09",
+            "type": "CzmImagery",
+            "brightness": 0.3,
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "ef404d5b-e812-4b53-a05a-45f7432b5eff",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "ec4e3277-1ab6-432a-bdf7-a5be9f3fe9dc",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "e24daa4a-6be2-4b4b-8d73-36e9a4181987",
+            "type": "View",
+            "position": [
+                116.3899140221553,
+                39.89994023820371,
+                7.350298740527973
+            ],
+            "rotation": [
+                50.26469659284788,
+                -36.3046009117618,
+                359.9999957157813
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "4cf9d3c9-844a-4b76-aab4-140f41f36040",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
