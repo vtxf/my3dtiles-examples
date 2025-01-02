@@ -7,6 +7,7 @@
   },
   "scripts": {
     "start": "http-server . -p 9123 --cors",
+    "auto-pull-from-git": "node tools/auto-pull-from-git.js",
     "make-list": "node m3t_make_list.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
