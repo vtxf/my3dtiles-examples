@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.34",
         "createdTime": "2024-12-02T03:19:48.621Z",
-        "modifiedTime": "2024-12-31T02:53:18.321Z",
+        "modifiedTime": "2025-01-02T09:11:31.565Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -190,7 +190,7 @@
                                     0.95
                                 ],
                                 "borderWidth": 0,
-                                "clickFuncStr": "function () {\r\n    window.open('https://www.wolai.com/vtxf/cwzBwpDuCvihvjftK4jmeE');\r\n}",
+                                "clickFuncStr": "function () {\r\n    window.open('https://www.wolai.com/vtxf/3k4mAH4EWMzZAkjruUEXrR');\r\n}",
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                 "text": "说明文档",
                                 "textColor": [
@@ -232,7 +232,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "94eeb2fd-d522-4035-9d7e-b18c6d458f92",
+            "id": "8dbcb980-f66d-40d0-9e92-ba9f8a70f552",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -247,7 +247,7 @@
             "clockCurrentTime": 1733109588624
         },
         "offlineImagery": {
-            "id": "e75cc6c9-e1ec-4017-a090-83f017216e93",
+            "id": "a53d7598-9070-4946-b8f5-1b931eb31e35",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -257,7 +257,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "903fd1bd-0845-423c-8412-39e9ea834133",
+            "id": "071c332e-b049-439c-b05d-9027e5da207f",
             "type": "CzmImagery",
             "brightness": 0.3,
             "imageryProvider": {
@@ -280,7 +280,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "73513dc8-2fe7-4b0b-99e7-cf8c511f6bb3",
+            "id": "348e1a9d-e41a-45db-9ed2-a6c654b1babe",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -291,12 +291,12 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "93c7935a-12cd-42c6-b805-00fb553c295e",
+            "id": "d0a4f319-aee0-43d1-8faa-1d11a974462b",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "0b69dba9-edd5-4c4a-b0ba-2d7274eb5d9d",
+            "id": "bea3e444-0f1b-4e74-8219-d9007e6f3a1a",
             "type": "View",
             "position": [
                 116.38992414504901,
@@ -306,12 +306,12 @@
             "rotation": [
                 49.14150065935929,
                 -32.53118802691052,
-                0.000005497631208231358
+                0.000005497631157342483
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "b1cdf537-2ddf-4d6e-b2c8-bc0b6dd04fc7",
+            "id": "f7e3fe99-a240-45f9-848e-2d26a128eaf3",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }

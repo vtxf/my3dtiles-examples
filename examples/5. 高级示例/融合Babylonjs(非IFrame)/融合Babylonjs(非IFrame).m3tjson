@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.34",
         "createdTime": "2024-12-02T03:19:48.621Z",
-        "modifiedTime": "2025-01-02T01:26:57.455Z",
+        "modifiedTime": "2025-01-02T09:12:12.050Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -36,10 +36,10 @@
                                 "ref": "babylonjs_house(非iframe)",
                                 "extras": {
                                     "clearColor": [
-                                        0.2,
-                                        0.2,
-                                        0.2,
-                                        1
+                                        0,
+                                        0,
+                                        0,
+                                        0
                                     ]
                                 },
                                 "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function getCameraInfo() {\r\n        var { viewer } = g_app.czmViewer;\r\n        if (!viewer) return;\r\n        var { camera } = g_app.czmViewer.viewer;\r\n        if (!camera) return;\r\n        var m = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(116.39, 39.9, 0));\r\n        var inverseM = Cesium.Matrix4.inverse(m, new Cesium.Matrix4());\r\n        var p = camera.positionWC;\r\n        var target = Cesium.Cartesian3.add(p, camera.direction, new Cesium.Cartesian3());\r\n        var up = Cesium.Cartesian3.add(p, camera.up, new Cesium.Cartesian3());\r\n        var p2 = Cesium.Matrix4.multiplyByPoint(inverseM, p, new Cesium.Cartesian3());\r\n        var target2 = Cesium.Matrix4.multiplyByPoint(inverseM, target, new Cesium.Cartesian3());\r\n        var up2 = Cesium.Matrix4.multiplyByPoint(inverseM, up, new Cesium.Cartesian3());\r\n        var up3 = Cesium.Cartesian3.subtract(up2, p2, new Cesium.Cartesian3());\r\n        Cesium.Cartesian3.normalize(up3, up3);\r\n        return {\r\n            pos: [p2.x, p2.y, p2.z],\r\n            target: [target2.x, target2.y, target2.z],\r\n            up: [up3.x, up3.y, up3.z],\r\n            fovy: g_app.czmViewer.viewer.camera.frustum.fovy * 180 / Math.PI,\r\n        };\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n            const div = sceneObject.layoutDiv.div;\r\n\r\n            const canvas = document.createElement('canvas');\r\n            {\r\n                canvas.style.width = '100%'\r\n                canvas.style.height = '100%'\r\n                canvas.setAttribute('babylonjs', `${sceneObject.id}`);\r\n                div.appendChild(canvas);\r\n                this.dispose(() => div.removeChild(canvas));\r\n            }\r\n\r\n            const engine = new BABYLON.Engine(canvas, true);\r\n            this.dispose(() => engine.dispose());\r\n\r\n            // 创建场景\r\n            const scene = new BABYLON.Scene(engine);\r\n            this.dispose(() => scene.dispose());\r\n            // scene.clearColor = new BABYLON.Color4(0, 0, 0, 0); // 设置canvas背景透明\r\n            const clearColor = sceneObject?.extras?.clearColor ?? [0, 0, 0, 0];\r\n            scene.clearColor = new BABYLON.Color4(...clearColor); // 设置canvas背景透明\r\n            // 设置为右手坐标系\r\n            scene.useRightHandedSystem = true;\r\n\r\n            // 创建相机\r\n            const camera = new BABYLON.FreeCamera(\"Camera\", BABYLON.Vector3.Zero(), scene);\r\n            this.dispose(() => camera.dispose());\r\n            // 初始相机位置设置\r\n            {\r\n                // camera.attachControl(canvas, true);\r\n                // 设置相机的近裁和远裁\r\n                camera.minZ = 0.01;\r\n                camera.maxZ = 5000;\r\n                camera.fov = BABYLON.Tools.ToRadians(70);\r\n                camera.position = new BABYLON.Vector3(6.454080615661778, 6.377902589742007, 3.9602961614727974);\r\n                camera.setTarget(new BABYLON.Vector3(5.804354174531736, 5.719789407685312, 3.579845651984215));\r\n                camera.upVector = new BABYLON.Vector3(-0.2672885352198342, -0.27073867394813395, 0.9248012810160037);\r\n            }\r\n\r\n            // 创建灯光\r\n            const light = new BABYLON.HemisphericLight(\"light\", new BABYLON.Vector3(0, 1, 0), scene);\r\n            this.dispose(() => light.dispose());\r\n\r\n            const { context } = XE2['xe2-base-objects'].SceneObject;\r\n            const gltfBaseUrl = context.getStrFromEnv(\"${SD}../../../shared/data/gltfs/orhouse/\");\r\n            BABYLON.SceneLoader.ImportMesh(\"\", gltfBaseUrl, \"orhouse.glb\", scene, (meshes) => {\r\n                const rootMesh = new BABYLON.Mesh(\"root\", scene);\r\n                this.dispose(() => rootMesh.dispose());\r\n                meshes.forEach(mesh => {\r\n                    mesh.parent = rootMesh;\r\n                    this.dispose(() => mesh.dispose());\r\n                });\r\n                rootMesh.scaling = new BABYLON.Vector3(0.01, 0.01, 0.01);\r\n                rootMesh.position.z += 0.8;\r\n                rootMesh.rotation.x = BABYLON.Tools.ToRadians(90); // 绕x轴旋转90度\r\n            });\r\n\r\n            // 渲染循环\r\n            engine.runRenderLoop(() => {\r\n                scene.render();\r\n            });\r\n\r\n            // 窗口大小改变时的响应\r\n            const resizeObserver = new ResizeObserver(() => {\r\n                engine.resize();\r\n            });\r\n            resizeObserver.observe(canvas);\r\n            this.dispose(() => resizeObserver.unobserve(canvas));\r\n\r\n            const updateCameraInfo = () => {\r\n                const cameraInfo = getCameraInfo();\r\n                if (!cameraInfo) return;\r\n                const { pos, target, up, fovy } = cameraInfo;\r\n                if (!pos || !target || !up || !fovy) return;\r\n\r\n                camera.fov = BABYLON.Tools.ToRadians(fovy);\r\n                camera.position = new BABYLON.Vector3(pos[0], pos[1], pos[2]);\r\n                camera.setTarget(new BABYLON.Vector3(target[0], target[1], target[2]));\r\n                camera.upVector = new BABYLON.Vector3(up[0], up[1], up[2]);\r\n            }\r\n            updateCameraInfo();\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(updateCameraInfo));\r\n\r\n            {\r\n                const update = () => {\r\n                    const clearColor = sceneObject?.extras?.clearColor ?? [0, 0, 0, 0];\r\n                    scene.clearColor = new BABYLON.Color4(...clearColor); // 设置canvas背景透明\r\n                };\r\n                update();\r\n                this.dispose(sceneObject.extrasChanged.disposableOn(update));\r\n            }\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
@@ -176,7 +176,6 @@
                                 "borderWidth": 0,
                                 "clickFuncStr": "function(mouseEvent) {\n\n}\n",
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
-                                "highlighted": true,
                                 "highlightOnClick": true,
                                 "text": "自动",
                                 "textColor": [
@@ -251,7 +250,7 @@
                                     0.95
                                 ],
                                 "borderWidth": 0,
-                                "clickFuncStr": "function () {\r\n    window.open('https://www.wolai.com/vtxf/cwzBwpDuCvihvjftK4jmeE');\r\n}",
+                                "clickFuncStr": "function () {\r\n    window.open('https://www.wolai.com/vtxf/3k4mAH4EWMzZAkjruUEXrR');\r\n}",
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                 "text": "说明文档",
                                 "textColor": [
@@ -293,7 +292,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "bdd6dc73-e4af-4af7-904f-04e3729bb42f",
+            "id": "b6461319-b9f0-4c62-8fa4-d0b6a22b6e42",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -308,7 +307,7 @@
             "clockCurrentTime": 1733109588624
         },
         "offlineImagery": {
-            "id": "f855fe38-fd21-46e9-b302-faa7547361de",
+            "id": "002fc460-1923-4108-9179-945fd805b5e8",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -318,7 +317,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "5575fea6-b2df-4264-878b-814d03b022dd",
+            "id": "a8822154-7071-457f-89df-cfb1ff24586b",
             "type": "CzmImagery",
             "brightness": 0.3,
             "imageryProvider": {
@@ -341,7 +340,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "dd8f4b5e-0457-44b8-ae5a-0f3cd68a850c",
+            "id": "3b6eecd3-a151-4554-8f98-3b5e153b14c9",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -352,27 +351,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "05711a76-f6d1-40b8-ab21-6a1ab66dee9a",
+            "id": "a1300388-b025-4da1-b898-e5d5b654f5ad",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "7adc943a-d9b0-4d90-8bd6-bca080fe183f",
+            "id": "cfa812aa-d6e0-4f26-a9b0-c25ed84c13a1",
             "type": "View",
             "position": [
-                116.38993748071337,
-                39.899945268861295,
-                7.223896726335926
+                116.38991026063154,
+                39.89991207962762,
+                12.59816132329364
             ],
             "rotation": [
-                43.52243664091821,
-                -43.847789437172004,
-                0.000003880030714564207
+                43.52243662960689,
+                -43.84778942477331,
+                0.000003896361005409588
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "c4bbbc39-c317-4b8a-b419-8e2b7e1e485f",
+            "id": "317f2e35-2f8d-4ae2-91fc-4b21b026ba1d",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
