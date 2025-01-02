@@ -112,12 +112,12 @@
                     },
                     "children": [
                         {
-                            "name": "WebGPU渲染",
+                            "name": "Babylonjs渲染",
                             "sceneObj": {
                                 "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
                                 "type": "RectangleButton",
-                                "name": "WebGPU渲染",
-                                "ref": "WebGPU渲染",
+                                "name": "Babylonjs渲染",
+                                "ref": "Babylonjs渲染",
                                 "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n    const showCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 1.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n    const hiddenCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 0.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n\r\n            const update = () => {\r\n                const { highlighted } = sceneObject;\r\n                const house = XE2.g.refs['babylonjs_house(非iframe)'];\r\n                if (!house) return;\r\n                house.cssText = highlighted ? showCss : hiddenCss;\r\n            };\r\n            update();\r\n            this.dispose(sceneObject.highlightedChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                 "width": 92,
                                 "height": 29,
@@ -138,7 +138,7 @@
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                 "highlighted": true,
                                 "highlightOnClick": true,
-                                "text": "WebGPU渲染",
+                                "text": "Babylonjs渲染",
                                 "textColor": [
                                     0.95,
                                     0.95,
@@ -158,7 +158,7 @@
                                 "type": "RectangleButton",
                                 "name": "自动",
                                 "ref": "自动",
-                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    debugger;\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n            const { Cartesian3 } = Cesium;\r\n\r\n            const update = () => {\r\n                if (!sceneObject.highlighted) return;\r\n                const { czm_house, WebGPU渲染 } = XE2.g.refs;\r\n                if (!WebGPU渲染) return;\r\n                if (!czm_house || !czm_house.position) return;\r\n                const c0 = Cartesian3.fromDegrees(...czm_house.position);\r\n                const ci = g_app.czmViewer.getCameraInfo();\r\n                const d = Cartesian3.distance(c0, Cartesian3.fromDegrees(...ci.position));\r\n                WebGPU渲染.highlighted = d < 20;\r\n            };\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(update));\r\n\r\n            {\r\n                const update = () => {\r\n                    const bljh = XE2.g.refs['babylonjs_house(非iframe)'];\r\n                    if (sceneObject.highlighted) {\r\n                        bljh.extras = { clearColor: [0.2, 0.2, 0.2, 1.0] };\r\n                    } else {\r\n                        bljh.extras = { clearColor: [0, 0, 0, 0] };\r\n                    }\r\n                }\r\n                update();\r\n                this.dispose(sceneObject.highlightedChanged.disposableOn(update));\r\n            }\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    debugger;\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n            const { Cartesian3 } = Cesium;\r\n\r\n            const update = () => {\r\n                if (!sceneObject.highlighted) return;\r\n                const { czm_house, Babylonjs渲染 } = XE2.g.refs;\r\n                if (!Babylonjs渲染) return;\r\n                if (!czm_house || !czm_house.position) return;\r\n                const c0 = Cartesian3.fromDegrees(...czm_house.position);\r\n                const ci = g_app.czmViewer.getCameraInfo();\r\n                const d = Cartesian3.distance(c0, Cartesian3.fromDegrees(...ci.position));\r\n                Babylonjs渲染.highlighted = d < 20;\r\n            };\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(update));\r\n\r\n            {\r\n                const update = () => {\r\n                    const bljh = XE2.g.refs['babylonjs_house(非iframe)'];\r\n                    if (sceneObject.highlighted) {\r\n                        bljh.extras = { clearColor: [0.2, 0.2, 0.2, 1.0] };\r\n                    } else {\r\n                        bljh.extras = { clearColor: [0, 0, 0, 0] };\r\n                    }\r\n                }\r\n                update();\r\n                this.dispose(sceneObject.highlightedChanged.disposableOn(update));\r\n            }\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                 "width": 92,
                                 "height": 29,
                                 "backgroundColor": [
