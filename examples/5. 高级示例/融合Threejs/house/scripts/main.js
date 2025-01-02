@@ -21,7 +21,7 @@ function initWeb3D() {
         if (!e.data) return;
         if (e.data.type !== 'camera') return;
         const { pos, target, up, fovy } = e.data;
-        console.log(`e.data`, e.data);
+        // console.log(`e.data`, e.data);
 
         camera.fov = fovy;
         camera.updateProjectionMatrix();

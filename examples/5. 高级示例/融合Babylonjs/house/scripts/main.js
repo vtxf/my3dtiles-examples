@@ -29,7 +29,7 @@ window.addEventListener('message', e => {
     if (!e.data) return;
     if (e.data.type !== 'camera') return;
     const { pos, target, up, fovy } = e.data;
-    console.log(`e.data`, e.data);
+    // console.log(`e.data`, e.data);
 
     camera.fov = BABYLON.Tools.ToRadians(fovy);
     camera.position = new BABYLON.Vector3(pos[0], pos[1], pos[2]);
