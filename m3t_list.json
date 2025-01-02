@@ -1525,6 +1525,14 @@
                             "previewImageUri": "${M3T_CurrentDir}融合Babylonjs(非IFrame)/融合Babylonjs(非IFrame).jpg"
                         },
                         {
+                            "name": "融合Threejs",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}融合Threejs/融合Threejs.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}融合Threejs/融合Threejs.jpg"
+                        },
+                        {
                             "name": "融合WebGPU20241202",
                             "content": {
                                 "type": "m3tJsonUri",
