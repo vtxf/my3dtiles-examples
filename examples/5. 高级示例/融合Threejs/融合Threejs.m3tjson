@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.34",
         "createdTime": "2024-12-02T03:19:48.621Z",
-        "modifiedTime": "2024-12-31T02:53:18.321Z",
+        "modifiedTime": "2025-01-02T03:20:15.693Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -91,12 +91,12 @@
                     },
                     "children": [
                         {
-                            "name": "WebGPU渲染",
+                            "name": "Threejs渲染",
                             "sceneObj": {
                                 "id": "93de608e-4358-4c6d-92e8-81a49aeb055f",
                                 "type": "RectangleButton",
-                                "name": "WebGPU渲染",
-                                "ref": "WebGPU渲染",
+                                "name": "Threejs渲染",
+                                "ref": "Threejs渲染",
                                 "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n    const showCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 1.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n    const hiddenCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 0.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n\r\n            const update = () => {\r\n                const { highlighted } = sceneObject;\r\n                XE2.g.refs.babylonjs_house.cssText = highlighted ? showCss : hiddenCss;\r\n            };\r\n            update();\r\n            this.dispose(sceneObject.highlightedChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                 "width": 92,
                                 "height": 29,
@@ -117,7 +117,7 @@
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                 "highlighted": true,
                                 "highlightOnClick": true,
-                                "text": "WebGPU渲染",
+                                "text": "Threejs渲染",
                                 "textColor": [
                                     0.95,
                                     0.95,
@@ -224,7 +224,7 @@
                             0.5
                         ],
                         "cssText": "left: 4px;\ntop: 40px;",
-                        "content": "### 融合Babylonjs渲染\n\nCesium渲染效果一般，可以结合babylonjs渲染，来提升局部渲染效果。\n\n这里演示的是将babylonjs渲染的模型融合到Cesium场景中的效果。\n"
+                        "content": "### 融合Threejs渲染\n\nCesium渲染效果一般，可以结合Threejs渲染，来提升局部渲染效果。\n\n这里演示的是将Threejs渲染的模型融合到Cesium场景中的效果。\n"
                     }
                 }
             ]
@@ -232,7 +232,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "94eeb2fd-d522-4035-9d7e-b18c6d458f92",
+            "id": "18e406f5-6f18-4453-9762-b2cd59994b11",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -247,7 +247,7 @@
             "clockCurrentTime": 1733109588624
         },
         "offlineImagery": {
-            "id": "e75cc6c9-e1ec-4017-a090-83f017216e93",
+            "id": "17938500-e89a-43ec-9726-84f66c04c22c",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -257,7 +257,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "903fd1bd-0845-423c-8412-39e9ea834133",
+            "id": "d008f8fa-54f7-4612-8210-2172ff6eaa90",
             "type": "CzmImagery",
             "brightness": 0.3,
             "imageryProvider": {
@@ -280,7 +280,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "73513dc8-2fe7-4b0b-99e7-cf8c511f6bb3",
+            "id": "37467ac7-e1eb-41d7-8dba-8fb7d838446a",
             "type": "CzmTerrain",
             "show": false,
             "provider": {
@@ -291,27 +291,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "93c7935a-12cd-42c6-b805-00fb553c295e",
+            "id": "6d382c7a-8285-4ae1-bcc7-2de66c799784",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "0b69dba9-edd5-4c4a-b0ba-2d7274eb5d9d",
+            "id": "bec37c5b-0817-4666-9348-520bc1fdd9d3",
             "type": "View",
             "position": [
-                116.38992414504901,
-                39.899947046325934,
-                6.624288030803812
+                116.3899231441079,
+                39.899934747174136,
+                7.77983977409383
             ],
             "rotation": [
-                49.14150065935929,
-                -32.53118802691052,
-                0.000005497631208231358
+                45.687303348380816,
+                -37.023444940234626,
+                359.9999947035699
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "b1cdf537-2ddf-4d6e-b2c8-bc0b6dd04fc7",
+            "id": "41f05043-bc66-4456-9971-ba53ea95dc19",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
