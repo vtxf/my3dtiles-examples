@@ -9,13 +9,12 @@ function initWeb3D() {
     scene.background = null; // 设置canvas背景透明
 
     // 创建相机
-    const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 5000);
-
+    const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 1000);
     // 初始相机位置设置
     {
-        camera.position.set(6.454080615661778, 6.377902589742007, 3.9602961614727974);
-        camera.lookAt(new THREE.Vector3(5.804354174531736, 5.719789407685312, 3.579845651984215));
-        camera.up.set(-0.2672885352198342, -0.27073867394813395, 0.9248012810160037);
+        camera.position.set(5.87119293911729, -7.38644338398808, 4.312101513147354);
+        camera.lookAt(new THREE.Vector3(5.260303682185449, -6.661173892669467, 3.9946137480437756));
+        camera.up.set(-0.20453188615497309, 0.24282748671934215, 0.9482623683556449);
     }
 
     window.addEventListener('message', e => {
@@ -37,12 +36,12 @@ function initWeb3D() {
     // scene.add(light);
     {
         // 创建环境光
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // 颜色为白色，强度为0.5，强度值可根据实际需求调整
+        const ambientLight = new THREE.AmbientLight(0xffffff, 3); // 颜色为白色，强度为0.5，强度值可根据实际需求调整
         scene.add(ambientLight);
 
         // 创建平行光
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5); // 同样颜色为白色，强度为0.5
-        directionalLight.position.set(0, 1, 0); // 设置平行光的位置，这里使其从上方（Y轴正方向）照射
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 2); // 同样颜色为白色，强度为0.5
+        directionalLight.position.set(0, 0, 5); // 设置平行光的位置，这里使其从上方（Y轴正方向）照射
         scene.add(directionalLight);
     }
 
@@ -59,6 +58,13 @@ function initWeb3D() {
         rootMesh.rotation.x = THREE.MathUtils.degToRad(90); // 绕x轴旋转90度
         scene.add(rootMesh);
     });
+
+    // 初始相机位置设置
+    {
+        camera.position.set(5.87119293911729, -7.38644338398808, 4.312101513147354);
+        camera.lookAt(new THREE.Vector3(5.260303682185449, -6.661173892669467, 3.9946137480437756));
+        camera.up.set(-0.20453188615497309, 0.24282748671934215, 0.9482623683556449);
+    }
 
     // 渲染循环
     function animate() {
