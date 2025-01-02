@@ -5,9 +5,31 @@
     <meta charset="UTF-8">
     <title>Babylon.js GLB Model Loading Example</title>
     <!-- <script src="https://cdn.babylonjs.com/babylon.js"></script> -->
-    <script src="../../../../shared/scripts//babylon/babylon.js"></script>
+    <!-- <script src="../../../../shared/scripts//babylon/babylon.js"></script> -->
     <!-- <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script> -->
-    <script src="../../../../shared/scripts/babylon/babylonjs.loaders.min.js"></script>
+    <!-- <script src="../../../../shared/scripts/babylon/babylonjs.loaders.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script> -->
+
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.core.js"></script> -->
+
+    <!-- <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@172/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@172/examples/jsm/"
+          }
+        }
+      </script> -->
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
+          }
+        }
+      </script>
+
     <style>
         * {
             padding: 0;
@@ -24,7 +46,19 @@
 
 <body>
     <canvas id="renderCanvas" style="width: 100%; height: 100%;"></canvas>
-    <script src="./scripts/main.js"></script>
+
+    <script type="module">
+        // import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js';
+        import * as THREE from 'three';
+        window.THREE = THREE;
+        // import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/loaders/GLTFLoader.js';
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+        window.GLTFLoader = GLTFLoader;
+        // import { DRACOLoader } from 'https://cdn.jsdelivr.net/npm/three@<version>/examples/jsm/loaders/DRACOLoader.js';
+        import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+        window.DRACOLoader = DRACOLoader;
+        import './scripts/main.js';
+    </script>
 </body>
 
 </html>
