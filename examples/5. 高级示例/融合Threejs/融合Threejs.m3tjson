@@ -14,12 +14,12 @@
                     "name": "场景",
                     "children": [
                         {
-                            "name": "babylonjs_house",
+                            "name": "threejs_house",
                             "sceneObj": {
                                 "id": "433219b9-f8bd-4367-80af-073cb1988c5d",
                                 "type": "IFrameDiv",
-                                "name": "babylonjs_house",
-                                "ref": "babylonjs_house",
+                                "name": "threejs_house",
+                                "ref": "threejs_house",
                                 "createAppendedObjFuncStr": "function (sceneObject) {\r\n    function updateCameraInfo() {\r\n        var { viewer} = g_app.czmViewer;\r\n        if (!viewer) return;\r\n        var { camera } = g_app.czmViewer.viewer;\r\n        if (!camera) return;\r\n        var m = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(116.39, 39.9, 0));\r\n        var inverseM = Cesium.Matrix4.inverse(m, new Cesium.Matrix4());\r\n        var p = camera.positionWC;\r\n        var target = Cesium.Cartesian3.add(p, camera.direction, new Cesium.Cartesian3());\r\n        var up = Cesium.Cartesian3.add(p, camera.up, new Cesium.Cartesian3());\r\n        var p2 = Cesium.Matrix4.multiplyByPoint(inverseM, p, new Cesium.Cartesian3());\r\n        var target2 = Cesium.Matrix4.multiplyByPoint(inverseM, target, new Cesium.Cartesian3());\r\n        var up2 = Cesium.Matrix4.multiplyByPoint(inverseM, up, new Cesium.Cartesian3());\r\n        var up3 = Cesium.Cartesian3.subtract(up2, p2, new Cesium.Cartesian3());\r\n        Cesium.Cartesian3.normalize(up3, up3);\r\n        sceneObject.postMessage({\r\n            type: \"camera\",\r\n            pos: [p2.x, p2.y, p2.z],\r\n            target: [target2.x, target2.y, target2.z],\r\n            up: [up3.x, up3.y, up3.z],\r\n            fovy: g_app.czmViewer.viewer.camera.frustum.fovy * 180 / Math.PI,\r\n        }, { targetOrigin: '*' });\r\n    }\r\n\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n            updateCameraInfo();\r\n            this.dispose(g_app.czmViewer.cameraChanged.disposableOn(updateCameraInfo));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                 "width": 0,
                                 "height": 0,
@@ -97,7 +97,7 @@
                                 "type": "RectangleButton",
                                 "name": "Threejs渲染",
                                 "ref": "Threejs渲染",
-                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n    const showCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 1.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n    const hiddenCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 0.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n\r\n            const update = () => {\r\n                const { highlighted } = sceneObject;\r\n                XE2.g.refs.babylonjs_house.cssText = highlighted ? showCss : hiddenCss;\r\n            };\r\n            update();\r\n            this.dispose(sceneObject.highlightedChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
+                                "createAppendedObjFuncStr": "function (sceneObject) {\r\n    class AppendedObj extends XE2['xe2-base-utils'].Destroyable {\r\n        constructor() {\r\n            super();\r\n\r\n    const showCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 1.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n    const hiddenCss = `\r\nwidth: 100%;\r\nheight: 100%;\r\npointer-events: none;\r\nopacity: 0.0;\r\ntransition: opacity 1s ease-in-out;\r\n`;\r\n\r\n            const update = () => {\r\n                const { highlighted } = sceneObject;\r\n                XE2.g.refs.threejs_house.cssText = highlighted ? showCss : hiddenCss;\r\n            };\r\n            update();\r\n            this.dispose(sceneObject.highlightedChanged.disposableOn(update));\r\n        }\r\n    }\r\n    return new AppendedObj();\r\n}",
                                 "width": 92,
                                 "height": 29,
                                 "backgroundColor": [
