@@ -1,0 +1,109 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.36",
+        "createdTime": "2025-01-12T12:03:31.133Z",
+        "modifiedTime": "2025-01-12T12:47:30.716Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "china_country_border-line.geojson",
+                    "sceneObj": {
+                        "id": "a8755bb8-47af-4ad5-af78-8faf683bfbcd",
+                        "type": "CzmGeoJson",
+                        "uri": "${LF}D:\\vtxf\\2025\\202501\\misc\\china_country_border-line.geojson",
+                        "clampToGround": true,
+                        "allowPicking": true,
+                        "loadFuncStr": "// dataSource\n(dataSource) => {\n    if (dataSource) {\n        dataSource.show = true;\n        const entities = dataSource.entities.values;\n        for (let i = 0; i < entities.length; i++) {\n            const entity = entities[i];\n            entity.polyline.width = 3;\n        }\n    }\n}\n",
+                        "name": "china_country_border-line.geojson"
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "305a2731-54a6-463a-ae18-00b6215e5513",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneGlobeDepthTestAgainstTerrain": false,
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1736683411149
+        },
+        "offlineImagery": {
+            "id": "39e9eef2-7069-4261-955c-c25a75305aa2",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "18c77e60-1b02-4be1-93bd-15421acb7713",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "4cb8a479-9a0e-4e52-9521-40dcf37fe9e2",
+            "type": "CzmTerrain",
+            "show": true,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "74d55027-a763-4089-8c85-bdcf4df8af76",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "16e35e67-b4de-4943-a8fb-a9d556aa2fa9",
+            "type": "View",
+            "position": [
+                109.63505818042725,
+                29.79807464054434,
+                5455735.81496152
+            ],
+            "rotation": [
+                357.05567768834396,
+                -89.15818692205815,
+                0
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "fb8d7a11-2e26-47b9-91e0-ef9a0677eae7",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

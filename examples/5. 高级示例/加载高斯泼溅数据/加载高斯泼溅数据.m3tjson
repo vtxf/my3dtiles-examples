@@ -1,0 +1,136 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.36",
+        "createdTime": "2025-01-04T08:47:13.553Z",
+        "modifiedTime": "2025-01-12T12:52:01.244Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "CzmSplat",
+                    "sceneObj": {
+                        "id": "3226a61a-c40e-4a96-89df-633666fe972d",
+                        "type": "CzmSplat",
+                        "name": "CzmSplat",
+                        "position": [
+                            116.39106045349376,
+                            39.910599106769375,
+                            0
+                        ],
+                        "url": "${SD}../../../shared/data/splat/model.splat",
+                        "writeDepth": true,
+                        "localPosition": [
+                            0,
+                            0,
+                            2.8
+                        ],
+                        "localRotation": [
+                            0,
+                            -120,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "name": "worker",
+                    "sceneObj": {
+                        "id": "ca13e87f-6459-4fc7-b026-7c70ebd8e60f",
+                        "type": "CzmModelPrimitive",
+                        "name": "worker",
+                        "url": "${my3dtiles-assets-script-dir}/assets/gltfs/build_worker/worker.glb",
+                        "allowPicking": true,
+                        "position": [
+                            116.3910514345489,
+                            39.9105940269813,
+                            0
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "cb6324b4-a787-4e12-8d30-aed089ac4bca",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1735980433561
+        },
+        "offlineImagery": {
+            "id": "f5557356-b030-407d-9d73-e8aedbf788d6",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "e343b642-cd9a-4bf8-88c6-5e3dea7485f6",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "846a22cb-f6a3-4077-83e7-47bed9f838ce",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "b7e57a57-e62d-4134-b3c1-65557c9c9042",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "2ddc282c-4428-4486-9784-ffdb0d1e54c9",
+            "type": "View",
+            "position": [
+                116.39104775202345,
+                39.91062194087964,
+                2.4228200160369266
+            ],
+            "rotation": [
+                168.22403319779673,
+                -32.95470678006286,
+                359.9999992763949
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "bd49d030-12e0-4407-b84e-c5d8776d23f0",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}

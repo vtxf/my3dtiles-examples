@@ -1,0 +1,199 @@
+{
+    "asset": {
+        "type": "My3dtiles",
+        "version": "0.9.34",
+        "createdTime": "2025-01-03T11:00:24.844Z",
+        "modifiedTime": "2025-01-03T11:29:22.361Z",
+        "name": "未命名项目"
+    },
+    "sceneTree": {
+        "root": {
+            "name": "root",
+            "children": [
+                {
+                    "name": "自定义图元",
+                    "sceneObj": {
+                        "id": "b7a1a628-9e28-4677-a55d-635a443b1118",
+                        "type": "CzmCustomPrimitive",
+                        "show": true,
+                        "allowPicking": true,
+                        "position": [
+                            116.04937724011165,
+                            32.378640351207196,
+                            0
+                        ],
+                        "vertexShaderSource": "in vec3 position;\nin vec3 normal;\nin vec2 st;\nin float instances;\nout vec3 v_normalEC;\nout vec2 v_st;\nvoid main()\n{\n    // 如果这一句注释，要相应地注释掉attribute中的normal，也就是说顶点属性要和shader中的一一匹配！\n    v_normalEC = czm_normal * normal; \n    v_st = st;\n    vec3 p3 = position;\n    p3.z += instances;\n    gl_Position = czm_modelViewProjection * vec4(p3, 1.0);\n}\n",
+                        "instanceCount": 3,
+                        "name": "自定义图元",
+                        "attributes": {
+                            "position": {
+                                "typedArray": {
+                                    "type": "Float32Array",
+                                    "array": [
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        -1,
+                                        0,
+                                        1,
+                                        -1,
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        1,
+                                        -1,
+                                        0,
+                                        1,
+                                        0,
+                                        0
+                                    ]
+                                },
+                                "componentsPerAttribute": 3
+                            },
+                            "normal": {
+                                "typedArray": {
+                                    "type": "Float32Array",
+                                    "array": [
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ]
+                                },
+                                "componentsPerAttribute": 3
+                            },
+                            "textureCoordinates": {
+                                "typedArray": {
+                                    "type": "Float32Array",
+                                    "array": [
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                        1,
+                                        1,
+                                        0,
+                                        1,
+                                        1
+                                    ]
+                                },
+                                "componentsPerAttribute": 2
+                            },
+                            "instances": {
+                                "typedArray": {
+                                    "type": "Float32Array",
+                                    "array": [
+                                        0,
+                                        1,
+                                        2
+                                    ]
+                                },
+                                "componentsPerAttribute": 1,
+                                "instanceDivisor": 1
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "builtin": {
+        "czmViewer": {
+            "id": "24c01269-9faf-41c8-8bd0-7a78a81783ea",
+            "type": "CzmViewer",
+            "show": true,
+            "actived": true,
+            "name": "默认视口",
+            "ref": "v",
+            "sceneSsccZoomFactor": 2,
+            "clockCurrentTime": 1735902024850
+        },
+        "offlineImagery": {
+            "id": "3b91cc8d-32ec-4f8d-80be-3be1f147b440",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "TileMapServiceImageryProvider",
+                "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+            },
+            "zIndex": -2,
+            "name": "默认离线影像"
+        },
+        "baseImagery": {
+            "id": "527e7b44-e1aa-4441-b5bf-cd4df8b792b8",
+            "type": "CzmImagery",
+            "imageryProvider": {
+                "type": "UrlTemplateImageryProvider",
+                "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                "subdomains": [
+                    "t0",
+                    "t1",
+                    "t2",
+                    "t3",
+                    "t4",
+                    "t5",
+                    "t6",
+                    "t7"
+                ],
+                "minimumLevel": 0,
+                "maximumLevel": 18
+            },
+            "zIndex": -1,
+            "name": "基础地球影像"
+        },
+        "czmTerrain": {
+            "id": "52868353-7e09-4ef7-b7da-24cf692df91a",
+            "type": "CzmTerrain",
+            "show": false,
+            "provider": {
+                "type": "CesiumTerrainProvider",
+                "url": "ion://1",
+                "requestVertexNormals": true
+            },
+            "name": "Cesium官方地形"
+        },
+        "czmClassicNavigator": {
+            "id": "56ed33c4-2055-475d-9657-91e5c6883c1b",
+            "type": "CzmClassicNavigator",
+            "name": "经典指北针"
+        },
+        "lastView": {
+            "id": "b2c226c5-9199-443c-8b7a-d3a2b3614172",
+            "type": "View",
+            "position": [
+                116.04940483193803,
+                32.37865351701528,
+                3.149360900650965
+            ],
+            "rotation": [
+                227.69527131447938,
+                -39.287772857130165,
+                359.99999303243715
+            ],
+            "name": "最近视角"
+        },
+        "initOptions": {
+            "id": "d4b2b03c-39e5-4ff3-9d05-7e4b7cf904e0",
+            "type": "M3tInitOptions",
+            "name": "初始化选项"
+        }
+    }
+}
