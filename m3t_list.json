@@ -439,6 +439,14 @@
                                     "previewImageUri": "${M3T_CurrentDir}geojson自定义配置/geojson自定义配置.jpg"
                                 },
                                 {
+                                    "name": "国界",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}国界/国界.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}国界/国界.jpg"
+                                },
+                                {
                                     "name": "图片模型滑动交互",
                                     "content": {
                                         "type": "m3tJsonUri",
@@ -1493,12 +1501,27 @@
                             "previewImageUri": "${M3T_CurrentDir}加载CAD图纸20241107/加载CAD图纸20241107.jpg"
                         },
                         {
+                            "name": "加载高斯泼溅数据",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}加载高斯泼溅数据/加载高斯泼溅数据.m3tjson"
+                            },
+                            "previewImageUri": "${M3T_CurrentDir}加载高斯泼溅数据/加载高斯泼溅数据.jpg"
+                        },
+                        {
                             "name": "双视口联动20240926",
                             "content": {
                                 "type": "m3tJsonUri",
                                 "m3tJsonUri": "${M3T_CurrentDir}双视口联动20240926/双视口联动20240926.m3tjson"
                             },
                             "previewImageUri": "${M3T_CurrentDir}双视口联动20240926/双视口联动20240926.jpg"
+                        },
+                        {
+                            "name": "自定义图元实例渲染",
+                            "content": {
+                                "type": "m3tJsonUri",
+                                "m3tJsonUri": "${M3T_CurrentDir}自定义图元实例渲染/自定义图元实例渲染.m3tjson"
+                            }
                         },
                         {
                             "name": "自定义场景对象拾取20241107",
