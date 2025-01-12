@@ -1,1 +1,1 @@
-/*! my3dtiles-lib(0.9.33-6def7fd8-2024-12-24T03:54:24.000Z) 版权所有@beijing jinfei technology co.,ltd */
+/*! my3dtiles-lib(0.9.36-e89e7892-2025-01-07T06:05:08.000Z) 版权所有@beijing jinfei technology co.,ltd */
