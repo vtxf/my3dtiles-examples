@@ -3,7 +3,7 @@
         "type": "My3dtiles",
         "version": "0.9.36",
         "createdTime": "2025-01-12T12:03:31.133Z",
-        "modifiedTime": "2025-01-12T12:47:30.716Z",
+        "modifiedTime": "2025-01-13T02:28:38.120Z",
         "name": "未命名项目"
     },
     "sceneTree": {
@@ -15,7 +15,7 @@
                     "sceneObj": {
                         "id": "a8755bb8-47af-4ad5-af78-8faf683bfbcd",
                         "type": "CzmGeoJson",
-                        "uri": "${LF}D:\\vtxf\\2025\\202501\\misc\\china_country_border-line.geojson",
+                        "uri": "${SD}..\\..\\..\\..\\shared\\data\\misc\\china_country_border-line.geojson",
                         "clampToGround": true,
                         "allowPicking": true,
                         "loadFuncStr": "// dataSource\n(dataSource) => {\n    if (dataSource) {\n        dataSource.show = true;\n        const entities = dataSource.entities.values;\n        for (let i = 0; i < entities.length; i++) {\n            const entity = entities[i];\n            entity.polyline.width = 3;\n        }\n    }\n}\n",
@@ -27,7 +27,7 @@
     },
     "builtin": {
         "czmViewer": {
-            "id": "305a2731-54a6-463a-ae18-00b6215e5513",
+            "id": "0485065f-2708-425c-9032-79dabee1ccbe",
             "type": "CzmViewer",
             "show": true,
             "actived": true,
@@ -38,7 +38,7 @@
             "clockCurrentTime": 1736683411149
         },
         "offlineImagery": {
-            "id": "39e9eef2-7069-4261-955c-c25a75305aa2",
+            "id": "9f112f01-8ebc-49bc-a441-aa7d4681cf73",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "TileMapServiceImageryProvider",
@@ -48,7 +48,7 @@
             "name": "默认离线影像"
         },
         "baseImagery": {
-            "id": "18c77e60-1b02-4be1-93bd-15421acb7713",
+            "id": "6168dbb5-ce9a-4fef-81bc-c589e1ec5e96",
             "type": "CzmImagery",
             "imageryProvider": {
                 "type": "UrlTemplateImageryProvider",
@@ -70,7 +70,7 @@
             "name": "基础地球影像"
         },
         "czmTerrain": {
-            "id": "4cb8a479-9a0e-4e52-9521-40dcf37fe9e2",
+            "id": "e09a9943-a434-4b1d-be3f-79e690c1d7fa",
             "type": "CzmTerrain",
             "show": true,
             "provider": {
@@ -81,27 +81,27 @@
             "name": "Cesium官方地形"
         },
         "czmClassicNavigator": {
-            "id": "74d55027-a763-4089-8c85-bdcf4df8af76",
+            "id": "07760c99-9c0d-462c-9bd8-ba628ee072dd",
             "type": "CzmClassicNavigator",
             "name": "经典指北针"
         },
         "lastView": {
-            "id": "16e35e67-b4de-4943-a8fb-a9d556aa2fa9",
+            "id": "64b1d9ca-c4ce-4124-b33e-5a1d10e40a65",
             "type": "View",
             "position": [
-                109.63505818042725,
-                29.79807464054434,
-                5455735.81496152
+                112.12726336606607,
+                28.21692377472002,
+                5455236.735047981
             ],
             "rotation": [
-                357.05567768834396,
-                -89.15818692205815,
+                357.05568192036276,
+                -89.16380550091326,
                 0
             ],
             "name": "最近视角"
         },
         "initOptions": {
-            "id": "fb8d7a11-2e26-47b9-91e0-ef9a0677eae7",
+            "id": "16553bb2-5d79-4e4b-87b9-557e5c5c7124",
             "type": "M3tInitOptions",
             "name": "初始化选项"
         }
