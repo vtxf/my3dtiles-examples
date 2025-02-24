@@ -9,6 +9,7 @@
     "start": "http-server . -p 9123 --cors",
     "auto-pull-from-git": "node tools/auto-pull-from-git.js",
     "make-list": "node m3t_make_list.js",
+    "osspush": "node tools/oss-push/oss-push.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
