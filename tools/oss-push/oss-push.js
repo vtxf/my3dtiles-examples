@@ -72,7 +72,7 @@ async function main() {
 
         for (const file of files) {
             const localFile = path.resolve(file);
-            const ossPath = file.replace(/\\/g, '/');
+            const ossPath = 'm3t/examples/' + file.replace(/\\/g, '/');
             await uploadFile(localFile, ossPath);
         }
 
