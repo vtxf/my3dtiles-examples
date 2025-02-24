@@ -1,0 +1,14 @@
+这是一个静态网站项目，需要将项目文件推送到阿里云OSS存储中。
+oss-push目录为oss上传工具目录。这里有两个文件.env和oss-push.js。
+.env 用来存储阿里云OSS的环境变量
+oss-push.js 用来根据.env中的配置上传文件到oss，使用nodejs来完成。
+注意上传文件时，以下文件需要过滤不上传：
+/.git
+/.env
+/node_modules
+/tools
+/package.json
+/package-lock.json
+
+帮我完成.env和oss-push.js的编写。
+
