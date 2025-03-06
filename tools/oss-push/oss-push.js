@@ -7,6 +7,8 @@ const { glob } = require('glob');  // 修改这一行
 // 加载环境变量
 dotenv.config({ path: path.join(__dirname, '.env') });
 
+const ossBucketDir = process.env.OSS_BUCKET_DIR
+
 // OSS 客户端配置
 const client = new OSS({
     region: process.env.OSS_REGION,
@@ -60,11 +62,26 @@ async function checkOSSAccess() {
 
 async function main() {
     try {
-        // 首先检查 OSS 访问权限
-        const hasAccess = await checkOSSAccess();
-        if (!hasAccess) {
-            console.error('请检查您的 OSS 配置和权限是否正确！');
-            return;
+        // // 首先检查 OSS 访问权限
+        // const hasAccess = await checkOSSAccess();
+        // if (!hasAccess) {
+        //     console.error('请检查您的 OSS 配置和权限是否正确！');
+        //     return;
+        // }
+
+        // 删除ossBucketDir目录下的所有文件
+        {
+            console.log(`删除目录：${ossBucketDir} 开始！`);
+            // const result = await client.list({ prefix: ossBucketDir, delimiter: '/' });
+            const result = await client.list({ prefix: ossBucketDir });
+            for (const file of result.objects) {
+                const ossPath = file.name;
+                if (ossPath !== ossBucketDir) {
+                    await client.delete(ossPath);
+                    console.log('删除成功:', ossPath);
+                }
+            }
+            console.log(`删除目录：${ossBucketDir} 完成！`);
         }
 
         const files = await getFiles();
@@ -72,7 +89,7 @@ async function main() {
 
         for (const file of files) {
             const localFile = path.resolve(file);
-            const ossPath = 'm3t/examples/' + file.replace(/\\/g, '/');
+            const ossPath = ossBucketDir + file.replace(/\\/g, '/');
             await uploadFile(localFile, ossPath);
         }
 
