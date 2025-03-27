@@ -65,7 +65,7 @@
                                 "id": "eccfa684-8508-4b1c-8ad2-0852420115c5",
                                 "type": "CzmModelPrimitive",
                                 "name": "物体",
-                                "url": "${SD}/running_jerry.glb",
+                                "url": "${SD}running_jerry.glb",
                                 "allowPicking": true,
                                 "maximumScale": 50,
                                 "pixelSize": 10,

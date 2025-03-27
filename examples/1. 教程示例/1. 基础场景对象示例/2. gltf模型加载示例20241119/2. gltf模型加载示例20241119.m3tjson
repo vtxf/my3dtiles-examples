@@ -61,7 +61,7 @@
                                 "type": "CzmModelPrimitive",
                                 "name": "running_jerry(场景目录下gltf模型文件)",
                                 "ref": "running_jerry",
-                                "url": "${SD}/running_jerry.glb",
+                                "url": "${SD}running_jerry.glb",
                                 "allowPicking": true,
                                 "position": [
                                     116.39093680226415,

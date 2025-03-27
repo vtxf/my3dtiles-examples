@@ -46,7 +46,7 @@
                                     0.95
                                 ],
                                 "borderWidth": 0,
-                                "clickFuncStr": "async function (mouseEvent) {\n    const { ui } = vtxf['xr-base-utils'];\n    const selects = ['内置天空盒', '天空盒1', '天空盒2', '天空盒3', '天空盒4', '天空盒5', '天空盒6', '天空盒7'];\n    const s = await ui.select(selects, '请选择天空盒');\n    if (s === undefined) {\n        return;\n    }\n\n    const defaultLocalSkySources = {\n        \"positiveX\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/east.jpg\",\n        \"negativeX\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/west.jpg\",\n        \"positiveY\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/bottom.jpg\",\n        \"negativeY\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/top.jpg\",\n        \"positiveZ\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/north.jpg\",\n        \"negativeZ\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/south.jpg\"\n    };\n\n    const localSkys = [...new Array(7).keys()].map(i => ({\n        \"positiveX\": `\\${SD}/skyboxes/sky${i+1}/east.jpg`,\n        \"negativeX\": `\\${SD}/skyboxes/sky${i+1}/west.jpg`,\n        \"positiveY\": `\\${SD}/skyboxes/sky${i+1}/bottom.jpg`,\n        \"negativeY\": `\\${SD}/skyboxes/sky${i+1}/top.jpg`,\n        \"positiveZ\": `\\${SD}/skyboxes/sky${i+1}/north.jpg`,\n        \"negativeZ\": `\\${SD}/skyboxes/sky${i+1}/south.jpg`\n    }));\n\n    const skys = [defaultLocalSkySources, ...localSkys];\n\n    g_app.czmViewer.xbsjLocalBoxSources = skys[s];\n}\n",
+                                "clickFuncStr": "async function (mouseEvent) {\n    const { ui } = vtxf['xr-base-utils'];\n    const selects = ['内置天空盒', '天空盒1', '天空盒2', '天空盒3', '天空盒4', '天空盒5', '天空盒6', '天空盒7'];\n    const s = await ui.select(selects, '请选择天空盒');\n    if (s === undefined) {\n        return;\n    }\n\n    const defaultLocalSkySources = {\n        \"positiveX\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/east.jpg\",\n        \"negativeX\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/west.jpg\",\n        \"positiveY\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/bottom.jpg\",\n        \"negativeY\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/top.jpg\",\n        \"positiveZ\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/north.jpg\",\n        \"negativeZ\": \"${xe2-assets-script-dir}/xe2-assets/scene-manager/images/skybox/south.jpg\"\n    };\n\n    const localSkys = [...new Array(7).keys()].map(i => ({\n        \"positiveX\": `\\${SD}skyboxes/sky${i+1}/east.jpg`,\n        \"negativeX\": `\\${SD}skyboxes/sky${i+1}/west.jpg`,\n        \"positiveY\": `\\${SD}skyboxes/sky${i+1}/bottom.jpg`,\n        \"negativeY\": `\\${SD}skyboxes/sky${i+1}/top.jpg`,\n        \"positiveZ\": `\\${SD}skyboxes/sky${i+1}/north.jpg`,\n        \"negativeZ\": `\\${SD}skyboxes/sky${i+1}/south.jpg`\n    }));\n\n    const skys = [defaultLocalSkySources, ...localSkys];\n\n    g_app.czmViewer.xbsjLocalBoxSources = skys[s];\n}\n",
                                 "statusFuncStr": "function (status, sceneObject) {\n    const ratioMap = {\n        normal: 0.95,\n        hovered: 0.98,\n        pressed: 1,\n    };\n    const r = ratioMap[status];\n\n    sceneObject.borderColor = [1*r, 1*r, 1*r, 1*r];\n    // sceneObject.backgroundColor = [.1*r, .1*r, .1*r, .9*r];\n    sceneObject.textColor = [1*r, 1*r, 1*r, 1];\n}\n",
                                 "highlighted": true,
                                 "text": "切换天空盒",
@@ -214,12 +214,12 @@
             "name": "默认视口",
             "ref": "v",
             "xbsjLocalBoxSources": {
-                "positiveX": "${SD}/skyboxes/sky3/east.jpg",
-                "negativeX": "${SD}/skyboxes/sky3/west.jpg",
-                "positiveY": "${SD}/skyboxes/sky3/bottom.jpg",
-                "negativeY": "${SD}/skyboxes/sky3/top.jpg",
-                "positiveZ": "${SD}/skyboxes/sky3/north.jpg",
-                "negativeZ": "${SD}/skyboxes/sky3/south.jpg"
+                "positiveX": "${SD}skyboxes/sky3/east.jpg",
+                "negativeX": "${SD}skyboxes/sky3/west.jpg",
+                "positiveY": "${SD}skyboxes/sky3/bottom.jpg",
+                "negativeY": "${SD}skyboxes/sky3/top.jpg",
+                "positiveZ": "${SD}skyboxes/sky3/north.jpg",
+                "negativeZ": "${SD}skyboxes/sky3/south.jpg"
             },
             "sceneSsccZoomFactor": 2,
             "firstPersonKeyboardEnabled": true,

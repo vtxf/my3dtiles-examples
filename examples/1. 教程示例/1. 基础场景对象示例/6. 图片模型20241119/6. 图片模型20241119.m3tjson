@@ -52,7 +52,7 @@
                                 "id": "91eb84c3-fe36-4ced-bcf8-77c158630948",
                                 "type": "CzmImageModel",
                                 "allowPicking": true,
-                                "uri": "${SD}/my3dtiles.png",
+                                "uri": "${SD}my3dtiles.png",
                                 "position": [
                                     116.39026915006366,
                                     39.90262001193671,
@@ -67,7 +67,7 @@
                                 "id": "a05973ec-a259-4ec8-8f6f-8f0e40fe217f",
                                 "type": "CzmImageModel",
                                 "allowPicking": true,
-                                "uri": "${SD}/my3dtiles.png",
+                                "uri": "${SD}my3dtiles.png",
                                 "position": [
                                     116.3934190694257,
                                     39.90450125310286,
@@ -92,7 +92,7 @@
                                 "id": "322efd68-6ceb-4ef7-91fd-e89f52a801d2",
                                 "type": "CzmImageModel",
                                 "allowPicking": true,
-                                "uri": "${SD}/my3dtiles.png",
+                                "uri": "${SD}my3dtiles.png",
                                 "position": [
                                     116.39333984259576,
                                     39.90234884594573,
@@ -112,7 +112,7 @@
                                 "id": "7820a142-0fcd-4596-8bf8-88c7ee4b9a53",
                                 "type": "CzmImageModel",
                                 "allowPicking": true,
-                                "uri": "${SD}/my3dtiles.png",
+                                "uri": "${SD}my3dtiles.png",
                                 "position": [
                                     116.39074050564852,
                                     39.90062757336574,
@@ -163,7 +163,7 @@
                                             641,
                                             360
                                         ],
-                                        "uri": "${SD}/big-buck-bunny_trailer.mp4",
+                                        "uri": "${SD}big-buck-bunny_trailer.mp4",
                                         "name": "CzmTexture"
                                     }
                                 }

@@ -34,7 +34,7 @@
                         "name": "MyImage(场景目录下图片文件)",
                         "layoutType": "LeftTop",
                         "cssText": "left: 4px;\ntop: 208px;",
-                        "imageUri": "${SD}/my3dtiles.png"
+                        "imageUri": "${SD}my3dtiles.png"
                     }
                 }
             ]

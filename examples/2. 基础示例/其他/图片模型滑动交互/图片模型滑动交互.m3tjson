@@ -20,7 +20,7 @@
                                 "id": "ddc8887c-2492-4cca-8fee-280e6d5efe54",
                                 "type": "CzmImageModel",
                                 "allowPicking": true,
-                                "uri": "${SD}/icons8-bookmark-138 (1).png",
+                                "uri": "${SD}icons8-bookmark-138 (1).png",
                                 "position": [
                                     116.39163666724085,
                                     39.9060047496636,
@@ -47,7 +47,7 @@
                                 "id": "7825c806-49c5-4395-8024-cdce4b9a27f0",
                                 "type": "CzmImageModel",
                                 "allowPicking": true,
-                                "uri": "${SD}/icons8-plus-138 (1).png",
+                                "uri": "${SD}icons8-plus-138 (1).png",
                                 "position": [
                                     116.39323583713588,
                                     39.907767503709856,
@@ -74,7 +74,7 @@
                                 "id": "c07c3a04-e985-4ed6-97c1-8676747bb982",
                                 "type": "CzmImageModel",
                                 "allowPicking": true,
-                                "uri": "${SD}/icons8-download-from-the-cloud-138.png",
+                                "uri": "${SD}icons8-download-from-the-cloud-138.png",
                                 "position": [
                                     116.3910258161074,
                                     39.907455988483186,

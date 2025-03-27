@@ -25,7 +25,7 @@
                                 "width": 0,
                                 "height": 0,
                                 "cssText": "\nwidth: 100%;\nheight: 100%;\nopacity: 1.0;\ntransition: opacity 1s ease-in-out;\n",
-                                "iframeSrc": "${SD}/cgajs/pure.html"
+                                "iframeSrc": "${SD}cgajs/pure.html"
                             }
                         },
                         {

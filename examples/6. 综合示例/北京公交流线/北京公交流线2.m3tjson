@@ -18,7 +18,7 @@
                         "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAABCAYAAABubagXAAAATUlEQVQYlaXLOQqEUBQF0SMmojgvpfe/JiccEvlNwwuM24IK7oXKUkof7ylQoUGHHsPDMf4WNcpociTcuHBgx4oFczg9/O0tPKP7D3wBky8UMt76XnoAAAAASUVORK5CYII=",
                         "repeat": 0.5,
                         "width": 1,
-                        "geoJsonUrl": "${SD}/bj_bus.geojson",
+                        "geoJsonUrl": "${SD}bj_bus.geojson",
                         "allowPicking": true,
                         "loop": true,
                         "currentTime": 757.8000020571053,

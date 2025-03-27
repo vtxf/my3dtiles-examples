@@ -17,7 +17,7 @@
                         "type": "CzmImagery",
                         "imageryProvider": {
                             "type": "SingleTileImageryProvider",
-                            "url": "${SD}/北京行政区划图.png",
+                            "url": "${SD}北京行政区划图.png",
                             "rectangle": [
                                 115.31302276743361,
                                 39.31256344855234,

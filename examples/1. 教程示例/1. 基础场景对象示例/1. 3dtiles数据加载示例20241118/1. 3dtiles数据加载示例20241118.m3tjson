@@ -17,7 +17,7 @@
                         "type": "Czm3DTiles",
                         "name": "Revit_School_3dtiles_1.1",
                         "allowPicking": true,
-                        "url": "${SD}/revit_school_3dtiles1.1/tileset.json",
+                        "url": "${SD}revit_school_3dtiles1.1/tileset.json",
                         "show": true
                     }
                 }

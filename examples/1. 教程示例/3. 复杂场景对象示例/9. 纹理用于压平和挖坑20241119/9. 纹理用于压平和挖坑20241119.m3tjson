@@ -19,7 +19,7 @@
                             476,
                             470
                         ],
-                        "uri": "${SD}/image.jpg",
+                        "uri": "${SD}image.jpg",
                         "name": "压平纹理(CzmTexture)",
                         "ref": "压平纹理"
                     }

@@ -17,7 +17,7 @@
                         "id": "00b12c6b-dc7a-4d1a-ae25-fa428e9782f7",
                         "type": "CzmSignalTransmissionCollection",
                         "width": 1,
-                        "geoJsonUrl": "${SD}/bj_bus.geojson",
+                        "geoJsonUrl": "${SD}bj_bus.geojson",
                         "allowPicking": true,
                         "loop": true,
                         "currentTime": 1938.5000003799796,
