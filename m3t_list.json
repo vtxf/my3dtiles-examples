@@ -476,6 +476,13 @@
                                             "previewImageUri": "${M3T_CurrentDir}墨卡托网格标签.jpg"
                                         },
                                         {
+                                            "name": "墨卡托网格标签文字放大",
+                                            "content": {
+                                                "type": "m3tJsonUri",
+                                                "m3tJsonUri": "${M3T_CurrentDir}墨卡托网格标签文字放大.m3tjson"
+                                            }
+                                        },
+                                        {
                                             "name": "经纬度网格标签",
                                             "content": {
                                                 "type": "m3tJsonUri",
