@@ -431,6 +431,14 @@
                                     "previewImageUri": "${M3T_CurrentDir}ArcGIS历史影像/ArcGIS历史影像.jpg"
                                 },
                                 {
+                                    "name": "geojson点样式配置",
+                                    "content": {
+                                        "type": "m3tJsonUri",
+                                        "m3tJsonUri": "${M3T_CurrentDir}geojson点样式配置/geojson点样式配置.m3tjson"
+                                    },
+                                    "previewImageUri": "${M3T_CurrentDir}geojson点样式配置/geojson点样式配置.jpg"
+                                },
+                                {
                                     "name": "geojson自定义配置",
                                     "content": {
                                         "type": "m3tJsonUri",
